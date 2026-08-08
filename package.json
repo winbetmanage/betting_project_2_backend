@@ -1,0 +1,35 @@
+{
+  "name": "betting-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend service for betting platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": " prisma generate && prisma validate",
+    "dev": "nodemon server.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio",
+    "prisma:validate": "prisma validate"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "prisma": "^6.19.3",
+    "tsx": "^4.23.1"
+  }
+}
