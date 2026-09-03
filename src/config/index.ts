@@ -24,7 +24,7 @@ const config: AppConfig = {
   refreshTokenExpiresIn: process.env.REFRESH_TOKEN_EXPIRES_IN || '7d',
   corsOrigin: (process.env.CORS_ORIGIN || 'http://localhost:4000')
     .split(',')
-    .map((s: string) => s.trim())
+    .map((s: string) => s.trim().replace(/\/+$/, ''))
     .filter(Boolean),
   bcryptRounds: parseInt(process.env.BCRYPT_ROUNDS || '10', 10),
 };
