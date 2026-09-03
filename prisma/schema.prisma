@@ -1,9 +1,9 @@
 // ============================================
-// BETTING PLATFORM - STARTER SCHEMA
+// TANABETTING - PRISMA SCHEMA (revised)
 // ============================================
 
 datasource db {
-  provider = "mysql" // switch to "mysql" or "sqlite" if needed
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -18,7 +18,7 @@ generator client {
 enum Role {
   USER
   ADMIN
-  ODDS_MANAGER // useful later: lets you give trading-team access without full admin rights
+  ODDS_MANAGER // trading-team access without full admin rights
 }
 
 enum GameType {
@@ -40,6 +40,8 @@ enum GameStatus {
   POSTPONED
 }
 
+
+//TODO : check theoddsapi data and updtate the market type
 enum MarketType {
   MATCH_WINNER      // 1X2 / moneyline
   OVER_UNDER
@@ -82,8 +84,25 @@ enum TransactionType {
 }
 
 // ============================================
-// USERS
+// USERS (single table for customers + admins)
 // ============================================
+enum ThemeMode {
+  LIGHT
+  DARK
+  SYSTEM // follow OS preference
+}
+
+enum FundRequestType {
+  DEPOSIT
+  WITHDRAWAL
+}
+
+enum FundRequestStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  CANCELLED   // user cancelled before admin review
+}
 
 model User {
   id            String   @id @default(cuid())
@@ -92,27 +111,147 @@ model User {
   name          String?
   role          Role     @default(USER)
   balance       Decimal  @default(0) @db.Decimal(12, 2)
+  heldBalance   Decimal  @default(0) @db.Decimal(12, 2) // locked by pending withdrawals
   isActive      Boolean  @default(true)
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
 
-  bets          Bet[]
-  transactions  Transaction[]
-  refreshTokens RefreshToken[]
+  // Kept for later, unused for now
+  emailVerified Boolean  @default(false)
+
+   themeMode  ThemeMode @default(SYSTEM)
+  themeColor String?   @default("blue") 
+
+  // --- Security hardening ---
+  // 2FA: enforced at app layer for ADMIN / ODDS_MANAGER roles.
+  // Regular USER accounts can opt in later if you add that feature.
+  twoFactorSecret   String?
+  twoFactorEnabled  Boolean  @default(false)
+  backupCodesHashed Json?    // array of hashed one-time backup codes
+
+  // Brute-force protection
+  failedLoginAttempts Int       @default(0)
+  lockedUntil         DateTime?
+
+  // Basic login audit trail
+  lastLoginAt DateTime?
+  lastLoginIp String?
+
+  devices Device[]
+
+fundRequests         FundRequest[] @relation("UserFundRequests")
+fundRequestsReviewed FundRequest[] @relation("FundRequestReviewer")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  bets            Bet[]
+  transactions    Transaction[]
+  refreshTokens   RefreshToken[]
+  adminActionLogs AdminActionLog[]
 
   @@index([email])
+  @@index([role])
 }
 
+
+model FundRequest {
+  id     String          @id @default(cuid())
+  userId String
+  user   User            @relation("UserFundRequests", fields: [userId], references: [id])
+
+  type   FundRequestType
+  amount Decimal         @db.Decimal(12, 2)
+  status FundRequestStatus @default(PENDING)
+
+  // --- Deposit-specific fields ---
+  transferAccountId String?              // which of OUR bank accounts they sent to
+  transferAccount   OurTransferAccount?  @relation(fields: [transferAccountId], references: [id])
+  proofImagePath    String?              // uploaded receipt/screenshot
+  senderReference    String?             // e.g. transaction ref number user typed in from their bank
+
+  // --- Withdrawal-specific fields ---
+  payoutAccountName   String?
+  payoutAccountNumber String?
+  payoutBankName      String?
+
+  // --- Admin review ---
+  reviewedById    String?
+  reviewedBy      User?     @relation("FundRequestReviewer", fields: [reviewedById], references: [id])
+  reviewedAt      DateTime?
+  rejectionReason String?
+
+  transaction Transaction?  // set once approved — the resulting ledger entry
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([type])
+}
+
+model Transaction {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  type         TransactionType
+  amount       Decimal         @db.Decimal(12, 2)
+  balanceAfter Decimal         @db.Decimal(12, 2)
+  reference    String?
+
+  fundRequestId String?      @unique
+  fundRequest   FundRequest? @relation(fields: [fundRequestId], references: [id])
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([type])
+}
+enum DeviceType {
+  DESKTOP
+  MOBILE
+  TABLET
+  UNKNOWN
+}
+
+model Device {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Fingerprint to recognize "is this the same device as before"
+  deviceFingerprint String  // hash of UA + other stable signals, see below
+  deviceType        DeviceType @default(UNKNOWN)
+  deviceName        String?    // e.g. "Chrome on Windows" - parsed, user-friendly label
+  os                String?    // e.g. "Windows 11", "iOS 17"
+  browser           String?    // e.g. "Chrome 128"
+
+  // Network info at most recent (or first) sighting
+  ipAddress String
+  location  String? // optional: city/country from IP geolocation lookup
+
+  isTrusted  Boolean  @default(false) // user can mark "remember this device"
+  firstSeenAt DateTime @default(now())
+  lastSeenAt  DateTime @default(now())
+
+  // Optional: link to active session so you can revoke by device
+  refreshTokens RefreshToken[]
+
+  @@unique([userId, deviceFingerprint])
+  @@index([userId])
+  @@index([ipAddress])
+}
 // ============================================
 // AUTH / REFRESH TOKENS
 // ============================================
 
 model RefreshToken {
-  id        String    @id @default(cuid())
-  userId    String
-  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  tokenHash String    @unique          // sha256 of the opaque refresh token
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+ deviceId String?
+  device   Device? @relation(fields: [deviceId], references: [id], onDelete: SetNull)
+  tokenHash String    @unique // sha256 of the opaque refresh token
   expiresAt DateTime
   createdAt DateTime  @default(now())
   revokedAt DateTime?
@@ -121,14 +260,41 @@ model RefreshToken {
 }
 
 // ============================================
+// ADMIN ACTION LOG
+// Accountability trail for sensitive admin actions:
+// manual settlements, balance adjustments, market
+// suspensions, etc. Tied to User rather than a
+// separate admin table.
+// ============================================
+
+model AdminActionLog {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Restrict)
+
+  action    String // e.g. "MARKET_SUSPENDED", "BALANCE_ADJUSTED", "BET_VOIDED"
+  targetType String? // e.g. "Market", "User", "Bet"
+  targetId   String? // id of the affected record
+
+  // Free-form context, e.g. { "reason": "duplicate line", "previousBalance": 100 }
+  metadata Json?
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([targetType, targetId])
+}
+
+// ============================================
 // SPORTS / COMPETITIONS / GAMES
 // ============================================
 
 model Sport {
-  id        String   @id @default(cuid())
-  name      String   @unique      // e.g. "Soccer"
-  slug      String   @unique      // e.g. "soccer"
-  gameType  GameType
+  id       String   @id @default(cuid())
+  name     String   @unique // e.g. "Soccer"
+  slug     String   @unique // e.g. "soccer"
+  gameType GameType
 
   competitions Competition[]
 
@@ -136,13 +302,14 @@ model Sport {
 }
 
 model Competition {
-  id        String   @id @default(cuid())
-  name      String              // e.g. "Premier League"
-  country   String?
-  sportId   String
-  sport     Sport    @relation(fields: [sportId], references: [id])
+  id      String @id @default(cuid())
+  name    String // e.g. "Premier League"
+  country String?
+  sportId String
+  sport   Sport  @relation(fields: [sportId], references: [id])
 
-  games     Game[]
+  games          Game[]
+  outrightMarkets Market[] @relation("CompetitionOutrights")
 
   createdAt DateTime @default(now())
 
@@ -153,80 +320,152 @@ model Game {
   id            String      @id @default(cuid())
   competitionId String
   competition   Competition @relation(fields: [competitionId], references: [id])
-
-  homeTeam      String
-  awayTeam      String
-  startTime     DateTime
-  status        GameStatus  @default(SCHEDULED)
-
+  externalEventId String?     @unique
+  homeTeam  String
+  awayTeam  String
+  startTime DateTime
+  status    GameStatus @default(SCHEDULED)
+ score  GameScore?
   // Flexible bucket for sport-specific info without new tables per sport
   // e.g. { "period": "2H", "clock": "63:00", "score": { "home": 1, "away": 0 } }
   specifications Json?
-
-  markets       Market[]
-
-  createdAt     DateTime    @default(now())
-  updatedAt     DateTime    @updatedAt
+ isPublished Boolean @default(false)
+  markets Market[]
+checkpoints OddsFetchCheckpoint[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([competitionId])
   @@index([startTime])
   @@index([status])
+   @@index([externalEventId])
+  @@index([isPublished])
 }
 
+
+model GameScore {
+  id                  String   @id @default(cuid())
+  gameId              String   @unique
+  game                Game     @relation(fields: [gameId], references: [id])
+
+  footballDataMatchId Int      @unique
+
+  homeScoreHT         Int
+  awayScoreHT         Int
+  homeScoreFT         Int
+  awayScoreFT         Int
+  winner              String?  // "HOME_TEAM" | "AWAY_TEAM" | "DRAW"
+  status              String   // e.g. "FINISHED"
+
+  fetchedAt           DateTime @default(now())
+  rawJsonPath         String   // e.g. "epl_games_scores/<matchId>.json"
+
+  @@index([footballDataMatchId])
+}
+
+model OddsFetchCheckpoint {
+  id         String   @id @default(cuid())
+  gameId     String
+  game       Game     @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  checkpoint String   // "24h", "6h", "1h", "15m"
+  fetchedAt  DateTime @default(now())
+
+  @@unique([gameId, checkpoint])
+  @@index([gameId])
+}
 // ============================================
 // MARKETS / SELECTIONS / ODDS
 // ============================================
 
+// A Market belongs to EITHER a Game OR a Competition (for outrights),
+// never both. Enforce the "exactly one" rule at the application layer
+// (Prisma can't express XOR constraints directly).
 model Market {
-  id        String       @id @default(cuid())
-  gameId    String
-  game      Game         @relation(fields: [gameId], references: [id])
+  id     String  @id @default(cuid())
+  gameId String?
+  game   Game?   @relation(fields: [gameId], references: [id])
 
-  type      MarketType
-  name      String                // e.g. "Match Winner", "Over/Under 2.5"
-  status    MarketStatus @default(OPEN)
+  competitionId String?
+  competition   Competition? @relation("CompetitionOutrights", fields: [competitionId], references: [id])
+
+  type   MarketType
+  name   String // e.g. "Match Winner", "Over/Under 2.5", "Tournament Winner"
+  status MarketStatus @default(OPEN)
 
   // For parameterized markets like Over/Under or Handicap
   // e.g. { "line": 2.5 } or { "handicap": -1.5 }
   parameters Json?
 
+sourceBookmakerKeys Json?     // e.g. ["bet365", "skybet"] — MySQL/Prisma has no native string array
+  lastSourceCheckedAt DateTime? // when the cron last checked these bookmakers for new data
+  
   selections Selection[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@index([gameId])
+  @@index([competitionId])
   @@index([status])
 }
 
 model Selection {
-  id          String   @id @default(cuid())
-  marketId    String
-  market      Market   @relation(fields: [marketId], references: [id])
+  id       String @id @default(cuid())
+  marketId String
+  market   Market @relation(fields: [marketId], references: [id])
 
-  name        String            // e.g. "Home", "Draw", "Away", "Over"
-  odds        Decimal  @db.Decimal(8, 3)  // decimal odds, e.g. 1.950
-  isWinning   Boolean?          // null until settled
+  name      String // e.g. "Home", "Draw", "Away", "Over"
+  odds      Decimal  @db.Decimal(8, 3) // decimal odds, e.g. 1.950
+  isWinning Boolean? // null until settled
 
-  oddsHistory OddsHistory[]
+  oddsHistory   OddsHistory[]
   betSelections BetSelection[]
 
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([marketId])
 }
 
 // Tracks every odds change so you can show movement / build an odds API feed
 model OddsHistory {
-  id           String    @id @default(cuid())
-  selectionId  String
-  selection    Selection @relation(fields: [selectionId], references: [id])
+  id          String    @id @default(cuid())
+  selectionId String
+  selection   Selection @relation(fields: [selectionId], references: [id], onDelete: Cascade)
 
-  odds         Decimal   @db.Decimal(8, 3)
-  recordedAt   DateTime  @default(now())
+  odds       Decimal  @db.Decimal(8, 3)
+  recordedAt DateTime @default(now())
 
   @@index([selectionId, recordedAt])
+}
+
+// ============================================
+// EXTERNAL ODDS FEED (The Odds API staging)
+// Raw per-bookmaker snapshot, kept separate from
+// Selection.odds so your own pricing/margin logic
+// stays independent of any single external source.
+// Not linked by foreign key to Game/Market/Selection
+// on purpose — the external event/market/outcome keys
+// don't line up 1:1 with your ids, so your ingestion
+// job resolves that mapping in code, not in the schema.
+// ============================================
+
+model BookmakerOdds {
+  id String @id @default(cuid())
+
+  externalEventId String // The Odds API "id" field for the event
+  sportKey        String // e.g. "soccer_epl"
+  bookmakerKey    String // e.g. "pinnacle"
+  marketKey       String // e.g. "h2h", "totals", "spreads"
+  outcomeName     String // e.g. "Arsenal", "Over"
+  point           Decimal? @db.Decimal(8, 3) // line, if applicable (totals/spreads)
+  price           Decimal  @db.Decimal(8, 3) // bookmaker's decimal odds
+
+  fetchedAt DateTime @default(now())
+
+  @@index([externalEventId])
+  @@index([sportKey, bookmakerKey, marketKey])
+  @@index([fetchedAt])
 }
 
 // ============================================
@@ -234,20 +473,20 @@ model OddsHistory {
 // ============================================
 
 model Bet {
-  id              String    @id @default(cuid())
-  userId          String
-  user            User      @relation(fields: [userId], references: [id])
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
 
   type            BetType   @default(SINGLE)
   stake           Decimal   @db.Decimal(12, 2)
-  totalOdds       Decimal   @db.Decimal(10, 3)   // combined odds at placement
+  totalOdds       Decimal   @db.Decimal(10, 3) // combined odds at placement
   potentialPayout Decimal   @db.Decimal(12, 2)
   status          BetStatus @default(PENDING)
 
-  selections      BetSelection[]
+  selections BetSelection[]
 
-  placedAt        DateTime  @default(now())
-  settledAt       DateTime?
+  placedAt  DateTime  @default(now())
+  settledAt DateTime?
 
   @@index([userId])
   @@index([status])
@@ -256,14 +495,14 @@ model Bet {
 // Join table: a bet can contain multiple selections (parlay),
 // and stores the odds AT TIME OF BET (odds move, this must not)
 model BetSelection {
-  id          String    @id @default(cuid())
-  betId       String
-  bet         Bet       @relation(fields: [betId], references: [id])
+  id    String @id @default(cuid())
+  betId String
+  bet   Bet    @relation(fields: [betId], references: [id], onDelete: Cascade)
 
   selectionId String
   selection   Selection @relation(fields: [selectionId], references: [id])
 
-  oddsAtPlacement Decimal @db.Decimal(8, 3)
+  oddsAtPlacement Decimal   @db.Decimal(8, 3)
   result          BetStatus @default(PENDING) // per-leg result for parlays
 
   @@index([betId])
@@ -274,18 +513,24 @@ model BetSelection {
 // WALLET / TRANSACTIONS
 // ============================================
 
-model Transaction {
-  id            String          @id @default(cuid())
-  userId        String
-  user          User            @relation(fields: [userId], references: [id])
 
-  type          TransactionType
-  amount        Decimal         @db.Decimal(12, 2)
-  balanceAfter  Decimal         @db.Decimal(12, 2)
-  reference     String?         // e.g. related bet id, payment gateway ref
 
-  createdAt     DateTime        @default(now())
 
-  @@index([userId])
-  @@index([type])
+model OurTransferAccount {
+    id          String    @id @default(cuid())
+    accountType String?
+    accountName String?
+    accountNumber String
+    bankName    String?
+    bankCode    String?
+    branchName  String?
+    branchCode  String?
+    swiftCode   String?
+ fundRequests FundRequest[]
+    
+    status Boolean @default(true)
+    createdAt   DateTime  @default(now())
+    updatedAt   DateTime  @updatedAt
 }
+
+

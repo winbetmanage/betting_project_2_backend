@@ -1,0 +1,24 @@
+import { Router } from 'express';
+import * as fundRequestController from '../controllers/fundRequest.controller';
+import { authenticate, authorize } from '../middleware/auth.middleware';
+import { fundRequestUpload } from '../middleware/upload.middleware';
+
+const router = Router();
+
+// User routes (authenticated)
+router.get('/balance', authenticate, fundRequestController.getMyBalance);
+router.post('/deposit', authenticate, fundRequestUpload.single('proofImage'), fundRequestController.createDeposit);
+router.post('/withdraw', authenticate, fundRequestController.createWithdrawal);
+router.get('/requests', authenticate, fundRequestController.listMyRequests);
+router.post('/requests/:id/cancel', authenticate, fundRequestController.cancelMyRequest);
+
+// Admin routes
+router.get('/admin/requests', authenticate, authorize('ADMIN'), fundRequestController.adminList);
+router.get('/admin/requests/:id', authenticate, authorize('ADMIN'), fundRequestController.adminGetById);
+router.post('/admin/requests/:id/approve', authenticate, authorize('ADMIN'), fundRequestController.adminApprove);
+router.post('/admin/requests/:id/reject', authenticate, authorize('ADMIN'), fundRequestController.adminReject);
+
+// Proof image (owner or admin)
+router.get('/requests/:id/proof', authenticate, fundRequestController.getProofImage);
+
+export default router;

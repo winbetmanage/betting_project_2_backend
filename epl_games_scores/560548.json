@@ -1,0 +1,66 @@
+{
+  "area": {
+    "id": 2072,
+    "name": "England",
+    "code": "ENG",
+    "flag": "https://crests.football-data.org/770.svg"
+  },
+  "competition": {
+    "id": 2021,
+    "name": "Premier League",
+    "code": "PL",
+    "type": "LEAGUE",
+    "emblem": "https://crests.football-data.org/PL.png"
+  },
+  "season": {
+    "id": 2502,
+    "startDate": "2026-08-21",
+    "endDate": "2027-05-30",
+    "currentMatchday": 2,
+    "winner": null
+  },
+  "id": 560548,
+  "utcDate": "2026-08-23T13:00:00Z",
+  "status": "FINISHED",
+  "matchday": 1,
+  "stage": "REGULAR_SEASON",
+  "group": null,
+  "lastUpdated": "2026-09-02T00:20:34Z",
+  "homeTeam": {
+    "id": 65,
+    "name": "Manchester City FC",
+    "shortName": "Man City",
+    "tla": "MCI",
+    "crest": "https://crests.football-data.org/65.png"
+  },
+  "awayTeam": {
+    "id": 1044,
+    "name": "AFC Bournemouth",
+    "shortName": "Bournemouth",
+    "tla": "BOU",
+    "crest": "https://crests.football-data.org/bournemouth.png"
+  },
+  "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+      "home": 2,
+      "away": 1
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  "odds": {
+    "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+  },
+  "referees": [
+    {
+      "id": 257648,
+      "name": "Adrian Gillett",
+      "type": "REFEREE",
+      "nationality": "England"
+    }
+  ]
+}

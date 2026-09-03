@@ -1,0 +1,66 @@
+{
+  "area": {
+    "id": 2072,
+    "name": "England",
+    "code": "ENG",
+    "flag": "https://crests.football-data.org/770.svg"
+  },
+  "competition": {
+    "id": 2021,
+    "name": "Premier League",
+    "code": "PL",
+    "type": "LEAGUE",
+    "emblem": "https://crests.football-data.org/PL.png"
+  },
+  "season": {
+    "id": 2502,
+    "startDate": "2026-08-21",
+    "endDate": "2027-05-30",
+    "currentMatchday": 2,
+    "winner": null
+  },
+  "id": 560551,
+  "utcDate": "2026-08-24T19:00:00Z",
+  "status": "FINISHED",
+  "matchday": 1,
+  "stage": "REGULAR_SEASON",
+  "group": null,
+  "lastUpdated": "2026-09-02T00:20:34Z",
+  "homeTeam": {
+    "id": 63,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": "https://crests.football-data.org/63.png"
+  },
+  "awayTeam": {
+    "id": 61,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": "https://crests.football-data.org/61.png"
+  },
+  "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+      "home": 2,
+      "away": 3
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  "odds": {
+    "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+  },
+  "referees": [
+    {
+      "id": 11327,
+      "name": "John Brooks",
+      "type": "REFEREE",
+      "nationality": "England"
+    }
+  ]
+}

@@ -1,6 +1,11 @@
 node_modules/
 .env
+.env.local
 dist/
 *.log
 .DS_Store
 node_modules/.prisma/
+coverage/
+prisma/migrations/
+!prisma/migrations/.gitkeep
+uploads/
