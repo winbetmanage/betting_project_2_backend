@@ -20,3 +20,8 @@ export const update = asyncHandler(async (req, res) => {
   const game = await gameService.updateGame(req.params.id as string, req.body as Record<string, unknown>);
   res.json({ message: 'Game updated', data: game });
 });
+
+export const removeBulk = asyncHandler(async (req, res) => {
+  const result = await gameService.deleteGames((req.body as { ids?: unknown }).ids);
+  res.json({ message: `Deleted ${result.deleted} game(s)`, data: result });
+});

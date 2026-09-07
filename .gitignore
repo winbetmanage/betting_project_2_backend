@@ -9,3 +9,4 @@ coverage/
 prisma/migrations/
 !prisma/migrations/.gitkeep
 uploads/
+json_store/
