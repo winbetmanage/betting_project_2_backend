@@ -16,7 +16,7 @@
     "id": 2502,
     "startDate": "2026-08-21",
     "endDate": "2027-05-30",
-    "currentMatchday": 2,
+    "currentMatchday": 3,
     "winner": null
   },
   "id": 560614,
@@ -25,7 +25,7 @@
   "matchday": 8,
   "stage": "REGULAR_SEASON",
   "group": null,
-  "lastUpdated": "2026-09-02T00:20:34Z",
+  "lastUpdated": "2026-09-07T00:20:34Z",
   "homeTeam": {
     "id": 58,
     "name": "Aston Villa FC",

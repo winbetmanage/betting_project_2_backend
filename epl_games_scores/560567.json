@@ -16,16 +16,16 @@
     "id": 2502,
     "startDate": "2026-08-21",
     "endDate": "2027-05-30",
-    "currentMatchday": 2,
+    "currentMatchday": 3,
     "winner": null
   },
   "id": 560567,
   "utcDate": "2026-09-06T13:00:00Z",
-  "status": "TIMED",
+  "status": "FINISHED",
   "matchday": 3,
   "stage": "REGULAR_SEASON",
   "group": null,
-  "lastUpdated": "2026-09-02T00:20:34Z",
+  "lastUpdated": "2026-09-07T00:20:34Z",
   "homeTeam": {
     "id": 62,
     "name": "Everton FC",
@@ -41,19 +41,26 @@
     "crest": "https://crests.football-data.org/66.png"
   },
   "score": {
-    "winner": null,
+    "winner": "DRAW",
     "duration": "REGULAR",
     "fullTime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 2
     },
     "halfTime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     }
   },
   "odds": {
     "msg": "Activate Odds-Package in User-Panel to retrieve odds."
   },
-  "referees": []
+  "referees": [
+    {
+      "id": 11327,
+      "name": "John Brooks",
+      "type": "REFEREE",
+      "nationality": "England"
+    }
+  ]
 }

@@ -49,6 +49,18 @@ export const updateGame = async (id: string, data: Record<string, unknown>) => {
   return prisma.game.update({ where: { id }, data: data as never });
 };
 
+export const listRecentResults = async (limit: number) => {
+  return prisma.game.findMany({
+    where: { status: 'FINISHED', score: { isNot: null } },
+    orderBy: { startTime: 'desc' },
+    take: Math.min(Math.max(limit, 1), 50),
+    include: {
+      score: true,
+      competition: { include: { sport: true } },
+    },
+  });
+};
+
 export const deleteGames = async (ids: unknown) => {
   if (!Array.isArray(ids) || ids.length === 0) throw new ApiError(400, 'No games selected');
   const idList = Array.from(new Set(ids.filter((v): v is string => typeof v === 'string' && v.trim() !== '')));

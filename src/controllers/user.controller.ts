@@ -38,3 +38,13 @@ export const remove = asyncHandler(async (req, res) => {
   const result = await userService.deleteUser(req.params.id as string);
   res.json({ message: result.message, data: result });
 });
+
+export const listDevices = asyncHandler(async (req, res) => {
+  const devices = await userService.listAllDevices(req.query as Record<string, unknown>);
+  res.json({ data: devices });
+});
+
+export const listReferralBonuses = asyncHandler(async (_req, res) => {
+  const data = await userService.listReferralBonuses();
+  res.json({ data });
+});

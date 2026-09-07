@@ -3,6 +3,10 @@ import ApiError from '../utils/ApiError';
 
 const MIN_AMOUNT = 100;
 const MAX_PENDING_DEPOSITS = 3;
+const REFERRAL_QUALIFY_AMOUNT = 100; // referee's deposit must be at least this for the referrer to earn the bonus
+
+// Slow remote MySQL + extra referral work can exceed the 5s default
+const TX_OPTIONS = { maxWait: 10_000, timeout: 20_000 };
 
 export async function createDepositRequest(
   userId: string,
@@ -59,7 +63,7 @@ export async function createWithdrawalRequest(
 
     await tx.user.update({ where: { id: userId }, data: { heldBalance: { increment: data.amount } } });
     return request;
-  });
+  }, TX_OPTIONS);
 }
 
 export async function approveRequest(requestId: string, adminId: string) {
@@ -104,8 +108,39 @@ export async function approveRequest(requestId: string, adminId: string) {
       data: { status: 'APPROVED', reviewedById: adminId, reviewedAt: new Date() },
     });
 
+    // Referral payout — only on qualifying DEPOSIT approvals.
+    // The conditional updateMany (WHERE status='PENDING') is the double-pay guard:
+    // only one concurrent approval can win the race and flip the status.
+    if (req.type === 'DEPOSIT' && Number(req.amount) >= REFERRAL_QUALIFY_AMOUNT) {
+      const referral = await tx.referral.findFirst({
+        where: { refereeId: req.userId, status: 'PENDING' },
+        include: { referrer: { select: { id: true, balance: true } } },
+      });
+      if (referral) {
+        const claimed = await tx.referral.updateMany({
+          where: { id: referral.id, status: 'PENDING' },
+          data: { status: 'REWARDED', qualifiedAt: new Date(), rewardedAt: new Date() },
+        });
+        if (claimed.count === 1) {
+          const updatedReferrer = await tx.user.update({
+            where: { id: referral.referrerId },
+            data: { balance: { increment: referral.bonusAmount } },
+          });
+          await tx.transaction.create({
+            data: {
+              userId: referral.referrerId,
+              type: 'REFERRAL_BONUS',
+              amount: referral.bonusAmount,
+              balanceAfter: Number(updatedReferrer.balance),
+              reference: `referral:${referral.id}`,
+            },
+          });
+        }
+      }
+    }
+
     return { request: req, transaction };
-  });
+  }, TX_OPTIONS);
 }
 
 export async function rejectRequest(requestId: string, adminId: string, reason: string) {
@@ -125,7 +160,7 @@ export async function rejectRequest(requestId: string, adminId: string, reason: 
     });
 
     return req;
-  });
+  }, TX_OPTIONS);
 }
 
 export async function cancelRequest(requestId: string, userId: string) {
@@ -141,7 +176,7 @@ export async function cancelRequest(requestId: string, userId: string) {
 
     await tx.fundRequest.update({ where: { id: requestId }, data: { status: 'CANCELLED' } });
     return req;
-  });
+  }, TX_OPTIONS);
 }
 
 export async function listMyRequests(userId: string, filters: Record<string, unknown> = {}) {

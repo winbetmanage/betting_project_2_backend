@@ -11,6 +11,12 @@ export const list = asyncHandler(async (req, res) => {
   res.json({ data: games });
 });
 
+export const results = asyncHandler(async (req, res) => {
+  const limit = Number(req.query.limit) || 10;
+  const games = await gameService.listRecentResults(limit);
+  res.json({ data: games });
+});
+
 export const getById = asyncHandler(async (req, res) => {
   const game = await gameService.getGameById(req.params.id as string);
   res.json({ data: game });

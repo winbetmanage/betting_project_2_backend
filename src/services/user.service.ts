@@ -154,3 +154,58 @@ export const deleteUser = async (id: string) => {
   await prisma.user.delete({ where: { id } });
   return { soft: false, message: 'User deleted' };
 };
+
+// ============================================
+// ADMIN: Devices & Referral listings
+// ============================================
+
+export const listAllDevices = async (filters: Record<string, unknown> = {}) => {
+  const where: Record<string, unknown> = {};
+  if (filters.userId && typeof filters.userId === 'string') where.userId = filters.userId;
+
+  const devices = await prisma.device.findMany({
+    where: where as never,
+    include: {
+      user: { select: { id: true, email: true, name: true, role: true } },
+      _count: { select: { refreshTokens: true } },
+    },
+    orderBy: { lastSeenAt: 'desc' },
+    take: 500,
+  });
+  return devices;
+};
+
+export const listReferralBonuses = async () => {
+  const referrals = await prisma.referral.findMany({
+    where: { status: 'REWARDED' },
+    include: {
+      referrer: { select: { id: true, email: true, name: true } },
+      referee: { select: { id: true, email: true, name: true } },
+    },
+    orderBy: { rewardedAt: 'desc' },
+  });
+
+  // Attach the bonus payout transaction (for amount verification)
+  const referrerIds = Array.from(new Set(referrals.map((r) => r.referrerId)));
+  const bonusTx = await prisma.transaction.findMany({
+    where: { userId: { in: referrerIds }, type: 'REFERRAL_BONUS' },
+    orderBy: { createdAt: 'desc' },
+  });
+  const txByReferralId = new Map<string, (typeof bonusTx)[number]>();
+  for (const t of bonusTx) {
+    const m = /^referral:(.+)$/.exec(t.reference ?? '');
+    if (m && !txByReferralId.has(m[1])) txByReferralId.set(m[1], t);
+  }
+
+  return referrals.map((r) => ({
+    id: r.id,
+    referrer: r.referrer,
+    referee: r.referee,
+    codeUsed: r.codeUsed,
+    bonusAmount: r.bonusAmount,
+    qualifiedAt: r.qualifiedAt,
+    rewardedAt: r.rewardedAt,
+    createdAt: r.createdAt,
+    transaction: txByReferralId.get(r.id) ?? null,
+  }));
+};

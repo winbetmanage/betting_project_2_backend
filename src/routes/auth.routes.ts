@@ -5,6 +5,9 @@ import { validate } from '../middleware/validate.middleware';
 
 const router = Router();
 
+// Public — resolve a referral code to the referrer's display name (signup page)
+router.get('/referral', authController.referralInfo);
+
 router.post(
   '/register',
   validate({

@@ -6,6 +6,7 @@ import { authenticate, authorize } from '../middleware/auth.middleware';
 const router = Router();
 
 router.get('/', gameController.list);
+router.get('/results', gameController.results);
 router.get('/:id', gameController.getById);
 router.post('/', authenticate, authorize('ADMIN'), gameController.create);
 router.patch('/:id', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), gameController.update);

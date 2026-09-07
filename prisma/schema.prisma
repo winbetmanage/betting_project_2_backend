@@ -81,8 +81,13 @@ enum TransactionType {
   BET_WON
   BET_REFUND
   ADJUSTMENT  // manual admin correction
+  REFERRAL_BONUS 
 }
-
+enum ReferralStatus {
+  PENDING     // signed up with a code, hasn't qualified yet
+  QUALIFIED   // hit the deposit threshold
+  REWARDED    // referrer has been paid the bonus
+}
 // ============================================
 // USERS (single table for customers + admins)
 // ============================================
@@ -135,6 +140,11 @@ model User {
   lastLoginAt DateTime?
   lastLoginIp String?
 
+   referralCode String  @unique @default(cuid()) // shown in their referral link
+
+  referralsMade   Referral[] @relation("ReferralsMade")
+  referredAs      Referral?  @relation("ReferralReceived") // this user, as someone else's referee
+
   devices Device[]
 
 fundRequests         FundRequest[] @relation("UserFundRequests")
@@ -150,6 +160,28 @@ fundRequestsReviewed FundRequest[] @relation("FundRequestReviewer")
 
   @@index([email])
   @@index([role])
+}
+
+model Referral {
+  id String @id @default(cuid())
+
+  referrerId String
+  referrer   User   @relation("ReferralsMade", fields: [referrerId], references: [id])
+
+  refereeId String @unique   // one referral record per new user - can't be referred twice
+  referee   User   @relation("ReferralReceived", fields: [refereeId], references: [id])
+
+  codeUsed String   // snapshot of the code at signup, in case referrer changes it later
+  status   ReferralStatus @default(PENDING)
+
+  bonusAmount Decimal @default(50) @db.Decimal(12, 2)
+
+  qualifiedAt DateTime?
+  rewardedAt  DateTime?
+  createdAt   DateTime  @default(now())
+
+  @@index([referrerId])
+  @@index([status])
 }
 
 
