@@ -1,85 +1,5 @@
 [
   {
-    "id": "625c096fabb6047cbeb082dab9affce4",
-    "sport_key": "soccer_epl",
-    "sport_title": "EPL",
-    "commence_time": "2026-09-04T19:00:00Z",
-    "home_team": "Ipswich Town",
-    "away_team": "Liverpool"
-  },
-  {
-    "id": "686358c484cc44fe8e617674c335d531",
-    "sport_key": "soccer_epl",
-    "sport_title": "EPL",
-    "commence_time": "2026-09-05T11:30:00Z",
-    "home_team": "Newcastle United",
-    "away_team": "Bournemouth"
-  },
-  {
-    "id": "29f81160baf6a97d6391d7172fad2425",
-    "sport_key": "soccer_epl",
-    "sport_title": "EPL",
-    "commence_time": "2026-09-05T14:00:00Z",
-    "home_team": "Brentford",
-    "away_team": "Sunderland"
-  },
-  {
-    "id": "3b81531990da7ea3e461c43e8827672b",
-    "sport_key": "soccer_epl",
-    "sport_title": "EPL",
-    "commence_time": "2026-09-05T14:00:00Z",
-    "home_team": "Brighton and Hove Albion",
-    "away_team": "Leeds United"
-  },
-  {
-    "id": "3db5f919507eb8ab0c8c72bddaca8f08",
-    "sport_key": "soccer_epl",
-    "sport_title": "EPL",
-    "commence_time": "2026-09-05T14:00:00Z",
-    "home_team": "Manchester City",
-    "away_team": "Coventry City"
-  },
-  {
-    "id": "8f68612bf47c3193e7fa2d8783e79373",
-    "sport_key": "soccer_epl",
-    "sport_title": "EPL",
-    "commence_time": "2026-09-05T14:00:00Z",
-    "home_team": "Fulham",
-    "away_team": "Crystal Palace"
-  },
-  {
-    "id": "a6f2622727548c33369cc15c88b2aabd",
-    "sport_key": "soccer_epl",
-    "sport_title": "EPL",
-    "commence_time": "2026-09-05T14:00:00Z",
-    "home_team": "Nottingham Forest",
-    "away_team": "Tottenham Hotspur"
-  },
-  {
-    "id": "21fd24ad6732df00774304a046d84fe9",
-    "sport_key": "soccer_epl",
-    "sport_title": "EPL",
-    "commence_time": "2026-09-05T16:30:00Z",
-    "home_team": "Hull City",
-    "away_team": "Aston Villa"
-  },
-  {
-    "id": "8ea6c863f1852654399073b518b0a1f8",
-    "sport_key": "soccer_epl",
-    "sport_title": "EPL",
-    "commence_time": "2026-09-06T13:00:00Z",
-    "home_team": "Everton",
-    "away_team": "Manchester United"
-  },
-  {
-    "id": "78d4dfda8c2dc27bdc3ec26c2654f8fc",
-    "sport_key": "soccer_epl",
-    "sport_title": "EPL",
-    "commence_time": "2026-09-06T15:30:00Z",
-    "home_team": "Arsenal",
-    "away_team": "Chelsea"
-  },
-  {
     "id": "d09677edcf1fb82ad75a8df58bb26eab",
     "sport_key": "soccer_epl",
     "sport_title": "EPL",
@@ -158,5 +78,85 @@
     "commence_time": "2026-09-14T19:00:00Z",
     "home_team": "Leeds United",
     "away_team": "Newcastle United"
+  },
+  {
+    "id": "82d8b6a005d78bac0b1508abc17a7d39",
+    "sport_key": "soccer_epl",
+    "sport_title": "EPL",
+    "commence_time": "2026-09-18T19:00:00Z",
+    "home_team": "Brentford",
+    "away_team": "Chelsea"
+  },
+  {
+    "id": "d02ff636f652d5b5bb65f6b24330c4fe",
+    "sport_key": "soccer_epl",
+    "sport_title": "EPL",
+    "commence_time": "2026-09-19T11:30:00Z",
+    "home_team": "Tottenham Hotspur",
+    "away_team": "Aston Villa"
+  },
+  {
+    "id": "b5b058d0a95f9742548f789d1c564a78",
+    "sport_key": "soccer_epl",
+    "sport_title": "EPL",
+    "commence_time": "2026-09-19T14:00:00Z",
+    "home_team": "Brighton and Hove Albion",
+    "away_team": "Arsenal"
+  },
+  {
+    "id": "88519a51012811476c9b4724eafc96c5",
+    "sport_key": "soccer_epl",
+    "sport_title": "EPL",
+    "commence_time": "2026-09-19T14:00:00Z",
+    "home_team": "Everton",
+    "away_team": "Ipswich Town"
+  },
+  {
+    "id": "f65c4eaf0f94a569f06d768f737dad2e",
+    "sport_key": "soccer_epl",
+    "sport_title": "EPL",
+    "commence_time": "2026-09-19T14:00:00Z",
+    "home_team": "Newcastle United",
+    "away_team": "Hull City"
+  },
+  {
+    "id": "75133fdcd4fc3067b303a8f166f974e4",
+    "sport_key": "soccer_epl",
+    "sport_title": "EPL",
+    "commence_time": "2026-09-19T16:30:00Z",
+    "home_team": "Nottingham Forest",
+    "away_team": "Coventry City"
+  },
+  {
+    "id": "784f777f5181e1efdad7a6ecb2cfde15",
+    "sport_key": "soccer_epl",
+    "sport_title": "EPL",
+    "commence_time": "2026-09-20T13:00:00Z",
+    "home_team": "Bournemouth",
+    "away_team": "Liverpool"
+  },
+  {
+    "id": "b63aef4291a066e32644e591c19a235a",
+    "sport_key": "soccer_epl",
+    "sport_title": "EPL",
+    "commence_time": "2026-09-20T13:00:00Z",
+    "home_team": "Leeds United",
+    "away_team": "Crystal Palace"
+  },
+  {
+    "id": "f923236e69ed946fdc55163494ee88db",
+    "sport_key": "soccer_epl",
+    "sport_title": "EPL",
+    "commence_time": "2026-09-20T13:00:00Z",
+    "home_team": "Manchester City",
+    "away_team": "Sunderland"
+  },
+  {
+    "id": "182b81a9e220b2347235107c42802fd8",
+    "sport_key": "soccer_epl",
+    "sport_title": "EPL",
+    "commence_time": "2026-09-20T15:30:00Z",
+    "home_team": "Fulham",
+    "away_team": "Manchester United"
   }
 ]

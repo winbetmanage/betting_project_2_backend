@@ -3,6 +3,7 @@ import { runFetchEplEventsJob } from './operations/fetch-epl-events.js';
 import { runFetchEplGameOddsJob } from './operations/fetch-epl-game-odds.js';
 import { runRefreshEplOddsCheckpointsJob } from './operations/refresh-epl-odds-checkpoints.js';
 import { runFundRequestProofCleanupJob } from './operations/fund-request-proof-cleanup.js';
+import { runEndFinishedGamesJob } from './operations/end-finished-games.js';
 
 export function startJobs() {
   // Every 5 minutes
@@ -16,16 +17,22 @@ export function startJobs() {
     await runRefreshEplOddsCheckpointsJob();
   });
 
+  // Every 3 minutes — end games whose match has finished
+  cron.schedule('*/3 * * * *', async () => {
+    await runEndFinishedGamesJob();
+  });
+
   // Every Sunday at 3:00 AM — clean up proof images for stale REJECTED / CANCELLED requests
   cron.schedule('0 3 * * 0', async () => {
     await runFundRequestProofCleanupJob();
   });
 
-  console.log('[jobs] scheduler started: fetch-epl-events, fetch-epl-game-odds, refresh-epl-odds-checkpoints, fund-request-proof-cleanup (weekly)');
+  console.log('[jobs] scheduler started: fetch-epl-events, fetch-epl-game-odds, refresh-epl-odds-checkpoints, end-finished-games (3min), fund-request-proof-cleanup (weekly)');
   setTimeout(() => {
     runFetchEplEventsJob()
       .then(() => runFetchEplGameOddsJob())
       .then(() => runRefreshEplOddsCheckpointsJob())
+      .then(() => runEndFinishedGamesJob())
       .catch((e) => console.error('[jobs] initial run failed', e));
   }, 5000);
 }

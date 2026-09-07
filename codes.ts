@@ -2,11 +2,15 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const BASE_URL = "https://api.the-odds-api.com/v4";
+//const BASE_URL = "http://localhost:5000/v4";
+
 const API_KEY = process.env.API_ONE;
 const REGIONS = "eu";
 const MARKETS = "h2h,totals,btts";
 
 const FOOTBALL_DATA_BASE_URL = "https://api.football-data.org/v4";
+//const FOOTBALL_DATA_BASE_URL = "http://localhost:6000/v4";
+
 const FOOTBALL_DATA_TOKEN = process.env.FOOTBALL_DATA_TOKEN;
 
 

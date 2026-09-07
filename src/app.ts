@@ -2,7 +2,7 @@ import express from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
 import morgan from 'morgan';
-import rateLimit from 'express-rate-limit';
+import { authLimiter } from './middleware/rateLimiters';
 import config from './config';
 import routes from './routes';
 import { notFound, errorHandler } from './middleware/error.middleware';
@@ -21,12 +21,9 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
-  message: { status: 429, message: 'Too many requests' },
-});
-app.use(limiter);
+// Rate limiting — only auth endpoints (login/register/refresh) are limited.
+// Other endpoints are unlimited since proxied traffic shares one IP.
+app.use('/api/v1/auth', authLimiter);
 
 app.get('/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
