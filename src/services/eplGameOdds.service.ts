@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import ApiError from '../utils/ApiError';
-import { FetchEplEventAllMarkets } from '../../codes';
+import { getAllMarketsOddsUrl } from '../../codes';
 
 export type BookmakerGroup = {
   marketKey: string;
@@ -42,23 +42,71 @@ export function hasJsonFor(externalEventId: string): boolean {
   return fs.existsSync(jsonPathFor(externalEventId));
 }
 
-export async function fetchAndSaveGameOdds(externalEventId: string): Promise<number> {
-  if (!FetchEplEventAllMarkets(externalEventId).includes('apiKey=') || FetchEplEventAllMarkets(externalEventId).includes('apiKey=undefined')) {
-    throw new ApiError(500, 'API key not configured (API_ONE)');
+// Market-set ladder: full list first, then progressively narrower sets in case the
+// API plan rejects unsupported markets (The Odds API 422s the entire request if ANY
+// requested market is not on the plan).
+const MARKET_LADDER: (string | undefined)[] = [undefined, "h2h,totals,spreads", "h2h,totals", "h2h"];
+
+async function fetchOddsEvents(sportKey: string): Promise<{ events: { id?: string; bookmakers?: unknown[] }[]; marketsUsed: string }> {
+  let lastErr: ApiError | null = null;
+  for (const mkts of MARKET_LADDER) {
+    const url = getAllMarketsOddsUrl(sportKey, mkts);
+    if (!url.includes("apiKey=") || url.includes("apiKey=undefined")) {
+      throw new ApiError(500, "API key not configured (API_ONE)");
+    }
+    let res: Response;
+    try {
+      res = await fetch(url);
+    } catch (e) {
+      throw new ApiError(502, `Odds request failed: ${e instanceof Error ? e.message : String(e)}`);
+    }
+    if (res.ok) {
+      const data = await res.json();
+      if (!Array.isArray(data)) throw new ApiError(500, "Invalid odds response (expected an array of events)");
+      return { events: data as { id?: string; bookmakers?: unknown[] }[], marketsUsed: mkts ?? "all" };
+    }
+    const text = await res.text().catch(() => "");
+    const err = new ApiError(res.status, `Failed to fetch game odds: ${res.status} ${text.slice(0, 300)}`);
+    // Only retry on plan/market-rejection status codes; anything else is fatal
+    if (res.status === 400 || res.status === 422 || /market/i.test(text)) {
+      lastErr = err;
+      continue;
+    }
+    throw err;
   }
-  const url = FetchEplEventAllMarkets(externalEventId);
-  const res = await fetch(url);
-  if (!res.ok) {
-    const text = await res.text().catch(() => '');
-    throw new ApiError(res.status, `Failed to fetch game odds: ${res.status} ${text.slice(0, 300)}`);
-  }
-  const data = await res.json();
-  if (!data || typeof data !== 'object') throw new ApiError(500, 'Invalid odds response');
+  throw lastErr ?? new ApiError(500, "Odds fetch failed");
+}
+
+export async function fetchAndSaveGameOdds(externalEventId: string, sportKey: string = "soccer_epl"): Promise<number> {
+  const { events, marketsUsed } = await fetchOddsEvents(sportKey);
+  const event = events.find((e) => e?.id === externalEventId);
+  if (!event) throw new ApiError(404, `Event ${externalEventId} is not present in the current odds feed for ${sportKey} (${marketsUsed} markets)`);
   const file = jsonPathFor(externalEventId);
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, JSON.stringify(data, null, 2), 'utf-8');
-  const bmCount = Array.isArray((data as { bookmakers?: unknown[] }).bookmakers) ? (data as { bookmakers: unknown[] }).bookmakers.length : 0;
+  fs.writeFileSync(file, JSON.stringify(event, null, 2), "utf-8");
+  const bmCount = Array.isArray(event.bookmakers) ? event.bookmakers.length : 0;
+  console.log(`[eplGameOdds] saved ${file} using markets=${marketsUsed} (${bmCount} bookmakers)`);
   return bmCount;
+}
+
+export function getGameOddsFileInfo(externalEventId: string): { bookmakerCount: number; marketCount: number; updatedAt: Date | null; path: string } | null {
+  const file = jsonPathFor(externalEventId);
+  if (!fs.existsSync(file)) return null;
+  try {
+    const parsed = JSON.parse(fs.readFileSync(file, 'utf-8')) as { bookmakers?: { markets?: { key?: string }[] }[] };
+    const bookmakers = parsed.bookmakers ?? [];
+    const marketKeys = new Set<string>();
+    for (const b of bookmakers) for (const m of b.markets ?? []) if (m.key) marketKeys.add(m.key);
+    let updatedAt: Date | null = null;
+    try {
+      updatedAt = fs.statSync(file).mtime;
+    } catch {
+      /* ignore */
+    }
+    return { bookmakerCount: bookmakers.length, marketCount: marketKeys.size, updatedAt, path: file };
+  } catch {
+    return null;
+  }
 }
 
 export function readGameOdds(externalEventId: string): unknown | null {

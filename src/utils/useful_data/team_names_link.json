@@ -1,0 +1,312 @@
+[
+  {
+    "fullName": "AS Roma",
+    "shortName": "Roma",
+    "oddsApiName": "AS Roma",
+    "footballDataName": "AS Roma",
+    "footballDataTeamId": 100,
+    "iconUrl": "https://crests.football-data.org/100.png",
+    "country": "Italy",
+    "isNational": false
+  },
+  {
+    "fullName": "Arsenal",
+    "shortName": "Arsenal",
+    "oddsApiName": "Arsenal",
+    "footballDataName": "Arsenal FC",
+    "footballDataTeamId": 57,
+    "iconUrl": "https://crests.football-data.org/57.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Aston Villa",
+    "shortName": "Aston Villa",
+    "oddsApiName": "Aston Villa",
+    "footballDataName": "Aston Villa FC",
+    "footballDataTeamId": 58,
+    "iconUrl": "https://crests.football-data.org/58.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Bayern Munich",
+    "shortName": "Bayern",
+    "oddsApiName": "Bayern Munich",
+    "footballDataName": "FC Bayern München",
+    "footballDataTeamId": 5,
+    "iconUrl": "https://crests.football-data.org/5.png",
+    "country": "Germany",
+    "isNational": false
+  },
+  {
+    "fullName": "Bodø/Glimt",
+    "shortName": "Bodø/Glimt",
+    "oddsApiName": "Bodø/Glimt",
+    "footballDataName": "FK Bodø/Glimt",
+    "footballDataTeamId": 5721,
+    "iconUrl": "https://crests.football-data.org/5721.png",
+    "country": "Norway",
+    "isNational": false
+  },
+  {
+    "fullName": "Bournemouth",
+    "shortName": "Bournemouth",
+    "oddsApiName": "Bournemouth",
+    "footballDataName": "AFC Bournemouth",
+    "footballDataTeamId": 1044,
+    "iconUrl": "https://crests.football-data.org/bournemouth.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Brentford",
+    "shortName": "Brentford",
+    "oddsApiName": "Brentford",
+    "footballDataName": "Brentford FC",
+    "footballDataTeamId": 402,
+    "iconUrl": "https://crests.football-data.org/402.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Brighton & Hove Albion",
+    "shortName": "Brighton Hove",
+    "oddsApiName": "Brighton and Hove Albion",
+    "footballDataName": "Brighton & Hove Albion FC",
+    "footballDataTeamId": 397,
+    "iconUrl": "https://crests.football-data.org/397.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Chelsea",
+    "shortName": "Chelsea",
+    "oddsApiName": "Chelsea",
+    "footballDataName": "Chelsea FC",
+    "footballDataTeamId": 61,
+    "iconUrl": "https://crests.football-data.org/61.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Como",
+    "shortName": "Como 1907",
+    "oddsApiName": "Como",
+    "footballDataName": "Como 1907",
+    "footballDataTeamId": 7397,
+    "iconUrl": "https://crests.football-data.org/7397.png",
+    "country": "Italy",
+    "isNational": false
+  },
+  {
+    "fullName": "Coventry City",
+    "shortName": "Coventry City",
+    "oddsApiName": "Coventry City",
+    "footballDataName": "Coventry City FC",
+    "footballDataTeamId": 1076,
+    "iconUrl": "https://crests.football-data.org/1076.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Crystal Palace",
+    "shortName": "Crystal Palace",
+    "oddsApiName": "Crystal Palace",
+    "footballDataName": "Crystal Palace FC",
+    "footballDataTeamId": 354,
+    "iconUrl": "https://crests.football-data.org/354.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Everton",
+    "shortName": "Everton",
+    "oddsApiName": "Everton",
+    "footballDataName": "Everton FC",
+    "footballDataTeamId": 62,
+    "iconUrl": "https://crests.football-data.org/62.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Fenerbahçe",
+    "shortName": "Fenerbahçe",
+    "oddsApiName": "Fenerbahce",
+    "footballDataName": "Fenerbahçe SK",
+    "footballDataTeamId": 613,
+    "iconUrl": "https://crests.football-data.org/613.png",
+    "country": "Turkey",
+    "isNational": false
+  },
+  {
+    "fullName": "Fulham",
+    "shortName": "Fulham",
+    "oddsApiName": "Fulham",
+    "footballDataName": "Fulham FC",
+    "footballDataTeamId": 63,
+    "iconUrl": "https://crests.football-data.org/63.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Hull City",
+    "shortName": "Hull City",
+    "oddsApiName": "Hull City",
+    "footballDataName": "Hull City AFC",
+    "footballDataTeamId": 322,
+    "iconUrl": "https://crests.football-data.org/322.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Ipswich Town",
+    "shortName": "Ipswich Town",
+    "oddsApiName": "Ipswich Town",
+    "footballDataName": "Ipswich Town FC",
+    "footballDataTeamId": 349,
+    "iconUrl": "https://crests.football-data.org/349.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Leeds United",
+    "shortName": "Leeds United",
+    "oddsApiName": "Leeds United",
+    "footballDataName": "Leeds United FC",
+    "footballDataTeamId": 341,
+    "iconUrl": "https://crests.football-data.org/341.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Liverpool",
+    "shortName": "Liverpool",
+    "oddsApiName": "Liverpool",
+    "footballDataName": "Liverpool FC",
+    "footballDataTeamId": 64,
+    "iconUrl": "https://crests.football-data.org/64.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Manchester City",
+    "shortName": "Man City",
+    "oddsApiName": "Manchester City",
+    "footballDataName": "Manchester City FC",
+    "footballDataTeamId": 65,
+    "iconUrl": "https://crests.football-data.org/65.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Manchester United",
+    "shortName": "Man United",
+    "oddsApiName": "Manchester United",
+    "footballDataName": "Manchester United FC",
+    "footballDataTeamId": 66,
+    "iconUrl": "https://crests.football-data.org/66.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Newcastle United",
+    "shortName": "Newcastle",
+    "oddsApiName": "Newcastle United",
+    "footballDataName": "Newcastle United FC",
+    "footballDataTeamId": 67,
+    "iconUrl": "https://crests.football-data.org/67.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Nottingham Forest",
+    "shortName": "Nottingham",
+    "oddsApiName": "Nottingham Forest",
+    "footballDataName": "Nottingham Forest FC",
+    "footballDataTeamId": 351,
+    "iconUrl": "https://crests.football-data.org/351.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "PSV Eindhoven",
+    "shortName": "PSV",
+    "oddsApiName": "PSV Eindhoven",
+    "footballDataName": "PSV",
+    "footballDataTeamId": 674,
+    "iconUrl": "https://crests.football-data.org/674.png",
+    "country": "Netherlands",
+    "isNational": false
+  },
+  {
+    "fullName": "RB Leipzig",
+    "shortName": "RB Leipzig",
+    "oddsApiName": "RB Leipzig",
+    "footballDataName": "RB Leipzig",
+    "footballDataTeamId": 721,
+    "iconUrl": "https://crests.football-data.org/721.png",
+    "country": "Germany",
+    "isNational": false
+  },
+  {
+    "fullName": "RC Lens",
+    "shortName": "RC Lens",
+    "oddsApiName": "RC Lens",
+    "footballDataName": "Racing Club de Lens",
+    "footballDataTeamId": 546,
+    "iconUrl": "https://crests.football-data.org/546.png",
+    "country": "France",
+    "isNational": false
+  },
+  {
+    "fullName": "Sabah FK",
+    "shortName": "Sabah FK",
+    "oddsApiName": "Sabah FK",
+    "footballDataName": "Sabah FK",
+    "footballDataTeamId": 10233,
+    "iconUrl": "https://crests.football-data.org/10233.png",
+    "country": "Azerbaijan",
+    "isNational": false
+  },
+  {
+    "fullName": "Shakhtar Donetsk",
+    "shortName": "Shaktar",
+    "oddsApiName": "Shakhtar Donetsk",
+    "footballDataName": "FK Shakhtar Donetsk",
+    "footballDataTeamId": 1887,
+    "iconUrl": "https://crests.football-data.org/1887.png",
+    "country": "Ukraine",
+    "isNational": false
+  },
+  {
+    "fullName": "Slavia Praha",
+    "shortName": "Slavia Praha",
+    "oddsApiName": "Slavia Praha",
+    "footballDataName": "SK Slavia Praha",
+    "footballDataTeamId": 930,
+    "iconUrl": "https://crests.football-data.org/930.png",
+    "country": "Czech Republic",
+    "isNational": false
+  },
+  {
+    "fullName": "Sunderland",
+    "shortName": "Sunderland",
+    "oddsApiName": "Sunderland",
+    "footballDataName": "Sunderland AFC",
+    "footballDataTeamId": 71,
+    "iconUrl": "https://crests.football-data.org/71.png",
+    "country": "England",
+    "isNational": false
+  },
+  {
+    "fullName": "Tottenham Hotspur",
+    "shortName": "Tottenham",
+    "oddsApiName": "Tottenham Hotspur",
+    "footballDataName": "Tottenham Hotspur FC",
+    "footballDataTeamId": 73,
+    "iconUrl": "https://crests.football-data.org/73.png",
+    "country": "England",
+    "isNational": false
+  }
+]

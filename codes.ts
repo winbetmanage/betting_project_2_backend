@@ -1,54 +1,72 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-const BASE_URL = "https://api.the-odds-api.com/v4";
-//const BASE_URL = "http://localhost:5000/v4";
+// ============================================
+// THE ODDS API
+// ============================================
 
-const API_KEY = process.env.API_ONE;
-const REGIONS = "eu";
-const MARKETS = "h2h,totals,btts";
+const ODDS_API_BASE_URL = "https://api.the-odds-api.com/v4";
+//const ODDS_API_BASE_URL = "http://localhost:5000";
+
+const ODDS_API_KEY = process.env.API_ONE;
+const ODDS_API_REGIONS = "eu";
+const ODDS_API_MARKETS = "h2h,totals,btts";
+
+// Every market type the odds api supports for soccer
+const ODDS_API_ALL_MARKETS =
+  "h2h,spreads,totals,btts,draw_no_bet,h2h_3_way,double_chance," +
+  "alternate_spreads,alternate_totals,team_totals,alternate_team_totals," +
+  "btts_h1,double_chance_h1,h2h_h1,h2h_h2,totals_h1,totals_h2," +
+  "correct_score,correct_score_h1,halftime_fulltime,corners_1x2," +
+  "alternate_totals_corners,alternate_spreads_corners," +
+  "alternate_totals_cards,alternate_spreads_cards";
+
+// Free call - all EPL fixtures
+export const getEplEventsUrl = () =>
+  `${ODDS_API_BASE_URL}/sports/soccer_epl/events/?apiKey=${ODDS_API_KEY}`;
+
+// Free call - all Champions League fixtures
+export const getChampionsLeagueEventsUrl = () =>
+  `${ODDS_API_BASE_URL}/sports/soccer_uefa_champs_league/events/?apiKey=${ODDS_API_KEY}`;
+
+// Costs credits - single game detail (odds) for one event
+// sportKey must match whichever competition the event belongs to
+// (e.g. "soccer_epl" or "soccer_uefa_champs_league")
+export const getOddsApiEventDetailUrl = (sportKey: string, eventId: string) =>
+  `${ODDS_API_BASE_URL}/sports/${sportKey}/events/${eventId}/odds/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}&markets=${ODDS_API_MARKETS}&oddsFormat=decimal&dateFormat=iso`;
+
+// Costs credits - ALL games in a competition, with EVERY market type, EU bookmakers
+// sportKey: "soccer_epl" or "soccer_uefa_champs_league"
+// markets: optional override (defaults to the full list); pass a smaller set if the
+//          API plan rejects unsupported markets (The Odds API 422s the whole call if any
+//          requested market is not on the plan).
+// export const getAllMarketsOddsUrl = (sportKey: string, markets: string = ODDS_API_ALL_MARKETS) =>
+//   `${ODDS_API_BASE_URL}/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}&markets=${markets}&oddsFormat=decimal&dateFormat=iso`;
+
+export const getAllMarketsOddsUrl = (sportKey: string, markets: string = `${ODDS_API_ALL_MARKETS},btts,double_chance,draw_no_bet`) =>
+  `${ODDS_API_BASE_URL}/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}&markets=${markets}&oddsFormat=decimal&dateFormat=iso`;
+
+// ============================================
+// FOOTBALL-DATA.ORG
+// ============================================
 
 const FOOTBALL_DATA_BASE_URL = "https://api.football-data.org/v4";
-//const FOOTBALL_DATA_BASE_URL = "http://localhost:6000/v4";
+//const FOOTBALL_DATA_BASE_URL = "http://localhost:6060";
 
 const FOOTBALL_DATA_TOKEN = process.env.FOOTBALL_DATA_TOKEN;
-
-
-// Free call - list all sports/leagues
-export const getAllSportsUrl = () =>
-  `${BASE_URL}/sports/?apiKey=${API_KEY}`;
-
-// Free call - list fixtures for a league (no odds)
-export const getEventsUrl = (sportKey: string) =>
-  `${BASE_URL}/sports/${sportKey}/events/?apiKey=${API_KEY}`;
-
-// Costs credits - odds for all games in a league
-export const getOddsUrl = (sportKey: string) =>
-  `${BASE_URL}/sports/${sportKey}/odds/?apiKey=${API_KEY}&regions=${REGIONS}&markets=${MARKETS}&oddsFormat=decimal&dateFormat=iso`;
-
-// Costs credits - odds for one specific game
-export const getEventOddsUrl = (sportKey: string, eventId: string) =>
-  `${BASE_URL}/sports/${sportKey}/events/${eventId}/odds?apiKey=${API_KEY}&regions=${REGIONS}&markets=${MARKETS}&oddsFormat=decimal`;
-
-export const FetchEplEvents = `${BASE_URL}/sports/soccer_epl/events/?apiKey=${API_KEY}`;
-
-export const FetchEplOdds = (regions = 'uk', markets = 'h2h,totals,spreads') =>
-  `${BASE_URL}/sports/soccer_epl/odds/?apiKey=${API_KEY}&regions=${regions}&markets=${markets}`;
-
-export const FetchEplEventOdds = (eventId: string, regions = 'uk', markets = 'h2h,totals,spreads') =>
-  `${BASE_URL}/sports/soccer_epl/events/${eventId}/odds/?apiKey=${API_KEY}&regions=${regions}&markets=${markets}`;
-
-
-// Costs credits - fetches ALL available soccer/EPL market types for one game, UK bookmakers only
-// Note: some markets require the /events/{eventId}/odds endpoint (not the bulk /odds endpoint) - this const uses that endpoint
-export const FetchEplEventAllMarkets = (eventId: string) =>
-  `${BASE_URL}/sports/soccer_epl/events/${eventId}/odds/?apiKey=${API_KEY}&regions=uk&markets=h2h,spreads,totals,btts,draw_no_bet,h2h_3_way,double_chance,alternate_spreads,alternate_totals,team_totals,alternate_team_totals,btts_h1,double_chance_h1,h2h_h1,h2h_h2,totals_h1,totals_h2,correct_score,correct_score_h1,halftime_fulltime,corners_1x2,alternate_totals_corners,alternate_spreads_corners,alternate_totals_cards,alternate_spreads_cards&oddsFormat=decimal&dateFormat=iso`;
-
-
-
-export const getEplAllMatchesUrl = () =>
-  `${FOOTBALL_DATA_BASE_URL}/competitions/PL/matches`;
 
 export const footballDataFetchOptions = () => ({
   headers: { "X-Auth-Token": FOOTBALL_DATA_TOKEN ?? "" },
 });
+
+// All EPL matches
+export const getEplMatchesUrl = () =>
+  `${FOOTBALL_DATA_BASE_URL}/competitions/PL/matches`;
+
+// All Champions League matches
+export const getChampionsLeagueMatchesUrl = () =>
+  `${FOOTBALL_DATA_BASE_URL}/competitions/CL/matches`;
+
+// Single game detail
+export const getFootballDataMatchDetailUrl = (matchId: string | number) =>
+  `${FOOTBALL_DATA_BASE_URL}/matches/${matchId}`;

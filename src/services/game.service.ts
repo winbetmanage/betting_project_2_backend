@@ -21,15 +21,48 @@ export const listGames = async (filters: Record<string, unknown> = {}) => {
     if (filters.to) (where.startTime as Prisma.DateTimeFilter).lte = new Date(filters.to as string);
   }
 
-  return prisma.game.findMany({
+  const games = await prisma.game.findMany({
     where,
     include: {
       competition: { include: { sport: true } },
+      score: { select: { footballDataMatchId: true, homeScoreHT: true, awayScoreHT: true, homeScoreFT: true, awayScoreFT: true, winner: true, status: true } },
       ...(filters.include === 'markets'
         ? { markets: { include: { selections: { orderBy: { name: 'asc' as const } } } } }
         : {}),
     },
     orderBy: { startTime: 'asc' },
+  });
+
+  return games.map((g) => {
+    const spec = (g.specifications ?? {}) as Record<string, unknown>;
+    const fdMatchId = (typeof spec.footballDataMatchId === 'number' ? spec.footballDataMatchId : null) ?? g.score?.footballDataMatchId ?? null;
+    const compName = (g.competition?.name ?? '').toLowerCase();
+    const apiSportKey = typeof spec.sport_key === 'string' && spec.sport_key
+      ? spec.sport_key
+      : compName.includes('champions')
+        ? 'soccer_uefa_champs_league'
+        : compName
+          ? 'soccer_epl'
+          : null;
+    const score = g.score
+      ? {
+          footballDataMatchId: g.score.footballDataMatchId,
+          homeHT: g.score.homeScoreHT,
+          awayHT: g.score.awayScoreHT,
+          homeFT: g.score.homeScoreFT,
+          awayFT: g.score.awayScoreFT,
+          winner: g.score.winner,
+          status: g.score.status,
+        }
+      : null;
+    return {
+      ...g,
+      score,
+      footballDataMatchId: fdMatchId,
+      hasOddsApi: !!g.externalEventId,
+      hasFootballData: fdMatchId != null,
+      apiSportKey,
+    };
   });
 };
 
@@ -39,6 +72,7 @@ export const getGameById = async (id: string) => {
     include: {
       competition: { include: { sport: true } },
       markets: { include: { selections: true } },
+      score: true,
     },
   });
   if (!game) throw new ApiError(404, 'Game not found');
@@ -111,4 +145,55 @@ export const deleteGames = async (ids: unknown) => {
 
   console.log(`[game.service] deleted ${deleted} game(s): ${deletableIds.join(', ')}`);
   return { deleted, ids: deletableIds };
+};
+
+export const CLEAR_GAMES_CONFIRM_PHRASE = 'DELETE ALL GAMES';
+
+export const clearAllGameData = async ({ confirm, adminId }: { confirm?: unknown; adminId?: string }) => {
+  if (typeof confirm !== 'string' || confirm.trim() !== CLEAR_GAMES_CONFIRM_PHRASE) {
+    throw new ApiError(400, `Confirmation mismatch. Type "${CLEAR_GAMES_CONFIRM_PHRASE}" exactly to proceed.`);
+  }
+
+  const summary = await prisma.$transaction(
+    async (tx) => {
+      // Detach staged games from their confirmed Game rows so the FK clears cleanly
+      await tx.stagedGame.updateMany({ where: { gameId: { not: null } }, data: { gameId: null } });
+
+      const betSelections = await tx.betSelection.deleteMany({});
+      const bets = await tx.bet.deleteMany({});
+      const oddsHistories = await tx.oddsHistory.deleteMany({});
+      const selections = await tx.selection.deleteMany({});
+      const markets = await tx.market.deleteMany({});
+      const scores = await tx.gameScore.deleteMany({});
+      const checkpoints = await tx.oddsFetchCheckpoint.deleteMany({});
+      const games = await tx.game.deleteMany({});
+
+      const result = {
+        games: games.count,
+        markets: markets.count,
+        selections: selections.count,
+        oddsHistories: oddsHistories.count,
+        scores: scores.count,
+        checkpoints: checkpoints.count,
+        bets: bets.count,
+        betSelections: betSelections.count,
+      };
+
+      if (adminId) {
+        await tx.adminActionLog.create({
+          data: {
+            userId: adminId,
+            action: 'GAME_DATA_CLEARED',
+            targetType: 'Game',
+            metadata: result as unknown as Prisma.InputJsonValue,
+          },
+        });
+      }
+      return result;
+    },
+    { timeout: 120000, maxWait: 15000 }
+  );
+
+  console.log(`[game.service] CLEARED ALL GAME DATA: ${JSON.stringify(summary)}`);
+  return summary;
 };

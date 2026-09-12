@@ -1,10 +1,10 @@
 {
-  "id": "d09677edcf1fb82ad75a8df58bb26eab",
+  "id": "c97a93b915115f2b4659fb88262b71f8",
   "sport_key": "soccer_epl",
   "sport_title": "EPL",
-  "commence_time": "2026-09-12T14:00:00Z",
-  "home_team": "Aston Villa",
-  "away_team": "Nottingham Forest",
+  "commence_time": "2026-09-13T13:00:00Z",
+  "home_team": "Coventry City",
+  "away_team": "Brighton and Hove Albion",
   "bookmakers": [
     {
       "key": "tipico_de",
@@ -16,16 +16,16 @@
           "last_update": "2026-09-11T22:07:36Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.25
+              "name": "Brighton and Hove Albion",
+              "price": 1.85
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.3
+              "name": "Coventry City",
+              "price": 3.9
             },
             {
               "name": "Draw",
-              "price": 3.2
+              "price": 3.8
             }
           ]
         },
@@ -35,135 +35,12 @@
           "outcomes": [
             {
               "name": "Over",
-              "price": 1.87,
+              "price": 1.7,
               "point": 2.5
             },
             {
               "name": "Under",
-              "price": 1.87,
-              "point": 2.5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "winamax_fr",
-      "title": "Winamax (FR)",
-      "last_update": "2026-09-11T22:07:05Z",
-      "markets": [
-        {
-          "key": "h2h",
-          "last_update": "2026-09-11T22:07:05Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.2
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 3
-            },
-            {
-              "name": "Draw",
-              "price": 3.35
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "mybookieag",
-      "title": "MyBookie.ag",
-      "last_update": "2026-09-11T22:06:43Z",
-      "markets": [
-        {
-          "key": "h2h",
-          "last_update": "2026-09-11T22:06:43Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.28
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 3.12
-            },
-            {
-              "name": "Draw",
-              "price": 3.34
-            }
-          ]
-        },
-        {
-          "key": "spreads",
-          "last_update": "2026-09-11T22:06:43Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 1.63,
-              "point": 0
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 2.2,
-              "point": 0
-            }
-          ]
-        },
-        {
-          "key": "totals",
-          "last_update": "2026-09-11T22:06:43Z",
-          "outcomes": [
-            {
-              "name": "Over",
-              "price": 1.9,
-              "point": 2.5
-            },
-            {
-              "name": "Under",
-              "price": 1.84,
-              "point": 2.5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "codere_it",
-      "title": "Codere (IT)",
-      "last_update": "2026-09-11T22:07:02Z",
-      "markets": [
-        {
-          "key": "h2h",
-          "last_update": "2026-09-11T22:07:02Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.3
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 3.15
-            },
-            {
-              "name": "Draw",
-              "price": 3.35
-            }
-          ]
-        },
-        {
-          "key": "totals",
-          "last_update": "2026-09-11T22:07:02Z",
-          "outcomes": [
-            {
-              "name": "Over",
-              "price": 1.87,
-              "point": 2.5
-            },
-            {
-              "name": "Under",
-              "price": 1.81,
+              "price": 2.1,
               "point": 2.5
             }
           ]
@@ -173,23 +50,64 @@
     {
       "key": "unibet_fr",
       "title": "Unibet (FR)",
-      "last_update": "2026-09-11T22:07:04Z",
+      "last_update": "2026-09-11T22:08:09Z",
       "markets": [
         {
           "key": "h2h",
-          "last_update": "2026-09-11T22:07:04Z",
+          "last_update": "2026-09-11T22:08:09Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.15
+              "name": "Brighton and Hove Albion",
+              "price": 1.83
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.1
+              "name": "Coventry City",
+              "price": 3.8
             },
             {
               "name": "Draw",
-              "price": 3.3
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "last_update": "2026-09-11T22:08:10Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-11T22:08:10Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.91
+            },
+            {
+              "name": "Coventry City",
+              "price": 3.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-11T22:08:10Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.69,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2,
+              "point": 2.5
             }
           ]
         }
@@ -205,16 +123,41 @@
           "last_update": "2026-09-11T22:06:10Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.25
+              "name": "Brighton and Hove Albion",
+              "price": 1.86
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.05
+              "name": "Coventry City",
+              "price": 3.75
             },
             {
               "name": "Draw",
-              "price": 3.4
+              "price": 3.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "last_update": "2026-09-11T22:08:10Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-11T22:08:10Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.82
+            },
+            {
+              "name": "Coventry City",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
             }
           ]
         }
@@ -223,23 +166,80 @@
     {
       "key": "betclic_fr",
       "title": "Betclic (FR)",
-      "last_update": "2026-09-11T22:05:35Z",
+      "last_update": "2026-09-11T22:08:22Z",
       "markets": [
         {
           "key": "h2h",
-          "last_update": "2026-09-11T22:05:35Z",
+          "last_update": "2026-09-11T22:08:22Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.18
+              "name": "Brighton and Hove Albion",
+              "price": 1.83
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.1
+              "name": "Coventry City",
+              "price": 3.83
             },
             {
               "name": "Draw",
-              "price": 3.32
+              "price": 3.68
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mybookieag",
+      "title": "MyBookie.ag",
+      "last_update": "2026-09-11T22:06:43Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-11T22:06:43Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.87
+            },
+            {
+              "name": "Coventry City",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-11T22:06:43Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.85,
+              "point": -0.5
+            },
+            {
+              "name": "Coventry City",
+              "price": 1.86,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-11T22:06:43Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.71,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.02,
+              "point": 2.5
             }
           ]
         }
@@ -255,41 +255,16 @@
           "last_update": "2026-09-11T22:07:06Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.33
+              "name": "Brighton and Hove Albion",
+              "price": 1.89
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.22
-            },
-            {
-              "name": "Draw",
-              "price": 3.42
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "sport888",
-      "title": "888sport",
-      "last_update": "2026-09-11T22:07:01Z",
-      "markets": [
-        {
-          "key": "h2h",
-          "last_update": "2026-09-11T22:07:01Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.25
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 3.1
+              "name": "Coventry City",
+              "price": 4.15
             },
             {
               "name": "Draw",
-              "price": 3.25
+              "price": 3.82
             }
           ]
         }
@@ -305,16 +280,16 @@
           "last_update": "2026-09-11T22:07:36Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.36
+              "name": "Brighton and Hove Albion",
+              "price": 1.92
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.27
+              "name": "Coventry City",
+              "price": 4.21
             },
             {
               "name": "Draw",
-              "price": 3.5
+              "price": 3.88
             }
           ]
         },
@@ -323,13 +298,13 @@
           "last_update": "2026-09-11T22:07:36Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 1.7,
+              "name": "Brighton and Hove Albion",
+              "price": 1.39,
               "point": 0
             },
             {
-              "name": "Nottingham Forest",
-              "price": 2.34,
+              "name": "Coventry City",
+              "price": 3.41,
               "point": 0
             }
           ]
@@ -340,13 +315,38 @@
           "outcomes": [
             {
               "name": "Over",
-              "price": 2.03,
+              "price": 1.83,
               "point": 2.5
             },
             {
               "name": "Under",
-              "price": 1.91,
+              "price": 2.14,
               "point": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "last_update": "2026-09-11T22:08:09Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-11T22:08:09Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.85
+            },
+            {
+              "name": "Coventry City",
+              "price": 3.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
             }
           ]
         }
@@ -359,34 +359,34 @@
       "markets": [
         {
           "key": "h2h",
-          "last_update": "2026-09-11T22:07:35Z",
+          "last_update": "2026-09-11T22:07:36Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.25
+              "name": "Brighton and Hove Albion",
+              "price": 1.85
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.1
+              "name": "Coventry City",
+              "price": 3.9
             },
             {
               "name": "Draw",
-              "price": 3.25
+              "price": 3.6
             }
           ]
         },
         {
           "key": "totals",
-          "last_update": "2026-09-11T22:07:35Z",
+          "last_update": "2026-09-11T22:07:36Z",
           "outcomes": [
             {
               "name": "Over",
-              "price": 1.95,
+              "price": 1.73,
               "point": 2.5
             },
             {
               "name": "Under",
-              "price": 1.83,
+              "price": 2.05,
               "point": 2.5
             }
           ]
@@ -396,41 +396,41 @@
     {
       "key": "betfair_ex_eu",
       "title": "Betfair",
-      "last_update": "2026-09-11T22:07:36Z",
+      "last_update": "2026-09-11T22:08:08Z",
       "markets": [
         {
           "key": "h2h",
-          "last_update": "2026-09-11T22:07:36Z",
+          "last_update": "2026-09-11T22:08:08Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.36
+              "name": "Brighton and Hove Albion",
+              "price": 1.97
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.4
+              "name": "Coventry City",
+              "price": 4.1
             },
             {
               "name": "Draw",
-              "price": 3.45
+              "price": 3.95
             }
           ]
         },
         {
           "key": "h2h_lay",
-          "last_update": "2026-09-11T22:07:36Z",
+          "last_update": "2026-09-11T22:08:08Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.38
+              "name": "Brighton and Hove Albion",
+              "price": 1.98
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.45
+              "name": "Coventry City",
+              "price": 4.2
             },
             {
               "name": "Draw",
-              "price": 3.5
+              "price": 4
             }
           ]
         }
@@ -446,16 +446,16 @@
           "last_update": "2026-09-11T22:08:06Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.33
+              "name": "Brighton and Hove Albion",
+              "price": 1.9
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.18
+              "name": "Coventry City",
+              "price": 4.08
             },
             {
               "name": "Draw",
-              "price": 3.46
+              "price": 3.81
             }
           ]
         },
@@ -464,14 +464,14 @@
           "last_update": "2026-09-11T22:08:06Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.01,
-              "point": -0.25
+              "name": "Brighton and Hove Albion",
+              "price": 1.91,
+              "point": -0.5
             },
             {
-              "name": "Nottingham Forest",
-              "price": 1.89,
-              "point": 0.25
+              "name": "Coventry City",
+              "price": 2,
+              "point": 0.5
             }
           ]
         },
@@ -481,13 +481,13 @@
           "outcomes": [
             {
               "name": "Over",
-              "price": 2.04,
-              "point": 2.5
+              "price": 1.99,
+              "point": 2.75
             },
             {
               "name": "Under",
-              "price": 1.85,
-              "point": 2.5
+              "price": 1.89,
+              "point": 2.75
             }
           ]
         }
@@ -503,16 +503,16 @@
           "last_update": "2026-09-11T22:07:38Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.23
+              "name": "Brighton and Hove Albion",
+              "price": 1.83
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.1
+              "name": "Coventry City",
+              "price": 4
             },
             {
               "name": "Draw",
-              "price": 3.35
+              "price": 3.6
             }
           ]
         },
@@ -522,12 +522,12 @@
           "outcomes": [
             {
               "name": "Over",
-              "price": 1.82,
+              "price": 1.67,
               "point": 2.5
             },
             {
               "name": "Under",
-              "price": 1.74,
+              "price": 1.89,
               "point": 2.5
             }
           ]
@@ -544,16 +544,16 @@
           "last_update": "2026-09-11T22:07:38Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.3
+              "name": "Brighton and Hove Albion",
+              "price": 1.89
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.25
+              "name": "Coventry City",
+              "price": 4.3
             },
             {
               "name": "Draw",
-              "price": 3.5
+              "price": 3.8
             }
           ]
         },
@@ -563,12 +563,12 @@
           "outcomes": [
             {
               "name": "Over",
-              "price": 1.95,
+              "price": 1.79,
               "point": 2.5
             },
             {
               "name": "Under",
-              "price": 1.87,
+              "price": 2.04,
               "point": 2.5
             }
           ]
@@ -585,16 +585,16 @@
           "last_update": "2026-09-11T22:08:07Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.25
+              "name": "Brighton and Hove Albion",
+              "price": 1.85
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.15
+              "name": "Coventry City",
+              "price": 4.1
             },
             {
               "name": "Draw",
-              "price": 3.4
+              "price": 3.65
             }
           ]
         },
@@ -604,12 +604,12 @@
           "outcomes": [
             {
               "name": "Over",
-              "price": 1.95,
+              "price": 1.79,
               "point": 2.5
             },
             {
               "name": "Under",
-              "price": 1.87,
+              "price": 2.04,
               "point": 2.5
             }
           ]
@@ -626,16 +626,16 @@
           "last_update": "2026-09-11T22:07:36Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.3
+              "name": "Brighton and Hove Albion",
+              "price": 1.89
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.25
+              "name": "Coventry City",
+              "price": 4.3
             },
             {
               "name": "Draw",
-              "price": 3.5
+              "price": 3.8
             }
           ]
         },
@@ -645,53 +645,12 @@
           "outcomes": [
             {
               "name": "Over",
-              "price": 1.93,
+              "price": 1.78,
               "point": 2.5
             },
             {
               "name": "Under",
-              "price": 1.83,
-              "point": 2.5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "betsson",
-      "title": "Betsson",
-      "last_update": "2026-09-11T22:07:36Z",
-      "markets": [
-        {
-          "key": "h2h",
-          "last_update": "2026-09-11T22:07:36Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.28
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 3.2
-            },
-            {
-              "name": "Draw",
-              "price": 3.35
-            }
-          ]
-        },
-        {
-          "key": "totals",
-          "last_update": "2026-09-11T22:07:36Z",
-          "outcomes": [
-            {
-              "name": "Over",
-              "price": 1.95,
-              "point": 2.5
-            },
-            {
-              "name": "Under",
-              "price": 1.85,
+              "price": 2.02,
               "point": 2.5
             }
           ]
@@ -708,16 +667,16 @@
           "last_update": "2026-09-11T22:07:42Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.28
+              "name": "Brighton and Hove Albion",
+              "price": 1.88
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.2
+              "name": "Coventry City",
+              "price": 4.1
             },
             {
               "name": "Draw",
-              "price": 3.35
+              "price": 3.6
             }
           ]
         },
@@ -727,12 +686,12 @@
           "outcomes": [
             {
               "name": "Over",
-              "price": 1.95,
+              "price": 1.75,
               "point": 2.5
             },
             {
               "name": "Under",
-              "price": 1.85,
+              "price": 2.08,
               "point": 2.5
             }
           ]
@@ -740,188 +699,40 @@
       ]
     },
     {
-      "key": "matchbook",
-      "title": "Matchbook",
-      "last_update": "2026-09-11T22:08:06Z",
+      "key": "betsson",
+      "title": "Betsson",
+      "last_update": "2026-09-11T22:07:36Z",
       "markets": [
         {
           "key": "h2h",
-          "last_update": "2026-09-11T22:08:06Z",
+          "last_update": "2026-09-11T22:07:36Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.36
+              "name": "Brighton and Hove Albion",
+              "price": 1.88
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.4
+              "name": "Coventry City",
+              "price": 4.1
             },
             {
               "name": "Draw",
-              "price": 3.45
-            }
-          ]
-        },
-        {
-          "key": "h2h_lay",
-          "last_update": "2026-09-11T22:08:06Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.38
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 3.45
-            },
-            {
-              "name": "Draw",
-              "price": 3.55
-            }
-          ]
-        },
-        {
-          "key": "spreads",
-          "last_update": "2026-09-11T22:08:06Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.02,
-              "point": -0.25
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 1.96,
-              "point": 0.25
+              "price": 3.6
             }
           ]
         },
         {
           "key": "totals",
-          "last_update": "2026-09-11T22:08:06Z",
+          "last_update": "2026-09-11T22:07:36Z",
           "outcomes": [
             {
               "name": "Over",
-              "price": 2.06,
+              "price": 1.75,
               "point": 2.5
             },
             {
               "name": "Under",
-              "price": 1.91,
-              "point": 2.5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "gtbets",
-      "title": "GTbets",
-      "last_update": "2026-09-11T22:07:35Z",
-      "markets": [
-        {
-          "key": "h2h",
-          "last_update": "2026-09-11T22:07:35Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.2
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 3.23
-            },
-            {
-              "name": "Draw",
-              "price": 3.39
-            }
-          ]
-        },
-        {
-          "key": "spreads",
-          "last_update": "2026-09-11T22:07:35Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.21,
-              "point": -0.5
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 1.65,
-              "point": 0.5
-            }
-          ]
-        },
-        {
-          "key": "totals",
-          "last_update": "2026-09-11T22:07:35Z",
-          "outcomes": [
-            {
-              "name": "Over",
-              "price": 1.96,
-              "point": 2.5
-            },
-            {
-              "name": "Under",
-              "price": 1.81,
-              "point": 2.5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "betonlineag",
-      "title": "BetOnline.ag",
-      "last_update": "2026-09-11T22:07:06Z",
-      "markets": [
-        {
-          "key": "h2h",
-          "last_update": "2026-09-11T22:07:06Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.32
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 3.17
-            },
-            {
-              "name": "Draw",
-              "price": 3.46
-            }
-          ]
-        },
-        {
-          "key": "spreads",
-          "last_update": "2026-09-11T22:07:06Z",
-          "outcomes": [
-            {
-              "name": "Aston Villa",
-              "price": 2.32,
-              "point": -0.5
-            },
-            {
-              "name": "Nottingham Forest",
-              "price": 1.63,
-              "point": 0.5
-            }
-          ]
-        },
-        {
-          "key": "totals",
-          "last_update": "2026-09-11T22:07:06Z",
-          "outcomes": [
-            {
-              "name": "Over",
-              "price": 2,
-              "point": 2.5
-            },
-            {
-              "name": "Under",
-              "price": 1.83,
+              "price": 2.08,
               "point": 2.5
             }
           ]
@@ -938,16 +749,16 @@
           "last_update": "2026-09-11T22:01:50Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.2
+              "name": "Brighton and Hove Albion",
+              "price": 1.83
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3
+              "name": "Coventry City",
+              "price": 3.85
             },
             {
               "name": "Draw",
-              "price": 3.3
+              "price": 3.6
             }
           ]
         }
@@ -963,16 +774,16 @@
           "last_update": "2026-09-11T22:08:07Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.34
+              "name": "Brighton and Hove Albion",
+              "price": 1.92
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.3
+              "name": "Coventry City",
+              "price": 4.12
             },
             {
               "name": "Draw",
-              "price": 3.44
+              "price": 3.88
             }
           ]
         },
@@ -981,13 +792,13 @@
           "last_update": "2026-09-11T22:08:07Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 3.65,
+              "name": "Brighton and Hove Albion",
+              "price": 2.63,
               "point": -1
             },
             {
-              "name": "Nottingham Forest",
-              "price": 1.31,
+              "name": "Coventry City",
+              "price": 1.53,
               "point": 1
             }
           ]
@@ -998,12 +809,185 @@
           "outcomes": [
             {
               "name": "Over",
-              "price": 1.98,
+              "price": 1.78,
               "point": 2.5
             },
             {
               "name": "Under",
+              "price": 2.12,
+              "point": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matchbook",
+      "title": "Matchbook",
+      "last_update": "2026-09-11T22:08:06Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-11T22:08:06Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.97
+            },
+            {
+              "name": "Coventry City",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.95
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-09-11T22:08:06Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.98
+            },
+            {
+              "name": "Coventry City",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-11T22:08:06Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.97,
+              "point": -0.5
+            },
+            {
+              "name": "Coventry City",
+              "price": 2.02,
+              "point": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gtbets",
+      "title": "GTbets",
+      "last_update": "2026-09-11T22:07:35Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-11T22:07:35Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.8
+            },
+            {
+              "name": "Coventry City",
+              "price": 4.14
+            },
+            {
+              "name": "Draw",
+              "price": 3.77
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-11T22:07:35Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.85,
+              "point": -0.5
+            },
+            {
+              "name": "Coventry City",
+              "price": 1.93,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-11T22:07:35Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.77,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.02,
+              "point": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betonlineag",
+      "title": "BetOnline.ag",
+      "last_update": "2026-09-11T22:07:06Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-11T22:07:06Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
+              "price": 1.89
+            },
+            {
+              "name": "Coventry City",
+              "price": 4.09
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-11T22:07:06Z",
+          "outcomes": [
+            {
+              "name": "Brighton and Hove Albion",
               "price": 1.89,
+              "point": -0.5
+            },
+            {
+              "name": "Coventry City",
+              "price": 1.94,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-11T22:07:06Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.77,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.06,
               "point": 2.5
             }
           ]
@@ -1020,16 +1004,16 @@
           "last_update": "2026-09-11T22:07:35Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 2.32
+              "name": "Brighton and Hove Albion",
+              "price": 1.88
             },
             {
-              "name": "Nottingham Forest",
-              "price": 3.17
+              "name": "Coventry City",
+              "price": 4
             },
             {
               "name": "Draw",
-              "price": 3.46
+              "price": 3.75
             }
           ]
         },
@@ -1038,14 +1022,14 @@
           "last_update": "2026-09-11T22:07:35Z",
           "outcomes": [
             {
-              "name": "Aston Villa",
-              "price": 1.95,
-              "point": -0.25
+              "name": "Brighton and Hove Albion",
+              "price": 1.87,
+              "point": -0.5
             },
             {
-              "name": "Nottingham Forest",
-              "price": 1.87,
-              "point": 0.25
+              "name": "Coventry City",
+              "price": 1.95,
+              "point": 0.5
             }
           ]
         },
@@ -1055,12 +1039,12 @@
           "outcomes": [
             {
               "name": "Over",
-              "price": 2,
+              "price": 1.78,
               "point": 2.5
             },
             {
               "name": "Under",
-              "price": 1.83,
+              "price": 2.08,
               "point": 2.5
             }
           ]

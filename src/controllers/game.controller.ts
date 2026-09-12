@@ -31,3 +31,11 @@ export const removeBulk = asyncHandler(async (req, res) => {
   const result = await gameService.deleteGames((req.body as { ids?: unknown }).ids);
   res.json({ message: `Deleted ${result.deleted} game(s)`, data: result });
 });
+
+export const clearAllGamesData = asyncHandler(async (req, res) => {
+  const result = await gameService.clearAllGameData({
+    confirm: (req.body as { confirm?: unknown }).confirm,
+    adminId: req.user?.id,
+  });
+  res.json({ message: `Cleared all game data (${result.games} game(s) deleted)`, data: result });
+});

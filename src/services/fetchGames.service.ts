@@ -1,6 +1,6 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
-import { FetchEplEvents } from '../../codes';
+import { getEplEventsUrl } from '../../codes';
 import * as eplGameOdds from './eplGameOdds.service';
 
 type EplEvent = {
@@ -19,10 +19,11 @@ export const fetchEplEvents = async (force = false): Promise<EplEvent[]> => {
   if (!force && cache && Date.now() - cache.fetchedAt < CACHE_TTL) {
     return cache.data;
   }
-  if (!FetchEplEvents.includes('apiKey=') || FetchEplEvents.includes('apiKey=undefined')) {
+  const url = getEplEventsUrl();
+  if (!url.includes('apiKey=') || url.includes('apiKey=undefined')) {
     throw new ApiError(500, 'API key not configured (API_ONE)');
   }
-  const res = await fetch(FetchEplEvents);
+  const res = await fetch(url);
   if (!res.ok) {
     const text = await res.text().catch(() => '');
     throw new ApiError(res.status, `Failed to fetch EPL events: ${res.status} ${text.slice(0, 300)}`);

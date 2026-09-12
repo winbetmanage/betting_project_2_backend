@@ -163,6 +163,30 @@ export async function rejectRequest(requestId: string, adminId: string, reason: 
   }, TX_OPTIONS);
 }
 
+export async function completeWithdrawal(requestId: string, adminId: string, data: { transactionId: string; completionProofImagePath?: string }) {
+  const req = await prisma.fundRequest.findUnique({ where: { id: requestId } });
+  if (!req) throw new ApiError(404, 'Request not found');
+  if (req.type !== 'WITHDRAWAL') throw new ApiError(400, 'Only withdrawal requests can be marked completed');
+  if (req.status !== 'APPROVED') throw new ApiError(400, 'Request must be approved before it can be marked completed');
+
+  const txId = (data.transactionId ?? '').trim();
+  if (!txId) throw new ApiError(400, 'Transaction ID is required to mark a withdrawal completed');
+
+  return prisma.fundRequest.update({
+    where: { id: requestId },
+    data: {
+      transactionId: txId.slice(0, 100),
+      completedAt: new Date(),
+      reviewedById: adminId,
+      ...(data.completionProofImagePath ? { completionProofImagePath: data.completionProofImagePath } : {}),
+    },
+    include: {
+      user: { select: { id: true, email: true, name: true } },
+      reviewedBy: { select: { id: true, email: true, name: true } },
+    },
+  });
+}
+
 export async function cancelRequest(requestId: string, userId: string) {
   return prisma.$transaction(async (tx) => {
     const req = await tx.fundRequest.findUnique({ where: { id: requestId } });

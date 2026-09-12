@@ -15,6 +15,9 @@ generator client {
 // ENUMS
 // ============================================
 
+
+
+
 enum Role {
   USER
   ADMIN
@@ -68,6 +71,12 @@ enum BetStatus {
   CASHED_OUT
 }
 
+enum PayoutStatus {
+  PENDING     // not paid out yet
+  SUBMITTED   // admin queued/submitted the payout
+  PAID        // money transferred to the user
+}
+
 enum BetType {
   SINGLE
   MULTIPLE    // parlay/accumulator
@@ -119,6 +128,10 @@ model User {
   heldBalance   Decimal  @default(0) @db.Decimal(12, 2) // locked by pending withdrawals
   isActive      Boolean  @default(true)
 
+  payoutAccountType     String?   // e.g. "BANK", "TELEBIRR", "CBE_BIRR"
+  payoutAccountNumber   String?
+  payoutAccountUsername String?   // account holder name on the receiving end
+
   // Kept for later, unused for now
   emailVerified Boolean  @default(false)
 
@@ -149,6 +162,9 @@ model User {
 
 fundRequests         FundRequest[] @relation("UserFundRequests")
 fundRequestsReviewed FundRequest[] @relation("FundRequestReviewer")
+
+ stagedGamesStaged   StagedGame[] @relation("StagedGameStagedBy")
+  stagedGamesReviewed StagedGame[] @relation("StagedGameReviewedBy")
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -210,6 +226,11 @@ model FundRequest {
   reviewedBy      User?     @relation("FundRequestReviewer", fields: [reviewedById], references: [id])
   reviewedAt      DateTime?
   rejectionReason String?
+
+ // --- Withdrawal completion (filled by admin once paid) ---
+  completionProofImagePath String?   // admin's screenshot of the completed transfer
+  transactionId            String?   // bank/mobile-money tx reference, set once completed
+  completedAt              DateTime?
 
   transaction Transaction?  // set once approved — the resulting ledger entry
 
@@ -273,6 +294,15 @@ model Device {
   @@index([userId])
   @@index([ipAddress])
 }
+
+
+
+
+
+
+
+
+
 // ============================================
 // AUTH / REFRESH TOKENS
 // ============================================
@@ -339,7 +369,7 @@ model Competition {
   country String?
   sportId String
   sport   Sport  @relation(fields: [sportId], references: [id])
-
+ stagedGames StagedGame[]
   games          Game[]
   outrightMarkets Market[] @relation("CompetitionOutrights")
 
@@ -348,6 +378,91 @@ model Competition {
   @@index([sportId])
 }
 
+
+model Team{
+  id String @id @default(cuid())
+  oddsApiName        String? @unique // exact name string from The Odds API
+  footballDataName   String? @unique // exact name string from football-data.org
+  footballDataTeamId Int?    @unique // stable numeric team id football-data.org provides
+    fullName   String  // canonical display name, e.g. "Manchester United"
+  shortName  String?
+  iconUrl    String? // crest/logo image URL
+  country    String?
+  isNational Boolean @default(false)
+  homeGames Game[] @relation("HomeTeam")
+  awayGames Game[] @relation("AwayTeam")
+
+    stagedGamesAsHome StagedGame[] @relation("StagedGameHomeTeam")
+  stagedGamesAsAway StagedGame[] @relation("StagedGameAwayTeam")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+@@index([country])
+}
+
+enum StagedGameStatus {
+  PENDING            // staged, awaiting admin confirmation
+  MATCH_NOT_FOUND    // no matching football-data fixture found yet for this odds-api event
+  CONFIRMED          // admin approved — added to Game
+  REJECTED           // admin determined this isn't a valid/wanted match
+}
+
+enum FootballDataMatchStatus {
+  SCHEDULED
+  TIMED
+  IN_PLAY
+  PAUSED
+  FINISHED
+  POSTPONED
+  SUSPENDED
+  CANCELLED
+  AWARDED
+}
+
+
+model StagedGame {
+  id String @id @default(cuid())
+
+  // --- The Odds API side ---
+  oddsApiEventId   String    @unique
+  oddsApiStartTime DateTime
+  oddsApiRaw       Json      // full event payload as fetched, for admin review
+
+  // --- football-data.org side (nullable until a match is found) ---
+  footballDataMatchId  Int?      @unique
+  footballDataStartTime DateTime?
+  footballDataRaw      Json?     // full match payload as fetched, once matched
+  footballDataStatus   FootballDataMatchStatus?
+
+  // --- resolved teams (via your Team table, not raw strings) ---
+  homeTeamId String
+  homeTeam   Team   @relation("StagedGameHomeTeam", fields: [homeTeamId], references: [id])
+  awayTeamId String
+  awayTeam   Team   @relation("StagedGameAwayTeam", fields: [awayTeamId], references: [id])
+
+  competitionId String
+  competition   Competition @relation(fields: [competitionId], references: [id])
+
+  status StagedGameStatus @default(PENDING)
+
+  stagedById    String?    // admin who selected it from the odds-api list
+  stagedBy      User?      @relation("StagedGameStagedBy", fields: [stagedById], references: [id])
+  reviewedById  String?    // admin who confirmed/rejected it
+  reviewedBy    User?      @relation("StagedGameReviewedBy", fields: [reviewedById], references: [id])
+  reviewedAt    DateTime?
+  rejectionReason String?
+
+  gameId String? @unique // set once confirmed — the resulting Game record
+  game   Game?   @relation(fields: [gameId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([homeTeamId, awayTeamId])
+}
+
+
 model Game {
   id            String      @id @default(cuid())
   competitionId String
@@ -355,11 +470,19 @@ model Game {
   externalEventId String?     @unique
   homeTeam  String
   awayTeam  String
+  stagedGame StagedGame? 
   startTime DateTime
   status    GameStatus @default(SCHEDULED)
  score  GameScore?
   // Flexible bucket for sport-specific info without new tables per sport
   // e.g. { "period": "2H", "clock": "63:00", "score": { "home": 1, "away": 0 } }
+
+
+   homeTeamId  String?
+  awayTeamId  String?
+  homeTeamRef Team?   @relation("HomeTeam", fields: [homeTeamId], references: [id])
+  awayTeamRef Team?   @relation("AwayTeam", fields: [awayTeamId], references: [id])
+
   specifications Json?
  isPublished Boolean @default(false)
   markets Market[]
@@ -374,6 +497,12 @@ checkpoints OddsFetchCheckpoint[]
   @@index([isPublished])
 }
 
+enum ScoreDuration {
+  REGULAR
+  EXTRA_TIME
+  PENALTIES
+}
+
 
 model GameScore {
   id                  String   @id @default(cuid())
@@ -382,15 +511,30 @@ model GameScore {
 
   footballDataMatchId Int      @unique
 
+  winner   String?       // "HOME_TEAM" | "AWAY_TEAM" | "DRAW"
+  duration ScoreDuration @default(REGULAR)
+
   homeScoreHT         Int
   awayScoreHT         Int
-  homeScoreFT         Int
-  awayScoreFT         Int
-  winner              String?  // "HOME_TEAM" | "AWAY_TEAM" | "DRAW"
-  status              String   // e.g. "FINISHED"
 
-  fetchedAt           DateTime @default(now())
-  rawJsonPath         String   // e.g. "epl_games_scores/<matchId>.json"
+  // 90-minute score — settle standard markets (1X2, totals, BTTS) on THIS,
+  // not fullTime, once duration != REGULAR
+  homeScoreRegularTime Int?
+  awayScoreRegularTime Int?
+
+  homeScoreFT         Int   // final score as reported (includes ET/pens if applicable)
+  awayScoreFT         Int
+
+  homeScoreExtraTime  Int?  // set only if duration is EXTRA_TIME or PENALTIES
+  awayScoreExtraTime  Int?
+
+  homeScorePenalties  Int?  // set only if duration is PENALTIES
+  awayScorePenalties  Int?
+
+  status  String // raw status at fetch time, e.g. "FINISHED"
+  rawJson Json?  // full API response snapshot, for audit/debugging
+
+  fetchedAt DateTime @default(now())
 
   @@index([footballDataMatchId])
 }
@@ -514,6 +658,9 @@ model Bet {
   totalOdds       Decimal   @db.Decimal(10, 3) // combined odds at placement
   potentialPayout Decimal   @db.Decimal(12, 2)
   status          BetStatus @default(PENDING)
+  payoutStatus    PayoutStatus @default(PENDING)
+  settledPayout   Decimal    @default(0) @db.Decimal(12, 2)
+  paidOutAt       DateTime?
 
   selections BetSelection[]
 
@@ -522,6 +669,7 @@ model Bet {
 
   @@index([userId])
   @@index([status])
+  @@index([payoutStatus])
 }
 
 // Join table: a bet can contain multiple selections (parlay),

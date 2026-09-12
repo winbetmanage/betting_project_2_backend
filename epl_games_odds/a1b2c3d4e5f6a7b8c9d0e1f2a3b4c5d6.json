@@ -1,0 +1,316 @@
+{
+  "id": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+  "sport_key": "soccer_epl",
+  "sport_title": "EPL",
+  "commence_time": "2026-09-16T13:33:05.612Z",
+  "home_team": "Liverpool",
+  "away_team": "Fulham",
+  "bookmakers": [
+    {
+      "key": "leovegas",
+      "title": "LeoVegas",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 2.2
+            },
+            {
+              "name": "Fulham",
+              "price": 3.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.85,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.9,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Home or Draw",
+              "price": 1.35
+            },
+            {
+              "name": "Away or Draw",
+              "price": 1.65
+            },
+            {
+              "name": "Home or Away",
+              "price": 1.3
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 1.6
+            },
+            {
+              "name": "Fulham",
+              "price": 2.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfred_uk",
+      "title": "Betfred (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 2.2501255559473914
+            },
+            {
+              "name": "Fulham",
+              "price": 3.1942729306668443
+            },
+            {
+              "name": "Draw",
+              "price": 3.211027818045106
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.85,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.9,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_uk",
+      "title": "Unibet (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 2.1484270285153464
+            },
+            {
+              "name": "Fulham",
+              "price": 3.157142090310393
+            },
+            {
+              "name": "Draw",
+              "price": 3.3377276246036396
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Home or Draw",
+              "price": 1.35
+            },
+            {
+              "name": "Away or Draw",
+              "price": 1.65
+            },
+            {
+              "name": "Home or Away",
+              "price": 1.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "skybet",
+      "title": "Sky Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 2.2382925574211754
+            },
+            {
+              "name": "Fulham",
+              "price": 3.0600142091443225
+            },
+            {
+              "name": "Draw",
+              "price": 3.2489159334377837
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 1.6
+            },
+            {
+              "name": "Fulham",
+              "price": 2.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "paddypower",
+      "title": "Paddy Power",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 2.212466222634387
+            },
+            {
+              "name": "Fulham",
+              "price": 3.1457958494599048
+            },
+            {
+              "name": "Draw",
+              "price": 3.2901511674798405
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.85,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.9,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Home or Draw",
+              "price": 1.35
+            },
+            {
+              "name": "Away or Draw",
+              "price": 1.65
+            },
+            {
+              "name": "Home or Away",
+              "price": 1.3
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-09-12T06:20:43.394Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 1.6
+            },
+            {
+              "name": "Fulham",
+              "price": 2.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,957 @@
+{
+  "id": "548baa1054bef3f3c9f830d99280eefe",
+  "sport_key": "soccer_uefa_champs_league",
+  "sport_title": "UEFA Champions League",
+  "commence_time": "2026-09-10T16:45:00Z",
+  "home_team": "Fenerbahce",
+  "away_team": "AS Roma",
+  "bookmakers": [
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "last_update": "2026-09-10T16:01:08Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:08Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.98
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.84
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "last_update": "2026-09-10T16:01:32Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:32Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 2.01
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.81
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-10T16:01:32Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.49,
+              "point": 0
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 2.89,
+              "point": 0
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:32Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.45,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.65,
+              "point": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "last_update": "2026-09-10T16:01:57Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:57Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.97
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.96
+            },
+            {
+              "name": "Draw",
+              "price": 3.72
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-10T16:01:57Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.98,
+              "point": -0.5
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 1.94,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:57Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.93,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.98,
+              "point": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "last_update": "2026-09-10T16:02:01Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:02:01Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.99
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.95
+            },
+            {
+              "name": "Draw",
+              "price": 3.73
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-10T16:02:01Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 2.69,
+              "point": -1
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 1.51,
+              "point": 1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:02:01Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.91,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.96,
+              "point": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gtbets",
+      "title": "GTbets",
+      "last_update": "2026-09-10T16:02:00Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:02:00Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 2
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.68
+            },
+            {
+              "name": "Draw",
+              "price": 3.59
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-10T16:02:00Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.92,
+              "point": -0.5
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 1.86,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:02:00Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.35,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.58,
+              "point": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "last_update": "2026-09-10T16:01:59Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:59Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.9
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "last_update": "2026-09-10T16:01:59Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:59Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.96
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:59Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.23,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.56,
+              "point": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "last_update": "2026-09-10T16:01:31Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:31Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.9
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "last_update": "2026-09-10T16:01:58Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:58Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 2
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-09-10T16:01:58Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 2.02
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "last_update": "2026-09-10T16:00:02Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:00:02Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.91
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "suprabets",
+      "title": "Suprabets",
+      "last_update": "2026-09-10T15:56:37Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T15:56:37Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.98
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.66
+            },
+            {
+              "name": "Draw",
+              "price": 3.62
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "last_update": "2026-09-10T16:01:30Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:30Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.95
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "last_update": "2026-09-10T16:01:31Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:31Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.91
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:31Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.16,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.51,
+              "point": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "last_update": "2026-09-10T16:01:31Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:31Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.96
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.95
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:31Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.33,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.62,
+              "point": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "last_update": "2026-09-10T16:01:32Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:32Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.91
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:32Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.33,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.62,
+              "point": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "last_update": "2026-09-10T16:01:32Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:32Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.96
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.95
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:32Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.32,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.61,
+              "point": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "last_update": "2026-09-10T16:02:00Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:02:00Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.88
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "last_update": "2026-09-10T16:01:32Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:32Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.95
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:32Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.55,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.4,
+              "point": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "last_update": "2026-09-10T16:01:32Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:31Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.98
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.8
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:31Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.55,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.42,
+              "point": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "last_update": "2026-09-10T16:01:31Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:31Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.98
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 3.8
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:31Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.55,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.42,
+              "point": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matchbook",
+      "title": "Matchbook",
+      "last_update": "2026-09-10T16:01:58Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:58Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.99
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-09-10T16:01:58Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 2.02
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-10T16:01:58Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.98,
+              "point": -0.5
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 2,
+              "point": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betonlineag",
+      "title": "BetOnline.ag",
+      "last_update": "2026-09-10T16:01:57Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:57Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.93
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 4.08
+            },
+            {
+              "name": "Draw",
+              "price": 3.69
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-10T16:01:57Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.93,
+              "point": -0.5
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 1.96,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:57Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.91,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.96,
+              "point": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betanysports",
+      "title": "BetAnything",
+      "last_update": "2026-09-10T16:01:57Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-10T16:01:57Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 1.93
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 4.08
+            },
+            {
+              "name": "Draw",
+              "price": 3.69
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-10T16:01:57Z",
+          "outcomes": [
+            {
+              "name": "AS Roma",
+              "price": 2.12,
+              "point": -0.5
+            },
+            {
+              "name": "Fenerbahce",
+              "price": 1.76,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-10T16:01:57Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.97,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.85,
+              "point": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

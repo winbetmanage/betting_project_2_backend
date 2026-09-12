@@ -17,8 +17,10 @@ router.get('/admin/requests', authenticate, authorize('ADMIN'), fundRequestContr
 router.get('/admin/requests/:id', authenticate, authorize('ADMIN'), fundRequestController.adminGetById);
 router.post('/admin/requests/:id/approve', authenticate, authorize('ADMIN'), fundRequestController.adminApprove);
 router.post('/admin/requests/:id/reject', authenticate, authorize('ADMIN'), fundRequestController.adminReject);
+router.patch('/admin/requests/:id/complete', authenticate, authorize('ADMIN'), fundRequestUpload.single('completionProof'), fundRequestController.adminComplete);
 
-// Proof image (owner or admin)
+// Proof images (owner or admin)
 router.get('/requests/:id/proof', authenticate, fundRequestController.getProofImage);
+router.get('/requests/:id/completion-proof', authenticate, fundRequestController.getCompletionProof);
 
 export default router;

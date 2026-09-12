@@ -1,0 +1,202 @@
+[
+  {
+    "fullName": "Sporting CP",
+    "shortName": "Sporting",
+    "oddsApiName": "Sporting Lisbon",
+    "footballDataName": "Sporting Clube de Portugal",
+    "footballDataTeamId": 498,
+    "iconUrl": "https://crests.football-data.org/498.png",
+    "country": "Portugal",
+    "isNational": false
+  },
+  {
+    "fullName": "Lille",
+    "shortName": "Lille",
+    "oddsApiName": "Lille",
+    "footballDataName": "Lille OSC",
+    "footballDataTeamId": 521,
+    "iconUrl": "https://crests.football-data.org/521.png",
+    "country": "France",
+    "isNational": false
+  },
+  {
+    "fullName": "Atlético Madrid",
+    "shortName": "Atlético",
+    "oddsApiName": "Atlético Madrid",
+    "footballDataName": "Club Atlético de Madrid",
+    "footballDataTeamId": 78,
+    "iconUrl": "https://crests.football-data.org/78.png",
+    "country": "Spain",
+    "isNational": false
+  },
+  {
+    "fullName": "Galatasaray",
+    "shortName": "Galatasaray",
+    "oddsApiName": "Galatasaray",
+    "footballDataName": "Galatasaray SK",
+    "footballDataTeamId": 610,
+    "iconUrl": "https://crests.football-data.org/610.png",
+    "country": "Turkey",
+    "isNational": false
+  },
+  {
+    "fullName": "Barcelona",
+    "shortName": "Barcelona",
+    "oddsApiName": "Barcelona",
+    "footballDataName": "FC Barcelona",
+    "footballDataTeamId": 81,
+    "iconUrl": "https://crests.football-data.org/81.png",
+    "country": "Spain",
+    "isNational": false
+  },
+  {
+    "fullName": "Viking FK",
+    "shortName": "Viking",
+    "oddsApiName": "Viking FK",
+    "footballDataName": "Viking FK",
+    "footballDataTeamId": 5720,
+    "iconUrl": "https://crests.football-data.org/5720.png",
+    "country": "Norway",
+    "isNational": false
+  },
+  {
+    "fullName": "Inter Milan",
+    "shortName": "Inter",
+    "oddsApiName": "Inter Milan",
+    "footballDataName": "FC Internazionale Milano",
+    "footballDataTeamId": 108,
+    "iconUrl": "https://crests.football-data.org/108.png",
+    "country": "Italy",
+    "isNational": false
+  },
+  {
+    "fullName": "Club Brugge",
+    "shortName": "Club Brugge",
+    "oddsApiName": "Club Brugge",
+    "footballDataName": "Club Brugge KV",
+    "footballDataTeamId": 851,
+    "iconUrl": "https://crests.football-data.org/851.png",
+    "country": "Belgium",
+    "isNational": false
+  },
+  {
+    "fullName": "Villarreal",
+    "shortName": "Villarreal",
+    "oddsApiName": "Villarreal",
+    "footballDataName": "Villarreal CF",
+    "footballDataTeamId": 94,
+    "iconUrl": "https://crests.football-data.org/94.png",
+    "country": "Spain",
+    "isNational": false
+  },
+  {
+    "fullName": "Napoli",
+    "shortName": "Napoli",
+    "oddsApiName": "Napoli",
+    "footballDataName": "SSC Napoli",
+    "footballDataTeamId": 113,
+    "iconUrl": "https://crests.football-data.org/113.png",
+    "country": "Italy",
+    "isNational": false
+  },
+  {
+    "fullName": "Feyenoord",
+    "shortName": "Feyenoord",
+    "oddsApiName": "Feyenoord",
+    "footballDataName": "Feyenoord Rotterdam",
+    "footballDataTeamId": 675,
+    "iconUrl": "https://crests.football-data.org/675.png",
+    "country": "Netherlands",
+    "isNational": false
+  },
+  {
+    "fullName": "LASK",
+    "shortName": "LASK",
+    "oddsApiName": "LASK",
+    "footballDataName": "LASK Linz",
+    "footballDataTeamId": 2016,
+    "iconUrl": "https://crests.football-data.org/2016.png",
+    "country": "Austria",
+    "isNational": false
+  },
+  {
+    "fullName": "AEK Athens",
+    "shortName": "AEK",
+    "oddsApiName": "AEK Athens",
+    "footballDataName": "PAE AEK",
+    "footballDataTeamId": 1899,
+    "iconUrl": "https://crests.football-data.org/1899.png",
+    "country": "Greece",
+    "isNational": false
+  },
+  {
+    "fullName": "Real Madrid",
+    "shortName": "Real Madrid",
+    "oddsApiName": "Real Madrid",
+    "footballDataName": "Real Madrid CF",
+    "footballDataTeamId": 86,
+    "iconUrl": "https://crests.football-data.org/86.png",
+    "country": "Spain",
+    "isNational": false
+  },
+  {
+    "fullName": "Borussia Dortmund",
+    "shortName": "Dortmund",
+    "oddsApiName": "Borussia Dortmund",
+    "footballDataName": "Borussia Dortmund",
+    "footballDataTeamId": 4,
+    "iconUrl": "https://crests.football-data.org/4.png",
+    "country": "Germany",
+    "isNational": false
+  },
+  {
+    "fullName": "Paris Saint-Germain",
+    "shortName": "PSG",
+    "oddsApiName": "Paris Saint Germain",
+    "footballDataName": "Paris Saint-Germain FC",
+    "footballDataTeamId": 524,
+    "iconUrl": "https://crests.football-data.org/524.png",
+    "country": "France",
+    "isNational": false
+  },
+  {
+    "fullName": "Real Betis",
+    "shortName": "Betis",
+    "oddsApiName": "Real Betis",
+    "footballDataName": "Real Betis Balompié",
+    "footballDataTeamId": 90,
+    "iconUrl": "https://crests.football-data.org/90.png",
+    "country": "Spain",
+    "isNational": false
+  },
+  {
+    "fullName": "Porto",
+    "shortName": "Porto",
+    "oddsApiName": "Porto",
+    "footballDataName": "FC Porto",
+    "footballDataTeamId": 503,
+    "iconUrl": "https://crests.football-data.org/503.png",
+    "country": "Portugal",
+    "isNational": false
+  },
+  {
+    "fullName": "ŠK Slovan Bratislava",
+    "shortName": "Slovan",
+    "oddsApiName": "ŠK Slovan Bratislava",
+    "footballDataName": "ŠK Slovan Bratislava",
+    "footballDataTeamId": 7509,
+    "iconUrl": "https://crests.football-data.org/7509.png",
+    "country": "Slovakia",
+    "isNational": false
+  },
+  {
+    "fullName": "VfB Stuttgart",
+    "shortName": "Stuttgart",
+    "oddsApiName": "VfB Stuttgart",
+    "footballDataName": "VfB Stuttgart",
+    "footballDataTeamId": 10,
+    "iconUrl": "https://crests.football-data.org/10.png",
+    "country": "Germany",
+    "isNational": false
+  }
+]

@@ -93,6 +93,35 @@ export const adminReject = asyncHandler(async (req, res) => {
   res.json({ message: 'Request rejected' });
 });
 
+export const adminComplete = asyncHandler(async (req, res) => {
+  const requestId = req.params.id as string;
+  const { transactionId } = req.body as { transactionId?: string };
+  const file = req.file as Express.Multer.File | undefined;
+
+  // Validate before touching the filesystem so a failed request never clobbers an existing proof
+  const current = await prisma.fundRequest.findUnique({ where: { id: requestId }, select: { type: true, status: true } });
+  if (!current) throw new ApiError(404, 'Request not found');
+  if (current.type !== 'WITHDRAWAL') throw new ApiError(400, 'Only withdrawal requests can be marked completed');
+  if (current.status !== 'APPROVED') throw new ApiError(400, 'Request must be approved before it can be marked completed');
+
+  let completionProofImagePath: string | undefined;
+  if (file) {
+    // Deterministic path per request: re-uploads overwrite the same file, stored path stays valid
+    completionProofImagePath = `fund_requests/${requestId}_completion.${PROOF_EXT}`;
+    const targetPath = path.join(uploadDir, `${requestId}_completion.${PROOF_EXT}`);
+    await sharp(file.buffer)
+      .resize({ width: 1200, withoutEnlargement: true })
+      .webp({ quality: 78 })
+      .toFile(targetPath);
+  }
+
+  const data = await fundRequestService.completeWithdrawal(requestId, req.user!.id, {
+    transactionId: transactionId ?? '',
+    completionProofImagePath,
+  });
+  res.json({ message: 'Withdrawal marked completed', data });
+});
+
 export const getProofImage = asyncHandler(async (req, res) => {
   const reqId = req.params.id as string;
   const request = await prisma.fundRequest.findUnique({ where: { id: reqId }, select: { userId: true, proofImagePath: true } });
@@ -106,6 +135,24 @@ export const getProofImage = asyncHandler(async (req, res) => {
 
   const abs = resolveUploadPath(request.proofImagePath);
   if (!fs.existsSync(abs)) throw new ApiError(404, 'Proof image not found');
+
+  res.setHeader('Content-Type', 'image/webp');
+  res.setHeader('Content-Disposition', `inline; filename="${path.basename(abs)}"`);
+  fs.createReadStream(abs).pipe(res);
+});
+
+export const getCompletionProof = asyncHandler(async (req, res) => {
+  const reqId = req.params.id as string;
+  const request = await prisma.fundRequest.findUnique({ where: { id: reqId }, select: { userId: true, completionProofImagePath: true } });
+  if (!request) throw new ApiError(404, 'Request not found');
+
+  const isStaff = req.user!.role === 'ADMIN' || req.user!.role === 'ODDS_MANAGER';
+  if (!isStaff && request.userId !== req.user!.id) throw new ApiError(403, 'Not allowed to view this proof');
+
+  if (!request.completionProofImagePath) throw new ApiError(404, 'No completion proof image on this request');
+
+  const abs = resolveUploadPath(request.completionProofImagePath);
+  if (!fs.existsSync(abs)) throw new ApiError(404, 'Completion proof image not found');
 
   res.setHeader('Content-Type', 'image/webp');
   res.setHeader('Content-Disposition', `inline; filename="${path.basename(abs)}"`);

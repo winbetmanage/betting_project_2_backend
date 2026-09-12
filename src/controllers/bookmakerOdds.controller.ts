@@ -8,6 +8,11 @@ export const fetchForGame = asyncHandler(async (req, res) => {
   res.json({ message: `Fetched ${result.stored} odds`, data: result });
 });
 
+export const apiDetails = asyncHandler(async (req, res) => {
+  const data = await bookmakerOddsService.getGameApiDetails(req.params.id as string);
+  res.json({ data });
+});
+
 export const getGroupedForGame = asyncHandler(async (req, res) => {
   const result = await bookmakerOddsService.getGroupedForGame(req.params.id as string);
   const gameId = req.params.id as string;
