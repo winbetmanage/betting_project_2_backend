@@ -4,29 +4,44 @@ import ApiError from '../utils/ApiError';
 const MARKET_TYPE_MAP: Record<string, string> = {
   h2h: 'MATCH_WINNER',
   h2h_3_way: 'MATCH_WINNER',
+  h2h_lay: 'MATCH_WINNER',
+  h2h_back: 'MATCH_WINNER',
   draw_no_bet: 'MATCH_WINNER',
   double_chance: 'MATCH_WINNER',
+  double_chance_lay: 'MATCH_WINNER',
+  double_chance_h1: 'MATCH_WINNER',
   h2h_h1: 'MATCH_WINNER',
   h2h_h2: 'MATCH_WINNER',
   totals: 'OVER_UNDER',
   totals_h1: 'OVER_UNDER',
   totals_h2: 'OVER_UNDER',
   team_totals: 'OVER_UNDER',
+  alternate_totals: 'OVER_UNDER',
+  alternate_team_totals: 'OVER_UNDER',
+  alternate_totals_corners: 'OVER_UNDER',
+  alternate_totals_cards: 'OVER_UNDER',
   spreads: 'HANDICAP',
+  alternate_spreads: 'HANDICAP',
+  alternate_spreads_corners: 'HANDICAP',
+  alternate_spreads_cards: 'HANDICAP',
   btts: 'BOTH_TEAMS_TO_SCORE',
   btts_h1: 'BOTH_TEAMS_TO_SCORE',
   correct_score: 'CORRECT_SCORE',
   correct_score_h1: 'CORRECT_SCORE',
   halftime_fulltime: 'CUSTOM',
   corners_1x2: 'CUSTOM',
-  alternate_spreads: 'CUSTOM',
-  alternate_totals: 'CUSTOM',
-  alternate_team_totals: 'CUSTOM',
-  alternate_totals_corners: 'CUSTOM',
-  alternate_spreads_corners: 'CUSTOM',
-  alternate_totals_cards: 'CUSTOM',
-  alternate_spreads_cards: 'CUSTOM',
 };
+
+// Fallback resolver so new/unknown variants don't all collapse to CUSTOM
+function resolveMarketType(marketKey: string): string {
+  if (MARKET_TYPE_MAP[marketKey]) return MARKET_TYPE_MAP[marketKey];
+  if (marketKey.startsWith('h2h') || marketKey.startsWith('draw_no_bet') || marketKey.startsWith('double_chance')) return 'MATCH_WINNER';
+  if (marketKey.startsWith('totals') || marketKey.startsWith('team_totals') || marketKey.startsWith('alternate_totals')) return 'OVER_UNDER';
+  if (marketKey.startsWith('spreads') || marketKey.startsWith('alternate_spreads')) return 'HANDICAP';
+  if (marketKey.startsWith('btts')) return 'BOTH_TEAMS_TO_SCORE';
+  if (marketKey.startsWith('correct_score')) return 'CORRECT_SCORE';
+  return 'CUSTOM';
+}
 
 function humanLabel(marketKey: string, point: number | null): string {
   const known: Record<string, string> = {
@@ -83,7 +98,7 @@ export async function approveMarket(gameId: string, input: ApproveInput, adminUs
   if (!game) throw new ApiError(404, 'Game not found');
   if (!game.externalEventId) throw new ApiError(400, 'Game has no externalEventId');
 
-  const type = MARKET_TYPE_MAP[marketKey] ?? 'CUSTOM';
+  const type = resolveMarketType(marketKey);
   const baseName = humanLabel(marketKey, null);
   const name = point != null ? `${baseName} — line ${point}` : baseName;
   const parameters = { marketKey, line: point ?? null };

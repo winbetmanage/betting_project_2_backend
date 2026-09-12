@@ -8,5 +8,6 @@ router.post('/', authenticate, betController.place);
 router.get('/mine', authenticate, betController.myBets);
 router.get('/:id', authenticate, betController.getById);
 router.get('/', authenticate, authorize('ADMIN'), betController.allBets);
+router.post('/:id/settle', authenticate, authorize('ADMIN'), betController.settleSingle);
 
 export default router;

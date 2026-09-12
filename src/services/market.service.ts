@@ -66,7 +66,7 @@ export const removeMarket = async (id: string) => {
   });
 };
 
-export const settleSelection = async (id: string, isWinning: boolean) => {
+export const settleSelection = async (id: string, isWinning: boolean | null) => {
   return prisma.$transaction(async (tx) => {
     const selection = await tx.selection.findUnique({
       where: { id },
@@ -74,8 +74,53 @@ export const settleSelection = async (id: string, isWinning: boolean) => {
     });
     if (!selection) throw new ApiError(404, 'Selection not found');
     if (selection.market.status === 'SETTLED') throw new ApiError(400, 'Market already settled');
-    if (selection.isWinning !== null && selection.isWinning !== isWinning) {
+    if (isWinning !== null && selection.isWinning !== null && selection.isWinning !== isWinning) {
       throw new ApiError(400, 'Selection already settled with a different result');
+    }
+
+    if (isWinning === null) {
+      // Push/void — no selection winner, just void the pending legs
+      const openBetSelections = await tx.betSelection.findMany({ where: { selectionId: id, result: 'PENDING' }, select: { id: true, betId: true } });
+      for (const bs of openBetSelections) {
+        await tx.betSelection.update({ where: { id: bs.id }, data: { result: 'VOID' } });
+        const bet = await tx.bet.findUnique({ where: { id: bs.betId }, include: { selections: true } });
+        if (!bet || bet.status !== 'PENDING') continue;
+        const legs = bet.selections;
+        if (legs.some((l) => l.result === 'LOST')) {
+          await tx.bet.update({ where: { id: bs.betId }, data: { status: 'LOST', settledAt: new Date() } });
+          continue;
+        }
+        if (legs.some((l) => l.result === 'PENDING')) continue;
+        const voided = legs.filter((l) => l.result === 'VOID');
+        if (voided.length === legs.length) {
+          const user = await tx.user.findUnique({ where: { id: bet.userId } });
+          if (user) {
+            const balanceAfter = Math.round((Number(user.balance) + Number(bet.stake)) * 100) / 100;
+            await tx.user.update({ where: { id: bet.userId }, data: { balance: { increment: bet.stake } } });
+            await tx.transaction.create({ data: { userId: bet.userId, type: 'BET_REFUND', amount: bet.stake, balanceAfter, reference: bet.id } });
+          }
+          await tx.bet.update({ where: { id: bs.betId }, data: { status: 'VOID', settledAt: new Date() } });
+          continue;
+        }
+        // Mixed void/won legs — payout on won legs only (if any won remains)
+        const activeOdds = legs.filter((l) => l.result === 'WON').reduce((acc, l) => acc * Number(l.oddsAtPlacement), 1);
+        if (legs.some((l) => l.result === 'WON')) {
+          const payout = Math.round(Number(bet.stake) * (activeOdds || 1) * 100) / 100;
+          const user = await tx.user.findUnique({ where: { id: bet.userId } });
+          if (user) {
+            const balanceAfter = Math.round((Number(user.balance) + payout) * 100) / 100;
+            await tx.user.update({ where: { id: bet.userId }, data: { balance: { increment: payout } } });
+            await tx.transaction.create({ data: { userId: bet.userId, type: 'BET_WON', amount: payout, balanceAfter, reference: bet.id } });
+          }
+          await tx.bet.update({ where: { id: bs.betId }, data: { status: 'WON', settledAt: new Date() } });
+        } else {
+          // Only void legs remain but not all void (e.g. single void leg) — treat as VOID
+          await tx.bet.update({ where: { id: bs.betId }, data: { status: 'VOID', settledAt: new Date() } });
+        }
+      }
+      const pending = await tx.betSelection.count({ where: { selection: { marketId: selection.marketId }, result: 'PENDING' } });
+      if (pending === 0) await tx.market.update({ where: { id: selection.marketId }, data: { status: 'SETTLED' } });
+      return { id, isWinning: null };
     }
 
     await tx.selection.update({ where: { id }, data: { isWinning } });
@@ -124,5 +169,5 @@ export const settleSelection = async (id: string, isWinning: boolean) => {
     }
 
     return { id, isWinning };
-  });
+  }, { timeout: 20000, maxWait: 10000 });
 };

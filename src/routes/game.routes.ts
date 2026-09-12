@@ -23,6 +23,7 @@ router.get('/:id/settlement', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), 
 router.post('/:id/settle', authenticate, authorize('ADMIN'), gameSettlementController.settle);
 router.post('/:id/calculate', authenticate, authorize('ADMIN'), gameSettlementController.calculate);
 router.post('/:id/payout', authenticate, authorize('ADMIN'), gameSettlementController.payout);
+router.post('/:id/bets/:betId/settle', authenticate, authorize('ADMIN'), gameSettlementController.settleSingleBet);
 router.post('/:id/markets/approve', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), bookmakerOddsController.approveMarket);
 router.post('/:id/markets/approve-bulk', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), bookmakerOddsController.approveMarketsBulk);
 

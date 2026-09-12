@@ -454,6 +454,12 @@ export const confirmStagedGameToGames = async (id: string, adminId?: string) => 
   const sportKey = typeof raw?.sport_key === 'string' ? raw.sport_key : null;
   const startTime = staged.footballDataStartTime ?? staged.oddsApiStartTime;
 
+  // Prevent duplicate football-data match id (GameScore.footballDataMatchId is @unique).
+  // Seeded games may already own this match id — confirming a duplicate would break
+  // settlement (Duplicate entry on GameScore).
+  const existingByFd = await prisma.gameScore.findUnique({ where: { footballDataMatchId: staged.footballDataMatchId } });
+  if (existingByFd) throw new ApiError(409, `A game for football-data match ${staged.footballDataMatchId} already exists (game ${existingByFd.gameId}). Delete or archive the old game first.`);
+
   try {
     await prisma.$transaction(async (tx) => {
       const game = await tx.game.create({

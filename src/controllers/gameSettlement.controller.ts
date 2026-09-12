@@ -41,3 +41,10 @@ export const calculate = asyncHandler(async (req, res) => {
     data,
   });
 });
+
+export const settleSingleBet = asyncHandler(async (req, res) => {
+  const gameId = req.params.id as string;
+  const betId = req.params.betId as string;
+  const data = await settlementService.settleSingleBet(gameId, betId, req.user?.id);
+  res.json({ message: 'Bet settled', data });
+});
