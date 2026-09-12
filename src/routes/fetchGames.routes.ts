@@ -25,7 +25,7 @@ router.get('/champions-league', authenticate, authorize('ADMIN', 'ODDS_MANAGER')
 // Premier League browse (same service as CL; legacy /premier-league routes below stay for now)
 router.get('/premier-league-events', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listPremierLeagueEvents);
 
-// Fetch Games -> Premier League (uses FetchEplEvents from codes.ts)
+// Fetch Games -> Premier League (uses getEplEventsUrl from codes.ts)
 router.get('/premier-league', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), fetchGamesController.listPremierLeague);
 router.post('/premier-league/refetch', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), fetchGamesController.refreshPremierLeague);
 router.get('/premier-league/published-ids', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), fetchGamesController.getPublishedIds);

@@ -21,6 +21,10 @@ const ODDS_API_ALL_MARKETS =
   "alternate_totals_corners,alternate_spreads_corners," +
   "alternate_totals_cards,alternate_spreads_cards";
 
+// Free call - list of all sports supported by the plan
+export const getAllSportsUrl = () =>
+  `${ODDS_API_BASE_URL}/sports/?apiKey=${ODDS_API_KEY}`;
+
 // Free call - all EPL fixtures
 export const getEplEventsUrl = () =>
   `${ODDS_API_BASE_URL}/sports/soccer_epl/events/?apiKey=${ODDS_API_KEY}`;

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
-import { getEplAllMatchesUrl, footballDataFetchOptions } from '../../codes';
+import { getEplMatchesUrl, footballDataFetchOptions } from '../../codes';
 
 type FdMatch = {
   id: number;
@@ -89,7 +89,7 @@ function scoresDir(): string {
 }
 
 export async function fetchEplMatchesAndUpsert() {
-  const url = getEplAllMatchesUrl();
+  const url = getEplMatchesUrl();
   const res = await fetch(url, footballDataFetchOptions());
   if (!res.ok) {
     const text = await res.text().catch(() => '');
@@ -123,7 +123,7 @@ export async function fetchEplMatchesAndUpsert() {
         awayScoreFT: ft.away ?? 0,
         winner: m.score?.winner ?? null,
         status: m.status ?? 'UNKNOWN',
-        rawJsonPath: `epl_games_scores/${m.id}.json`,
+        rawJson: m as never,
       },
       update: {
         gameId: game.id,
@@ -134,6 +134,7 @@ export async function fetchEplMatchesAndUpsert() {
         winner: m.score?.winner ?? null,
         status: m.status ?? 'UNKNOWN',
         fetchedAt: new Date(),
+        rawJson: m as never,
       },
     });
 

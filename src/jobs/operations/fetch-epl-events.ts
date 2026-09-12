@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import prisma from '../../utils/prisma.js';
-import { FetchEplEvents } from '../../../codes.js';
+import { getEplEventsUrl } from '../../../codes.js';
 
 type EplEvent = {
   id: string;
@@ -28,7 +28,7 @@ function inferStatus(commenceIso: string): string {
 export async function runFetchEplEventsJob() {
   const timestamp = new Date().toISOString();
   try {
-    const url = FetchEplEvents;
+    const url = getEplEventsUrl();
     const res = await fetch(url);
     if (!res.ok) {
       const text = await res.text().catch(() => '');

@@ -1,5 +1,5 @@
 import prisma from '../../utils/prisma.js';
-import { FetchEplEvents } from '../../../codes.js';
+import { getEplEventsUrl } from '../../../codes.js';
 
 const MATCH_END_GRACE_MINUTES = 90;
 const LIVE_WINDOW_HOURS = 3;
@@ -11,7 +11,7 @@ export async function runEndFinishedGamesJob() {
   const timestamp = new Date().toISOString();
   try {
     // Fetch the current schedule from the odds API
-    const res = await fetch(FetchEplEvents);
+    const res = await fetch(getEplEventsUrl());
     if (!res.ok) {
       const text = await res.text().catch(() => '');
       throw new Error(`Fetch failed ${res.status} ${text.slice(0, 200)}`);
