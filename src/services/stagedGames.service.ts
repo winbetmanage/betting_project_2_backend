@@ -3,8 +3,8 @@ import ApiError from '../utils/ApiError';
 import { Prisma, FootballDataMatchStatus } from '@prisma/client';
 import { getEplEventsUrl, getChampionsLeagueEventsUrl, getEplMatchesUrl, getChampionsLeagueMatchesUrl, getFootballDataMatchDetailUrl, footballDataFetchOptions } from '../../codes';
 
-type FdTeam = { id: number; name: string; shortName?: string; tla?: string };
-type FdMatch = {
+export type FdTeam = { id: number; name: string; shortName?: string; tla?: string };
+export type FdMatch = {
   id: number;
   utcDate: string;
   status: string;
@@ -53,7 +53,7 @@ export type OddsEvent = {
 const eventCache = new Map<SportChoice, { data: OddsEvent[]; at: number }>();
 const CACHE_TTL = 5 * 60 * 1000;
 
-async function fetchEvents(choice: SportChoice, force: boolean): Promise<OddsEvent[]> {
+export async function fetchEvents(choice: SportChoice, force: boolean): Promise<OddsEvent[]> {
   if (!force) {
     const cached = eventCache.get(choice);
     if (cached && Date.now() - cached.at < CACHE_TTL) return cached.data;
@@ -253,24 +253,24 @@ export const listStagedGames = async (filters: Record<string, unknown> = {}) => 
   return { data, total, page, limit, totalPages, counts };
 };
 
-function choiceForCompetitionName(name: string | null | undefined): SportChoice {
+export function choiceForCompetitionName(name: string | null | undefined): SportChoice {
   const lower = (name ?? '').toLowerCase();
   if (lower.includes('champions')) return 'champions-league';
   return 'premier-league';
 }
 
-function teamHasFdMapping(team: { footballDataTeamId: number | null; footballDataName: string | null }): boolean {
+export function teamHasFdMapping(team: { footballDataTeamId: number | null; footballDataName: string | null }): boolean {
   return team.footballDataTeamId != null || !!team.footballDataName;
 }
 
-function fdTeamMatchesTeam(fdTeam: FdTeam | undefined, team: { footballDataTeamId: number | null; footballDataName: string | null }): boolean {
+export function fdTeamMatchesTeam(fdTeam: FdTeam | undefined, team: { footballDataTeamId: number | null; footballDataName: string | null }): boolean {
   if (!fdTeam) return false;
   if (team.footballDataTeamId != null) return fdTeam.id === team.footballDataTeamId;
   if (team.footballDataName) return fdTeam.name === team.footballDataName;
   return false;
 }
 
-function summarizeMatch(m: FdMatch) {
+export function summarizeMatch(m: FdMatch) {
   return {
     id: m.id,
     utcDate: m.utcDate,
@@ -292,7 +292,7 @@ function summarizeMatch(m: FdMatch) {
   };
 }
 
-async function loadStagedForFd(id: string) {
+export async function loadStagedForFd(id: string) {
   const staged = await prisma.stagedGame.findUnique({
     where: { id },
     include: { homeTeam: { select: TEAM_SELECT_FULL }, awayTeam: { select: TEAM_SELECT_FULL }, competition: { select: { id: true, name: true, country: true } } },
@@ -301,7 +301,7 @@ async function loadStagedForFd(id: string) {
   return staged;
 }
 
-function isoDay(d: Date): string {
+export function isoDay(d: Date): string {
   return d.toISOString().slice(0, 10);
 }
 
@@ -318,7 +318,7 @@ export function mapFootballDataStatus(raw: unknown): FootballDataMatchStatus | n
   return null;
 }
 
-async function fetchFdMatchesByDay(choice: SportChoice, dayIso: string): Promise<FdMatch[]> {
+export async function fetchFdMatchesByDay(choice: SportChoice, dayIso: string): Promise<FdMatch[]> {
   const base = choice === 'champions-league' ? getChampionsLeagueMatchesUrl() : getEplMatchesUrl();
   const url = `${base}?date=${dayIso}`;
   const res = await fetch(url, footballDataFetchOptions());
