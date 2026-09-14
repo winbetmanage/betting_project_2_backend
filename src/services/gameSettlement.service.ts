@@ -154,6 +154,40 @@ export async function resolveGameResult(gameId: string): Promise<GameResult> {
   };
 }
 
+const TEAM_TOKEN_EXPANSIONS: Record<string, string> = {
+  man: 'manchester',
+  utd: 'united',
+  nottm: 'nottingham',
+  wolves: 'wolverhampton',
+  st: 'saint',
+  saints: 'saint',
+};
+const TEAM_NOISE_TOKENS = new Set(['fc', 'afc', 'cfc', 'cf', 'sc', 'fk', 'club']);
+
+function teamTokens(s: unknown): Set<string> {
+  return new Set(
+    norm(s)
+      .replace(/[^a-z0-9 ]/g, ' ')
+      .split(' ')
+      .filter(Boolean)
+      .map((t) => TEAM_TOKEN_EXPANSIONS[t] ?? t)
+      .filter((t) => !TEAM_NOISE_TOKENS.has(t))
+  );
+}
+
+/** True when a selection name and a game team string refer to the same club. */
+export function teamNameMatches(a: string, b: string): boolean {
+  const A = teamTokens(a);
+  const B = teamTokens(b);
+  if (A.size === 0 || B.size === 0) return false;
+  const [small, large] = A.size <= B.size ? [A, B] : [B, A];
+  if (Array.from(small).every((t) => large.has(t))) {
+    if (A.size === B.size) return true;
+    if (small.size >= 2) return true;
+  }
+  return false;
+}
+
 /**
  * Determine winning selections for a market given a finished result.
  * Returns a Map<selectionId, isWinning> when resolvable, or null if this market
@@ -169,8 +203,13 @@ function resolveMarketWinners(market: { type: string; name: string; parameters: 
   switch (market.type) {
     case 'MATCH_WINNER': {
       if (!result.winner) return null;
-      const want = result.winner === 'HOME' ? norm(game.homeTeam) : result.winner === 'AWAY' ? norm(game.awayTeam) : 'draw';
-      const winning = market.selections.find((s) => norm(s.name) === want || norm(s.name).includes(want) || want.includes(norm(s.name)));
+      const wantRaw = result.winner === 'HOME' ? game.homeTeam : result.winner === 'AWAY' ? game.awayTeam : 'draw';
+      const want = norm(wantRaw);
+      const winning = market.selections.find((s) => {
+        const n = norm(s.name);
+        if (result.winner === 'DRAW') return n === 'draw' || n.startsWith('draw');
+        return teamNameMatches(s.name, wantRaw) || n === want || n.includes(want) || want.includes(n);
+      });
       if (!winning) return null;
       // Guard: a 2-way market (e.g. draw_no_bet) can't decide a draw.
       if (result.winner === 'DRAW' && !market.selections.some((s) => norm(s.name) === 'draw')) return null;
@@ -203,11 +242,14 @@ function resolveMarketWinners(market: { type: string; name: string; parameters: 
       let any = false;
       for (const s of market.selections) {
         const n = norm(s.name);
+        const isHome = teamNameMatches(s.name, game.homeTeam) || n === homeNorm || n.includes(homeNorm) || homeNorm.includes(n);
+        const isAway = teamNameMatches(s.name, game.awayTeam) || n === awayNorm || n.includes(awayNorm) || awayNorm.includes(n);
+        if (isHome && isAway) continue; // ambiguous — do not guess
         let selGoals: number | null = null;
         let oppGoals: number | null = null;
-        if (n === homeNorm || n.includes(homeNorm) || homeNorm.includes(n)) {
+        if (isHome) {
           selGoals = result.homeFT; oppGoals = result.awayFT;
-        } else if (n === awayNorm || n.includes(awayNorm) || awayNorm.includes(n)) {
+        } else if (isAway) {
           selGoals = result.awayFT; oppGoals = result.homeFT;
         } else {
           // Single-selection alias: if name is not a team, treat line as already applied to a generic side —
@@ -374,6 +416,10 @@ async function buildSettlement(gameId: string) {
       status: game.status,
       isPublished: game.isPublished,
       externalEventId: game.externalEventId,
+      lastOddsFetchAt: game.lastOddsFetchAt ?? (() => {
+        const spec = (game.specifications ?? {}) as { lastFetchedAt?: unknown };
+        return typeof spec.lastFetchedAt === 'string' ? new Date(spec.lastFetchedAt) : null;
+      })(),
       competition: game.competition ? { id: game.competition.id, name: game.competition.name, country: game.competition.country, sport: game.competition.sport?.name ?? null } : null,
     },
     result,

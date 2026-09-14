@@ -487,6 +487,11 @@ model Game {
  isPublished Boolean @default(false)
   markets Market[]
 checkpoints OddsFetchCheckpoint[]
+
+ lastOddsFetchAt DateTime?
+  nextOddsFetchAt DateTime?  @default(now())
+
+  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 

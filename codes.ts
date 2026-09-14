@@ -36,8 +36,9 @@ export const getChampionsLeagueEventsUrl = () =>
 // Costs credits - single game detail (odds) for one event
 // sportKey must match whichever competition the event belongs to
 // (e.g. "soccer_epl" or "soccer_uefa_champs_league")
-export const getOddsApiEventDetailUrl = (sportKey: string, eventId: string) =>
-  `${ODDS_API_BASE_URL}/sports/${sportKey}/events/${eventId}/odds/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}&markets=${ODDS_API_MARKETS}&oddsFormat=decimal&dateFormat=iso`;
+// markets: optional comma-separated list to fetch only specific market types
+export const getOddsApiEventDetailUrl = (sportKey: string, eventId: string, markets: string = ODDS_API_MARKETS) =>
+  `${ODDS_API_BASE_URL}/sports/${sportKey}/events/${eventId}/odds/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}&markets=${markets}&oddsFormat=decimal&dateFormat=iso`;
 
 // Costs credits - ALL games in a competition, with EVERY market type, EU bookmakers
 // sportKey: "soccer_epl" or "soccer_uefa_champs_league"
