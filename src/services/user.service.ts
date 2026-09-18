@@ -80,10 +80,20 @@ export const updateUser = async (id: string, updates: Record<string, unknown>) =
     if (!THEME_MODES.includes(m as never)) throw new ApiError(400, 'Invalid theme mode');
     allowed.themeMode = m;
   }
+  // Payout account (user-editable at any time; used as default for withdrawals)
+  const payoutFields = ['payoutAccountType', 'payoutAccountNumber', 'payoutAccountUsername'] as const;
+  for (const field of payoutFields) {
+    if (updates[field] !== undefined) {
+      const v = String(updates[field]).trim();
+      if (v.length > 100) throw new ApiError(400, `Invalid ${field}`);
+      allowed[field] = v || null;
+    }
+  }
   // keep backward compat for old 'name' only updates via /me
   const hasTheme = allowed.themeColor !== undefined || allowed.themeMode !== undefined;
   const hasName = updates.name !== undefined;
-  if (!hasTheme && !hasName) {
+  const hasPayout = payoutFields.some((f) => allowed[f] !== undefined);
+  if (!hasTheme && !hasName && !hasPayout) {
     // fallback to old strict name-only check for compatibility
     const allowedFields = ['name'] as const;
     const data: Record<string, unknown> = {};
@@ -99,7 +109,7 @@ export const updateUser = async (id: string, updates: Record<string, unknown>) =
   return user;
 };
 
-export const updateUserByAdmin = async (id: string, updates: Record<string, unknown>) => {
+export const updateUserByAdmin = async (id: string, updates: Record<string, unknown>, actorId: string) => {
   const allowed: Record<string, unknown> = {};
   if (updates.name !== undefined) allowed.name = String(updates.name).trim() || null;
   if (updates.role !== undefined) {
@@ -127,7 +137,12 @@ export const updateUserByAdmin = async (id: string, updates: Record<string, unkn
 
   if (Object.keys(allowed).length === 0) throw new ApiError(400, 'No valid fields to update');
 
-  const user = await prisma.user.update({ where: { id }, data: allowed });
+  // Attribute direct role/isActive/balance changes to the acting admin
+  const directChange = allowed.role !== undefined || allowed.isActive !== undefined || allowed.balance !== undefined;
+  const user = await prisma.user.update({
+    where: { id },
+    data: { ...allowed, ...(directChange ? { lastModifiedById: actorId } : {}) },
+  });
   return user;
 };
 

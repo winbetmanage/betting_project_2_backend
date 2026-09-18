@@ -51,7 +51,6 @@ enum MarketType {
   HANDICAP
   BOTH_TEAMS_TO_SCORE
   CORRECT_SCORE
-  HALFTIME_FULLTIME // half-time/full-time combos
   PLAYER_PROP
   OUTRIGHT
   CUSTOM
@@ -172,16 +171,6 @@ fundRequestsReviewed FundRequest[] @relation("FundRequestReviewer")
 
   bets            Bet[]
   transactions    Transaction[]
-  notifications   Notification[] @relation("NotificationUser")
-  transactionsPerformed Transaction[] @relation("TransactionPerformedBy")
-  betsSettled           Bet[]         @relation("BetSettledBy")
-  marketsLastActioned   Market[]      @relation("MarketLastAction")
-  gamesStatusChanged    Game[]        @relation("GameStatusChangedBy")
-  transferAccountsCreated OurTransferAccount[] @relation("TransferAccountCreatedBy")
-  appSettingUpdates      AppSetting[] @relation("AppSettingUpdatedBy")
-  lastModifiedById String? // admin who last changed this user's role/isActive/balance directly
-  lastModifiedBy   User?  @relation("UserLastModifiedBy", fields: [lastModifiedById], references: [id])
-  modifiedUsers    User[]  @relation("UserLastModifiedBy")
   refreshTokens   RefreshToken[]
   adminActionLogs AdminActionLog[]
 
@@ -265,9 +254,6 @@ model Transaction {
 
   fundRequestId String?      @unique
   fundRequest   FundRequest? @relation(fields: [fundRequestId], references: [id])
-
-  performedById String? // admin who manually created this entry (ADJUSTMENT etc.); null for system-generated rows
-  performedBy   User?   @relation("TransactionPerformedBy", fields: [performedById], references: [id], onDelete: SetNull)
 
   createdAt DateTime @default(now())
 
@@ -487,8 +473,6 @@ model Game {
   stagedGame StagedGame? 
   startTime DateTime
   status    GameStatus @default(SCHEDULED)
-  statusChangedById String? // admin who last changed Game.status manually (null when changed by football-data sync)
-  statusChangedBy   User?   @relation("GameStatusChangedBy", fields: [statusChangedById], references: [id], onDelete: SetNull)
  score  GameScore?
   // Flexible bucket for sport-specific info without new tables per sport
   // e.g. { "period": "2H", "clock": "63:00", "score": { "home": 1, "away": 0 } }
@@ -595,9 +579,6 @@ model Market {
 
 sourceBookmakerKeys Json?     // e.g. ["bet365", "skybet"] — MySQL/Prisma has no native string array
   lastSourceCheckedAt DateTime? // when the cron last checked these bookmakers for new data
-  lastActionById String? // admin who last suspended/cancelled/reopened/edited this market (null when changed by odds-feed automation)
-  lastActionBy   User?   @relation("MarketLastAction", fields: [lastActionById], references: [id], onDelete: SetNull)
-  lastActionAt   DateTime?
   
   selections Selection[]
 
@@ -685,8 +666,6 @@ model Bet {
   payoutStatus    PayoutStatus @default(PENDING)
   settledPayout   Decimal    @default(0) @db.Decimal(12, 2)
   paidOutAt       DateTime?
-  settledById String? // admin who manually forced this bet's settlement (null for automatic settlement)
-  settledBy   User?   @relation("BetSettledBy", fields: [settledById], references: [id], onDelete: SetNull)
 
   selections BetSelection[]
 
@@ -732,54 +711,11 @@ model OurTransferAccount {
     branchName  String?
     branchCode  String?
     swiftCode   String?
-  fundRequests FundRequest[]
-  createdById String? // admin who created this transfer account
-  createdBy   User?   @relation("TransferAccountCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+ fundRequests FundRequest[]
     
     status Boolean @default(true)
     createdAt   DateTime  @default(now())
     updatedAt   DateTime  @updatedAt
-}
-
-// ============================================
-// APP SETTINGS (admin-editable operational values)
-// ============================================
-
-model AppSetting {
-  key         String   @id // e.g. "referral.bonus_amount"
-  valueNumber Decimal? @db.Decimal(12, 2)
-  valueString String?
-  valueBool   Boolean?
-  updatedById String? // admin who last changed it
-  updatedBy   User?   @relation("AppSettingUpdatedBy", fields: [updatedById], references: [id], onDelete: SetNull)
-  updatedAt   DateTime @updatedAt
-}
-
-// ============================================
-// NOTIFICATIONS
-// ============================================
-
-enum NotificationAudience {
-  USER   // visible to one specific user (userId = recipient)
-  ADMIN  // visible on the admin notifications menu (userId = subject user, if any)
-}
-
-model Notification {
-  id       String               @id @default(cuid())
-  audience NotificationAudience
-  userId   String? // recipient for USER; subject user for ADMIN (null for game events)
-  user     User?   @relation("NotificationUser", fields: [userId], references: [id], onDelete: SetNull)
-
-  type    String // GAME_FINISHED | USER_REGISTERED | DEPOSIT_REQUESTED | WITHDRAWAL_REQUESTED | DEPOSIT_APPROVED | WITHDRAWAL_APPROVED | REFERRAL_SIGNUP
-  title   String
-  message String?
-  linkUrl String? // in-app destination, e.g. /admin/bet-games/<id>
-
-  isRead    Boolean  @default(false)
-  createdAt DateTime @default(now())
-
-  @@index([audience, isRead, createdAt])
-  @@index([userId])
 }
 
 

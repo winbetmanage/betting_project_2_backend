@@ -1,6 +1,10 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
+import fs from 'fs';
+import path from 'path';
 import * as marketService from './market.service';
+import * as betService from './bet.service';
+import { notify } from './notification.service';
 import { getFootballDataMatchDetailUrl, footballDataFetchOptions } from '../../codes';
 
 const round2 = (n: unknown) => Math.round(Number(n) * 100) / 100;
@@ -189,52 +193,243 @@ export function teamNameMatches(a: string, b: string): boolean {
 }
 
 /**
+ * Settlement registry (src/config/marketSettlement.json): how each odds-api
+ * marketKey is graded from a result. Keyed by marketKey (not DB type) so a
+ * market is graded the same no matter how it was typed at approval time.
+ * isWinning = null means push/void.
+ */
+type SettleKind = 'match_winner' | 'double_chance' | 'totals' | 'team_totals' | 'handicap' | 'btts' | 'correct_score' | 'htft' | 'none';
+type ScorePeriod = 'FT' | 'HT' | 'H2' | 'HT_FT';
+type SettleRule = { settle: SettleKind; period?: ScorePeriod; drawPush?: boolean; reason?: string };
+
+const BUILTIN_RULES: Record<string, SettleRule> = {
+  h2h: { settle: 'match_winner', period: 'FT' },
+  totals: { settle: 'totals', period: 'FT' },
+  spreads: { settle: 'handicap', period: 'FT' },
+  btts: { settle: 'btts', period: 'FT' },
+};
+
+let cachedRules: Record<string, SettleRule> | null = null;
+function settlementRules(): Record<string, SettleRule> {
+  if (cachedRules) return cachedRules;
+  const candidates = [
+    path.join(__dirname, '..', 'config', 'marketSettlement.json'),
+    path.join(process.cwd(), 'src', 'config', 'marketSettlement.json'),
+  ];
+  for (const f of candidates) {
+    try {
+      if (fs.existsSync(f)) {
+        const raw = JSON.parse(fs.readFileSync(f, 'utf-8')) as Record<string, unknown>;
+        const rules: Record<string, SettleRule> = { ...BUILTIN_RULES };
+        for (const [k, v] of Object.entries(raw)) {
+          if (k.startsWith('_')) continue;
+          const r = v as SettleRule;
+          if (r && typeof r.settle === 'string') rules[k] = r;
+        }
+        cachedRules = rules;
+        return rules;
+      }
+    } catch {
+      // fall through to built-ins
+    }
+  }
+  cachedRules = { ...BUILTIN_RULES };
+  return cachedRules;
+}
+
+function ruleForMarket(market: { type: string; parameters: unknown }): SettleRule | null {
+  const params = (market.parameters ?? {}) as { marketKey?: unknown };
+  const key = typeof params.marketKey === 'string' ? params.marketKey : null;
+  if (key) {
+    const r = settlementRules()[key];
+    if (r) return r;
+  }
+  // Fallback for unknown keys: grade by DB type on full-time (legacy behaviour)
+  switch (market.type) {
+    case 'MATCH_WINNER': return { settle: 'match_winner', period: 'FT' };
+    case 'OVER_UNDER': return { settle: 'totals', period: 'FT' };
+    case 'HANDICAP': return { settle: 'handicap', period: 'FT' };
+    case 'BOTH_TEAMS_TO_SCORE': return { settle: 'btts', period: 'FT' };
+    default: return null;
+  }
+}
+
+/** Why a market can never auto-settle (shown in the UI); null = may be resolvable. */
+export function manualReason(market: { type: string; parameters: unknown }): string | null {
+  const r = ruleForMarket(market);
+  if (!r) return null;
+  if (r.settle === 'none') return r.reason ?? 'not supported';
+  return null;
+}
+
+/** True when every token of the team name appears in the outcome name. */
+function outcomeMentionsTeam(outcome: string, team: string): boolean {
+  const t = [...teamTokens(team)];
+  const o = new Set(teamTokens(outcome));
+  return t.length > 0 && t.every((tok) => o.has(tok));
+}
+
+type PeriodGoals = { home: number; away: number; htHome: number | null; htAway: number | null };
+
+function periodGoals(period: ScorePeriod | undefined, result: GameResult): PeriodGoals | null {
+  const p = period ?? 'FT';
+  const { homeFT, awayFT, homeHT, awayHT } = result;
+  if (p === 'FT') {
+    if (homeFT == null || awayFT == null) return null;
+    return { home: homeFT, away: awayFT, htHome: homeHT, htAway: awayHT };
+  }
+  if (p === 'HT') {
+    if (homeHT == null || awayHT == null) return null;
+    return { home: homeHT, away: awayHT, htHome: homeHT, htAway: awayHT };
+  }
+  if (p === 'H2') {
+    // second-half goals = full-time minus half-time
+    if (homeFT == null || awayFT == null || homeHT == null || awayHT == null) return null;
+    return { home: homeFT - homeHT, away: awayFT - awayHT, htHome: homeHT, htAway: awayHT };
+  }
+  // HT_FT: both needed
+  if (homeFT == null || awayFT == null || homeHT == null || awayHT == null) return null;
+  return { home: homeFT, away: awayFT, htHome: homeHT, htAway: awayHT };
+}
+
+function sideWinner(home: number, away: number): 'HOME' | 'AWAY' | 'DRAW' {
+  if (home > away) return 'HOME';
+  if (home < away) return 'AWAY';
+  return 'DRAW';
+}
+
+function parseChanceSide(part: string, game: { homeTeam: string; awayTeam: string }): 'HOME' | 'AWAY' | 'DRAW' | null {
+  const n = norm(part);
+  if (!n) return null;
+  if (/^[12x]+$/.test(n)) {
+    // compact form like "1X" — caller splits into single chars before calling
+    return null;
+  }
+  if (n === 'draw' || n === 'x' || n.includes('draw')) return 'DRAW';
+  if (n === '1' || n === 'home' || n.includes('home')) return 'HOME';
+  if (n === '2' || n === 'away' || n.includes('away')) return 'AWAY';
+  if (outcomeMentionsTeam(part, game.homeTeam)) return 'HOME';
+  if (outcomeMentionsTeam(part, game.awayTeam)) return 'AWAY';
+  return null;
+}
+
+function parseDoubleChance(name: string, game: { homeTeam: string; awayTeam: string }): Set<'HOME' | 'AWAY' | 'DRAW'> | null {
+  const rawParts = name.split(/\s+or\s+|\s*\/\s*/i).map((s) => s.trim()).filter(Boolean);
+  const parts: string[] = [];
+  for (const p of rawParts) {
+    if (/^[12xX]+$/.test(p.replace(/\s/g, '')) && p.replace(/\s/g, '').length > 1) {
+      parts.push(...p.replace(/\s/g, '').split(''));
+    } else {
+      parts.push(p);
+    }
+  }
+  const covered = new Set<'HOME' | 'AWAY' | 'DRAW'>();
+  for (const p of parts) {
+    const side = parseChanceSide(p, game);
+    if (!side) return null;
+    covered.add(side);
+  }
+  return covered.size > 0 ? covered : null;
+}
+
+function parseScoreline(name: string): [number, number] | 'OTHER' | null {
+  const lower = norm(name);
+  if (/other|unlisted|any other/.test(lower)) return 'OTHER';
+  const bar = name.split('|');
+  if (bar.length === 2) {
+    const a = bar[0].match(/(\d+)\s*$/);
+    const b = bar[1].match(/(\d+)\s*$/);
+    if (a && b) return [parseInt(a[1], 10), parseInt(b[1], 10)];
+  }
+  const m = name.match(/(\d+)\s*[-:–]\s*(\d+)/);
+  if (m) return [parseInt(m[1], 10), parseInt(m[2], 10)];
+  return null;
+}
+
+/**
  * Determine winning selections for a market given a finished result.
+ * Driven by src/config/marketSettlement.json (score period + outcome rules).
  * Returns a Map<selectionId, isWinning> when resolvable, or null if this market
- * cannot be auto-settled (needs manual settlement). isWinning = null means push/void.
+ * cannot be auto-settled (needs manual settlement).
  */
 function resolveMarketWinners(market: { type: string; name: string; parameters: unknown; selections: { id: string; name: string }[] }, game: { homeTeam: string; awayTeam: string }, result: GameResult): Map<string, boolean | null> | null {
-  if (!result.finished || result.homeFT == null || result.awayFT == null) return null;
-  const total = result.homeFT + result.awayFT;
+  if (!result.finished) return null;
+  const rule = ruleForMarket(market);
+  if (!rule || rule.settle === 'none') return null;
+  const g = periodGoals(rule.period, result);
+  if (!g) return null;
+  const winner = sideWinner(g.home, g.away);
+
   const params = (market.parameters ?? {}) as { line?: unknown };
   const line = typeof params.line === 'number' ? params.line : null;
   const by = (pred: (name: string) => boolean) => market.selections.filter((s) => pred(norm(s.name)));
 
-  switch (market.type) {
-    case 'MATCH_WINNER': {
-      if (!result.winner) return null;
-      const wantRaw = result.winner === 'HOME' ? game.homeTeam : result.winner === 'AWAY' ? game.awayTeam : 'draw';
+  switch (rule.settle) {
+    case 'match_winner': {
+      if (rule.drawPush && winner === 'DRAW') {
+        return new Map(market.selections.map((s) => [s.id, null]));
+      }
+      const wantRaw = winner === 'HOME' ? game.homeTeam : winner === 'AWAY' ? game.awayTeam : 'draw';
       const want = norm(wantRaw);
       const winning = market.selections.find((s) => {
         const n = norm(s.name);
-        if (result.winner === 'DRAW') return n === 'draw' || n.startsWith('draw');
+        if (winner === 'DRAW') return n === 'draw' || n.startsWith('draw');
         return teamNameMatches(s.name, wantRaw) || n === want || n.includes(want) || want.includes(n);
       });
       if (!winning) return null;
       // Guard: a 2-way market (e.g. draw_no_bet) can't decide a draw.
-      if (result.winner === 'DRAW' && !market.selections.some((s) => norm(s.name) === 'draw')) return null;
+      if (winner === 'DRAW' && !market.selections.some((s) => norm(s.name) === 'draw')) return null;
       return new Map(market.selections.map((s) => [s.id, s.id === winning.id]));
     }
-    case 'OVER_UNDER': {
+    case 'double_chance': {
+      const map = new Map<string, boolean>();
+      for (const s of market.selections) {
+        const covered = parseDoubleChance(s.name, game);
+        if (!covered) return null;
+        map.set(s.id, covered.has(winner));
+      }
+      return map;
+    }
+    case 'totals': {
       if (line == null) return null;
+      const total = g.home + g.away;
       if (total === line) {
         // Push on integer line — void
         return new Map(market.selections.map((s) => [s.id, null]));
       }
       const overs = by((n) => n.startsWith('over'));
       const unders = by((n) => n.startsWith('under'));
-      if (overs.length === 0 || unders.length === 0) return null;
+      if (overs.length === 0 && unders.length === 0) return null;
+      // Single-sided books (only Over or only Under offered) still grade
+      // against the total; unknown third outcomes force manual review.
+      if (overs.length + unders.length !== market.selections.length) return null;
       const overWins = total > line;
-      return new Map(market.selections.map((s) => [s.id, overs.includes(s) ? overWins : unders.includes(s) ? !overWins : false]));
+      return new Map(market.selections.map((s) => [s.id, overs.includes(s) ? overWins : !overWins]));
     }
-    case 'BOTH_TEAMS_TO_SCORE': {
-      const yes = by((n) => n === 'yes' || n.startsWith('yes'));
-      const no = by((n) => n === 'no' || n.startsWith('no'));
-      if (yes.length === 0 || no.length === 0) return null;
-      const both = result.homeFT > 0 && result.awayFT > 0;
-      return new Map(market.selections.map((s) => [s.id, yes.includes(s) ? both : no.includes(s) ? !both : false]));
+    case 'team_totals': {
+      if (line == null) return null;
+      const map = new Map<string, boolean | null>();
+      let any = false;
+      for (const s of market.selections) {
+        const n = norm(s.name);
+        const hasOver = /\bover\b/.test(n);
+        const hasUnder = /\bunder\b/.test(n);
+        if (hasOver === hasUnder) continue;
+        const mentionsHome = outcomeMentionsTeam(s.name, game.homeTeam);
+        const mentionsAway = outcomeMentionsTeam(s.name, game.awayTeam);
+        if (mentionsHome === mentionsAway) continue;
+        const goals = mentionsHome ? g.home : g.away;
+        let res: boolean | null;
+        if (goals === line) res = null;
+        else if (hasOver) res = goals > line;
+        else res = goals < line;
+        map.set(s.id, res);
+        any = true;
+      }
+      if (!any) return null;
+      return map;
     }
-    case 'HANDICAP': {
+    case 'handicap': {
       if (line == null) return null;
       const homeNorm = norm(game.homeTeam);
       const awayNorm = norm(game.awayTeam);
@@ -242,15 +437,15 @@ function resolveMarketWinners(market: { type: string; name: string; parameters: 
       let any = false;
       for (const s of market.selections) {
         const n = norm(s.name);
-        const isHome = teamNameMatches(s.name, game.homeTeam) || n === homeNorm || n.includes(homeNorm) || homeNorm.includes(n);
-        const isAway = teamNameMatches(s.name, game.awayTeam) || n === awayNorm || n.includes(awayNorm) || awayNorm.includes(n);
+        const isHome = teamNameMatches(s.name, game.homeTeam) || outcomeMentionsTeam(s.name, game.homeTeam) || n === homeNorm || n.includes(homeNorm) || homeNorm.includes(n);
+        const isAway = teamNameMatches(s.name, game.awayTeam) || outcomeMentionsTeam(s.name, game.awayTeam) || n === awayNorm || n.includes(awayNorm) || awayNorm.includes(n);
         if (isHome && isAway) continue; // ambiguous — do not guess
         let selGoals: number | null = null;
         let oppGoals: number | null = null;
         if (isHome) {
-          selGoals = result.homeFT; oppGoals = result.awayFT;
+          selGoals = g.home; oppGoals = g.away;
         } else if (isAway) {
-          selGoals = result.awayFT; oppGoals = result.homeFT;
+          selGoals = g.away; oppGoals = g.home;
         } else {
           // Single-selection alias: if name is not a team, treat line as already applied to a generic side —
           // fallback: if we cannot map, skip this selection
@@ -268,16 +463,61 @@ function resolveMarketWinners(market: { type: string; name: string; parameters: 
       if (!any) return null;
       return m;
     }
+    case 'btts': {
+      const yes = by((n) => n === 'yes' || n.startsWith('yes'));
+      const no = by((n) => n === 'no' || n.startsWith('no'));
+      if (yes.length === 0 || no.length === 0) return null;
+      const both = g.home > 0 && g.away > 0;
+      return new Map(market.selections.map((s) => [s.id, yes.includes(s) ? both : no.includes(s) ? !both : false]));
+    }
+    case 'correct_score': {
+      const parsed = market.selections.map((s) => ({ s, score: parseScoreline(s.name) }));
+      const bad = parsed.filter((p): p is { s: { id: string; name: string }; score: [number, number] | 'OTHER' } => p.score !== null);
+      if (bad.length !== parsed.length) return null;
+      const listed = bad.filter((p) => p.score !== 'OTHER').map((p) => p.score as [number, number]);
+      const actual: [number, number] = [g.home, g.away];
+      const map = new Map<string, boolean>();
+      for (const { s, score } of bad) {
+        if (score === 'OTHER') {
+          map.set(s.id, !listed.some(([h, a]) => h === actual[0] && a === actual[1]));
+        } else {
+          map.set(s.id, score[0] === actual[0] && score[1] === actual[1]);
+        }
+      }
+      return map;
+    }
+    case 'htft': {
+      if (g.htHome == null || g.htAway == null) return null;
+      const htW = sideWinner(g.htHome, g.htAway);
+      const ftW = sideWinner(g.home, g.away);
+      const toSide = (part: string): 'HOME' | 'AWAY' | 'DRAW' | null => {
+        const n = norm(part);
+        if (n === 'draw') return 'DRAW';
+        if (outcomeMentionsTeam(part, game.homeTeam)) return 'HOME';
+        if (outcomeMentionsTeam(part, game.awayTeam)) return 'AWAY';
+        return null;
+      };
+      const map = new Map<string, boolean>();
+      for (const s of market.selections) {
+        const halves = s.name.split('/').map((x) => x.trim());
+        if (halves.length !== 2) return null;
+        const h1 = toSide(halves[0]);
+        const h2 = toSide(halves[1]);
+        if (!h1 || !h2) return null;
+        map.set(s.id, h1 === htW && h2 === ftW);
+      }
+      return map;
+    }
     default:
       return null;
   }
 }
 
 /** Provisional winner map for any score (live or finished) — used by UI details accordion. */
-export function resolveMarketWinnersProvisional(market: { type: string; name: string; parameters: unknown; selections: { id: string; name: string }[] }, game: { homeTeam: string; awayTeam: string }, result: { homeFT: number | null; awayFT: number | null }): Map<string, boolean | null> | null {
+export function resolveMarketWinnersProvisional(market: { type: string; name: string; parameters: unknown; selections: { id: string; name: string }[] }, game: { homeTeam: string; awayTeam: string }, result: { homeFT: number | null; awayFT: number | null; homeHT?: number | null; awayHT?: number | null }): Map<string, boolean | null> | null {
   if (result.homeFT == null || result.awayFT == null) return null;
-  // Reuse logic but without finished gate
-  const fake: GameResult = { finished: true, matchStatus: 'PROVISIONAL', homeFT: result.homeFT, awayFT: result.awayFT, homeHT: null, awayHT: null, winner: result.homeFT > result.awayFT ? 'HOME' : result.homeFT < result.awayFT ? 'AWAY' : 'DRAW', source: 'none' };
+  // Reuse logic but without finished gate (HT carried through so half markets preview too)
+  const fake: GameResult = { finished: true, matchStatus: 'PROVISIONAL', homeFT: result.homeFT, awayFT: result.awayFT, homeHT: result.homeHT ?? null, awayHT: result.awayHT ?? null, winner: result.homeFT > result.awayFT ? 'HOME' : result.homeFT < result.awayFT ? 'AWAY' : 'DRAW', source: 'none' };
   return resolveMarketWinners(market as Parameters<typeof resolveMarketWinners>[0], game, fake);
 }
 
@@ -329,7 +569,10 @@ async function buildSettlement(gameId: string) {
     const w = resolveMarketWinners(m, game, result);
     winnerMap.set(m.id, w);
     if (w) autoSettleable.push(m.name);
-    else needsManual.push(m.name);
+    else {
+      const reason = result.finished ? manualReason(m) : null;
+      needsManual.push(reason ? `${m.name} (${reason})` : m.name);
+    }
   }
 
   const bets = await prisma.bet.findMany({
@@ -348,10 +591,13 @@ async function buildSettlement(gameId: string) {
     const stake = Number(b.stake);
     totalStaked += stake;
     const proj = computeBetProjection(b as unknown as Parameters<typeof computeBetProjection>[0], winnerMap);
-    const payout = b.status === 'WON' ? Number(b.potentialPayout) : b.status === 'VOID' ? stake : proj.payout;
+    // Actual payable: the graded (void-adjusted) payout when set, else the placement
+    // potential for fully-won tickets and stake for voids.
+    const effective = Number(b.settledPayout) > 0 ? Number(b.settledPayout) : b.status === 'WON' ? Number(b.potentialPayout) : stake;
+    const payout = b.status === 'WON' || b.status === 'VOID' ? effective : proj.payout;
     if ((b.status === 'WON' || b.status === 'VOID') || proj.result === 'WON' || proj.result === 'VOID') projectedPayout += payout;
     if (b.payoutStatus === 'PAID' && (b.status === 'WON' || b.status === 'VOID')) {
-      paidOut += b.status === 'WON' ? Number(b.potentialPayout) : stake;
+      paidOut += effective;
     }
     return {
       id: b.id,
@@ -369,6 +615,7 @@ async function buildSettlement(gameId: string) {
       user: b.user,
       legs: b.selections.map((l) => ({
         id: l.id,
+        selectionId: l.selection.id,
         selectionName: l.selection.name,
         marketName: l.selection.market.name,
         marketType: l.selection.market.type,
@@ -389,7 +636,7 @@ async function buildSettlement(gameId: string) {
   // Markets with provisional winners for the accordion details (live or finished)
   const marketsView = game.markets.map((m) => {
     const w = winnerMap.get(m.id);
-    const prov = result.homeFT != null && result.awayFT != null ? resolveMarketWinnersProvisional(m, game, { homeFT: result.homeFT, awayFT: result.awayFT }) : null;
+    const prov = result.homeFT != null && result.awayFT != null ? resolveMarketWinnersProvisional(m, game, { homeFT: result.homeFT, awayFT: result.awayFT, homeHT: result.homeHT, awayHT: result.awayHT }) : null;
     const eff = w ?? prov;
     return {
       id: m.id,
@@ -443,9 +690,10 @@ export type Settlement = Awaited<ReturnType<typeof buildSettlement>>;
 export const getSettlement = (gameId: string) => buildSettlement(gameId);
 
 /**
- * Recalculate the game from the current result and PERSIST Selection.isWinning
- * for every auto-resolvable market (finished games only). No balances move and
- * markets are not flipped to SETTLED — that stays with settleGame().
+ * Preview-only calculation for the admin bet-games page: who won, who lost
+ * and the expected profit — WITHOUT writing anything (no leg results, no
+ * Selection.isWinning, no grading, no money movement). Paying out is the
+ * separate settleGamePayments() step, which asks for confirmation first.
  */
 export async function calculateGameSettlement(gameId: string) {
   const game = await prisma.game.findUnique({
@@ -455,28 +703,40 @@ export async function calculateGameSettlement(gameId: string) {
   if (!game) throw new ApiError(404, 'Game not found');
 
   const result = await resolveGameResult(gameId);
-  let selectionsUpdated = 0;
+
+  const winnerMaps = new Map<string, Map<string, boolean | null> | null>();
   let marketsResolved = 0;
+  let previewWon = 0;
+  let previewLost = 0;
+  let previewVoid = 0;
+  let previewUndecided = 0;
+  let previewPayout = 0;
 
   if (result.finished) {
     for (const m of game.markets) {
+      if (m.status === 'SETTLED') continue;
       const winners = resolveMarketWinners(m, game, result);
-      if (!winners) continue;
-      marketsResolved++;
-      for (const s of m.selections) {
-        const v = winners.get(s.id);
-        const shouldBeWinning = v === true ? true : v === false ? false : null;
-        // For push/void (null) we keep isWinning null — VOID is handled via winnerMap at payout time
-        if (s.isWinning !== shouldBeWinning) {
-          await prisma.selection.update({ where: { id: s.id }, data: { isWinning: shouldBeWinning } });
-          selectionsUpdated++;
-        }
-      }
+      winnerMaps.set(m.id, winners);
+      if (winners) marketsResolved++;
+    }
+
+    // Project every PENDING ticket through the shared projector — read-only
+    const pendingBets = await prisma.bet.findMany({
+      where: { status: 'PENDING', selections: { some: { selection: { market: { gameId } } } } },
+      include: { selections: { include: { selection: { select: { id: true, marketId: true, isWinning: true } } } } },
+    });
+    for (const b of pendingBets) {
+      const proj = computeBetProjection(b as unknown as Parameters<typeof computeBetProjection>[0], winnerMaps);
+      if (proj.result === 'WON') { previewWon++; previewPayout = round2(previewPayout + proj.payout); }
+      else if (proj.result === 'LOST') previewLost++;
+      else if (proj.result === 'VOID') { previewVoid++; previewPayout = round2(previewPayout + proj.payout); }
+      else previewUndecided++;
     }
   }
 
   const settlement = await buildSettlement(gameId);
-  return { ...settlement, meta: { resultFinished: result.finished, marketsResolved, selectionsUpdated } };
+  const profit = round2(settlement.totals.totalStaked - settlement.totals.projectedPayout);
+  return { ...settlement, meta: { resultFinished: result.finished, marketsResolved, previewWon, previewLost, previewVoid, previewUndecided, previewPayout, profit } };
 }
 
 /** Full football-data.org details for a game (live fetch by match id + stored GameScore snapshot). */
@@ -566,78 +826,42 @@ export async function settleSingleBet(gameId: string, betId: string, adminId?: s
   const result = await resolveGameResult(gameId);
   if (!result.finished) throw new ApiError(400, 'Game is not finished yet — cannot settle. Waiting for football-data result.');
 
-  // For each leg, resolve its market's winner map
-  for (const leg of bet.selections) {
+  // Pre-compute leg results (pure reads)
+  const legUpdates = bet.selections.map((leg) => {
     const market = game.markets.find((m) => m.id === leg.selection.marketId);
     if (!market) throw new ApiError(404, `Market ${leg.selection.marketId} not found for this game`);
     const winners = resolveMarketWinners(market, game, result);
     if (!winners) throw new ApiError(400, `Market "${market.name}" cannot be auto-settled — needs manual settlement`);
-
     const v = winners.get(leg.selectionId);
-    const isWinning = v === true ? true : v === false ? false : null;
+    return {
+      id: leg.id,
+      selectionId: leg.selectionId,
+      result: (v === null ? 'VOID' : v ? 'WON' : 'LOST') as 'WON' | 'LOST' | 'VOID',
+      isWinning: (v === true ? true : v === false ? false : null) as boolean | null,
+    };
+  });
 
-    // Update BetSelection result for THIS bet only (not global selection settle)
-    const newResult = isWinning === null ? 'VOID' : isWinning ? 'WON' : 'LOST';
-    await prisma.betSelection.update({ where: { id: leg.id }, data: { result: newResult } });
-
-    // Also persist Selection.isWinning when it's a clear win/loss (helps future projections)
-    if (isWinning !== null) {
-      const sel = await prisma.selection.findUnique({ where: { id: leg.selectionId } });
-      if (sel && sel.isWinning == null) {
-        await prisma.selection.update({ where: { id: leg.selectionId }, data: { isWinning } });
+  // ONE transaction: leg results + grading + balance credit + ledger row commit
+  // together (gradeBetIfComplete uses this same tx client). Manual per-bet
+  // settlement => attribute the acting admin on the bet itself.
+  const graded = await prisma.$transaction(async (tx) => {
+    for (const lu of legUpdates) {
+      await tx.betSelection.update({ where: { id: lu.id }, data: { result: lu.result } });
+      if (lu.isWinning !== null) {
+        const sel = await tx.selection.findUnique({ where: { id: lu.selectionId } });
+        if (sel && sel.isWinning == null) {
+          await tx.selection.update({ where: { id: lu.selectionId }, data: { isWinning: lu.isWinning } });
+        }
       }
     }
-  }
-
-  // Recompute bet status + transfer money atomically
-  const updatedLegs = await prisma.betSelection.findMany({ where: { betId } });
-  let finalStatus: 'WON' | 'LOST' | 'VOID';
-  let payout = 0;
-  if (updatedLegs.some((l) => l.result === 'LOST')) {
-    finalStatus = 'LOST';
-  } else if (updatedLegs.every((l) => l.result === 'VOID')) {
-    finalStatus = 'VOID';
-    payout = Number(bet.stake);
-  } else if (updatedLegs.some((l) => l.result === 'WON')) {
-    finalStatus = 'WON';
-    const wonOdds = updatedLegs.filter((l) => l.result === 'WON').reduce((acc, l) => acc * Number(l.oddsAtPlacement), 1);
-    payout = round2(Number(bet.stake) * (wonOdds || 1));
-  } else {
-    throw new ApiError(500, 'Unexpected bet leg state after settle');
-  }
-
-  const updatedBet = await prisma.$transaction(async (tx) => {
-    let balanceAfter: number | null = null;
-    if (finalStatus === 'WON' || finalStatus === 'VOID') {
-      const user = await tx.user.findUnique({ where: { id: bet.userId } });
-      if (user) {
-        balanceAfter = round2(Number(user.balance) + payout);
-        await tx.user.update({ where: { id: bet.userId }, data: { balance: { increment: payout } } });
-        await tx.transaction.create({
-          data: {
-            userId: bet.userId,
-            type: finalStatus === 'WON' ? 'BET_WON' : 'BET_REFUND',
-            amount: payout,
-            balanceAfter,
-            reference: bet.id,
-          },
-        });
-      }
-    }
-    const data: Record<string, unknown> = { status: finalStatus, settledAt: new Date() };
-    if (finalStatus === 'WON') {
-      (data as { payoutStatus: string }).payoutStatus = 'SUBMITTED';
-      (data as { settledPayout: number }).settledPayout = payout;
-    } else if (finalStatus === 'VOID') {
-      (data as { payoutStatus: string }).payoutStatus = 'SUBMITTED';
-      (data as { settledPayout: number }).settledPayout = payout;
-    }
-    return tx.bet.update({ where: { id: betId }, data: data as never });
+    const g = await betService.gradeBetIfComplete(tx, betId, adminId ? { settledById: adminId } : undefined);
+    if (!g) throw new ApiError(500, 'Bet could not be graded after all legs were decided');
+    return g;
   }, { timeout: 20000, maxWait: 10000 });
 
   if (adminId) {
     await prisma.adminActionLog.create({
-      data: { userId: adminId, action: 'BET_SETTLED_SINGLE', targetType: 'Bet', targetId: betId, metadata: { gameId, finalStatus, payout, legs: updatedLegs.map((l) => ({ id: l.id, result: l.result })) } as never },
+      data: { userId: adminId, action: 'BET_SETTLED_SINGLE', targetType: 'Bet', targetId: betId, metadata: { gameId, finalStatus: graded.status, payout: graded.payout, legs: legUpdates.map((l) => ({ id: l.id, result: l.result })) } as never },
     });
   }
 
@@ -682,13 +906,16 @@ export async function settleGame(gameId: string, adminId?: string) {
     settledMarkets++;
   }
 
-  // Mark newly WON/VOID bets as SUBMITTED and record settledPayout for payout tracking
+  // Mark newly WON/VOID bets SUBMITTED (gradeBetIfComplete already wrote the actual
+  // settledPayout incl. void-leg adjustment; backfill only for pre-existing rows).
   const newlySettled = await prisma.bet.findMany({
     where: { status: { in: ['WON', 'VOID'] }, payoutStatus: 'PENDING', selections: { some: { selection: { market: { gameId } } } } },
-    select: { id: true, status: true, potentialPayout: true, stake: true },
+    select: { id: true, status: true, potentialPayout: true, stake: true, settledPayout: true },
   });
   for (const b of newlySettled) {
-    const settledPayout = b.status === 'WON' ? round2(b.potentialPayout) : round2(b.stake);
+    const settledPayout = Number(b.settledPayout) > 0
+      ? Number(b.settledPayout)
+      : b.status === 'WON' ? round2(b.potentialPayout) : round2(b.stake);
     await prisma.bet.update({ where: { id: b.id }, data: { payoutStatus: 'SUBMITTED', settledPayout } });
   }
 
@@ -701,15 +928,60 @@ export async function settleGame(gameId: string, adminId?: string) {
   return { ...s, meta: { settledMarkets, skippedMarkets } };
 }
 
+/**
+ * Confirmed payout step (admin pressed "Settle payment" + confirmed):
+ * grades + credits via settleGame(), then notifies ONLY the winning users.
+ * Idempotent: only bets that were PENDING before this run and are WON after
+ * get a notification — re-pressing notifies nobody new.
+ */
+export async function settleGamePayments(gameId: string, adminId?: string) {
+  const pendingBefore = await prisma.bet.findMany({
+    where: { status: 'PENDING', selections: { some: { selection: { market: { gameId } } } } },
+    select: { id: true },
+  });
+  const pendingIds = new Set(pendingBefore.map((b) => b.id));
+
+  const settled = await settleGame(gameId, adminId);
+
+  let notified = 0;
+  if (pendingIds.size > 0) {
+    const newlyWon = await prisma.bet.findMany({
+      where: { id: { in: [...pendingIds] }, status: 'WON' },
+      select: { id: true, userId: true, stake: true, settledPayout: true, potentialPayout: true },
+    });
+    const game = await prisma.game.findUnique({ where: { id: gameId }, select: { homeTeam: true, awayTeam: true } });
+    const fixture = game ? `${game.homeTeam} vs ${game.awayTeam}` : 'your game';
+    for (const b of newlyWon) {
+      const amount = Number(b.settledPayout) > 0 ? Number(b.settledPayout) : Number(b.potentialPayout);
+      await notify({
+        audience: 'USER',
+        userId: b.userId,
+        type: 'BET_WON',
+        title: `You won ETB ${round2(amount).toFixed(2)}!`,
+        message: `${fixture} — stake ETB ${Number(b.stake).toFixed(2)} paid out`,
+        linkUrl: '/my-bets',
+      });
+      notified++;
+    }
+  }
+
+  if (adminId) {
+    await prisma.adminActionLog.create({
+      data: { userId: adminId, action: 'GAME_PAYOUT_SETTLED', targetType: 'Game', targetId: gameId, metadata: { notified } as never },
+    });
+  }
+  return { ...settled, meta: { ...settled.meta, notified } };
+}
+
 export async function markPayout(gameId: string, payoutStatus: 'SUBMITTED' | 'PAID' | 'PENDING', adminId?: string) {
   const bets = await prisma.bet.findMany({
     where: { status: { in: ['WON', 'VOID'] }, selections: { some: { selection: { market: { gameId } } } } },
-    select: { id: true, status: true, potentialPayout: true, stake: true },
+    select: { id: true, status: true, potentialPayout: true, stake: true, settledPayout: true },
   });
   if (bets.length === 0) throw new ApiError(404, 'No settled (won/void) bets for this game to mark');
 
   for (const b of bets) {
-    const amount = b.status === 'WON' ? round2(b.potentialPayout) : round2(b.stake);
+    const amount = Number(b.settledPayout) > 0 ? round2(b.settledPayout) : b.status === 'WON' ? round2(b.potentialPayout) : round2(b.stake);
     await prisma.bet.update({
       where: { id: b.id },
       data: {

@@ -1,5 +1,6 @@
 import * as marketService from '../services/market.service';
 import asyncHandler from '../utils/asyncHandler';
+import ApiError from '../utils/ApiError';
 
 export const create = asyncHandler(async (req, res) => {
   const market = await marketService.createMarket(req.params.gameId as string, req.body as Record<string, unknown>);
@@ -17,7 +18,7 @@ export const getById = asyncHandler(async (req, res) => {
 });
 
 export const update = asyncHandler(async (req, res) => {
-  const market = await marketService.updateMarket(req.params.id as string, req.body as Record<string, unknown>);
+  const market = await marketService.updateMarket(req.params.id as string, req.body as Record<string, unknown>, req.user!.id);
   res.json({ message: 'Market updated', data: market });
 });
 
@@ -37,7 +38,11 @@ export const updateOdds = asyncHandler(async (req, res) => {
 });
 
 export const settle = asyncHandler(async (req, res) => {
-  const result = await marketService.settleSelection(req.params.id as string, (req.body as { isWinning: boolean }).isWinning);
+  const { isWinning } = req.body as { isWinning?: boolean | null };
+  if (isWinning !== true && isWinning !== false && isWinning !== null) {
+    throw new ApiError(400, 'isWinning must be true, false or null (null = void/push)');
+  }
+  const result = await marketService.settleSelection(req.params.id as string, isWinning);
   res.json({ message: 'Selection settled', data: result });
 });
 

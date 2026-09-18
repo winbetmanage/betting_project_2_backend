@@ -1,0 +1,40 @@
+import * as settingsService from '../services/settings.service';
+import asyncHandler from '../utils/asyncHandler';
+
+export const list = asyncHandler(async (_req, res) => {
+  const data = await settingsService.listSettings();
+  res.json({ data });
+});
+
+export const update = asyncHandler(async (req, res) => {
+  const { valueNumber, valueString, valueBool } = req.body as {
+    valueNumber?: unknown;
+    valueString?: unknown;
+    valueBool?: unknown;
+  };
+  const data = await settingsService.setSetting(
+    req.params.key as string,
+    {
+      valueNumber: valueNumber === undefined ? undefined : Number(valueNumber),
+      valueString: valueString === undefined ? undefined : String(valueString),
+      valueBool: valueBool === undefined ? undefined : Boolean(valueBool),
+    },
+    req.user!.id
+  );
+  res.json({ message: 'Setting saved', data });
+});
+
+/** Non-sensitive limits for the user side (any authenticated user). */
+export const maxStake = asyncHandler(async (_req, res) => {
+  const value = await settingsService.getNumberSetting('betting.max_stake', Number.POSITIVE_INFINITY);
+  res.json({ data: { maxStake: Number.isFinite(value) ? value : null } });
+});
+
+/** All user-facing limits in one call (any authenticated user). */
+export const publicLimits = asyncHandler(async (_req, res) => {
+  const [maxStake, minDeposit] = await Promise.all([
+    settingsService.getNumberSetting('betting.max_stake', Number.POSITIVE_INFINITY),
+    settingsService.getNumberSetting('deposit.min_amount', 100),
+  ]);
+  res.json({ data: { maxStake: Number.isFinite(maxStake) ? maxStake : null, minDeposit } });
+});

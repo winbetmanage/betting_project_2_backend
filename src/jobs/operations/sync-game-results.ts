@@ -1,6 +1,7 @@
 import prisma from '../../utils/prisma';
 import { resolveGameResult, fdStatusBucket } from '../../services/gameSettlement.service';
 import { mapFootballDataStatus } from '../../services/stagedGames.service';
+import { notify } from '../../services/notification.service';
 
 export type SyncResultsSummary = { checked: number; finished: number; updated: number; skippedNoFd: number; stagedUpdated: number; errors: number };
 
@@ -8,7 +9,7 @@ export async function runSyncGameResults(): Promise<SyncResultsSummary> {
   const now = new Date();
   const games = await prisma.game.findMany({
     where: { status: { in: ['SCHEDULED', 'LIVE'] }, startTime: { lte: now } },
-    select: { id: true, homeTeam: true, awayTeam: true, startTime: true },
+    select: { id: true, homeTeam: true, awayTeam: true, startTime: true, isPublished: true },
     orderBy: { startTime: 'asc' },
   });
 
@@ -47,7 +48,19 @@ export async function runSyncGameResults(): Promise<SyncResultsSummary> {
     if (next && next !== curStatus) {
       await prisma.game.update({ where: { id: g.id }, data: { status: next } });
       summary.updated++;
-      if (next === 'FINISHED') summary.finished++;
+      if (next === 'FINISHED') {
+        summary.finished++;
+        if (g.isPublished) {
+          await notify({
+            audience: 'ADMIN',
+            userId: null,
+            type: 'GAME_FINISHED',
+            title: `Finished: ${g.homeTeam} vs ${g.awayTeam}`,
+            message: `Final ${result.homeFT ?? '?'}–${result.awayFT ?? '?'} — ready to settle`,
+            linkUrl: `/admin/bet-games/${g.id}`,
+          });
+        }
+      }
       console.log(`[sync-game-results] ${g.homeTeam} vs ${g.awayTeam}: ${curStatus} -> ${next} (${result.homeFT}-${result.awayFT})`);
     }
 

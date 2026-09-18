@@ -15,7 +15,7 @@ router.post('/requests/:id/cancel', authenticate, fundRequestController.cancelMy
 // Admin routes
 router.get('/admin/requests', authenticate, authorize('ADMIN'), fundRequestController.adminList);
 router.get('/admin/requests/:id', authenticate, authorize('ADMIN'), fundRequestController.adminGetById);
-router.post('/admin/requests/:id/approve', authenticate, authorize('ADMIN'), fundRequestController.adminApprove);
+router.post('/admin/requests/:id/approve', authenticate, authorize('ADMIN'), fundRequestUpload.single('completionProof'), fundRequestController.adminApprove);
 router.post('/admin/requests/:id/reject', authenticate, authorize('ADMIN'), fundRequestController.adminReject);
 router.patch('/admin/requests/:id/complete', authenticate, authorize('ADMIN'), fundRequestUpload.single('completionProof'), fundRequestController.adminComplete);
 

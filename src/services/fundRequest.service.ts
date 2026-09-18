@@ -1,9 +1,15 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
+import { notify } from './notification.service';
+import { getNumberSetting } from './settings.service';
 
 const MIN_AMOUNT = 100;
 const MAX_PENDING_DEPOSITS = 3;
-const REFERRAL_QUALIFY_AMOUNT = 100; // referee's deposit must be at least this for the referrer to earn the bonus
+const WITHDRAWAL_MIN_RESERVE = 100; // available balance must stay >= this after a withdrawal request
+// Fallbacks if settings rows are missing; live values come from AppSetting
+// (referral.bonus_amount / referral.qualifying_deposit), editable in admin settings.
+const REFERRAL_BONUS_FALLBACK = 50;
+const REFERRAL_QUALIFY_FALLBACK = 100;
 
 // Slow remote MySQL + extra referral work can exceed the 5s default
 const TX_OPTIONS = { maxWait: 10_000, timeout: 20_000 };
@@ -12,7 +18,9 @@ export async function createDepositRequest(
   userId: string,
   data: { id?: string; amount: number; transferAccountId: string; senderReference?: string; proofImagePath?: string }
 ) {
-  if (!data.amount || data.amount < MIN_AMOUNT) throw new ApiError(400, `Minimum deposit is ${MIN_AMOUNT}`);
+  if (!data.amount) throw new ApiError(400, 'Amount is required');
+  const minDeposit = await getNumberSetting('deposit.min_amount', MIN_AMOUNT);
+  if (data.amount < minDeposit) throw new ApiError(400, `Minimum deposit is ${minDeposit}`);
 
   const pending = await prisma.fundRequest.count({ where: { userId, type: 'DEPOSIT', status: 'PENDING' } });
   if (pending >= MAX_PENDING_DEPOSITS) throw new ApiError(400, `Max ${MAX_PENDING_DEPOSITS} pending deposits allowed`);
@@ -31,23 +39,43 @@ export async function createDepositRequest(
       senderReference: data.senderReference,
       proofImagePath: data.proofImagePath,
     },
+  }).then(async (request) => {
+    await notify({
+      audience: 'ADMIN',
+      userId,
+      type: 'DEPOSIT_REQUESTED',
+      title: `New deposit request — ETB ${Number(data.amount).toFixed(2)}`,
+      linkUrl: '/admin/wallet',
+    });
+    return request;
   });
 }
 
 export async function createWithdrawalRequest(
   userId: string,
-  data: { amount: number; payoutAccountName: string; payoutAccountNumber: string; payoutBankName: string }
+  data: { amount: number; payoutAccountName?: string; payoutAccountNumber?: string; payoutBankName?: string }
 ) {
   if (!data.amount || data.amount < MIN_AMOUNT) throw new ApiError(400, `Minimum withdrawal is ${MIN_AMOUNT}`);
-  if (!data.payoutAccountName || !data.payoutAccountNumber || !data.payoutBankName) throw new ApiError(400, 'Payout account details required');
 
   return prisma.$transaction(async (tx) => {
     const user = await tx.user.findUnique({ where: { id: userId } });
     if (!user) throw new ApiError(404, 'User not found');
     if (!user.isActive) throw new ApiError(403, 'Account inactive');
 
+    // Destination snapshot: explicit per-request values win, otherwise the
+    // user's stored payout account. One of the two must be complete.
+    const payoutAccountName = (data.payoutAccountName ?? '').trim() || user.payoutAccountUsername;
+    const payoutAccountNumber = (data.payoutAccountNumber ?? '').trim() || user.payoutAccountNumber;
+    const payoutBankName = (data.payoutBankName ?? '').trim() || user.payoutAccountType;
+    if (!payoutAccountName || !payoutAccountNumber || !payoutBankName) {
+      throw new ApiError(400, 'Set up your payout account first (profile), then request a withdrawal');
+    }
+
+    // Re-checked inside the transaction: race-safe against concurrent bets/requests
     const available = Number(user.balance) - Number(user.heldBalance);
-    if (data.amount > available) throw new ApiError(400, 'Insufficient available balance');
+    if (available - Number(data.amount) < WITHDRAWAL_MIN_RESERVE) {
+      throw new ApiError(400, `Insufficient available balance — ETB ${WITHDRAWAL_MIN_RESERVE} must remain after a withdrawal`);
+    }
 
     const request = await tx.fundRequest.create({
       data: {
@@ -55,22 +83,48 @@ export async function createWithdrawalRequest(
         type: 'WITHDRAWAL',
         amount: data.amount,
         status: 'PENDING',
-        payoutAccountName: data.payoutAccountName,
-        payoutAccountNumber: data.payoutAccountNumber,
-        payoutBankName: data.payoutBankName,
+        payoutAccountName,
+        payoutAccountNumber,
+        payoutBankName,
       },
     });
 
     await tx.user.update({ where: { id: userId }, data: { heldBalance: { increment: data.amount } } });
     return request;
-  }, TX_OPTIONS);
+  }, TX_OPTIONS).then(async (request) => {
+    await notify({
+      audience: 'ADMIN',
+      userId,
+      type: 'WITHDRAWAL_REQUESTED',
+      title: `New withdrawal request — ETB ${Number(data.amount).toFixed(2)}`,
+      linkUrl: '/admin/users/withdrawal-requests',
+    });
+    return request;
+  });
 }
 
-export async function approveRequest(requestId: string, adminId: string) {
+export async function approveRequest(
+  requestId: string,
+  adminId: string,
+  evidence?: { transactionId?: string; completionProofImagePath?: string }
+) {
+  const txId = (evidence?.transactionId ?? '').trim();
+  const proofPath = (evidence?.completionProofImagePath ?? '').trim();
+
+  // Live referral policy (admin-editable); changes apply to pending referrals immediately
+  const referralBonus = await getNumberSetting('referral.bonus_amount', REFERRAL_BONUS_FALLBACK);
+  const referralQualifying = await getNumberSetting('referral.qualifying_deposit', REFERRAL_QUALIFY_FALLBACK);
+
   return prisma.$transaction(async (tx) => {
     const req = await tx.fundRequest.findUnique({ where: { id: requestId } });
     if (!req) throw new ApiError(404, 'Request not found');
     if (req.status !== 'PENDING') throw new ApiError(400, 'Request is not pending');
+
+    // Withdrawals: admin confirms only after paying out manually — evidence is mandatory
+    if (req.type === 'WITHDRAWAL') {
+      if (!txId) throw new ApiError(400, 'Transaction ID is required to approve a withdrawal');
+      if (!proofPath) throw new ApiError(400, 'Completion proof image is required to approve a withdrawal');
+    }
 
     const user = await tx.user.findUnique({ where: { id: req.userId } });
     if (!user) throw new ApiError(404, 'User not found');
@@ -88,7 +142,7 @@ export async function approveRequest(requestId: string, adminId: string) {
       await tx.user.update({ where: { id: req.userId }, data: { balance: { increment: req.amount } } });
     }
 
-    // Create Transaction (ledger entry)
+    // Create Transaction (ledger entry) — amount always positive, same as deposits
     const txType = req.type === 'DEPOSIT' ? 'DEPOSIT' : 'WITHDRAWAL';
     const balanceAfter = req.type === 'DEPOSIT' ? Number(user.balance) + Number(req.amount) : Number(user.balance) - Number(req.amount);
 
@@ -102,16 +156,35 @@ export async function approveRequest(requestId: string, adminId: string) {
       },
     });
 
-    // Update request
+    // Update request — withdrawals land fully completed (paid + evidenced) in one step
     await tx.fundRequest.update({
       where: { id: requestId },
-      data: { status: 'APPROVED', reviewedById: adminId, reviewedAt: new Date() },
+      data: {
+        status: 'APPROVED',
+        reviewedById: adminId,
+        reviewedAt: new Date(),
+        ...(req.type === 'WITHDRAWAL'
+          ? { transactionId: txId.slice(0, 100), completionProofImagePath: proofPath, completedAt: new Date() }
+          : {}),
+      },
+    });
+
+    await tx.adminActionLog.create({
+      data: {
+        userId: adminId,
+        action: req.type === 'WITHDRAWAL' ? 'WITHDRAWAL_APPROVED' : 'DEPOSIT_APPROVED',
+        targetType: 'FundRequest',
+        targetId: requestId,
+        metadata: { amount: Number(req.amount), userId: req.userId, ...(req.type === 'WITHDRAWAL' ? { transactionId: txId.slice(0, 100) } : {}) } as never,
+      },
     });
 
     // Referral payout — only on qualifying DEPOSIT approvals.
     // The conditional updateMany (WHERE status='PENDING') is the double-pay guard:
     // only one concurrent approval can win the race and flip the status.
-    if (req.type === 'DEPOSIT' && Number(req.amount) >= REFERRAL_QUALIFY_AMOUNT) {
+    // Amount + threshold are read live from settings; the credited figure is
+    // snapshotted onto the referral row for audit.
+    if (req.type === 'DEPOSIT' && Number(req.amount) >= referralQualifying) {
       const referral = await tx.referral.findFirst({
         where: { refereeId: req.userId, status: 'PENDING' },
         include: { referrer: { select: { id: true, balance: true } } },
@@ -119,18 +192,18 @@ export async function approveRequest(requestId: string, adminId: string) {
       if (referral) {
         const claimed = await tx.referral.updateMany({
           where: { id: referral.id, status: 'PENDING' },
-          data: { status: 'REWARDED', qualifiedAt: new Date(), rewardedAt: new Date() },
+          data: { status: 'REWARDED', bonusAmount: referralBonus, qualifiedAt: new Date(), rewardedAt: new Date() },
         });
         if (claimed.count === 1) {
           const updatedReferrer = await tx.user.update({
             where: { id: referral.referrerId },
-            data: { balance: { increment: referral.bonusAmount } },
+            data: { balance: { increment: referralBonus } },
           });
           await tx.transaction.create({
             data: {
               userId: referral.referrerId,
               type: 'REFERRAL_BONUS',
-              amount: referral.bonusAmount,
+              amount: referralBonus,
               balanceAfter: Number(updatedReferrer.balance),
               reference: `referral:${referral.id}`,
             },
@@ -140,23 +213,46 @@ export async function approveRequest(requestId: string, adminId: string) {
     }
 
     return { request: req, transaction };
-  }, TX_OPTIONS);
+  }, TX_OPTIONS).then(async (out) => {
+    await notify({
+      audience: 'USER',
+      userId: out.request.userId,
+      type: out.request.type === 'WITHDRAWAL' ? 'WITHDRAWAL_APPROVED' : 'DEPOSIT_APPROVED',
+      title: out.request.type === 'WITHDRAWAL'
+        ? `Withdrawal approved — ETB ${Number(out.request.amount).toFixed(2)}`
+        : `Deposit approved — ETB ${Number(out.request.amount).toFixed(2)}`,
+      linkUrl: '/wallet',
+    });
+    return out;
+  });
 }
 
 export async function rejectRequest(requestId: string, adminId: string, reason: string) {
+  const cleanReason = (reason ?? '').trim();
+  if (!cleanReason) throw new ApiError(400, 'A rejection reason is required');
   return prisma.$transaction(async (tx) => {
     const req = await tx.fundRequest.findUnique({ where: { id: requestId } });
     if (!req) throw new ApiError(404, 'Request not found');
     if (req.status !== 'PENDING') throw new ApiError(400, 'Request is not pending');
 
-    // Release held balance (withdrawals only)
+    // Release held balance (withdrawals only) — balance itself was never touched
     if (req.type === 'WITHDRAWAL') {
       await tx.user.update({ where: { id: req.userId }, data: { heldBalance: { decrement: req.amount } } });
     }
 
     await tx.fundRequest.update({
       where: { id: requestId },
-      data: { status: 'REJECTED', reviewedById: adminId, reviewedAt: new Date(), rejectionReason: reason || null },
+      data: { status: 'REJECTED', reviewedById: adminId, reviewedAt: new Date(), rejectionReason: cleanReason },
+    });
+
+    await tx.adminActionLog.create({
+      data: {
+        userId: adminId,
+        action: req.type === 'WITHDRAWAL' ? 'WITHDRAWAL_REJECTED' : 'DEPOSIT_REJECTED',
+        targetType: 'FundRequest',
+        targetId: requestId,
+        metadata: { amount: Number(req.amount), userId: req.userId, reason: cleanReason } as never,
+      },
     });
 
     return req;

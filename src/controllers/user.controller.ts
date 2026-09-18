@@ -26,7 +26,7 @@ export const updateByAdmin = asyncHandler(async (req, res) => {
   if (req.params.id === req.user!.id && req.body.role && req.body.role !== req.user!.role) {
     // Allow but warn? For now allow, but prevent self-demotion to avoid lockout? We'll allow with check
   }
-  const user = await userService.updateUserByAdmin(req.params.id as string, req.body as Record<string, unknown>);
+  const user = await userService.updateUserByAdmin(req.params.id as string, req.body as Record<string, unknown>, req.user!.id);
   res.json({ message: 'User updated', data: sanitizeUser(user) });
 });
 

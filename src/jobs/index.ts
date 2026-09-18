@@ -1,6 +1,7 @@
 import cron from 'node-cron';
 import { runSyncGameResults } from './operations/sync-game-results.js';
 import { runRefreshGameOddsJob } from './operations/refresh-game-odds.js';
+import { runReferralBonusCheck } from './operations/referral-bonus-check.js';
 
 export function startJobs() {
   cron.schedule('*/10 * * * *', async () => {
@@ -27,7 +28,21 @@ export function startJobs() {
     }
   });
 
-  console.log('[jobs] scheduler started: sync-game-results (every 10 min), refresh-game-odds (every 5 min, tiered)');
+  // Referral bonus top-up: every 12h, pay pending referrals whose referee
+  // balance has reached the live qualifying threshold (skips rewarded ones)
+  cron.schedule('0 */12 * * *', async () => {
+    try {
+      const r = await runReferralBonusCheck();
+      if (r.rewarded || r.errored) {
+        console.log(`[jobs] referral-bonus-check: checked=${r.checked} rewarded=${r.rewarded} skippedLow=${r.skippedLowBalance} skippedInactive=${r.skippedInactive} errored=${r.errored}`);
+        for (const d of r.details) console.log(`  referral ${d.referralId}: paid ETB ${d.amount} to ${d.referrerId}`);
+      }
+    } catch (e) {
+      console.error('[jobs] referral-bonus-check failed', e);
+    }
+  });
+
+  console.log('[jobs] scheduler started: sync-game-results (every 10 min), refresh-game-odds (every 5 min, tiered), referral-bonus-check (every 12 h)');
 }
 
 export default startJobs;

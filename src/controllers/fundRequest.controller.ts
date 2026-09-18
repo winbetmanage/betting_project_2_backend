@@ -83,8 +83,37 @@ export const adminGetById = asyncHandler(async (req, res) => {
 });
 
 export const adminApprove = asyncHandler(async (req, res) => {
-  const result = await fundRequestService.approveRequest(req.params.id as string, req.user!.id);
-  res.json({ message: 'Request approved', data: result });
+  const requestId = req.params.id as string;
+  const file = req.file as Express.Multer.File | undefined;
+
+  // JSON body (deposits) or multipart FormData (withdrawals with proof)
+  const transactionId = (req.body as { transactionId?: unknown }).transactionId;
+
+  // Validate before touching the filesystem so a failed request never leaves an orphan file
+  const current = await prisma.fundRequest.findUnique({ where: { id: requestId }, select: { type: true, status: true } });
+  if (!current) throw new ApiError(404, 'Request not found');
+  if (current.status !== 'PENDING') throw new ApiError(400, 'Request is not pending');
+
+  let completionProofImagePath: string | undefined;
+  if (file) {
+    completionProofImagePath = `fund_requests/${requestId}_completion.${PROOF_EXT}`;
+    const targetPath = path.join(uploadDir, `${requestId}_completion.${PROOF_EXT}`);
+    await sharp(file.buffer)
+      .resize({ width: 1200, withoutEnlargement: true })
+      .webp({ quality: 78 })
+      .toFile(targetPath);
+  }
+
+  try {
+    const result = await fundRequestService.approveRequest(req.params.id as string, req.user!.id, {
+      transactionId: typeof transactionId === 'string' ? transactionId : '',
+      completionProofImagePath,
+    });
+    res.json({ message: 'Request approved', data: result });
+  } catch (e) {
+    if (completionProofImagePath) await deleteUploadFile(completionProofImagePath);
+    throw e;
+  }
 });
 
 export const adminReject = asyncHandler(async (req, res) => {

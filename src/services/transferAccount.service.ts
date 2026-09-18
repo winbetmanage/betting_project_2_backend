@@ -38,16 +38,16 @@ export const getTransferAccountById = async (id: string) => {
   return account;
 };
 
-export const createTransferAccount = async (data: CreateTransferAccountInput) => {
+export const createTransferAccount = async (data: CreateTransferAccountInput, creatorId: string) => {
   const parsed = createTransferAccountSchema.parse(data);
   // Ensure accountNumber uniqueness at app level (schema doesn't enforce)
   const exists = await prisma.ourTransferAccount.findFirst({ where: { accountNumber: parsed.accountNumber } });
   if (exists) throw new ApiError(409, 'Account number already exists');
-  return prisma.ourTransferAccount.create({ data: parsed as never });
+  return prisma.ourTransferAccount.create({ data: { ...parsed, createdById: creatorId } as never });
 };
 
-export const updateTransferAccount = async (id: string, data: UpdateTransferAccountInput) => {
-  await getTransferAccountById(id);
+export const updateTransferAccount = async (id: string, data: UpdateTransferAccountInput, actorId: string) => {
+  const before = await getTransferAccountById(id);
   const parsed = updateTransferAccountSchema.parse(data);
   if (parsed.accountNumber) {
     const dup = await prisma.ourTransferAccount.findFirst({
@@ -55,7 +55,26 @@ export const updateTransferAccount = async (id: string, data: UpdateTransferAcco
     });
     if (dup) throw new ApiError(409, 'Account number already exists');
   }
-  return prisma.ourTransferAccount.update({ where: { id }, data: parsed as never });
+  const changedKeys = (Object.keys(parsed) as (keyof UpdateTransferAccountInput)[]).filter(
+    (k) => (parsed[k] as unknown) !== (before[k as keyof typeof before] as unknown)
+  );
+  return prisma.$transaction(async (tx) => {
+    const updated = await tx.ourTransferAccount.update({ where: { id }, data: parsed as never });
+    await tx.adminActionLog.create({
+      data: {
+        userId: actorId,
+        action: 'TRANSFER_ACCOUNT_UPDATED',
+        targetType: 'OurTransferAccount',
+        targetId: id,
+        metadata: {
+          changed: changedKeys,
+          before: Object.fromEntries(changedKeys.map((k) => [k, before[k as keyof typeof before] ?? null])),
+          after: Object.fromEntries(changedKeys.map((k) => [k, parsed[k] ?? null])),
+        } as never,
+      },
+    });
+    return updated;
+  });
 };
 
 export const deleteTransferAccount = async (id: string) => {

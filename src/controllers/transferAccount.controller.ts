@@ -17,12 +17,12 @@ export const getById = asyncHandler(async (req, res) => {
 });
 
 export const create = asyncHandler(async (req, res) => {
-  const account = await transferAccountService.createTransferAccount(req.body);
+  const account = await transferAccountService.createTransferAccount(req.body, req.user!.id);
   res.status(201).json({ message: 'Transfer account created', data: account });
 });
 
 export const update = asyncHandler(async (req, res) => {
-  const account = await transferAccountService.updateTransferAccount(req.params.id as string, req.body);
+  const account = await transferAccountService.updateTransferAccount(req.params.id as string, req.body, req.user!.id);
   res.json({ message: 'Transfer account updated', data: account });
 });
 

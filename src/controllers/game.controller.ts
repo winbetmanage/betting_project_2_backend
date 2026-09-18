@@ -23,7 +23,7 @@ export const getById = asyncHandler(async (req, res) => {
 });
 
 export const update = asyncHandler(async (req, res) => {
-  const game = await gameService.updateGame(req.params.id as string, req.body as Record<string, unknown>);
+  const game = await gameService.updateGame(req.params.id as string, req.body as Record<string, unknown>, req.user!.id);
   res.json({ message: 'Game updated', data: game });
 });
 

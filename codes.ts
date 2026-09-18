@@ -9,7 +9,7 @@ const ODDS_API_BASE_URL = "https://api.the-odds-api.com/v4";
 //const ODDS_API_BASE_URL = "http://localhost:5000";
 
 const ODDS_API_KEY = process.env.API_ONE;
-const ODDS_API_REGIONS = "eu";
+const ODDS_API_REGIONS = "eu,uk";
 const ODDS_API_MARKETS = "h2h,totals,btts";
 
 // Every market type the odds api supports for soccer

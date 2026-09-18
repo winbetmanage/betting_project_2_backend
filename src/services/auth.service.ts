@@ -5,6 +5,7 @@ import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
 import config from '../config';
 import { sanitizeUser } from '../utils/sanitize';
+import { notify } from './notification.service';
 import type { User } from '@prisma/client';
 
 const parseExpiryMs = (str: string): number => {
@@ -180,9 +181,26 @@ export const register = async (
         await prisma.referral.create({
           data: { referrerId: referrer.id, refereeId: user.id, codeUsed: code, status: 'PENDING' },
         });
+        await notify({
+          audience: 'USER',
+          userId: referrer.id,
+          type: 'REFERRAL_SIGNUP',
+          title: 'Someone joined with your link',
+          message: `${user.name ?? user.email} signed up with your referral link`,
+          linkUrl: '/profile',
+        });
       }
     }
   }
+
+  await notify({
+    audience: 'ADMIN',
+    userId: user.id,
+    type: 'USER_REGISTERED',
+    title: `New user: ${user.name ?? user.email}`,
+    message: user.email,
+    linkUrl: '/admin/users',
+  });
 
   const deviceId = meta ? await trackDevice(user.id, meta.ip, meta.userAgent) : null;
   const tokens = await issueTokenPair(user, deviceId);

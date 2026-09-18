@@ -11,6 +11,8 @@ import transferAccountRoutes from './transferAccount.routes';
 import staticGamesRoutes from './staticGames.routes';
 import fetchGamesRoutes from './fetchGames.routes';
 import fundRequestRoutes from './fundRequest.routes';
+import notificationRoutes from './notification.routes';
+import settingsRoutes from './settings.routes';
 
 const router = Router();
 
@@ -26,5 +28,7 @@ router.use('/transfer-accounts', transferAccountRoutes);
 router.use('/info', staticGamesRoutes);
 router.use('/fetch-games', fetchGamesRoutes);
 router.use('/funds', fundRequestRoutes);
+router.use('/notifications', notificationRoutes);
+router.use('/settings', settingsRoutes);
 
 export default router;

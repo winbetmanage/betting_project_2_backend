@@ -79,8 +79,12 @@ export const getGameById = async (id: string) => {
   return game;
 };
 
-export const updateGame = async (id: string, data: Record<string, unknown>) => {
-  return prisma.game.update({ where: { id }, data: data as never });
+export const updateGame = async (id: string, data: Record<string, unknown>, actorId: string) => {
+  const { statusChangedById: _ignoredBy, ...rest } = data;
+  return prisma.game.update({
+    where: { id },
+    data: { ...(rest as Record<string, unknown>), ...(rest.status !== undefined ? { statusChangedById: actorId } : {}) } as never,
+  });
 };
 
 export const listRecentResults = async (limit: number) => {

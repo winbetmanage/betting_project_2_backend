@@ -1,40 +1,52 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
+import fs from 'fs';
+import path from 'path';
 
-const MARKET_TYPE_MAP: Record<string, string> = {
-  h2h: 'MATCH_WINNER',
-  h2h_3_way: 'MATCH_WINNER',
-  h2h_lay: 'MATCH_WINNER',
-  h2h_back: 'MATCH_WINNER',
-  draw_no_bet: 'MATCH_WINNER',
-  double_chance: 'MATCH_WINNER',
-  double_chance_lay: 'MATCH_WINNER',
-  double_chance_h1: 'MATCH_WINNER',
-  h2h_h1: 'MATCH_WINNER',
-  h2h_h2: 'MATCH_WINNER',
-  totals: 'OVER_UNDER',
-  totals_h1: 'OVER_UNDER',
-  totals_h2: 'OVER_UNDER',
-  team_totals: 'OVER_UNDER',
-  alternate_totals: 'OVER_UNDER',
-  alternate_team_totals: 'OVER_UNDER',
-  alternate_totals_corners: 'OVER_UNDER',
-  alternate_totals_cards: 'OVER_UNDER',
-  spreads: 'HANDICAP',
-  alternate_spreads: 'HANDICAP',
-  alternate_spreads_corners: 'HANDICAP',
-  alternate_spreads_cards: 'HANDICAP',
-  btts: 'BOTH_TEAMS_TO_SCORE',
-  btts_h1: 'BOTH_TEAMS_TO_SCORE',
-  correct_score: 'CORRECT_SCORE',
-  correct_score_h1: 'CORRECT_SCORE',
-  halftime_fulltime: 'CUSTOM',
-  corners_1x2: 'CUSTOM',
+/**
+ * Market-type registry (src/config/marketTypes.json): marketKey -> { type, label }.
+ * Loaded once at module load; falls back to built-ins if the file is missing.
+ * NOTE: editing the JSON alone does not hot-reload a running server — restart
+ * the backend (or touch this file) to pick up registry changes.
+ */
+type MarketTypeEntry = { type: string; label: string };
+
+const BUILTIN_TYPES: Record<string, MarketTypeEntry> = {
+  h2h: { type: 'MATCH_WINNER', label: 'Match Winner' },
+  totals: { type: 'OVER_UNDER', label: 'Over/Under' },
+  spreads: { type: 'HANDICAP', label: 'Handicap' },
+  btts: { type: 'BOTH_TEAMS_TO_SCORE', label: 'Both Teams to Score' },
 };
+
+function loadMarketTypes(): Record<string, MarketTypeEntry> {
+  const candidates = [
+    path.join(__dirname, '..', 'config', 'marketTypes.json'),
+    path.join(process.cwd(), 'src', 'config', 'marketTypes.json'),
+  ];
+  for (const f of candidates) {
+    try {
+      if (fs.existsSync(f)) {
+        const raw = JSON.parse(fs.readFileSync(f, 'utf-8')) as Record<string, unknown>;
+        const map: Record<string, MarketTypeEntry> = { ...BUILTIN_TYPES };
+        for (const [k, v] of Object.entries(raw)) {
+          if (k.startsWith('_')) continue;
+          const e = v as MarketTypeEntry;
+          if (e && typeof e.type === 'string' && typeof e.label === 'string') map[k] = e;
+        }
+        return map;
+      }
+    } catch {
+      // fall through to built-ins
+    }
+  }
+  return { ...BUILTIN_TYPES };
+}
+
+const MARKET_TYPES = loadMarketTypes();
 
 // Fallback resolver so new/unknown variants don't all collapse to CUSTOM
 function resolveMarketType(marketKey: string): string {
-  if (MARKET_TYPE_MAP[marketKey]) return MARKET_TYPE_MAP[marketKey];
+  if (MARKET_TYPES[marketKey]) return MARKET_TYPES[marketKey].type;
   if (marketKey.startsWith('h2h') || marketKey.startsWith('draw_no_bet') || marketKey.startsWith('double_chance')) return 'MATCH_WINNER';
   if (marketKey.startsWith('totals') || marketKey.startsWith('team_totals') || marketKey.startsWith('alternate_totals')) return 'OVER_UNDER';
   if (marketKey.startsWith('spreads') || marketKey.startsWith('alternate_spreads')) return 'HANDICAP';
@@ -44,37 +56,8 @@ function resolveMarketType(marketKey: string): string {
 }
 
 function humanLabel(marketKey: string, point: number | null): string {
-  const known: Record<string, string> = {
-    h2h: 'Match Winner',
-    totals: 'Over/Under',
-    spreads: 'Handicap',
-    h2h_3_way: 'Match Winner (3-Way)',
-    h2h_lay: 'Match Winner (Lay)',
-    h2h_back: 'Match Winner (Back)',
-    double_chance_lay: 'Double Chance (Lay)',
-    btts: 'Both Teams to Score',
-    draw_no_bet: 'Draw No Bet',
-    double_chance: 'Double Chance',
-    h2h_h1: 'First Half Winner',
-    h2h_h2: 'Second Half Winner',
-    totals_h1: 'First Half Totals',
-    totals_h2: 'Second Half Totals',
-    btts_h1: 'First Half BTTS',
-    double_chance_h1: 'First Half Double Chance',
-    correct_score: 'Correct Score',
-    correct_score_h1: 'First Half Correct Score',
-    halftime_fulltime: 'Half-Time/Full-Time',
-    team_totals: 'Team Totals',
-    alternate_spreads: 'Alternate Spreads',
-    alternate_totals: 'Alternate Totals',
-    alternate_team_totals: 'Alternate Team Totals',
-    corners_1x2: 'Corners 1X2',
-    alternate_totals_corners: 'Alternate Corner Totals',
-    alternate_spreads_corners: 'Alternate Corner Spreads',
-    alternate_totals_cards: 'Alternate Card Totals',
-    alternate_spreads_cards: 'Alternate Card Spreads',
-  };
-  const base = known[marketKey] ?? marketKey.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  const base = MARKET_TYPES[marketKey]?.label
+    ?? marketKey.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
   if (point != null) return `${base} — line ${point}`;
   return base;
 }
