@@ -1,6 +1,6 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
-import { getOddsApiEventDetailUrl } from '../../codes';
+import { getOddsApiEventAllMarketsUrl, getOddsApiEventDetailUrl } from '../../codes';
 import { resolveSportKey } from './bookmakerOdds.service';
 
 type RawOutcome = { name: string; price: number; point?: number | null };
@@ -17,6 +17,7 @@ const TYPE_TO_KEY: Record<string, string> = {
   HANDICAP: 'spreads',
   BOTH_TEAMS_TO_SCORE: 'btts',
   CORRECT_SCORE: 'correct_score',
+  HALFTIME_FULLTIME: 'halftime_fulltime',
 };
 
 const FREE_PLAN_KEYS = new Set(['h2h', 'totals', 'spreads']);
@@ -27,13 +28,14 @@ export function marketKeyOf(market: { type: string; parameters: unknown }): stri
   return TYPE_TO_KEY[market.type] ?? null;
 }
 
-/** Fetch one event's odds for exactly the given market keys (fallback list on 422). */
+/** Fetch one event's odds for ALL markets (fallback: requested subset on 422). */
 async function fetchEventOdds(sportKey: string, eventId: string, marketKeys: string[]): Promise<RawEvent> {
-  const tryLists = [marketKeys.join(','), marketKeys.filter((k) => FREE_PLAN_KEYS.has(k)).join(',')];
+  const fallback = marketKeys.filter((k) => FREE_PLAN_KEYS.has(k)).join(',');
+  const tryUrls = [getOddsApiEventAllMarketsUrl(sportKey, eventId)];
+  if (fallback) tryUrls.push(getOddsApiEventDetailUrl(sportKey, eventId, fallback));
   let lastErr = '';
-  for (const markets of tryLists) {
-    if (!markets) continue;
-    const res = await fetch(getOddsApiEventDetailUrl(sportKey, eventId, markets));
+  for (const url of tryUrls) {
+    const res = await fetch(url);
     if (res.ok) {
       const data = (await res.json()) as RawEvent | RawEvent[];
       const ev = Array.isArray(data) ? data.find((e) => e?.id === eventId) ?? data[0] : data;

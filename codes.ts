@@ -19,7 +19,7 @@ const ODDS_API_FEATURED_MARKETS = "h2h,spreads,totals";
 // NOTE: correct_score, correct_score_h1, halftime_fulltime, corners_1x2, and the
 // *_corners and *_cards keys are unverified for soccer. If the real API returns 422,
 // validate keys using the per-event /markets endpoint (see getEventMarketsUrl).
-const ODDS_API_ALL_MARKETS =
+export const ODDS_API_ALL_MARKETS =
   "h2h,spreads,totals,btts,draw_no_bet,h2h_3_way,double_chance," +
   "alternate_spreads,alternate_totals,team_totals,alternate_team_totals," +
   "btts_h1,double_chance_h1,h2h_h1,h2h_h2,totals_h1,totals_h2," +
@@ -47,6 +47,12 @@ export const getChampionsLeagueEventsUrl = () =>
 // ODDS_API_ALL_MARKETS here, e.g. getOddsApiEventDetailUrl(sportKey, eventId, ODDS_API_ALL_MARKETS).
 export const getOddsApiEventDetailUrl = (sportKey: string, eventId: string, markets: string = ODDS_API_MARKETS) =>
   `${ODDS_API_BASE_URL}/sports/${sportKey}/events/${eventId}/odds/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}&markets=${markets}&oddsFormat=decimal&dateFormat=iso`;
+
+// Costs credits (roughly number of markets x number of regions per event) -
+// single game detail with EVERY market in ODDS_API_ALL_MARKETS. If the API
+// returns 422, one of the unverified market keys is being rejected.
+export const getOddsApiEventAllMarketsUrl = (sportKey: string, eventId: string) =>
+  getOddsApiEventDetailUrl(sportKey, eventId, ODDS_API_ALL_MARKETS);
 
 // Costs credits - ALL games in a competition, featured markets only, EU bookmakers
 // sportKey: "soccer_epl" or "soccer_uefa_champs_league"
