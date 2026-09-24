@@ -17,7 +17,8 @@ export async function fetchAndStoreForGame(gameId: string) {
   if (!game) throw new ApiError(404, 'Game not found');
   if (!game.externalEventId) throw new ApiError(400, 'Game has no externalEventId');
   const sportKey = resolveSportKey(game);
-  const bookmakers = await eplGameOdds.fetchAndSaveGameOdds(game.externalEventId, sportKey);
+  // Per-event ALL-markets fetch (falls back gracefully) — saved to the game's JSON file
+  const bookmakers = await eplGameOdds.fetchAndSaveEventOdds(game.externalEventId, sportKey);
   const lastFetchedAt = new Date().toISOString();
   const spec = { ...((game.specifications ?? {}) as Record<string, unknown>) };
   spec.lastFetchedAt = lastFetchedAt;
@@ -108,4 +109,4 @@ export async function getGameApiDetails(gameId: string) {
   };
 }
 
-export { hasJsonFor, jsonPathFor, readGameOdds, groupOdds, fetchAndSaveGameOdds } from './eplGameOdds.service';
+export { hasJsonFor, jsonPathFor, readGameOdds, groupOdds, fetchAndSaveGameOdds, fetchAndSaveEventOdds } from './eplGameOdds.service';

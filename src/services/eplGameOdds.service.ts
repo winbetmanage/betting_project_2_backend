@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import ApiError from '../utils/ApiError';
-import { getAllMarketsOddsUrl } from '../../codes';
+import { getAllMarketsOddsUrl, getOddsApiEventAllMarketsUrl, getOddsApiEventDetailUrl, getEventMarketsUrl, ODDS_API_ALL_MARKETS } from '../../codes';
 
 export type BookmakerGroup = {
   marketKey: string;
@@ -82,6 +82,90 @@ export async function fetchAndSaveGameOdds(externalEventId: string, sportKey: st
   const { events, marketsUsed } = await fetchOddsEvents(sportKey);
   const event = events.find((e) => e?.id === externalEventId);
   if (!event) throw new ApiError(404, `Event ${externalEventId} is not present in the current odds feed for ${sportKey} (${marketsUsed} markets)`);
+  const file = jsonPathFor(externalEventId);
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, JSON.stringify(event, null, 2), "utf-8");
+  const bmCount = Array.isArray(event.bookmakers) ? event.bookmakers.length : 0;
+  console.log(`[eplGameOdds] saved ${file} using markets=${marketsUsed} (${bmCount} bookmakers)`);
+  return bmCount;
+}
+
+/** Which market keys the books actually offer for one event (null = unknown). */
+export async function fetchSupportedKeys(sportKey: string, eventId: string): Promise<Set<string> | null> {
+  try {
+    const res = await fetch(getEventMarketsUrl(sportKey, eventId));
+    if (!res.ok) return null;
+    const data: unknown = await res.json();
+    const keys = new Set<string>();
+    const collect = (m: unknown) => {
+      if (typeof m === 'string' && m) keys.add(m.toLowerCase());
+      else if (m && typeof m === 'object' && typeof (m as { key?: unknown }).key === 'string') {
+        keys.add(((m as { key: string }).key).toLowerCase());
+      }
+    };
+    const root = data as { bookmakers?: unknown; markets?: unknown };
+    const bms = Array.isArray(data) ? data : root.bookmakers ?? root.markets;
+    if (Array.isArray(bms)) {
+      for (const b of bms) {
+        const inner = (b as { markets?: unknown }).markets;
+        if (Array.isArray(inner)) inner.forEach(collect);
+        else collect(b);
+      }
+    }
+    return keys.size > 0 ? keys : null;
+  } catch {
+    return null;
+  }
+}
+
+type RawEvent = { id?: string; bookmakers?: RawBookmaker[] };
+
+async function fetchEventAll(sportKey: string, eventId: string): Promise<{ event: RawEvent; marketsUsed: string }> {
+  // 1. ALL markets in one per-event call
+  let res = await fetch(getOddsApiEventAllMarketsUrl(sportKey, eventId));
+  if (res.ok) {
+    const data = (await res.json()) as RawEvent | RawEvent[];
+    const ev = Array.isArray(data) ? data.find((e) => e?.id === eventId) ?? data[0] : data;
+    if (!ev) throw new ApiError(502, 'odds-api returned no event');
+    return { event: ev, marketsUsed: 'all' };
+  }
+  const firstErr = `${res.status} ${(await res.text().catch(() => '')).slice(0, 160)}`;
+  if (res.status !== 400 && res.status !== 422) {
+    throw new ApiError(res.status, `Failed to fetch event odds: ${firstErr}`);
+  }
+  // 2. only the keys the books actually offer for this event
+  const supported = await fetchSupportedKeys(sportKey, eventId);
+  if (supported) {
+    const subset = ODDS_API_ALL_MARKETS.split(',').filter((k) => supported.has(k.toLowerCase()));
+    if (subset.length > 0) {
+      res = await fetch(getOddsApiEventDetailUrl(sportKey, eventId, subset.join(',')));
+      if (res.ok) {
+        const data = (await res.json()) as RawEvent | RawEvent[];
+        const ev = Array.isArray(data) ? data.find((e) => e?.id === eventId) ?? data[0] : data;
+        if (!ev) throw new ApiError(502, 'odds-api returned no event');
+        return { event: ev, marketsUsed: `supported(${subset.length})` };
+      }
+    }
+  }
+  // 3. last resort: featured markets only (same as the bulk feed)
+  res = await fetch(getOddsApiEventDetailUrl(sportKey, eventId, 'h2h,spreads,totals'));
+  if (!res.ok) {
+    throw new ApiError(502, `odds fetch failed: ${firstErr} | ${(await res.text().catch(() => '')).slice(0, 160)}`);
+  }
+  const data = (await res.json()) as RawEvent | RawEvent[];
+  const ev = Array.isArray(data) ? data.find((e) => e?.id === eventId) ?? data[0] : data;
+  if (!ev) throw new ApiError(502, 'odds-api returned no event');
+  return { event: ev, marketsUsed: 'featured' };
+}
+
+/**
+ * Per-event "fetch all-market odds": requests ODDS_API_ALL_MARKETS for one event
+ * and saves the payload to epl_games_odds/<eventId>.json (used by the admin
+ * "fetch all-market odds" button). Falls back to the supported subset, then
+ * featured markets, so it never 422s fatally.
+ */
+export async function fetchAndSaveEventOdds(externalEventId: string, sportKey: string = "soccer_epl"): Promise<number> {
+  const { event, marketsUsed } = await fetchEventAll(sportKey, externalEventId);
   const file = jsonPathFor(externalEventId);
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, JSON.stringify(event, null, 2), "utf-8");
