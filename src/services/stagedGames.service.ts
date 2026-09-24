@@ -75,14 +75,17 @@ export async function fetchEvents(choice: SportChoice, force: boolean): Promise<
 
 export const listSportEvents = async (choice: SportChoice, filters: Record<string, unknown> = {}) => {
   const all = await fetchEvents(choice, !!filters.force);
+  // Already-staged events never show here — staging happens by selecting from this list
+  const stagedIds = await getStagedEventIds();
+  const unstaged = all.filter((e) => !stagedIds.has(e.id));
   const search = typeof filters.search === 'string' ? filters.search.trim().toLowerCase() : '';
   const filtered = search
-    ? all.filter((e) =>
+    ? unstaged.filter((e) =>
         [e.id, e.sport_key, e.sport_title, e.home_team, e.away_team, e.commence_time].some((f) =>
           String(f).toLowerCase().includes(search)
         )
       )
-    : all;
+    : unstaged;
 
   const page = Math.max(1, parseInt(String(filters.page ?? '1'), 10) || 1);
   const limit = Math.min(100, Math.max(1, parseInt(String(filters.limit ?? '20'), 10) || 20));
@@ -234,6 +237,122 @@ export const stageFromOdds = async (choice: SportChoice, adminId?: string): Prom
   return summary;
 };
 
+/**
+ * Stage only the explicitly selected odds events (from the PL / CL fetch pages).
+ * Unknown ids and already-staged events are reported, never duplicated.
+ */
+export const stageSelectedEvents = async (choice: SportChoice, eventIds: unknown, adminId?: string): Promise<StageSummary> => {
+  const ids = Array.from(
+    new Set(Array.isArray(eventIds) ? eventIds.filter((v): v is string => typeof v === 'string' && v.trim() !== '') : [])
+  );
+  if (ids.length === 0) throw new ApiError(400, 'No events selected');
+
+  const events = await fetchEvents(choice, true);
+  const byId = new Map(events.map((e) => [e.id, e]));
+  const existingSet = await getStagedEventIds();
+
+  const summary: StageSummary = { choice, fetched: events.length, alreadyStaged: 0, added: 0, createdTeams: [], unresolved: [] };
+  const targets: OddsEvent[] = [];
+  for (const id of ids) {
+    const e = byId.get(id);
+    if (!e) {
+      summary.unresolved.push({ fixture: id, reason: 'event not in the current feed' });
+      continue;
+    }
+    if (existingSet.has(id)) {
+      summary.alreadyStaged += 1;
+      continue;
+    }
+    targets.push(e);
+  }
+  if (targets.length === 0) return summary;
+
+  const competition = await ensureCompetition(choice);
+  const { ids: teamIds, created } = await resolveTeamIds(targets.flatMap((e) => [e.home_team, e.away_team]));
+  summary.createdTeams = created;
+
+  const rows: Prisma.StagedGameCreateManyInput[] = [];
+  for (const e of targets) {
+    const homeId = teamIds.get(e.home_team);
+    const awayId = teamIds.get(e.away_team);
+    if (!homeId || !awayId || homeId === awayId) {
+      summary.unresolved.push({ fixture: `${e.home_team} vs ${e.away_team}`, reason: 'team could not be resolved' });
+      continue;
+    }
+    rows.push({
+      oddsApiEventId: e.id,
+      oddsApiStartTime: new Date(e.commence_time),
+      oddsApiRaw: e as unknown as Prisma.InputJsonValue,
+      homeTeamId: homeId,
+      awayTeamId: awayId,
+      competitionId: competition.id,
+      status: 'PENDING',
+      stagedById: adminId ?? null,
+    });
+  }
+
+  if (rows.length > 0) {
+    const result = await prisma.stagedGame.createMany({ data: rows, skipDuplicates: true });
+    summary.added = result.count;
+  }
+  return summary;
+};
+
+export type RefreshStagedSummary = {
+  checked: number;
+  oddsUpdated: number;
+  fdUpdated: number;
+  errors: { id: string; message: string }[];
+};
+
+/**
+ * Refresh staged rows from the APIs: odds kickoff/raw from the free events feeds,
+ * football-data status/start/raw for linked matches. Never creates or deletes rows.
+ */
+export const refreshStagedGames = async (): Promise<RefreshStagedSummary> => {
+  const summary: RefreshStagedSummary = { checked: 0, oddsUpdated: 0, fdUpdated: 0, errors: [] };
+  const [epl, cl] = await Promise.all([fetchEvents('premier-league', true), fetchEvents('champions-league', true)]);
+  const feed = new Map<string, OddsEvent>([...epl, ...cl].map((e) => [e.id, e]));
+
+  const rows = await prisma.stagedGame.findMany({
+    select: { id: true, oddsApiEventId: true, oddsApiStartTime: true, footballDataMatchId: true },
+  });
+  for (const row of rows) {
+    summary.checked += 1;
+    try {
+      const data: Prisma.StagedGameUpdateInput = {};
+      const ev = feed.get(row.oddsApiEventId);
+      if (ev) {
+        const fresh = new Date(ev.commence_time);
+        if (fresh.getTime() !== new Date(row.oddsApiStartTime).getTime()) {
+          data.oddsApiStartTime = fresh;
+          summary.oddsUpdated += 1;
+        }
+        data.oddsApiRaw = ev as unknown as Prisma.InputJsonValue;
+      }
+      if (row.footballDataMatchId != null) {
+        const res = await fetch(getFootballDataMatchDetailUrl(row.footballDataMatchId), footballDataFetchOptions());
+        if (!res.ok) {
+          const text = await res.text().catch(() => '');
+          throw new ApiError(res.status, `Football-Data refresh failed: ${res.status} ${text.slice(0, 120)}`);
+        }
+        const match = (await res.json()) as FdMatch;
+        if (!match || typeof match.id !== 'number') throw new ApiError(502, 'Invalid Football-Data match payload');
+        data.footballDataStartTime = match.utcDate ? new Date(match.utcDate) : null;
+        data.footballDataRaw = match as unknown as Prisma.InputJsonValue;
+        data.footballDataStatus = mapFootballDataStatus(match.status);
+        summary.fdUpdated += 1;
+      }
+      if (Object.keys(data).length > 0) {
+        await prisma.stagedGame.update({ where: { id: row.id }, data });
+      }
+    } catch (e) {
+      summary.errors.push({ id: row.id, message: e instanceof Error ? e.message : String(e) });
+    }
+  }
+  return summary;
+};
+
 export const listStagedGames = async (filters: Record<string, unknown> = {}) => {
   const where: Prisma.StagedGameWhereInput = {};
   const status = typeof filters.status === 'string' ? filters.status.trim() : '';
@@ -251,6 +370,35 @@ export const listStagedGames = async (filters: Record<string, unknown> = {}) => 
       { homeTeam: { fullName: { contains: search } } },
       { awayTeam: { fullName: { contains: search } } },
     ];
+  }
+
+  // Visibility rules for the staged queue (pagination-safe id exclusion):
+  // 1. finished games never show (footballDataStatus FINISHED)
+  // 2. kickoff already passed never shows, even when the game is not finished
+  // 3. rescheduled away: linked football-data date no longer on the same UTC day
+  //    as the odds kickoff (same UTC-day rule the FD linker enforces)
+  // Computed in JS (UTC-correct) over a lightweight full scan — staged tables are small.
+  const now = new Date();
+  const meta = await prisma.stagedGame.findMany({
+    select: { id: true, oddsApiStartTime: true, footballDataStatus: true, footballDataStartTime: true },
+  });
+  const hidden = { finished: 0, pastKickoff: 0, rescheduled: 0 };
+  const hiddenIds: string[] = [];
+  for (const r of meta) {
+    if (r.footballDataStatus === 'FINISHED') {
+      hidden.finished += 1;
+      hiddenIds.push(r.id);
+    } else if (new Date(r.oddsApiStartTime).getTime() < now.getTime()) {
+      hidden.pastKickoff += 1;
+      hiddenIds.push(r.id);
+    } else if (r.footballDataStartTime && isoDay(new Date(r.oddsApiStartTime)) !== isoDay(new Date(r.footballDataStartTime))) {
+      hidden.rescheduled += 1;
+      hiddenIds.push(r.id);
+    }
+  }
+  const includeHidden = filters.includeHidden === true || filters.includeHidden === 'true' || filters.includeHidden === '1';
+  if (!includeHidden && hiddenIds.length > 0) {
+    where.AND = [{ id: { notIn: hiddenIds } }];
   }
 
   const page = Math.max(1, parseInt(String(filters.page ?? '1'), 10) || 1);
@@ -277,7 +425,7 @@ export const listStagedGames = async (filters: Record<string, unknown> = {}) => 
   for (const s of statusCounts) counts[s.status] = s._count._all;
 
   const totalPages = Math.max(1, Math.ceil(total / limit));
-  return { data, total, page, limit, totalPages, counts };
+  return { data, total, page, limit, totalPages, counts, hidden };
 };
 
 export function choiceForCompetitionName(name: string | null | undefined): SportChoice {

@@ -12,7 +12,13 @@ const ODDS_API_KEY = process.env.API_ONE;
 const ODDS_API_REGIONS = "eu,uk";
 const ODDS_API_MARKETS = "h2h,totals,btts";
 
+// Featured markets only — the only keys the bulk /sports/{sportKey}/odds endpoint supports
+const ODDS_API_FEATURED_MARKETS = "h2h,spreads,totals";
+
 // Every market type the odds api supports for soccer
+// NOTE: correct_score, correct_score_h1, halftime_fulltime, corners_1x2, and the
+// *_corners and *_cards keys are unverified for soccer. If the real API returns 422,
+// validate keys using the per-event /markets endpoint (see getEventMarketsUrl).
 const ODDS_API_ALL_MARKETS =
   "h2h,spreads,totals,btts,draw_no_bet,h2h_3_way,double_chance," +
   "alternate_spreads,alternate_totals,team_totals,alternate_team_totals," +
@@ -37,19 +43,27 @@ export const getChampionsLeagueEventsUrl = () =>
 // sportKey must match whichever competition the event belongs to
 // (e.g. "soccer_epl" or "soccer_uefa_champs_league")
 // markets: optional comma-separated list to fetch only specific market types
+// NOTE: this per-event endpoint is the one to use for additional markets — pass
+// ODDS_API_ALL_MARKETS here, e.g. getOddsApiEventDetailUrl(sportKey, eventId, ODDS_API_ALL_MARKETS).
 export const getOddsApiEventDetailUrl = (sportKey: string, eventId: string, markets: string = ODDS_API_MARKETS) =>
   `${ODDS_API_BASE_URL}/sports/${sportKey}/events/${eventId}/odds/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}&markets=${markets}&oddsFormat=decimal&dateFormat=iso`;
 
-// Costs credits - ALL games in a competition, with EVERY market type, EU bookmakers
+// Costs credits - ALL games in a competition, featured markets only, EU bookmakers
 // sportKey: "soccer_epl" or "soccer_uefa_champs_league"
-// markets: optional override (defaults to the full list); pass a smaller set if the
-//          API plan rejects unsupported markets (The Odds API 422s the whole call if any
-//          requested market is not on the plan).
+// The bulk /sports/{sportKey}/odds endpoint only supports featured markets
+// (h2h, spreads, totals). Additional markets (btts, double_chance, draw_no_bet,
+// alternate_*, ...) must be requested per event via getOddsApiEventDetailUrl —
+// one unsupported market key makes the real API return 422 for the whole request.
+// markets: optional override (defaults to the featured list).
 // export const getAllMarketsOddsUrl = (sportKey: string, markets: string = ODDS_API_ALL_MARKETS) =>
 //   `${ODDS_API_BASE_URL}/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}&markets=${markets}&oddsFormat=decimal&dateFormat=iso`;
 
-export const getAllMarketsOddsUrl = (sportKey: string, markets: string = `${ODDS_API_ALL_MARKETS},btts,double_chance,draw_no_bet`) =>
+export const getAllMarketsOddsUrl = (sportKey: string, markets: string = ODDS_API_FEATURED_MARKETS) =>
   `${ODDS_API_BASE_URL}/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}&markets=${markets}&oddsFormat=decimal&dateFormat=iso`;
+
+// Free/cheap call - lists which market keys each bookmaker offers for one event. Use it to filter market lists before requesting odds.
+export const getEventMarketsUrl = (sportKey: string, eventId: string) =>
+  `${ODDS_API_BASE_URL}/sports/${sportKey}/events/${eventId}/markets/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}`;
 
 // ============================================
 // FOOTBALL-DATA.ORG

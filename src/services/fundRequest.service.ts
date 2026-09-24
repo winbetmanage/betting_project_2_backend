@@ -6,6 +6,9 @@ import { getNumberSetting } from './settings.service';
 const MIN_AMOUNT = 100;
 const MAX_PENDING_DEPOSITS = 3;
 const WITHDRAWAL_MIN_RESERVE = 100; // available balance must stay >= this after a withdrawal request
+// Kill-switch: referral bonuses are PAUSED — no agent is rewarded for any
+// deposit amount until this is flipped back to false.
+export const REFERRAL_BONUS_PAUSED = true;
 // Fallbacks if settings rows are missing; live values come from AppSetting
 // (referral.bonus_amount / referral.qualifying_deposit), editable in admin settings.
 const REFERRAL_BONUS_FALLBACK = 50;
@@ -40,11 +43,13 @@ export async function createDepositRequest(
       proofImagePath: data.proofImagePath,
     },
   }).then(async (request) => {
+    const requester = await prisma.user.findUnique({ where: { id: userId }, select: { name: true, email: true } });
     await notify({
       audience: 'ADMIN',
       userId,
       type: 'DEPOSIT_REQUESTED',
       title: `New deposit request — ETB ${Number(data.amount).toFixed(2)}`,
+      message: `From ${requester?.name ?? requester?.email ?? userId}`,
       linkUrl: '/admin/wallet',
     });
     return request;
@@ -92,11 +97,13 @@ export async function createWithdrawalRequest(
     await tx.user.update({ where: { id: userId }, data: { heldBalance: { increment: data.amount } } });
     return request;
   }, TX_OPTIONS).then(async (request) => {
+    const requester = await prisma.user.findUnique({ where: { id: userId }, select: { name: true, email: true } });
     await notify({
       audience: 'ADMIN',
       userId,
       type: 'WITHDRAWAL_REQUESTED',
       title: `New withdrawal request — ETB ${Number(data.amount).toFixed(2)}`,
+      message: `From ${requester?.name ?? requester?.email ?? userId}`,
       linkUrl: '/admin/users/withdrawal-requests',
     });
     return request;
@@ -180,11 +187,12 @@ export async function approveRequest(
     });
 
     // Referral payout — only on qualifying DEPOSIT approvals.
+    // PAUSED (see REFERRAL_BONUS_PAUSED): referrals stay PENDING, nobody is paid.
     // The conditional updateMany (WHERE status='PENDING') is the double-pay guard:
     // only one concurrent approval can win the race and flip the status.
     // Amount + threshold are read live from settings; the credited figure is
     // snapshotted onto the referral row for audit.
-    if (req.type === 'DEPOSIT' && Number(req.amount) >= referralQualifying) {
+    if (!REFERRAL_BONUS_PAUSED && req.type === 'DEPOSIT' && Number(req.amount) >= referralQualifying) {
       const referral = await tx.referral.findFirst({
         where: { refereeId: req.userId, status: 'PENDING' },
         include: { referrer: { select: { id: true, balance: true } } },

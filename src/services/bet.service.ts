@@ -12,7 +12,7 @@ export interface PlaceBetInput {
   selections: Array<{ selectionId: string; odds?: number }>;
 }
 
-export const MAX_PARLAY_LEGS = 15;
+export const MAX_PARLAY_LEGS = 30;
 
 /** Betting window shuts this long before kickoff (checked at placement time). */
 export const BETTING_WINDOW_MS = 15 * 60 * 1000;

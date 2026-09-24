@@ -42,10 +42,11 @@ export function hasJsonFor(externalEventId: string): boolean {
   return fs.existsSync(jsonPathFor(externalEventId));
 }
 
-// Market-set ladder: full list first, then progressively narrower sets in case the
-// API plan rejects unsupported markets (The Odds API 422s the entire request if ANY
-// requested market is not on the plan).
-const MARKET_LADDER: (string | undefined)[] = [undefined, "h2h,totals,spreads", "h2h,totals", "h2h"];
+// Market-set ladder: featured-markets default first (the only keys the bulk
+// endpoint supports), then progressively narrower sets in case the API plan
+// rejects a key (The Odds API 422s the entire request if ANY requested market
+// is not on the plan).
+const MARKET_LADDER: (string | undefined)[] = [undefined, "h2h,totals", "h2h"];
 
 async function fetchOddsEvents(sportKey: string): Promise<{ events: { id?: string; bookmakers?: unknown[] }[]; marketsUsed: string }> {
   let lastErr: ApiError | null = null;
@@ -63,7 +64,7 @@ async function fetchOddsEvents(sportKey: string): Promise<{ events: { id?: strin
     if (res.ok) {
       const data = await res.json();
       if (!Array.isArray(data)) throw new ApiError(500, "Invalid odds response (expected an array of events)");
-      return { events: data as { id?: string; bookmakers?: unknown[] }[], marketsUsed: mkts ?? "all" };
+      return { events: data as { id?: string; bookmakers?: unknown[] }[], marketsUsed: mkts ?? "featured" };
     }
     const text = await res.text().catch(() => "");
     const err = new ApiError(res.status, `Failed to fetch game odds: ${res.status} ${text.slice(0, 300)}`);

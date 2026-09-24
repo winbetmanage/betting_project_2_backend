@@ -13,6 +13,25 @@ export const fetchAndStage = asyncHandler(async (req, res) => {
   });
 });
 
+export const stageSelected = asyncHandler(async (req, res) => {
+  const { choice, eventIds } = req.body as { choice?: unknown; eventIds?: unknown };
+  if (!isSportChoice(choice)) throw new ApiError(400, "choice must be 'premier-league' or 'champions-league'");
+  const result = await stagedGamesService.stageSelectedEvents(choice, eventIds, req.user?.id);
+  res.json({
+    message: `Staged ${result.added} game(s) for ${stagedGamesService.SPORTS[choice].label} (${result.alreadyStaged} already staged, ${result.unresolved.length} skipped)`,
+    data: result,
+  });
+});
+
+export const refreshStaged = asyncHandler(async (_req, res) => {
+  const result = await stagedGamesService.refreshStagedGames();
+  const errNote = result.errors.length > 0 ? `, ${result.errors.length} error(s)` : '';
+  res.json({
+    message: `Refreshed ${result.checked} staged game(s): ${result.oddsUpdated} kickoff update(s), ${result.fdUpdated} football-data update(s)${errNote}`,
+    data: result,
+  });
+});
+
 export const listStaged = asyncHandler(async (req, res) => {
   const result = await stagedGamesService.listStagedGames(req.query as Record<string, unknown>);
   res.json(result);

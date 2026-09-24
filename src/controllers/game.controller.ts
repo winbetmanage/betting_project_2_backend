@@ -39,3 +39,9 @@ export const clearAllGamesData = asyncHandler(async (req, res) => {
   });
   res.json({ message: `Cleared all game data (${result.games} game(s) deleted)`, data: result });
 });
+
+export const refreshTimes = asyncHandler(async (_req, res) => {
+  const result = await gameService.refreshUpcomingTimes();
+  const errNote = result.errors.length > 0 ? `, ${result.errors.length} error(s)` : '';
+  res.json({ message: `Checked ${result.checked} game(s), updated ${result.updated} kickoff time(s)${errNote}`, data: result });
+});

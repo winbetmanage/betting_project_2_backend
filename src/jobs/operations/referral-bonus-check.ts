@@ -1,5 +1,6 @@
 import prisma from '../../utils/prisma.js';
 import { getNumberSetting } from '../../services/settings.service.js';
+import { REFERRAL_BONUS_PAUSED } from '../../services/fundRequest.service.js';
 
 const BONUS_FALLBACK = 50;
 const QUALIFY_FALLBACK = 100;
@@ -34,6 +35,8 @@ export async function runReferralBonusCheck(): Promise<ReferralBonusSummary> {
     errored: 0,
     details: [],
   };
+  // PAUSED: referral bonuses are disabled until REFERRAL_BONUS_PAUSED is flipped.
+  if (REFERRAL_BONUS_PAUSED) return summary;
   if (running) return summary;
   running = true;
   try {

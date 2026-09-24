@@ -1,0 +1,124 @@
+{
+  "id": "mock-epl-002",
+  "sport_key": "soccer_epl",
+  "sport_title": "EPL",
+  "commence_time": "2026-09-24T15:10:00.000Z",
+  "home_team": "Liverpool",
+  "away_team": "Manchester City",
+  "bookmakers": [
+    {
+      "key": "mock_pinnacle",
+      "title": "Mock Pinnacle",
+      "last_update": "2026-09-24T14:38:05.338Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-24T14:38:05.338Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 2.55
+            },
+            {
+              "name": "Manchester City",
+              "price": 2.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-24T14:38:05.338Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 1.9,
+              "point": 0
+            },
+            {
+              "name": "Manchester City",
+              "price": 1.9,
+              "point": 0
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-24T14:38:05.338Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.85,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.95,
+              "point": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mock_bet365",
+      "title": "Mock Bet365",
+      "last_update": "2026-09-24T14:38:05.338Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-24T14:38:05.338Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 2.61
+            },
+            {
+              "name": "Manchester City",
+              "price": 2.76
+            },
+            {
+              "name": "Draw",
+              "price": 3.36
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-24T14:38:05.338Z",
+          "outcomes": [
+            {
+              "name": "Liverpool",
+              "price": 1.96,
+              "point": 0
+            },
+            {
+              "name": "Manchester City",
+              "price": 1.96,
+              "point": 0
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-24T14:38:05.338Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.91,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.01,
+              "point": 2.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

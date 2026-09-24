@@ -15,6 +15,7 @@ router.post('/', authenticate, authorize('ADMIN'), gameController.create);
 router.patch('/:id', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), gameController.update);
 router.post('/bulk-delete', authenticate, authorize('ADMIN'), gameController.removeBulk);
 router.post('/clear-all', authenticate, authorize('ADMIN'), gameController.clearAllGamesData);
+router.post('/refresh-times', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), gameController.refreshTimes);
 
 router.post('/:id/fetch-odds', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), bookmakerOddsController.fetchForGame);
 router.get('/:id/bookmaker-odds', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), bookmakerOddsController.getGroupedForGame);

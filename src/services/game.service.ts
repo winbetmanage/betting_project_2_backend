@@ -1,6 +1,8 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
 import type { Prisma } from '@prisma/client';
+import { fetchEvents } from './stagedGames.service';
+import { fetchFootballDataMatch } from './gameSettlement.service';
 
 export const createGame = async (data: Prisma.GameCreateInput | Record<string, unknown>) => {
   return prisma.game.create({ data: data as Prisma.GameCreateInput, include: { competition: { include: { sport: true } } } });
@@ -199,5 +201,65 @@ export const clearAllGameData = async ({ confirm, adminId }: { confirm?: unknown
   );
 
   console.log(`[game.service] CLEARED ALL GAME DATA: ${JSON.stringify(summary)}`);
+  return summary;
+};
+
+export type RefreshTimesSummary = {
+  checked: number;
+  updated: number;
+  errors: { id: string; message: string }[];
+};
+
+/**
+ * Re-check kickoff times for all unfinished games: odds commence_time from the
+ * free events feeds first, football-data utcDate when no odds event is found.
+ * Only startTime is touched — never statuses, markets or scores.
+ */
+export const refreshUpcomingTimes = async (): Promise<RefreshTimesSummary> => {
+  const summary: RefreshTimesSummary = { checked: 0, updated: 0, errors: [] };
+  const games = await prisma.game.findMany({
+    where: { status: { notIn: ['FINISHED', 'CANCELLED'] } },
+    select: {
+      id: true,
+      homeTeam: true,
+      awayTeam: true,
+      startTime: true,
+      externalEventId: true,
+      specifications: true,
+      score: { select: { footballDataMatchId: true } },
+      stagedGame: { select: { footballDataMatchId: true } },
+    },
+  });
+  const [epl, cl] = await Promise.all([fetchEvents('premier-league', true), fetchEvents('champions-league', true)]);
+  const feed = new Map<string, string>([...epl, ...cl].map((e) => [e.id, e.commence_time]));
+
+  for (const g of games) {
+    summary.checked += 1;
+    try {
+      let fresh: Date | null = null;
+      if (g.externalEventId) {
+        const commence = feed.get(g.externalEventId);
+        if (commence) fresh = new Date(commence);
+      }
+      if (!fresh) {
+        const spec = (g.specifications ?? {}) as { footballDataMatchId?: unknown };
+        const fdId =
+          (typeof spec.footballDataMatchId === 'number' ? spec.footballDataMatchId : null) ??
+          g.score?.footballDataMatchId ??
+          g.stagedGame?.footballDataMatchId ??
+          null;
+        if (fdId != null) {
+          const match = await fetchFootballDataMatch(fdId);
+          if (match.utcDate) fresh = new Date(match.utcDate);
+        }
+      }
+      if (fresh && fresh.getTime() !== new Date(g.startTime).getTime()) {
+        await prisma.game.update({ where: { id: g.id }, data: { startTime: fresh } });
+        summary.updated += 1;
+      }
+    } catch (e) {
+      summary.errors.push({ id: g.id, message: e instanceof Error ? e.message : String(e) });
+    }
+  }
   return summary;
 };

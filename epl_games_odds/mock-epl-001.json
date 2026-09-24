@@ -1,0 +1,124 @@
+{
+  "id": "mock-epl-001",
+  "sport_key": "soccer_epl",
+  "sport_title": "EPL",
+  "commence_time": "2026-09-24T15:00:00.000Z",
+  "home_team": "Arsenal",
+  "away_team": "Chelsea",
+  "bookmakers": [
+    {
+      "key": "mock_pinnacle",
+      "title": "Mock Pinnacle",
+      "last_update": "2026-09-24T14:31:57.555Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-24T14:31:57.555Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 2.1
+            },
+            {
+              "name": "Chelsea",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-24T14:31:57.555Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 2.05,
+              "point": -0.5
+            },
+            {
+              "name": "Chelsea",
+              "price": 1.75,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-24T14:31:57.555Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.9,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.91,
+              "point": 2.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mock_bet365",
+      "title": "Mock Bet365",
+      "last_update": "2026-09-24T14:31:57.555Z",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-09-24T14:31:57.555Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 2.16
+            },
+            {
+              "name": "Chelsea",
+              "price": 3.26
+            },
+            {
+              "name": "Draw",
+              "price": 3.46
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-09-24T14:31:57.555Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 2.11,
+              "point": -0.5
+            },
+            {
+              "name": "Chelsea",
+              "price": 1.81,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-09-24T14:31:57.555Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.96,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.97,
+              "point": 2.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

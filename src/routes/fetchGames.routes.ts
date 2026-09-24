@@ -8,6 +8,8 @@ const router = Router();
 // Staged games (Odds API -> staging table, admin confirmation later)
 router.get('/staged', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listStaged);
 router.post('/staged/fetch', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.fetchAndStage);
+router.post('/staged/stage-selected', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.stageSelected);
+router.post('/staged/refresh', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.refreshStaged);
 router.post('/staged/delete', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.deleteSelected);
 router.post('/staged/clear-finished', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.clearFinished);
 router.get('/staged/staged-ids', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.getStagedIds);

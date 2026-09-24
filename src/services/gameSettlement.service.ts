@@ -690,12 +690,13 @@ export type Settlement = Awaited<ReturnType<typeof buildSettlement>>;
 export const getSettlement = (gameId: string) => buildSettlement(gameId);
 
 /**
- * Preview-only calculation for the admin bet-games page: who won, who lost
- * and the expected profit — WITHOUT writing anything (no leg results, no
- * Selection.isWinning, no grading, no money movement). Paying out is the
- * separate settleGamePayments() step, which asks for confirmation first.
+ * Calculate step for the admin bet-games page (finished games only): grades the
+ * legs that belong to THIS game as WON/LOST (/VOID) on every PENDING ticket and
+ * flips tickets with a lost leg to LOST. Legs on other games are never touched,
+ * and no money moves — WON tickets are credited by the separate settle-payments
+ * step. Markets that cannot auto-resolve are skipped for manual grading.
  */
-export async function calculateGameSettlement(gameId: string) {
+export async function calculateGameSettlement(gameId: string, adminId?: string) {
   const game = await prisma.game.findUnique({
     where: { id: gameId },
     include: { markets: { include: { selections: true } } },
@@ -703,40 +704,65 @@ export async function calculateGameSettlement(gameId: string) {
   if (!game) throw new ApiError(404, 'Game not found');
 
   const result = await resolveGameResult(gameId);
+  if (!result.finished) throw new ApiError(400, 'Game is not finished yet — cannot calculate. Waiting for football-data result.');
 
-  const winnerMaps = new Map<string, Map<string, boolean | null> | null>();
-  let marketsResolved = 0;
-  let previewWon = 0;
-  let previewLost = 0;
-  let previewVoid = 0;
-  let previewUndecided = 0;
-  let previewPayout = 0;
+  let legsGraded = 0;
+  let betsMarkedLost = 0;
 
-  if (result.finished) {
-    for (const m of game.markets) {
-      if (m.status === 'SETTLED') continue;
-      const winners = resolveMarketWinners(m, game, result);
-      winnerMaps.set(m.id, winners);
-      if (winners) marketsResolved++;
+  const pendingBets = await prisma.bet.findMany({
+    where: { status: 'PENDING', selections: { some: { selection: { market: { gameId } } } } },
+    include: { selections: { include: { selection: { select: { id: true, marketId: true } } } } },
+  });
+
+  for (const b of pendingBets) {
+    const legUpdates: { id: string; result: 'WON' | 'LOST' | 'VOID' }[] = [];
+    for (const leg of b.selections) {
+      if (leg.result !== 'PENDING') continue; // manual grades + other games' legs stay as they are
+      const market = game.markets.find((m) => m.id === leg.selection.marketId);
+      if (!market || market.gameId !== gameId || market.status === 'SETTLED') continue;
+      const winners = resolveMarketWinners(market, game, result);
+      if (!winners) continue; // needs manual settlement
+      const v = winners.get(leg.selectionId);
+      legUpdates.push({ id: leg.id, result: v === null ? 'VOID' : v ? 'WON' : 'LOST' });
     }
-
-    // Project every PENDING ticket through the shared projector — read-only
-    const pendingBets = await prisma.bet.findMany({
-      where: { status: 'PENDING', selections: { some: { selection: { market: { gameId } } } } },
-      include: { selections: { include: { selection: { select: { id: true, marketId: true, isWinning: true } } } } },
+    if (legUpdates.length === 0) continue;
+    await prisma.$transaction(async (tx) => {
+      for (const lu of legUpdates) {
+        await tx.betSelection.update({ where: { id: lu.id }, data: { result: lu.result } });
+      }
+      legsGraded += legUpdates.length;
+      // A single lost leg kills the whole ticket — mark it now; payout stays for settle-payments
+      if (legUpdates.some((lu) => lu.result === 'LOST')) {
+        await tx.bet.update({ where: { id: b.id }, data: { status: 'LOST' } });
+        betsMarkedLost += 1;
+      }
     });
-    for (const b of pendingBets) {
-      const proj = computeBetProjection(b as unknown as Parameters<typeof computeBetProjection>[0], winnerMaps);
-      if (proj.result === 'WON') { previewWon++; previewPayout = round2(previewPayout + proj.payout); }
-      else if (proj.result === 'LOST') previewLost++;
-      else if (proj.result === 'VOID') { previewVoid++; previewPayout = round2(previewPayout + proj.payout); }
-      else previewUndecided++;
-    }
   }
 
   const settlement = await buildSettlement(gameId);
   const profit = round2(settlement.totals.totalStaked - settlement.totals.projectedPayout);
-  return { ...settlement, meta: { resultFinished: result.finished, marketsResolved, previewWon, previewLost, previewVoid, previewUndecided, previewPayout, profit } };
+  const out = {
+    ...settlement,
+    meta: {
+      resultFinished: result.finished,
+      marketsResolved: 0,
+      previewWon: 0,
+      previewLost: 0,
+      previewVoid: 0,
+      previewUndecided: 0,
+      previewPayout: 0,
+      profit,
+      legsGraded,
+      betsMarkedLost,
+    },
+  };
+
+  if (adminId && (legsGraded > 0 || betsMarkedLost > 0)) {
+    await prisma.adminActionLog.create({
+      data: { userId: adminId, action: 'GAME_CALCULATED', targetType: 'Game', targetId: gameId, metadata: { legsGraded, betsMarkedLost } as never },
+    });
+  }
+  return out;
 }
 
 /** Full football-data.org details for a game (live fetch by match id + stored GameScore snapshot). */
