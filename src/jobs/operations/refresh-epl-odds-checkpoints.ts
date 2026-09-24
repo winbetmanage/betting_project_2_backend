@@ -77,9 +77,10 @@ export async function runRefreshEplOddsCheckpointsJob() {
         const sKeys = m.sourceBookmakerKeys as string[] | null;
         if (!sKeys?.length) continue;
         const bookmakerKey = sKeys[0];
-        const marketKey = TYPE_TO_KEY[m.type] ?? null;
+        const params = m.parameters as { marketKey?: string; line?: number | null } | null;
+        const marketKey = (typeof params?.marketKey === 'string' && params.marketKey) || TYPE_TO_KEY[m.type] || null;
         if (!marketKey) continue;
-        const point = (m.parameters as { line?: number | null } | null)?.line ?? null;
+        const point = params?.line ?? null;
         const groupKey = `${marketKey}::${point ?? 'null'}`;
         const group = groupsByKey.get(groupKey);
         if (!group) continue;

@@ -1,6 +1,6 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
-import { getOddsApiEventAllMarketsUrl, getOddsApiEventDetailUrl } from '../../codes';
+import { getOddsApiEventAllMarketsUrl, getOddsApiEventDetailUrl, getEventMarketsUrl, ODDS_API_ALL_MARKETS } from '../../codes';
 import { resolveSportKey } from './bookmakerOdds.service';
 
 type RawOutcome = { name: string; price: number; point?: number | null };
@@ -28,7 +28,36 @@ export function marketKeyOf(market: { type: string; parameters: unknown }): stri
   return TYPE_TO_KEY[market.type] ?? null;
 }
 
-/** Fetch one event's odds for ALL markets (fallback: requested subset on 422). */
+/** Which market keys the books actually offer for one event (null = unknown). */
+async function fetchSupportedKeys(sportKey: string, eventId: string): Promise<Set<string> | null> {
+  try {
+    const res = await fetch(getEventMarketsUrl(sportKey, eventId));
+    if (!res.ok) return null;
+    const data: unknown = await res.json();
+    const keys = new Set<string>();
+    const collect = (m: unknown) => {
+      if (typeof m === 'string' && m) keys.add(m.toLowerCase());
+      else if (m && typeof m === 'object' && typeof (m as { key?: unknown }).key === 'string') {
+        keys.add(((m as { key: string }).key).toLowerCase());
+      }
+    };
+    const root = data as { bookmakers?: unknown; markets?: unknown };
+    const bms = Array.isArray(data) ? data : root.bookmakers ?? root.markets;
+    if (Array.isArray(bms)) {
+      for (const b of bms) {
+        const inner = (b as { markets?: unknown }).markets;
+        if (Array.isArray(inner)) inner.forEach(collect);
+        else collect(b);
+      }
+    }
+    return keys.size > 0 ? keys : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Fetch one event's odds for ALL markets; on 422, retry with only the keys
+ *  the books actually offer (via /markets), then the free-plan subset. */
 async function fetchEventOdds(sportKey: string, eventId: string, marketKeys: string[]): Promise<RawEvent> {
   const fallback = marketKeys.filter((k) => FREE_PLAN_KEYS.has(k)).join(',');
   const tryUrls = [getOddsApiEventAllMarketsUrl(sportKey, eventId)];
@@ -44,6 +73,18 @@ async function fetchEventOdds(sportKey: string, eventId: string, marketKeys: str
     }
     const text = await res.text().catch(() => '');
     lastErr = `${res.status} ${text.slice(0, 160)}`;
+    // on plan/market rejection, ask the API which keys this event supports
+    // and retry once with only those (intersected with ALL_MARKETS)
+    if ((res.status === 400 || res.status === 422) && url === tryUrls[0]) {
+      const supported = await fetchSupportedKeys(sportKey, eventId);
+      if (supported) {
+        const subset = ODDS_API_ALL_MARKETS.split(',').filter((k) => supported.has(k.toLowerCase()));
+        if (subset.length > 0) {
+          tryUrls.splice(1, 0, getOddsApiEventDetailUrl(sportKey, eventId, subset.join(',')));
+        }
+      }
+      continue;
+    }
     // only retry with narrower market list on plan/market rejection
     if (res.status !== 400 && res.status !== 422) break;
   }
