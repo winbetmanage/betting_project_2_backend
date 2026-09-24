@@ -9,6 +9,7 @@ const router = Router();
 router.get('/staged', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listStaged);
 router.post('/staged/fetch', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.fetchAndStage);
 router.post('/staged/delete', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.deleteSelected);
+router.post('/staged/clear-finished', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.clearFinished);
 router.get('/staged/staged-ids', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.getStagedIds);
 
 // Football-data linking for a staged game (match on same date + teams via Team table)

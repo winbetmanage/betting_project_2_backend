@@ -126,6 +126,33 @@ export const getStagedEventIds = async (): Promise<Set<string>> => {
 };
 
 /**
+ * Delete all staged games whose football-data status is FINISHED.
+ * Rows already promoted into the Games table (gameId set) are NEVER deleted.
+ */
+export const clearFinishedStagedGames = async (adminId?: string) => {
+  const rows = await prisma.stagedGame.findMany({
+    where: { footballDataStatus: 'FINISHED', gameId: null },
+    select: { id: true },
+  });
+  let deleted = 0;
+  if (rows.length > 0) {
+    const res = await prisma.stagedGame.deleteMany({ where: { id: { in: rows.map((r) => r.id) } } });
+    deleted = res.count;
+    if (adminId && deleted > 0) {
+      await prisma.adminActionLog.create({
+        data: {
+          userId: adminId,
+          action: 'STAGED_GAMES_CLEAR_FINISHED',
+          targetType: 'StagedGame',
+          metadata: { deleted } as unknown as Prisma.InputJsonValue,
+        },
+      });
+    }
+  }
+  return { deleted };
+};
+
+/**
  * Bulk-delete staged games. Rows already promoted into the Games table
  * (gameId set) are NEVER deleted — they are skipped and reported.
  */

@@ -15,3 +15,8 @@ export const refetch = asyncHandler(async (_req, res) => {
   const result = await staticGamesService.refetchAndSave();
   res.json({ message: 'Refetched and saved', data: result });
 });
+
+export const marketTypes = asyncHandler(async (_req, res) => {
+  const data = staticGamesService.listMarketTypes();
+  res.json({ data: data.groups, totalKeys: data.totalKeys });
+});

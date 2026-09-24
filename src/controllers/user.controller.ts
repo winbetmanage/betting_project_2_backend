@@ -12,6 +12,26 @@ export const updateProfile = asyncHandler(async (req, res) => {
   res.json({ message: 'Profile updated', data: sanitizeUser(user) });
 });
 
+export const listMyReferrals = asyncHandler(async (req, res) => {
+  const data = await userService.listMyReferrals(req.user!.id);
+  res.json({ data });
+});
+
+export const listUserBets = asyncHandler(async (req, res) => {
+  const data = await userService.listUserBets(req.params.id as string);
+  res.json({ data });
+});
+
+export const getUpline = asyncHandler(async (req, res) => {
+  const data = await userService.getUserUpline(req.params.id as string);
+  res.json({ data });
+});
+
+export const listReferredUsers = asyncHandler(async (req, res) => {
+  const data = await userService.listReferredUsers(req.params.id as string);
+  res.json({ data });
+});
+
 export const list = asyncHandler(async (req, res) => {
   const result = await userService.listUsers(req.query as Record<string, unknown>);
   res.json({ data: result.data, total: result.total, page: result.page, limit: result.limit, totalPages: result.totalPages });

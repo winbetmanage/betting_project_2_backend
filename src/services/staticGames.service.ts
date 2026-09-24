@@ -149,3 +149,67 @@ export const refetchAndSave = async () => {
     totalFiles: fs.readdirSync(dir).filter((f) => f.startsWith('all_games_list')).length,
   };
 };
+
+// ============================================
+// Market-type catalog (Information -> Markets)
+// Merges src/config/marketTypes.json (marketKey -> type + label) with
+// src/config/marketSettlement.json (marketKey -> settle rule + period),
+// grouped by system MarketType.
+// ============================================
+
+type RegistryEntry = { type?: string; label?: string; settle?: string; period?: string; reason?: string; drawPush?: boolean };
+
+function readRegistry(file: string): Record<string, RegistryEntry> {
+  const candidates = [
+    path.join(__dirname, '..', 'config', file),
+    path.join(process.cwd(), 'src', 'config', file),
+  ];
+  for (const f of candidates) {
+    try {
+      if (fs.existsSync(f)) {
+        const raw = JSON.parse(fs.readFileSync(f, 'utf-8')) as Record<string, unknown>;
+        const map: Record<string, RegistryEntry> = {};
+        for (const [k, v] of Object.entries(raw)) {
+          if (k.startsWith('_')) continue;
+          map[k] = (v ?? {}) as RegistryEntry;
+        }
+        return map;
+      }
+    } catch {
+      // try next candidate
+    }
+  }
+  return {};
+}
+
+export type MarketTypeGroup = {
+  type: string;
+  markets: { marketKey: string; label: string; settle: string | null; period: string | null; autoSettle: boolean; note: string | null }[];
+};
+
+export const listMarketTypes = (): { groups: MarketTypeGroup[]; totalKeys: number } => {
+  const types = readRegistry('marketTypes.json');
+  const settlement = readRegistry('marketSettlement.json');
+  const byType = new Map<string, MarketTypeGroup['markets']>();
+  for (const [marketKey, entry] of Object.entries(types)) {
+    const s = settlement[marketKey] ?? {};
+    const settle = typeof s.settle === 'string' ? s.settle : null;
+    const list = byType.get(entry.type ?? 'CUSTOM') ?? [];
+    list.push({
+      marketKey,
+      label: entry.label ?? marketKey,
+      settle,
+      period: typeof s.period === 'string' ? s.period : null,
+      autoSettle: !!settle && settle !== 'none',
+      note: typeof s.reason === 'string' ? s.reason : s.drawPush ? 'Draw pushes (stake returned)' : null,
+    });
+    byType.set(entry.type ?? 'CUSTOM', list);
+  }
+  const groups: MarketTypeGroup[] = Array.from(byType.entries())
+    .map(([type, markets]) => ({
+      type,
+      markets: markets.sort((a, b) => a.marketKey.localeCompare(b.marketKey)),
+    }))
+    .sort((a, b) => a.type.localeCompare(b.type));
+  return { groups, totalKeys: Object.keys(types).length };
+};

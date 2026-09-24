@@ -39,6 +39,11 @@ export const deleteSelected = asyncHandler(async (req, res) => {
   res.json({ message: `Deleted ${result.deleted} staged game(s)${skippedNote}`, data: result });
 });
 
+export const clearFinished = asyncHandler(async (req, res) => {
+  const result = await stagedGamesService.clearFinishedStagedGames(req.user?.id);
+  res.json({ message: `Cleared ${result.deleted} finished staged game(s)`, data: result });
+});
+
 export const getStagedGame = asyncHandler(async (req, res) => {
   const data = await stagedGamesService.getStagedGame(req.params.id as string);
   res.json({ data });

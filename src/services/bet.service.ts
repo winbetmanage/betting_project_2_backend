@@ -84,6 +84,7 @@ export const placeBet = async (userId: string, { type, stake, selections }: Plac
   const user = await prisma.user.findUnique({ where: { id: userId } });
   if (!user) throw new ApiError(404, 'User not found');
   if (!user.isActive) throw new ApiError(403, 'Account is inactive');
+  if (user.role === 'AGENT') throw new ApiError(403, 'You need a user account to bet.');
 
   const availableBalance = Number(user.balance) - Number((user as { heldBalance?: unknown }).heldBalance ?? 0);
 

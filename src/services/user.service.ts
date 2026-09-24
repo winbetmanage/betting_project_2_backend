@@ -114,7 +114,7 @@ export const updateUserByAdmin = async (id: string, updates: Record<string, unkn
   if (updates.name !== undefined) allowed.name = String(updates.name).trim() || null;
   if (updates.role !== undefined) {
     const r = String(updates.role);
-    if (!['USER', 'ADMIN', 'ODDS_MANAGER'].includes(r)) throw new ApiError(400, 'Invalid role');
+    if (!['USER', 'ADMIN', 'ODDS_MANAGER', 'AGENT'].includes(r)) throw new ApiError(400, 'Invalid role');
     allowed.role = r;
   }
   if (updates.isActive !== undefined) allowed.isActive = Boolean(updates.isActive);
@@ -168,6 +168,104 @@ export const deleteUser = async (id: string) => {
 
   await prisma.user.delete({ where: { id } });
   return { soft: false, message: 'User deleted' };
+};
+
+// ============================================
+// SELF: referrals made by the logged-in user (agent dashboard)
+// ============================================
+
+export const listMyReferrals = async (userId: string) => {
+  const referrals = await prisma.referral.findMany({
+    where: { referrerId: userId },
+    include: {
+      referee: { select: { id: true, email: true, name: true, isActive: true, createdAt: true } },
+    },
+    orderBy: { createdAt: 'desc' },
+  });
+  return referrals;
+};
+
+// ============================================
+// ADMIN: per-user detail additions (user detail page)
+// ============================================
+
+/** Full betting history of one user, with legs for the history table. */
+export const listUserBets = async (userId: string) => {
+  return prisma.bet.findMany({
+    where: { userId },
+    include: {
+      selections: {
+        include: { selection: { include: { market: { include: { game: { select: { homeTeam: true, awayTeam: true } } } } } } },
+      },
+    },
+    orderBy: { placedAt: 'desc' },
+  });
+};
+
+/** The upline agent/referrer a user registered with (null = registered directly). */
+export const getUserUpline = async (userId: string) => {
+  const referral = await prisma.referral.findUnique({
+    where: { refereeId: userId },
+    include: {
+      referrer: { select: { id: true, email: true, name: true, role: true } },
+    },
+  });
+  if (!referral) return null;
+  return {
+    referrer: referral.referrer,
+    codeUsed: referral.codeUsed,
+    status: referral.status,
+    bonusAmount: referral.bonusAmount,
+    createdAt: referral.createdAt,
+    rewardedAt: referral.rewardedAt,
+  };
+};
+
+/** Everyone registered via an agent's link, with per-user money/bet aggregates. */
+export const listReferredUsers = async (userId: string) => {
+  const referrals = await prisma.referral.findMany({
+    where: { referrerId: userId },
+    include: {
+      referee: { select: { id: true, email: true, name: true, isActive: true, createdAt: true } },
+    },
+    orderBy: { createdAt: 'desc' },
+  });
+  const ids = referrals.map((r) => r.refereeId);
+  const stats = new Map<string, { depositTotal: number; betCount: number; wonTotal: number; lostTotal: number; lastBetAt: Date | null }>();
+  for (const id of ids) stats.set(id, { depositTotal: 0, betCount: 0, wonTotal: 0, lostTotal: 0, lastBetAt: null });
+  if (ids.length > 0) {
+    const [deposits, bets] = await Promise.all([
+      prisma.fundRequest.findMany({
+        where: { userId: { in: ids }, type: 'DEPOSIT', status: 'APPROVED' },
+        select: { userId: true, amount: true },
+      }),
+      prisma.bet.findMany({
+        where: { userId: { in: ids } },
+        select: { userId: true, stake: true, status: true, settledPayout: true, placedAt: true },
+      }),
+    ]);
+    for (const d of deposits) {
+      const s = stats.get(d.userId);
+      if (s) s.depositTotal += Number(d.amount);
+    }
+    for (const b of bets) {
+      const s = stats.get(b.userId);
+      if (!s) continue;
+      s.betCount += 1;
+      if (b.status === 'WON') s.wonTotal += Number(b.settledPayout);
+      if (b.status === 'LOST') s.lostTotal += Number(b.stake);
+      if (!s.lastBetAt || b.placedAt > s.lastBetAt) s.lastBetAt = b.placedAt;
+    }
+  }
+  return referrals.map((r) => ({
+    id: r.id,
+    codeUsed: r.codeUsed,
+    status: r.status,
+    createdAt: r.createdAt,
+    rewardedAt: r.rewardedAt,
+    referee: r.referee,
+    stats: stats.get(r.refereeId) ?? { depositTotal: 0, betCount: 0, wonTotal: 0, lostTotal: 0, lastBetAt: null },
+  }));
 };
 
 // ============================================

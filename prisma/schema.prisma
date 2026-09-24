@@ -22,6 +22,7 @@ enum Role {
   USER
   ADMIN
   ODDS_MANAGER // trading-team access without full admin rights
+  AGENT
 }
 
 enum GameType {
