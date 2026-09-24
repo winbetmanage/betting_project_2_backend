@@ -5,8 +5,8 @@ dotenv.config();
 // THE ODDS API
 // ============================================
 
-//const ODDS_API_BASE_URL = "https://api.the-odds-api.com/v4";
-const ODDS_API_BASE_URL = "http://localhost:5000";
+const ODDS_API_BASE_URL = "https://api.the-odds-api.com/v4";
+//const ODDS_API_BASE_URL = "http://localhost:5000";
 
 const ODDS_API_KEY = process.env.API_ONE;
 const ODDS_API_REGIONS = "eu,uk";
@@ -69,8 +69,8 @@ export const getEventMarketsUrl = (sportKey: string, eventId: string) =>
 // FOOTBALL-DATA.ORG
 // ============================================
 
-//const FOOTBALL_DATA_BASE_URL = "https://api.football-data.org/v4";
-const FOOTBALL_DATA_BASE_URL = "http://localhost:6060";
+const FOOTBALL_DATA_BASE_URL = "https://api.football-data.org/v4";
+//const FOOTBALL_DATA_BASE_URL = "http://localhost:6060";
 
 const FOOTBALL_DATA_TOKEN = process.env.FOOTBALL_DATA_TOKEN;
 
