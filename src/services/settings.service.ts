@@ -49,6 +49,15 @@ export const KNOWN_SETTINGS: Record<string, SettingDef> = {
     group: 'Betting',
     unit: 'ETB',
   },
+  'betting.min_stake': {
+    kind: 'number',
+    label: 'Minimum stake per ticket (ETB)',
+    description: 'Smallest stake a user may place on one ticket. Tickets below this are rejected. Empty/unset falls back to 10.',
+    min: 1,
+    group: 'Betting',
+    unit: 'ETB',
+    defaultValue: 10,
+  },
   'deposit.min_amount': {
     kind: 'number',
     label: 'Minimum deposit (ETB)',

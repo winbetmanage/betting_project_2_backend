@@ -91,6 +91,8 @@ export const placeBet = async (userId: string, { type, stake, selections }: Plac
 
   const maxStake = await getNumberSetting('betting.max_stake', Number.POSITIVE_INFINITY);
   if (stakeAmount > maxStake) throw new ApiError(400, `Maximum stake per bet is ETB ${maxStake}`);
+  const minStake = await getNumberSetting('betting.min_stake', 10);
+  if (stakeAmount < minStake) throw new ApiError(400, `Minimum stake per ticket is ETB ${minStake}`);
   if (availableBalance < stakeAmount) throw new ApiError(400, 'Insufficient balance');
 
   const byId = new Map(available.map((s) => [s.id, s]));
