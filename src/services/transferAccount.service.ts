@@ -43,7 +43,24 @@ export const createTransferAccount = async (data: CreateTransferAccountInput, cr
   // Ensure accountNumber uniqueness at app level (schema doesn't enforce)
   const exists = await prisma.ourTransferAccount.findFirst({ where: { accountNumber: parsed.accountNumber } });
   if (exists) throw new ApiError(409, 'Account number already exists');
-  return prisma.ourTransferAccount.create({ data: { ...parsed, createdById: creatorId } as never });
+  return prisma.$transaction(async (tx) => {
+    const created = await tx.ourTransferAccount.create({ data: { ...parsed, createdById: creatorId } as never });
+    await tx.adminActionLog.create({
+      data: {
+        userId: creatorId,
+        action: 'TRANSFER_ACCOUNT_CREATED',
+        targetType: 'OurTransferAccount',
+        targetId: created.id,
+        metadata: {
+          accountType: created.accountType,
+          bankName: created.bankName,
+          accountName: created.accountName,
+          accountNumber: created.accountNumber,
+        } as never,
+      },
+    });
+    return created;
+  });
 };
 
 export const updateTransferAccount = async (id: string, data: UpdateTransferAccountInput, actorId: string) => {
@@ -77,7 +94,24 @@ export const updateTransferAccount = async (id: string, data: UpdateTransferAcco
   });
 };
 
-export const deleteTransferAccount = async (id: string) => {
-  await getTransferAccountById(id);
-  return prisma.ourTransferAccount.delete({ where: { id } });
+export const deleteTransferAccount = async (id: string, actorId: string) => {
+  const before = await getTransferAccountById(id);
+  return prisma.$transaction(async (tx) => {
+    const deleted = await tx.ourTransferAccount.delete({ where: { id } });
+    await tx.adminActionLog.create({
+      data: {
+        userId: actorId,
+        action: 'TRANSFER_ACCOUNT_DELETED',
+        targetType: 'OurTransferAccount',
+        targetId: id,
+        metadata: {
+          accountType: before.accountType,
+          bankName: before.bankName,
+          accountName: before.accountName,
+          accountNumber: before.accountNumber,
+        } as never,
+      },
+    });
+    return deleted;
+  });
 };

@@ -7,8 +7,8 @@ const router = Router();
 // Any authenticated user can list active transfer accounts (for deposits)
 router.get('/active', authenticate, transferAccountController.listActive);
 
-// All other transfer account routes require ADMIN
-router.use(authenticate, authorize('ADMIN'));
+// All other transfer account routes require ADMIN or SUBADMIN (money management)
+router.use(authenticate, authorize('ADMIN', 'SUBADMIN'));
 
 router.get('/', transferAccountController.list);
 router.get('/:id', transferAccountController.getById);

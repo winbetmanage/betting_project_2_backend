@@ -2,6 +2,7 @@ import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
 import { notify } from './notification.service';
 import { getNumberSetting } from './settings.service';
+import { NON_STAFF_ROLES } from './user.service';
 
 const MIN_AMOUNT = 100;
 const MAX_PENDING_DEPOSITS = 3;
@@ -24,6 +25,10 @@ export async function createDepositRequest(
   if (!data.amount) throw new ApiError(400, 'Amount is required');
   const minDeposit = await getNumberSetting('deposit.min_amount', MIN_AMOUNT);
   if (data.amount < minDeposit) throw new ApiError(400, `Minimum deposit is ${minDeposit}`);
+  // At least one proof of payment is mandatory: transaction ID or screenshot.
+  if (!data.senderReference?.trim() && !data.proofImagePath) {
+    throw new ApiError(400, 'Provide a transaction ID or a screenshot');
+  }
 
   const pending = await prisma.fundRequest.count({ where: { userId, type: 'DEPOSIT', status: 'PENDING' } });
   if (pending >= MAX_PENDING_DEPOSITS) throw new ApiError(400, `Max ${MAX_PENDING_DEPOSITS} pending deposits allowed`);
@@ -276,18 +281,37 @@ export async function completeWithdrawal(requestId: string, adminId: string, dat
   const txId = (data.transactionId ?? '').trim();
   if (!txId) throw new ApiError(400, 'Transaction ID is required to mark a withdrawal completed');
 
-  return prisma.fundRequest.update({
-    where: { id: requestId },
-    data: {
-      transactionId: txId.slice(0, 100),
-      completedAt: new Date(),
-      reviewedById: adminId,
-      ...(data.completionProofImagePath ? { completionProofImagePath: data.completionProofImagePath } : {}),
-    },
-    include: {
-      user: { select: { id: true, email: true, name: true } },
-      reviewedBy: { select: { id: true, email: true, name: true } },
-    },
+  const include = {
+    user: { select: { id: true, email: true, name: true } },
+    reviewedBy: { select: { id: true, email: true, name: true } },
+  };
+
+  return prisma.$transaction(async (tx) => {
+    const updated = await tx.fundRequest.update({
+      where: { id: requestId },
+      data: {
+        transactionId: txId.slice(0, 100),
+        completedAt: new Date(),
+        reviewedById: adminId,
+        ...(data.completionProofImagePath ? { completionProofImagePath: data.completionProofImagePath } : {}),
+      },
+      include,
+    });
+    await tx.adminActionLog.create({
+      data: {
+        userId: adminId,
+        action: 'WITHDRAWAL_COMPLETED',
+        targetType: 'FundRequest',
+        targetId: requestId,
+        metadata: {
+          amount: Number(req.amount),
+          userId: req.userId,
+          transactionId: txId.slice(0, 100),
+          ...(data.completionProofImagePath ? { completionProof: true } : {}),
+        } as never,
+      },
+    });
+    return updated;
   });
 }
 
@@ -319,6 +343,10 @@ export async function adminListRequests(filters: Record<string, unknown> = {}) {
   if (filters.type) where.type = filters.type;
   if (filters.status) where.status = filters.status;
   if (filters.userId) where.userId = filters.userId;
+  // Sub-admins must never see fund requests belonging to staff accounts.
+  if (filters.nonStaffOnly === 'true' || filters.nonStaffOnly === true) {
+    where.user = { role: { in: NON_STAFF_ROLES } };
+  }
   return prisma.fundRequest.findMany({
     where: where as never,
     include: { user: { select: { id: true, email: true, name: true } }, transferAccount: true, reviewedBy: { select: { id: true, email: true, name: true } } },
@@ -329,7 +357,7 @@ export async function adminListRequests(filters: Record<string, unknown> = {}) {
 export async function getRequestById(requestId: string) {
   const req = await prisma.fundRequest.findUnique({
     where: { id: requestId },
-    include: { user: { select: { id: true, email: true, name: true } }, transferAccount: true, reviewedBy: { select: { id: true, email: true, name: true } }, transaction: true },
+    include: { user: { select: { id: true, email: true, name: true, role: true } }, transferAccount: true, reviewedBy: { select: { id: true, email: true, name: true } }, transaction: true },
   });
   if (!req) throw new ApiError(404, 'Request not found');
   return req;

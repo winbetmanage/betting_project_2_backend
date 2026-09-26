@@ -1,5 +1,13 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
+import { normalizeRole } from '../constants/roles';
+
+/** Roles a sub-admin is allowed to see in the people lists. */
+export const NON_STAFF_ROLES: string[] = ['USER', 'AGENT'];
+
+/** Staff roles that are hidden from sub-admins everywhere. */
+export const isStaffRole = (role?: string | null): boolean =>
+  !!role && !NON_STAFF_ROLES.includes(role);
 
 export const getUserById = async (id: string) => {
   const user = await prisma.user.findUnique({
@@ -12,8 +20,18 @@ export const getUserById = async (id: string) => {
 
 export const listUsers = async (filters: Record<string, unknown> = {}) => {
   const where: Record<string, unknown> = {};
-  if (filters.role && typeof filters.role === 'string') {
-    where.role = filters.role;
+  const requestedRole = filters.role && typeof filters.role === 'string' ? filters.role : null;
+  const nonStaffOnly = filters.nonStaffOnly === 'true' || filters.nonStaffOnly === true;
+  if (requestedRole) {
+    // A sub-admin may only ever narrow the role down to players/agents, never widen it back to staff.
+    if (nonStaffOnly) {
+      where.role = NON_STAFF_ROLES.includes(requestedRole) ? requestedRole : { in: NON_STAFF_ROLES };
+    } else {
+      where.role = requestedRole;
+    }
+  } else if (nonStaffOnly) {
+    // Sub-admins may only ever see players and agents, never staff accounts.
+    where.role = { in: NON_STAFF_ROLES };
   }
   if (filters.isActive !== undefined) {
     where.isActive = filters.isActive === 'true' || filters.isActive === true;
@@ -115,8 +133,10 @@ export const updateUserByAdmin = async (id: string, updates: Record<string, unkn
   if (updates.name !== undefined) allowed.name = String(updates.name).trim() || null;
   if (updates.role !== undefined) {
     const r = String(updates.role);
-    if (!['USER', 'ADMIN', 'ODDS_MANAGER', 'AGENT'].includes(r)) throw new ApiError(400, 'Invalid role');
-    allowed.role = r;
+    if (!['USER', 'ADMIN', 'ODDS_MANAGER', 'AGENT', 'SUBADMIN', 'SUB_ADMIN'].includes(r))
+      throw new ApiError(400, 'Invalid role');
+    // Persist the spelling the database enum actually uses.
+    allowed.role = normalizeRole(r);
   }
   if (updates.second_referralCode !== undefined) {
     const code = String(updates.second_referralCode).trim();
@@ -160,6 +180,27 @@ export const updateUserByAdmin = async (id: string, updates: Record<string, unkn
     include: { _count: { select: { bets: true, transactions: true } } },
   });
   return user;
+};
+
+/**
+ * Sub-admin role switch: strictly USER <-> AGENT and nothing else.
+ * Rejects staff targets, self-changes, no-op switches, and any role outside
+ * the two non-staff roles. Attributed to the acting sub-admin via
+ * `lastModifiedById` (same as main-admin changes).
+ */
+export const switchRoleBySubAdmin = async (targetId: string, nextRole: unknown, actorId: string) => {
+  const next = typeof nextRole === 'string' ? nextRole : '';
+  if (!NON_STAFF_ROLES.includes(next)) {
+    throw new ApiError(403, 'Sub-admins may only switch accounts between USER and AGENT');
+  }
+  if (targetId === actorId) throw new ApiError(403, 'You cannot change your own account type');
+  const target = await prisma.user.findUnique({ where: { id: targetId }, select: { id: true, role: true } });
+  if (!target) throw new ApiError(404, 'User not found');
+  if (isStaffRole(target.role)) throw new ApiError(403, 'Not allowed to change this account');
+  if (target.role === next) {
+    throw new ApiError(400, `This account is already ${next === 'AGENT' ? 'an agent' : 'a user'}`);
+  }
+  return updateUserByAdmin(targetId, { role: next }, actorId);
 };
 
 export const deleteUser = async (id: string) => {
@@ -285,29 +326,107 @@ export const listReferredUsers = async (userId: string) => {
   }));
 };
 
+/** Referral totals for one agent, including the 7/15/30-day windows. */
+export type AgentStats = {
+  referred: number;
+  referred7: number;
+  referred15: number;
+  referred30: number;
+  /** Referred users whose approved deposits total 100 ETB or more, all time. */
+  funded100: number;
+  depositTotal: number;
+};
+
+const DAY = 24 * 60 * 60 * 1000;
+
+export const buildAgentStats = (refs: Awaited<ReturnType<typeof listReferredUsers>>, now = new Date()): AgentStats => {
+  const since = (days: number) => new Date(now.getTime() - days * DAY);
+  const d7 = since(7);
+  const d15 = since(15);
+  const d30 = since(30);
+  let referred7 = 0;
+  let referred15 = 0;
+  let referred30 = 0;
+  let funded100 = 0;
+  let depositTotal = 0;
+  for (const r of refs) {
+    const at = new Date(r.createdAt);
+    if (at >= d30) referred30 += 1;
+    if (at >= d15) referred15 += 1;
+    if (at >= d7) referred7 += 1;
+    if (r.stats.depositTotal >= 100) funded100 += 1;
+    depositTotal += r.stats.depositTotal;
+  }
+  return { referred: refs.length, referred7, referred15, referred30, funded100, depositTotal };
+};
+
 /** Every AGENT account with referral stats for the admin Agents list. */
 export const listAgentsOverview = async () => {
   const agents = await prisma.user.findMany({
     where: { role: 'AGENT' },
     select: {
       id: true, email: true, name: true, role: true, isActive: true,
-      emailVerified: true, referralCode: true, createdAt: true, lastLoginAt: true,
+      emailVerified: true, referralCode: true, second_referralCode: true, balance: true,
+      createdAt: true, lastLoginAt: true,
       _count: { select: { bets: true, transactions: true } },
     },
     orderBy: { createdAt: 'desc' },
   });
-  const out: (typeof agents[number] & { stats: { referred: number; funded100: number } })[] = [];
-  for (const a of agents) {
-    const refs = await listReferredUsers(a.id);
-    out.push({
+  return Promise.all(
+    agents.map(async (a) => ({
       ...a,
-      stats: {
-        referred: refs.length,
-        funded100: refs.filter((r) => r.stats.depositTotal >= 100).length,
-      },
-    });
+      stats: buildAgentStats(await listReferredUsers(a.id)),
+    }))
+  );
+};
+
+/** Referral stats for a single agent (used by the sub-admin agent detail page). */
+export const getAgentStats = async (agentId: string) => {
+  const agent = await prisma.user.findUnique({
+    where: { id: agentId },
+    select: {
+      id: true, email: true, name: true, role: true, isActive: true, balance: true,
+      emailVerified: true, referralCode: true, second_referralCode: true,
+      createdAt: true, lastLoginAt: true,
+      _count: { select: { bets: true, transactions: true } },
+    },
+  });
+  if (!agent) throw new ApiError(404, 'Agent not found');
+  if (agent.role !== 'AGENT') throw new ApiError(400, 'This account is not an agent');
+  return { ...agent, stats: buildAgentStats(await listReferredUsers(agentId)) };
+};
+
+// ============================================
+// ADMIN: staff activity log (who did what)
+// ============================================
+
+export const listAdminActions = async (filters: Record<string, unknown> = {}) => {
+  const where: Record<string, unknown> = {};
+  if (filters.userId && typeof filters.userId === 'string') where.userId = filters.userId;
+  if (filters.action && typeof filters.action === 'string') where.action = { contains: filters.action };
+  if (filters.search && typeof filters.search === 'string' && filters.search.trim()) {
+    const s = filters.search.trim();
+    where.OR = [
+      { action: { contains: s } },
+      { targetType: { contains: s } },
+      { targetId: { contains: s } },
+      { user: { email: { contains: s } } },
+      { user: { name: { contains: s } } },
+    ];
   }
-  return out;
+  const page = Math.max(1, parseInt(String(filters.page ?? '1'), 10) || 1);
+  const limit = Math.min(100, Math.max(1, parseInt(String(filters.limit ?? '20'), 10) || 20));
+  const [total, data] = await Promise.all([
+    prisma.adminActionLog.count({ where: where as never }),
+    prisma.adminActionLog.findMany({
+      where: where as never,
+      include: { user: { select: { id: true, email: true, name: true, role: true } } },
+      orderBy: { createdAt: 'desc' },
+      skip: (page - 1) * limit,
+      take: limit,
+    }),
+  ]);
+  return { data, total, page, limit, totalPages: Math.max(1, Math.ceil(total / limit)) };
 };
 
 // ============================================

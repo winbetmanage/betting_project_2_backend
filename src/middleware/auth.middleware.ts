@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import config from '../config';
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
+import { normalizeRole } from '../constants/roles';
 
 export interface JwtPayload {
   id: string;
@@ -47,7 +48,10 @@ export const authenticate = async (
 export const authorize =
   (...roles: string[]) =>
   (req: Request, _res: Response, next: NextFunction): void => {
-    if (!req.user || !roles.includes(req.user.role)) {
+    // Compared after normalisation so a route may use either sub-admin spelling
+    // regardless of which one the database enum stores.
+    const allowed = roles.map(normalizeRole);
+    if (!req.user || !allowed.includes(normalizeRole(req.user.role))) {
       next(new ApiError(403, 'Insufficient permissions'));
       return;
     }

@@ -8,6 +8,16 @@ type SettingDef = {
   label: string;
   description: string;
   min?: number;
+  max?: number;
+  /** Section heading in the admin settings page. */
+  group: string;
+  /** Unit hint shown next to the value input (e.g. ETB, minutes). */
+  unit?: string;
+  /**
+   * Value used when no row exists yet. Reported to the admin UI so a setting
+   * that has never been saved still shows what is actually in effect.
+   */
+  defaultValue?: number | boolean | null;
 };
 
 /**
@@ -20,41 +30,73 @@ export const KNOWN_SETTINGS: Record<string, SettingDef> = {
     label: 'Referral bonus amount (ETB)',
     description: 'Paid to the referrer when a referred user makes a qualifying deposit.',
     min: 0,
+    group: 'Referral',
+    unit: 'ETB',
   },
   'referral.qualifying_deposit': {
     kind: 'number',
     label: 'Qualifying deposit (ETB)',
     description: 'Minimum first deposit a referred user must make for the referrer to earn the bonus.',
     min: 0,
+    group: 'Referral',
+    unit: 'ETB',
   },
   'betting.max_stake': {
     kind: 'number',
     label: 'Maximum stake per bet (ETB)',
     description: 'Largest single stake a user may place. Empty/unset means no limit.',
     min: 1,
+    group: 'Betting',
+    unit: 'ETB',
   },
   'deposit.min_amount': {
     kind: 'number',
     label: 'Minimum deposit (ETB)',
     description: 'Smallest deposit a user may request. Empty/unset falls back to 100.',
     min: 1,
+    group: 'Deposit',
+    unit: 'ETB',
+    defaultValue: 100,
   },
   'betting.max_legs': {
     kind: 'number',
     label: 'Maximum markets per ticket',
     description: 'Most selections a single bet slip may contain. Empty/unset falls back to 30.',
     min: 1,
+    group: 'Betting',
+    defaultValue: 30,
   },
   'betting.max_payout': {
     kind: 'number',
     label: 'Maximum ticket payout (ETB)',
     description: 'Tickets whose potential payout exceeds this are rejected at placement. Empty/unset means no limit.',
     min: 1,
+    group: 'Betting',
+    unit: 'ETB',
   },
   'registration.require_agent': {
     kind: 'boolean',
     label: 'Require an agent to register',
     description: 'When ON, users cannot self-register: signup only succeeds if an agent is detected (agent second code or an agent referral link). When OFF, anyone can register.',
+    group: 'Registration',
+    defaultValue: false,
+  },
+  'auth.lockout_enabled': {
+    kind: 'boolean',
+    label: 'Block sign-in after too many failed attempts',
+    description: 'When ON, repeated failed sign-in attempts from one client are blocked with a "too many authentication attempts" error until the retry delay passes. When OFF, that error is never returned and sign-in is never blocked for this reason.',
+    group: 'Authentication',
+    defaultValue: true,
+  },
+  'auth.lockout_minutes': {
+    kind: 'number',
+    label: 'Retry delay after too many attempts (minutes)',
+    description: 'How long a blocked client must wait before it can sign in again. Takes effect as soon as you save, and applies while blocking is ON.',
+    min: 1,
+    max: 1440,
+    group: 'Authentication',
+    unit: 'minutes',
+    defaultValue: 15,
   },
 };
 
@@ -66,6 +108,7 @@ function pickValue(def: SettingDef, v: SettingValue) {
       throw new ApiError(400, `${def.label} must be a number`);
     }
     if (def.min !== undefined && v.valueNumber < def.min) throw new ApiError(400, `${def.label} must be at least ${def.min}`);
+    if (def.max !== undefined && v.valueNumber > def.max) throw new ApiError(400, `${def.label} must be at most ${def.max}`);
     return { valueNumber: v.valueNumber, valueString: null, valueBool: null };
   }
   if (def.kind === 'string') {
@@ -86,6 +129,9 @@ export async function listSettings() {
       label: def.label,
       description: def.description,
       kind: def.kind,
+      group: def.group,
+      unit: def.unit ?? null,
+      defaultValue: def.defaultValue ?? null,
       valueNumber: row?.valueNumber != null ? Number(row.valueNumber) : null,
       valueString: row?.valueString ?? null,
       valueBool: row?.valueBool ?? null,

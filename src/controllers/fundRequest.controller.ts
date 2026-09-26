@@ -7,6 +7,8 @@ import sharp from 'sharp';
 import ApiError from '../utils/ApiError';
 import prisma from '../utils/prisma';
 import { uploadDir, resolveUploadPath, deleteUploadFile } from '../middleware/upload.middleware';
+import { isReviewerRole, isSubAdminRole } from '../constants/roles';
+import { isStaffRole } from '../services/user.service';
 
 const PROOF_EXT = 'webp';
 
@@ -26,6 +28,10 @@ export const getMyBalance = asyncHandler(async (req, res) => {
 export const createDeposit = asyncHandler(async (req, res) => {
   const { amount, transferAccountId, senderReference } = req.body as { amount: number; transferAccountId: string; senderReference?: string };
   const file = req.file as Express.Multer.File | undefined;
+
+  // At least one proof of payment is mandatory: the bank transaction ID or a screenshot.
+  const ref = typeof senderReference === 'string' ? senderReference.trim() : '';
+  if (!ref && !file) throw new ApiError(400, 'Provide a transaction ID or a screenshot');
 
   // The proof file is named after the FundRequest id, so generate the id up-front
   // and pass it through to the DB create.
@@ -72,13 +78,19 @@ export const cancelMyRequest = asyncHandler(async (req, res) => {
 });
 
 // Admin
-export const adminList = asyncHandler(async (_req, res) => {
-  const requests = await fundRequestService.adminListRequests(_req.query as Record<string, unknown>);
+export const adminList = asyncHandler(async (req, res) => {
+  const filters = { ...(req.query as Record<string, unknown>) };
+  // Sub-admins review player/agent money requests only, never staff accounts.
+  if (isSubAdminRole(req.user!.role)) filters.nonStaffOnly = 'true';
+  const requests = await fundRequestService.adminListRequests(filters);
   res.json({ data: requests });
 });
 
 export const adminGetById = asyncHandler(async (req, res) => {
   const request = await fundRequestService.getRequestById(req.params.id as string);
+  if (isSubAdminRole(req.user!.role) && isStaffRole(request.user.role)) {
+    throw new ApiError(403, 'Not allowed to view this request');
+  }
   res.json({ data: request });
 });
 
@@ -156,8 +168,8 @@ export const getProofImage = asyncHandler(async (req, res) => {
   const request = await prisma.fundRequest.findUnique({ where: { id: reqId }, select: { userId: true, proofImagePath: true } });
   if (!request) throw new ApiError(404, 'Request not found');
 
-  // Only the owner or an ADMIN / ODDS_MANAGER can view the proof
-  const isStaff = req.user!.role === 'ADMIN' || req.user!.role === 'ODDS_MANAGER';
+  // Only the owner or a staff account (ADMIN / SUBADMIN / ODDS_MANAGER) can view the proof
+  const isStaff = isReviewerRole(req.user!.role);
   if (!isStaff && request.userId !== req.user!.id) throw new ApiError(403, 'Not allowed to view this proof');
 
   if (!request.proofImagePath) throw new ApiError(404, 'No proof image on this request');
@@ -175,7 +187,7 @@ export const getCompletionProof = asyncHandler(async (req, res) => {
   const request = await prisma.fundRequest.findUnique({ where: { id: reqId }, select: { userId: true, completionProofImagePath: true } });
   if (!request) throw new ApiError(404, 'Request not found');
 
-  const isStaff = req.user!.role === 'ADMIN' || req.user!.role === 'ODDS_MANAGER';
+  const isStaff = isReviewerRole(req.user!.role);
   if (!isStaff && request.userId !== req.user!.id) throw new ApiError(403, 'Not allowed to view this proof');
 
   if (!request.completionProofImagePath) throw new ApiError(404, 'No completion proof image on this request');

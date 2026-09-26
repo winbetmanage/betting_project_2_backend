@@ -27,6 +27,6 @@ export const update = asyncHandler(async (req, res) => {
 });
 
 export const remove = asyncHandler(async (req, res) => {
-  await transferAccountService.deleteTransferAccount(req.params.id as string);
+  await transferAccountService.deleteTransferAccount(req.params.id as string, req.user!.id);
   res.json({ message: 'Transfer account deleted' });
 });

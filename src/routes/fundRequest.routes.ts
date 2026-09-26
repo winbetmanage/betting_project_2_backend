@@ -12,12 +12,12 @@ router.post('/withdraw', authenticate, fundRequestController.createWithdrawal);
 router.get('/requests', authenticate, fundRequestController.listMyRequests);
 router.post('/requests/:id/cancel', authenticate, fundRequestController.cancelMyRequest);
 
-// Admin routes
-router.get('/admin/requests', authenticate, authorize('ADMIN'), fundRequestController.adminList);
-router.get('/admin/requests/:id', authenticate, authorize('ADMIN'), fundRequestController.adminGetById);
-router.post('/admin/requests/:id/approve', authenticate, authorize('ADMIN'), fundRequestUpload.single('completionProof'), fundRequestController.adminApprove);
-router.post('/admin/requests/:id/reject', authenticate, authorize('ADMIN'), fundRequestController.adminReject);
-router.patch('/admin/requests/:id/complete', authenticate, authorize('ADMIN'), fundRequestUpload.single('completionProof'), fundRequestController.adminComplete);
+// Admin + sub-admin routes (money management)
+router.get('/admin/requests', authenticate, authorize('ADMIN', 'SUBADMIN'), fundRequestController.adminList);
+router.get('/admin/requests/:id', authenticate, authorize('ADMIN', 'SUBADMIN'), fundRequestController.adminGetById);
+router.post('/admin/requests/:id/approve', authenticate, authorize('ADMIN', 'SUBADMIN'), fundRequestUpload.single('completionProof'), fundRequestController.adminApprove);
+router.post('/admin/requests/:id/reject', authenticate, authorize('ADMIN', 'SUBADMIN'), fundRequestController.adminReject);
+router.patch('/admin/requests/:id/complete', authenticate, authorize('ADMIN', 'SUBADMIN'), fundRequestUpload.single('completionProof'), fundRequestController.adminComplete);
 
 // Proof images (owner or admin)
 router.get('/requests/:id/proof', authenticate, fundRequestController.getProofImage);

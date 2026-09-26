@@ -1,4 +1,5 @@
 import * as settingsService from '../services/settings.service';
+import { invalidateAuthLimiterCache } from '../middleware/rateLimiters';
 import asyncHandler from '../utils/asyncHandler';
 
 export const list = asyncHandler(async (_req, res) => {
@@ -21,6 +22,8 @@ export const update = asyncHandler(async (req, res) => {
     },
     req.user!.id
   );
+  // Auth settings drive the rate limiter, so drop its cached config immediately.
+  if ((req.params.key as string).startsWith('auth.')) invalidateAuthLimiterCache();
   res.json({ message: 'Setting saved', data });
 });
 
