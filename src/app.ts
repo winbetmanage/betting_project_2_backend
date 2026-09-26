@@ -21,7 +21,8 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Rate limiting — only auth endpoints (login/register/refresh) are limited.
+// Rate limiting — login/register are limited. Token refresh and the public
+// referral lookup are exempt (see skip() in rateLimiters.ts).
 // Other endpoints are unlimited since proxied traffic shares one IP.
 app.use('/api/v1/auth', authLimiter);
 

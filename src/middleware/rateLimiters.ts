@@ -41,9 +41,21 @@ const buildLimiter = (config: AuthLimiterConfig): RateLimitRequestHandler =>
     limit: config.maxAttempts,
     standardHeaders: true,
     legacyHeaders: false,
-    // The token refresh endpoint is exempt: every client needs it regularly,
-    // and 429-ing it logs users out.
-    skip: (req) => req.path === '/refresh',
+    // NOTE: this middleware runs inside the /api/v1/auth mount, so req.path is
+    // mount-relative ("/referral", "/refresh"). endsWith keeps it correct even
+    // if the mount point ever changes.
+    skip: (req) => {
+      const p = req.path ?? '';
+      // The token refresh endpoint is exempt: every client needs it regularly,
+      // and 429-ing it logs users out.
+      if (p === '/refresh' || p.endsWith('/auth/refresh')) return true;
+      // The public referral lookup is exempt: the signup page polls it on every
+      // keystroke pause, so counting it would lock signups out after a few
+      // characters and show "no agent found" for correct codes. It returns
+      // only a display name, so exempting it costs nothing security-wise.
+      if (p === '/auth/referral' || p === '/referral') return true;
+      return false;
+    },
     handler: (_req, res) => {
       res.status(429).json({
         status: 429,
