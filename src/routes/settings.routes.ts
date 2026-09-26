@@ -7,6 +7,7 @@ const router = Router();
 router.get('/', authenticate, authorize('ADMIN'), settingsController.list);
 router.get('/max-stake', authenticate, settingsController.maxStake);
 router.get('/public', authenticate, settingsController.publicLimits);
+router.get('/signup-info', settingsController.signupInfo);
 router.patch('/:key', authenticate, authorize('ADMIN'), settingsController.update);
 
 export default router;

@@ -39,6 +39,23 @@ export const KNOWN_SETTINGS: Record<string, SettingDef> = {
     description: 'Smallest deposit a user may request. Empty/unset falls back to 100.',
     min: 1,
   },
+  'betting.max_legs': {
+    kind: 'number',
+    label: 'Maximum markets per ticket',
+    description: 'Most selections a single bet slip may contain. Empty/unset falls back to 30.',
+    min: 1,
+  },
+  'betting.max_payout': {
+    kind: 'number',
+    label: 'Maximum ticket payout (ETB)',
+    description: 'Tickets whose potential payout exceeds this are rejected at placement. Empty/unset means no limit.',
+    min: 1,
+  },
+  'registration.require_agent': {
+    kind: 'boolean',
+    label: 'Require an agent to register',
+    description: 'When ON, users cannot self-register: signup only succeeds if an agent is detected (agent second code or an agent referral link). When OFF, anyone can register.',
+  },
 };
 
 export type SettingValue = { valueNumber?: number | null; valueString?: string | null; valueBool?: boolean | null };
@@ -82,6 +99,12 @@ export async function getNumberSetting(key: string, fallback: number): Promise<n
   const row = await prisma.appSetting.findUnique({ where: { key } });
   const v = row?.valueNumber;
   return v != null ? Number(v) : fallback;
+}
+
+export async function getBoolSetting(key: string, fallback = false): Promise<boolean> {
+  const row = await prisma.appSetting.findUnique({ where: { key } });
+  if (row?.valueBool == null) return fallback;
+  return row.valueBool;
 }
 
 export async function setSetting(key: string, value: SettingValue, adminId: string) {

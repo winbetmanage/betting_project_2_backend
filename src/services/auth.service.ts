@@ -6,6 +6,7 @@ import ApiError from '../utils/ApiError';
 import config from '../config';
 import { sanitizeUser } from '../utils/sanitize';
 import { notify } from './notification.service';
+import { getBoolSetting } from './settings.service';
 import type { User } from '@prisma/client';
 
 const parseExpiryMs = (str: string): number => {
@@ -141,6 +142,7 @@ export interface RegisterInput {
   password: string;
   name: string;
   referralCode?: string;
+  secondReferralCode?: string;
 }
 
 export interface LoginInput {
@@ -154,43 +156,103 @@ export interface RequestMeta {
 }
 
 export const register = async (
-  { email, password, name, referralCode }: RegisterInput,
+  { email, password, name, referralCode, secondReferralCode }: RegisterInput,
   meta?: RequestMeta
 ) => {
   const normalizedEmail = String(email).toLowerCase();
   const exists = await prisma.user.findUnique({ where: { email: normalizedEmail } });
   if (exists) throw new ApiError(409, 'Email already registered');
 
+  // Agent gate: when registration.require_agent is ON, signup only succeeds if
+  // an agent is detected (manual second code wins, else an agent's ?ref= link).
+  const requireAgent = await getBoolSetting('registration.require_agent', false);
+  const manual = typeof secondReferralCode === 'string' ? secondReferralCode.trim() : '';
+  const linkCode = typeof referralCode === 'string' ? referralCode.trim() : '';
+  let agent: { id: string } | null = null;
+  let agentCode = '';
+  let agentCodeType: 'PRIMARY' | 'SECONDARY' = 'PRIMARY';
+  if (manual) {
+    const match = await prisma.user.findFirst({
+      where: { second_referralCode: manual, role: 'AGENT', isActive: true },
+      select: { id: true },
+    });
+    if (match && match.id !== undefined) {
+      agent = match;
+      agentCode = manual;
+      agentCodeType = 'SECONDARY';
+    }
+  }
+  let linkReferrer: { id: string } | null = null;
+  if (!agent && linkCode) {
+    const found = await prisma.user.findUnique({
+      where: { referralCode: linkCode },
+      select: { id: true, role: true, isActive: true },
+    });
+    if (found && found.id !== undefined && found.isActive && (!requireAgent || found.role === 'AGENT')) {
+      linkReferrer = found;
+    }
+  }
+  if (requireAgent && !agent && !linkReferrer) {
+    throw new ApiError(400, 'Registration requires a valid agent referral code.');
+  }
+
   const passwordHash = await bcrypt.hash(password, config.bcryptRounds);
-  const user = await prisma.user.create({
-    data: {
-      email: normalizedEmail,
-      name,
-      passwordHash,
-      lastLoginAt: new Date(),
-      lastLoginIp: meta?.ip ?? null,
-    },
-  });
 
   // Referral capture — invalid/self codes are silently ignored, never block signup
-  if (referralCode && typeof referralCode === 'string') {
-    const code = referralCode.trim();
-    if (code) {
-      const referrer = await prisma.user.findUnique({ where: { referralCode: code } });
-      if (referrer && referrer.id !== user.id) {
+  // (unless require_agent mode already rejected above).
+  const referrer = agent ?? linkReferrer;
+  const codeUsed = agent ? agentCode : linkCode;
+  let referralRecorded = false;
+
+  const createUserData = {
+    email: normalizedEmail,
+    name,
+    passwordHash,
+    lastLoginAt: new Date(),
+    lastLoginIp: meta?.ip ?? null,
+  };
+
+  if (requireAgent && referrer) {
+    // Atomic: the user exists only if the referral row is recorded. If the
+    // referral write fails, the whole registration is cancelled (rolled back).
+    try {
+      const created = await prisma.$transaction(async (tx) => {
+        const u = await tx.user.create({ data: createUserData });
+        if (referrer.id === u.id) throw new ApiError(400, 'Invalid referral.');
+        await tx.referral.create({
+          data: { referrerId: referrer.id, refereeId: u.id, codeUsed, codeType: agentCodeType, status: 'PENDING' },
+        });
+        return u;
+      });
+      var user = created;
+      referralRecorded = true;
+    } catch (e) {
+      if (e instanceof ApiError) throw e;
+      throw new ApiError(400, 'Registration failed: the agent referral could not be recorded, please try again.');
+    }
+  } else {
+    var user = await prisma.user.create({ data: createUserData });
+    if (referrer && referrer.id !== user.id) {
+      try {
         await prisma.referral.create({
-          data: { referrerId: referrer.id, refereeId: user.id, codeUsed: code, status: 'PENDING' },
+          data: { referrerId: referrer.id, refereeId: user.id, codeUsed, codeType: agentCodeType, status: 'PENDING' },
         });
-        await notify({
-          audience: 'USER',
-          userId: referrer.id,
-          type: 'REFERRAL_SIGNUP',
-          title: 'Someone joined with your link',
-          message: `${user.name ?? user.email} signed up with your referral link`,
-          linkUrl: '/profile',
-        });
+        referralRecorded = true;
+      } catch {
+        // open mode: a referral write failure never blocks signup
       }
     }
+  }
+
+  if (referralRecorded && referrer) {
+    await notify({
+      audience: 'USER',
+      userId: referrer.id,
+      type: 'REFERRAL_SIGNUP',
+      title: 'Someone joined with your link',
+      message: `${user.name ?? user.email} signed up with your referral ${agent ? 'code' : 'link'}`,
+      linkUrl: '/profile',
+    });
   }
 
   await notify({
@@ -209,12 +271,39 @@ export const register = async (
 
 export const getReferralInfo = async (code: string) => {
   if (!code || typeof code !== 'string') return { found: false as const };
+  const trimmed = code.trim();
+  if (!trimmed) return { found: false as const };
+  // Primary codes (any active user) first — existing ?ref= behaviour unchanged
   const user = await prisma.user.findUnique({
-    where: { referralCode: code.trim() },
-    select: { name: true, isActive: true },
+    where: { referralCode: trimmed },
+    select: { name: true, isActive: true, role: true, second_referralCode: true },
   });
-  if (!user || !user.isActive) return { found: false as const };
-  return { found: true as const, name: user.name ?? 'A friend' };
+  if (user && user.isActive) {
+    const isAgent = user.role === 'AGENT';
+    return {
+      found: true as const,
+      name: user.name ?? 'A friend',
+      codeType: 'PRIMARY' as const,
+      isAgent,
+      // Lets signup auto-fill the agent's second code (editable). Only agents have one.
+      secondCode: isAgent ? user.second_referralCode ?? null : null,
+    };
+  }
+  // Manual-box codes: an active AGENT's second code
+  const agent = await prisma.user.findFirst({
+    where: { second_referralCode: trimmed, role: 'AGENT', isActive: true },
+    select: { name: true, second_referralCode: true },
+  });
+  if (agent) {
+    return {
+      found: true as const,
+      name: agent.name ?? 'A friend',
+      codeType: 'SECONDARY' as const,
+      isAgent: true as const,
+      secondCode: agent.second_referralCode,
+    };
+  }
+  return { found: false as const };
 };
 
 export const login = async ({ email, password }: LoginInput, meta?: RequestMeta) => {

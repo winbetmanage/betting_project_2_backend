@@ -32,6 +32,11 @@ export const listReferredUsers = asyncHandler(async (req, res) => {
   res.json({ data });
 });
 
+export const listAgentsOverview = asyncHandler(async (_req, res) => {
+  const data = await userService.listAgentsOverview();
+  res.json({ data });
+});
+
 export const list = asyncHandler(async (req, res) => {
   const result = await userService.listUsers(req.query as Record<string, unknown>);
   res.json({ data: result.data, total: result.total, page: result.page, limit: result.limit, totalPages: result.totalPages });

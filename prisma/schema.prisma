@@ -21,6 +21,7 @@ generator client {
 enum Role {
   USER
   ADMIN
+  SUB_ADMIN
   ODDS_MANAGER // trading-team access without full admin rights
   AGENT
 }
@@ -99,6 +100,10 @@ enum ReferralStatus {
   QUALIFIED   // hit the deposit threshold
   REWARDED    // referrer has been paid the bonus
 }
+enum ReferralCodeType {
+  PRIMARY     // referrer's main referralCode (usually via ?ref= link)
+  SECONDARY   // referrer's manually-assigned second_referralCode (typed into the signup box)
+}
 // ============================================
 // USERS (single table for customers + admins)
 // ============================================
@@ -156,6 +161,7 @@ model User {
   lastLoginIp String?
 
    referralCode String  @unique @default(cuid()) // shown in their referral link
+   second_referralCode String? @unique
 
   referralsMade   Referral[] @relation("ReferralsMade")
   referredAs      Referral?  @relation("ReferralReceived") // this user, as someone else's referee
@@ -200,6 +206,7 @@ model Referral {
   referee   User   @relation("ReferralReceived", fields: [refereeId], references: [id])
 
   codeUsed String   // snapshot of the code at signup, in case referrer changes it later
+  codeType ReferralCodeType @default(PRIMARY) // which of the referrer's codes was used
   status   ReferralStatus @default(PENDING)
 
   bonusAmount Decimal @default(50) @db.Decimal(12, 2)

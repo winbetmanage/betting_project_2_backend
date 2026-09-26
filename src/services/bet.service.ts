@@ -22,8 +22,9 @@ export const placeBet = async (userId: string, { type, stake, selections }: Plac
   if (!Array.isArray(selections) || selections.length === 0) {
     throw new ApiError(400, 'At least one selection is required');
   }
-  if (selections.length > MAX_PARLAY_LEGS) {
-    throw new ApiError(400, `A bet slip can contain at most ${MAX_PARLAY_LEGS} selections`);
+  const maxLegs = await getNumberSetting('betting.max_legs', MAX_PARLAY_LEGS);
+  if (selections.length > maxLegs) {
+    throw new ApiError(400, `A bet slip can contain at most ${maxLegs} selections`);
   }
   if (type === 'SYSTEM') throw new ApiError(400, 'System bets are not supported');
   // Type is derived server-side: 1 leg = SINGLE, more = MULTIPLE
@@ -100,6 +101,9 @@ export const placeBet = async (userId: string, { type, stake, selections }: Plac
 
   const totalOdds = roundOdds(betSelections.reduce((acc, s) => acc * Number(s.oddsAtPlacement), 1));
   const potentialPayout = roundMoney(stakeAmount * totalOdds);
+
+  const maxPayout = await getNumberSetting('betting.max_payout', Number.POSITIVE_INFINITY);
+  if (potentialPayout > maxPayout) throw new ApiError(400, `Maximum ticket payout is ETB ${maxPayout}`);
 
   const bet = await prisma.$transaction(async (tx) => {
     const updatedUser = await tx.user.update({

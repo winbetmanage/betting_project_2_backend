@@ -48,6 +48,7 @@ export const listUsers = async (filters: Record<string, unknown> = {}) => {
         createdAt: true,
         updatedAt: true,
         lastLoginAt: true,
+        referredAs: { select: { referrer: { select: { id: true, name: true } } } },
         _count: { select: { bets: true, transactions: true } },
       },
       orderBy: { createdAt: 'desc' },
@@ -117,6 +118,20 @@ export const updateUserByAdmin = async (id: string, updates: Record<string, unkn
     if (!['USER', 'ADMIN', 'ODDS_MANAGER', 'AGENT'].includes(r)) throw new ApiError(400, 'Invalid role');
     allowed.role = r;
   }
+  if (updates.second_referralCode !== undefined) {
+    const code = String(updates.second_referralCode).trim();
+    if (code) {
+      // Unique across BOTH code columns (Prisma can't do cross-column unique)
+      const [clashPrimary, clashSecond] = await Promise.all([
+        prisma.user.findFirst({ where: { referralCode: code, id: { not: id } }, select: { id: true } }),
+        prisma.user.findFirst({ where: { second_referralCode: code, id: { not: id } }, select: { id: true } }),
+      ]);
+      if (clashPrimary || clashSecond) throw new ApiError(409, 'This code is already in use by another account');
+      allowed.second_referralCode = code;
+    } else {
+      allowed.second_referralCode = null;
+    }
+  }
   if (updates.isActive !== undefined) allowed.isActive = Boolean(updates.isActive);
   if (updates.balance !== undefined) {
     const b = Number(updates.balance);
@@ -137,11 +152,12 @@ export const updateUserByAdmin = async (id: string, updates: Record<string, unkn
 
   if (Object.keys(allowed).length === 0) throw new ApiError(400, 'No valid fields to update');
 
-  // Attribute direct role/isActive/balance changes to the acting admin
-  const directChange = allowed.role !== undefined || allowed.isActive !== undefined || allowed.balance !== undefined;
+  // Attribute direct role/isActive/balance/code changes to the acting admin
+  const directChange = allowed.role !== undefined || allowed.isActive !== undefined || allowed.balance !== undefined || allowed.second_referralCode !== undefined;
   const user = await prisma.user.update({
     where: { id },
     data: { ...allowed, ...(directChange ? { lastModifiedById: actorId } : {}) },
+    include: { _count: { select: { bets: true, transactions: true } } },
   });
   return user;
 };
@@ -214,6 +230,7 @@ export const getUserUpline = async (userId: string) => {
   return {
     referrer: referral.referrer,
     codeUsed: referral.codeUsed,
+    codeType: referral.codeType,
     status: referral.status,
     bonusAmount: referral.bonusAmount,
     createdAt: referral.createdAt,
@@ -266,6 +283,31 @@ export const listReferredUsers = async (userId: string) => {
     referee: r.referee,
     stats: stats.get(r.refereeId) ?? { depositTotal: 0, betCount: 0, wonTotal: 0, lostTotal: 0, lastBetAt: null },
   }));
+};
+
+/** Every AGENT account with referral stats for the admin Agents list. */
+export const listAgentsOverview = async () => {
+  const agents = await prisma.user.findMany({
+    where: { role: 'AGENT' },
+    select: {
+      id: true, email: true, name: true, role: true, isActive: true,
+      emailVerified: true, referralCode: true, createdAt: true, lastLoginAt: true,
+      _count: { select: { bets: true, transactions: true } },
+    },
+    orderBy: { createdAt: 'desc' },
+  });
+  const out: (typeof agents[number] & { stats: { referred: number; funded100: number } })[] = [];
+  for (const a of agents) {
+    const refs = await listReferredUsers(a.id);
+    out.push({
+      ...a,
+      stats: {
+        referred: refs.length,
+        funded100: refs.filter((r) => r.stats.depositTotal >= 100).length,
+      },
+    });
+  }
+  return out;
 };
 
 // ============================================

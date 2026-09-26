@@ -14,8 +14,9 @@ const requestMeta = (req: Request) => {
 
 export const register = asyncHandler(async (req, res) => {
   const ref = typeof req.query.ref === 'string' ? req.query.ref : undefined;
+  const body = req.body as { referralCode?: string; secondReferralCode?: string };
   const data = await authService.register(
-    { ...(req.body as object), referralCode: ref ?? (req.body as { referralCode?: string }).referralCode } as never,
+    { ...(req.body as object), referralCode: ref ?? body.referralCode, secondReferralCode: body.secondReferralCode } as never,
     requestMeta(req)
   );
   res.status(201).json({ message: 'User registered successfully', data });
