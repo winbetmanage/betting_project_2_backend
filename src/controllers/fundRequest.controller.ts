@@ -26,6 +26,8 @@ export const getMyBalance = asyncHandler(async (req, res) => {
 });
 
 export const createDeposit = asyncHandler(async (req, res) => {
+  // Only plain user accounts move money — staff may browse but never deposit.
+  if (req.user!.role !== 'USER') throw new ApiError(403, 'You need a user account to deposit.');
   const { amount, transferAccountId, senderReference } = req.body as { amount: number; transferAccountId: string; senderReference?: string };
   const file = req.file as Express.Multer.File | undefined;
 
@@ -62,6 +64,8 @@ export const createDeposit = asyncHandler(async (req, res) => {
 });
 
 export const createWithdrawal = asyncHandler(async (req, res) => {
+  // Only plain user accounts move money — staff may browse but never withdraw.
+  if (req.user!.role !== 'USER') throw new ApiError(403, 'You need a user account to withdraw.');
   const { amount, payoutAccountName, payoutAccountNumber, payoutBankName } = req.body as { amount: number; payoutAccountName: string; payoutAccountNumber: string; payoutBankName: string };
   const request = await fundRequestService.createWithdrawalRequest(req.user!.id, { amount, payoutAccountName, payoutAccountNumber, payoutBankName });
   res.status(201).json({ message: 'Withdrawal request submitted', data: request });

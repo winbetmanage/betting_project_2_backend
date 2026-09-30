@@ -93,7 +93,9 @@ enum TransactionType {
   BET_WON
   BET_REFUND
   ADJUSTMENT  // manual admin correction
-  REFERRAL_BONUS 
+  REFERRAL_BONUS
+  FIRST_DEPOSIT_BONUS // one-time depositor reward, locked for betting only
+  BONUS_EXPIRED       // locked bonus removed after the expiry window
 }
 enum ReferralStatus {
   PENDING     // signed up with a code, hasn't qualified yet
@@ -173,6 +175,10 @@ fundRequestsReviewed FundRequest[] @relation("FundRequestReviewer")
 
  stagedGamesStaged   StagedGame[] @relation("StagedGameStagedBy")
   stagedGamesReviewed StagedGame[] @relation("StagedGameReviewedBy")
+
+firstTimeDeposit Boolean @default(false)
+lockedBonus     Decimal   @default(0) @db.Decimal(12, 2) // part of balance that can't be withdrawn
+bonusGrantedAt  DateTime?                                 // null = bonus never given
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

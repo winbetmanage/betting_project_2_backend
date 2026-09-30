@@ -1,15 +1,25 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
 import type { Prisma } from '@prisma/client';
+import { getNumberSetting } from './settings.service';
+import { effectiveLockedBonus } from './fundRequest.service';
 
 const roundMoney = (value: number | Prisma.Decimal): number => Math.round(Number(value) * 100) / 100;
 
 export const getBalance = async (userId: string) => {
-  const user = await prisma.user.findUnique({ where: { id: userId }, select: { balance: true, heldBalance: true } });
+  const [user, expiryDays] = await Promise.all([
+    prisma.user.findUnique({ where: { id: userId }, select: { balance: true, heldBalance: true, lockedBonus: true, bonusGrantedAt: true } }),
+    getNumberSetting('bonus.expiry_days', 7),
+  ]);
   if (!user) throw new ApiError(404, 'User not found');
   const balance = Number(user.balance);
   const held = Number(user.heldBalance ?? 0);
-  return { balance, heldBalance: held, available: balance - held };
+  const locked = effectiveLockedBonus(user, expiryDays);
+  const bonusExpiresAt =
+    locked > 0 && user.bonusGrantedAt
+      ? new Date(new Date(user.bonusGrantedAt).getTime() + expiryDays * 86400_000).toISOString()
+      : null;
+  return { balance, heldBalance: held, lockedBonus: locked, bonusExpiresAt, available: balance - held - locked };
 };
 
 export const getTransactions = async (userId: string, filters: Record<string, unknown> = {}) => {

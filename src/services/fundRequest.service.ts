@@ -1,12 +1,86 @@
 import prisma from '../utils/prisma';
+import type { PrismaClient } from '@prisma/client';
 import ApiError from '../utils/ApiError';
 import { notify } from './notification.service';
-import { getNumberSetting } from './settings.service';
+import { getNumberSetting, getBoolSetting } from './settings.service';
 import { NON_STAFF_ROLES } from './user.service';
 
 const MIN_AMOUNT = 100;
 const MAX_PENDING_DEPOSITS = 3;
 const WITHDRAWAL_MIN_RESERVE = 100; // available balance must stay >= this after a withdrawal request
+// First-deposit bonus policy fallbacks (live values come from AppSetting)
+const BONUS_THRESHOLD_FALLBACK = 300;
+const BONUS_FLAT_FALLBACK = 200;
+const BONUS_PERCENT_FALLBACK = 10;
+const BONUS_EXPIRY_DAYS_FALLBACK = 7;
+
+const round2 = (n: number): number => Math.round(Number(n) * 100) / 100;
+
+/**
+ * Pure computation for the one-time first-deposit bonus. At or above the
+ * threshold the depositor earns the flat amount; below it they earn the
+ * percent of their deposit. Returns 0 when the bonus is disabled.
+ */
+export const computeFirstDepositBonus = (
+  depositAmount: number,
+  opts: { threshold: number; flat: number; percent: number }
+): number => {
+  const amount = Number(depositAmount);
+  if (!(amount > 0)) return 0;
+  if (amount >= opts.threshold) return round2(Math.max(0, opts.flat));
+  return round2(Math.max(0, (amount * Math.max(0, opts.percent)) / 100));
+};
+
+/**
+ * If the user's locked bonus has expired, remove it now: deduct whatever of it
+ * still exists from the balance and zero the lock, with a ledger entry.
+ * Runs inside the caller's transaction. Returns the deducted amount.
+ */
+export const sweepExpiredBonusInTx = async (
+  tx: Pick<PrismaClient, 'user' | 'transaction'>,
+  userId: string,
+  expiryDays: number
+): Promise<number> => {
+  const u = await tx.user.findUnique({
+    where: { id: userId },
+    select: { balance: true, heldBalance: true, lockedBonus: true, bonusGrantedAt: true },
+  });
+  if (!u) return 0;
+  const locked = Number(u.lockedBonus ?? 0);
+  if (!(locked > 0) || !u.bonusGrantedAt) return 0;
+  if (Date.now() - new Date(u.bonusGrantedAt).getTime() < expiryDays * 86400_000) return 0;
+  const deduct = Math.max(0, Math.min(locked, Number(u.balance) - Number(u.heldBalance ?? 0)));
+  const updated = await tx.user.update({
+    where: { id: userId },
+    data: { lockedBonus: 0, ...(deduct > 0 ? { balance: { decrement: deduct } } : {}) },
+  });
+  await tx.transaction.create({
+    data: {
+      userId,
+      type: 'BONUS_EXPIRED',
+      amount: deduct,
+      balanceAfter: round2(Number(updated.balance)),
+      reference: 'bonus-expiry',
+    },
+  });
+  return deduct;
+};
+
+/**
+ * Locked bonus currently in effect. Once the grant is older than the expiry
+ * window the bonus counts as 0 (the sweep/cron then physically removes it).
+ */
+export const effectiveLockedBonus = (
+  u: { lockedBonus?: unknown; bonusGrantedAt?: Date | string | null },
+  expiryDays: number
+): number => {
+  const locked = Number(u.lockedBonus ?? 0);
+  if (!(locked > 0)) return 0;
+  if (!u.bonusGrantedAt) return locked;
+  const granted = new Date(u.bonusGrantedAt).getTime();
+  if (!Number.isFinite(granted)) return locked;
+  return Date.now() - granted >= expiryDays * 86400_000 ? 0 : locked;
+};
 // Kill-switch: referral bonuses are PAUSED — no agent is rewarded for any
 // deposit amount until this is flipped back to false.
 export const REFERRAL_BONUS_PAUSED = true;
@@ -67,6 +141,8 @@ export async function createWithdrawalRequest(
 ) {
   if (!data.amount || data.amount < MIN_AMOUNT) throw new ApiError(400, `Minimum withdrawal is ${MIN_AMOUNT}`);
 
+  const bonusExpiryDaysForWithdrawals = await getNumberSetting('bonus.expiry_days', BONUS_EXPIRY_DAYS_FALLBACK);
+
   return prisma.$transaction(async (tx) => {
     const user = await tx.user.findUnique({ where: { id: userId } });
     if (!user) throw new ApiError(404, 'User not found');
@@ -81,8 +157,16 @@ export async function createWithdrawalRequest(
       throw new ApiError(400, 'Set up your payout account first (profile), then request a withdrawal');
     }
 
-    // Re-checked inside the transaction: race-safe against concurrent bets/requests
-    const available = Number(user.balance) - Number(user.heldBalance);
+    // Re-checked inside the transaction: race-safe against concurrent bets/requests.
+    // Locked bonus money can never be withdrawn, so it is excluded. An expired
+    // bonus is swept away here first so it cannot leak into a withdrawal.
+    await sweepExpiredBonusInTx(tx, userId, bonusExpiryDaysForWithdrawals);
+    const fresh = await tx.user.findUnique({
+      where: { id: userId },
+      select: { balance: true, heldBalance: true, lockedBonus: true, bonusGrantedAt: true },
+    });
+    const available =
+      Number(fresh?.balance ?? 0) - Number(fresh?.heldBalance ?? 0) - effectiveLockedBonus(fresh ?? {}, bonusExpiryDaysForWithdrawals);
     if (available - Number(data.amount) < WITHDRAWAL_MIN_RESERVE) {
       throw new ApiError(400, `Insufficient available balance — ETB ${WITHDRAWAL_MIN_RESERVE} must remain after a withdrawal`);
     }
@@ -127,6 +211,15 @@ export async function approveRequest(
   const referralBonus = await getNumberSetting('referral.bonus_amount', REFERRAL_BONUS_FALLBACK);
   const referralQualifying = await getNumberSetting('referral.qualifying_deposit', REFERRAL_QUALIFY_FALLBACK);
 
+  // Live first-deposit bonus policy (admin-editable); applies at approval time
+  const [bonusEnabled, bonusThreshold, bonusFlat, bonusPercent, bonusExpiryDays] = await Promise.all([
+    getBoolSetting('bonus.enabled', false),
+    getNumberSetting('bonus.min_deposit', BONUS_THRESHOLD_FALLBACK),
+    getNumberSetting('bonus.flat_amount', BONUS_FLAT_FALLBACK),
+    getNumberSetting('bonus.percent', BONUS_PERCENT_FALLBACK),
+    getNumberSetting('bonus.expiry_days', BONUS_EXPIRY_DAYS_FALLBACK),
+  ]);
+
   return prisma.$transaction(async (tx) => {
     const req = await tx.fundRequest.findUnique({ where: { id: requestId } });
     if (!req) throw new ApiError(404, 'Request not found');
@@ -142,7 +235,8 @@ export async function approveRequest(
     if (!user) throw new ApiError(404, 'User not found');
 
     if (req.type === 'WITHDRAWAL') {
-      const available = Number(user.balance) - Number(user.heldBalance);
+      const available =
+        Number(user.balance) - Number(user.heldBalance) - effectiveLockedBonus(user, bonusExpiryDays);
       if (Number(req.amount) > available) throw new ApiError(400, 'User no longer has sufficient balance');
     }
 
@@ -191,6 +285,45 @@ export async function approveRequest(
       },
     });
 
+    // First-deposit bonus — once per account, on the first APPROVED deposit.
+    // Skipped entirely while the bonus is disabled, so nobody's one-time
+    // eligibility is consumed by a paused program.
+    // The conditional updateMany (WHERE firstTimeDeposit=false) is the
+    // double-grant guard: only one concurrent approval can win the race and
+    // claim the flag. The flag flips even when the computed bonus is 0, so a
+    // first deposit never earns twice.
+    let bonusGranted = 0;
+    if (bonusEnabled && req.type === 'DEPOSIT') {
+      const bonus = computeFirstDepositBonus(Number(req.amount), {
+        threshold: bonusThreshold,
+        flat: bonusFlat,
+        percent: bonusPercent,
+      });
+      const now = new Date();
+      const claimed = await tx.user.updateMany({
+        where: { id: req.userId, firstTimeDeposit: false },
+        data: {
+          firstTimeDeposit: true,
+          ...(bonus > 0
+            ? { balance: { increment: bonus }, lockedBonus: { increment: bonus }, bonusGrantedAt: now }
+            : {}),
+        },
+      });
+      if (claimed.count === 1 && bonus > 0) {
+        bonusGranted = bonus;
+        const after = await tx.user.findUnique({ where: { id: req.userId }, select: { balance: true } });
+        await tx.transaction.create({
+          data: {
+            userId: req.userId,
+            type: 'FIRST_DEPOSIT_BONUS',
+            amount: bonus,
+            balanceAfter: round2(Number(after?.balance ?? 0)),
+            reference: `first-deposit:${req.id}`,
+          },
+        });
+      }
+    }
+
     // Referral payout — only on qualifying DEPOSIT approvals.
     // PAUSED (see REFERRAL_BONUS_PAUSED): referrals stay PENDING, nobody is paid.
     // The conditional updateMany (WHERE status='PENDING') is the double-pay guard:
@@ -225,7 +358,7 @@ export async function approveRequest(
       }
     }
 
-    return { request: req, transaction };
+    return { request: req, transaction, bonusGranted, bonusExpiryDays };
   }, TX_OPTIONS).then(async (out) => {
     await notify({
       audience: 'USER',
@@ -236,6 +369,16 @@ export async function approveRequest(
         : `Deposit approved — ETB ${Number(out.request.amount).toFixed(2)}`,
       linkUrl: '/wallet',
     });
+    if (out.bonusGranted > 0) {
+      await notify({
+        audience: 'USER',
+        userId: out.request.userId,
+        type: 'FIRST_DEPOSIT_BONUS',
+        title: `First deposit bonus — ETB ${out.bonusGranted.toFixed(2)}`,
+        message: `Use it for betting within ${out.bonusExpiryDays} day${out.bonusExpiryDays === 1 ? '' : 's'}. Bonus money cannot be withdrawn.`,
+        linkUrl: '/wallet',
+      });
+    }
     return out;
   });
 }
@@ -364,7 +507,17 @@ export async function getRequestById(requestId: string) {
 }
 
 export async function getMyAvailableBalance(userId: string) {
-  const user = await prisma.user.findUnique({ where: { id: userId }, select: { balance: true, heldBalance: true } });
-  if (!user) return { balance: 0, heldBalance: 0, available: 0 };
-  return { balance: Number(user.balance), heldBalance: Number(user.heldBalance), available: Number(user.balance) - Number(user.heldBalance) };
+  const [user, expiryDays] = await Promise.all([
+    prisma.user.findUnique({ where: { id: userId }, select: { balance: true, heldBalance: true, lockedBonus: true, bonusGrantedAt: true } }),
+    getNumberSetting('bonus.expiry_days', BONUS_EXPIRY_DAYS_FALLBACK),
+  ]);
+  if (!user) return { balance: 0, heldBalance: 0, lockedBonus: 0, available: 0 };
+  const balance = Number(user.balance);
+  const held = Number(user.heldBalance ?? 0);
+  const locked = effectiveLockedBonus(user, expiryDays);
+  const bonusExpiresAt =
+    locked > 0 && user.bonusGrantedAt
+      ? new Date(new Date(user.bonusGrantedAt).getTime() + expiryDays * 86400_000).toISOString()
+      : null;
+  return { balance, heldBalance: held, lockedBonus: locked, bonusExpiresAt, available: balance - held - locked };
 }

@@ -85,11 +85,14 @@ export const placeBet = async (userId: string, { type, stake, selections }: Plac
   const user = await prisma.user.findUnique({ where: { id: userId } });
   if (!user) throw new ApiError(404, 'User not found');
   if (!user.isActive) throw new ApiError(403, 'Account is inactive');
-  if (user.role === 'AGENT') throw new ApiError(403, 'You need a user account to bet.');
+  // Only plain user accounts may bet — staff may browse but never wager.
+  if (user.role !== 'USER') throw new ApiError(403, 'You need a user account to bet.');
 
   const availableBalance = Number(user.balance) - Number((user as { heldBalance?: unknown }).heldBalance ?? 0);
 
-  const maxStake = await getNumberSetting('betting.max_stake', Number.POSITIVE_INFINITY);
+  const maxStakeRaw = await getNumberSetting('betting.max_stake', Number.POSITIVE_INFINITY);
+  // A 0 (or negative) limit means "no limit", same as unset.
+  const maxStake = maxStakeRaw > 0 ? maxStakeRaw : Number.POSITIVE_INFINITY;
   if (stakeAmount > maxStake) throw new ApiError(400, `Maximum stake per bet is ETB ${maxStake}`);
   const minStake = await getNumberSetting('betting.min_stake', 10);
   if (stakeAmount < minStake) throw new ApiError(400, `Minimum stake per ticket is ETB ${minStake}`);

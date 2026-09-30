@@ -2,6 +2,7 @@ import cron from 'node-cron';
 import { runSyncGameResults } from './operations/sync-game-results.js';
 import { runRefreshGameOddsJob } from './operations/refresh-game-odds.js';
 import { runReferralBonusCheck } from './operations/referral-bonus-check.js';
+import { runBonusExpiryCheck } from './operations/bonus-expiry-check.js';
 
 export function startJobs() {
   cron.schedule('*/10 * * * *', async () => {
@@ -42,7 +43,21 @@ export function startJobs() {
     }
   });
 
-  console.log('[jobs] scheduler started: sync-game-results (every 10 min), refresh-game-odds (every 5 min, tiered), referral-bonus-check (every 12 h)');
+  // First-deposit bonus expiry: daily, take back whatever locked bonus is left
+  // past the live bonus.expiry_days window (ledgered as BONUS_EXPIRED)
+  cron.schedule('0 3 * * *', async () => {
+    try {
+      const r = await runBonusExpiryCheck();
+      if (r.swept || r.errored) {
+        console.log(`[jobs] bonus-expiry-check: checked=${r.checked} swept=${r.swept} deducted=${r.deducted} errored=${r.errored}`);
+        for (const d of r.details) console.log(`  user ${d.userId}: removed ETB ${d.deducted}`);
+      }
+    } catch (e) {
+      console.error('[jobs] bonus-expiry-check failed', e);
+    }
+  });
+
+  console.log('[jobs] scheduler started: sync-game-results (every 10 min), refresh-game-odds (every 5 min, tiered), referral-bonus-check (every 12 h), bonus-expiry-check (daily 03:00)');
 }
 
 export default startJobs;
