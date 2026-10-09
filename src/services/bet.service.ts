@@ -14,6 +14,9 @@ export interface PlaceBetInput {
 
 export const MAX_PARLAY_LEGS = 30;
 
+/** Max markets (selections) allowed per game on one ticket. */
+export const MAX_MARKETS_PER_GAME = 2;
+
 /** Betting window shuts this long before kickoff (checked at placement time). */
 export const BETTING_WINDOW_MS = 15 * 60 * 1000;
 
@@ -50,6 +53,17 @@ export const placeBet = async (userId: string, { type, stake, selections }: Plac
   if (new Set(marketIds).size !== marketIds.length) {
     const dup = available.find((sel, i) => marketIds.indexOf(sel.market.id) !== i);
     throw new ApiError(400, `Only one selection per market is allowed — "${dup?.market.name ?? 'a market'}" appears twice on this slip`);
+  }
+
+  // Max 2 markets per game on one ticket (multiple games allowed, 2 each)
+  const legsPerGame = new Map<string, number>();
+  for (const sel of available) {
+    const gid: string = sel.market.gameId ?? `market:${sel.market.id}`;
+    legsPerGame.set(gid, (legsPerGame.get(gid) ?? 0) + 1);
+  }
+  const overLimit = [...legsPerGame.entries()].find(([, count]) => count > MAX_MARKETS_PER_GAME);
+  if (overLimit) {
+    throw new ApiError(400, `Maximum ${MAX_MARKETS_PER_GAME} markets per game on one ticket — one game has ${overLimit[1]} picks. Remove one to add another.`);
   }
 
   // Game not started / betting window / odds stale validation
