@@ -187,10 +187,32 @@ export const getBetById = async (id: string, userId: string, isAdmin = false) =>
 export const getAllBets = async (filters: Record<string, unknown> = {}) => {
   const where: Prisma.BetWhereInput = {};
   if (filters.status && typeof filters.status === 'string') where.status = filters.status as never;
+  if (filters.payoutStatus && typeof filters.payoutStatus === 'string') where.payoutStatus = filters.payoutStatus as never;
   if (filters.userId && typeof filters.userId === 'string') where.userId = filters.userId;
+  // Date-range filter on ticket placement time: ?from=ISO&to=ISO (also accepts placedFrom/placedTo)
+  const fromRaw = (filters.from ?? filters.placedFrom) as unknown;
+  const toRaw = (filters.to ?? filters.placedTo) as unknown;
+  const from = typeof fromRaw === 'string' && fromRaw ? new Date(fromRaw) : null;
+  const to = typeof toRaw === 'string' && toRaw ? new Date(toRaw) : null;
+  if ((from && !isNaN(from.getTime())) || (to && !isNaN(to.getTime()))) {
+    where.placedAt = {};
+    if (from && !isNaN(from.getTime())) (where.placedAt as Prisma.DateTimeFilter).gte = from;
+    if (to && !isNaN(to.getTime())) (where.placedAt as Prisma.DateTimeFilter).lte = to;
+  }
   return prisma.bet.findMany({
     where,
-    include: { user: { select: { id: true, name: true, email: true } } },
+    include: {
+      user: { select: { id: true, name: true, email: true } },
+      selections: {
+        include: {
+          selection: {
+            include: {
+              market: { include: { game: { select: { id: true, homeTeam: true, awayTeam: true, status: true, startTime: true } } } },
+            },
+          },
+        },
+      },
+    },
     orderBy: { placedAt: 'desc' },
   });
 };

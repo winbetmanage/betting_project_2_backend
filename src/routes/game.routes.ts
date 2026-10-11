@@ -30,6 +30,7 @@ router.post('/:id/api-links/unlink-fd', authenticate, authorize('ADMIN', 'ODDS_M
 router.post('/:id/api-links/link-odds', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), gameApiLinkController.linkOdds);
 router.post('/:id/settle', authenticate, authorize('ADMIN'), gameSettlementController.settle);
 router.post('/:id/settle-payments', authenticate, authorize('ADMIN'), gameSettlementController.settlePayments);
+router.post('/:id/submit-payments', authenticate, authorize('ADMIN'), gameSettlementController.submitPayments);
 router.post('/:id/calculate', authenticate, authorize('ADMIN'), gameSettlementController.calculate);
 router.post('/:id/payout', authenticate, authorize('ADMIN'), gameSettlementController.payout);
 router.post('/:id/bets/:betId/settle', authenticate, authorize('ADMIN'), gameSettlementController.settleSingleBet);

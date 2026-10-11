@@ -100,6 +100,21 @@ export const settleSelection = async (id: string, isWinning: boolean | null) => 
       await betService.gradeBetIfComplete(tx, bs.betId);
     }
 
+    // Re-grade EVERY ticket holding this selection — not only ones with open legs.
+    // Legs graded earlier via Calculate (which writes leg results without grading)
+    // would otherwise leave their tickets stuck PENDING forever with no payout.
+    // gradeBetIfComplete is a safe no-op for settled tickets or tickets still
+    // waiting on other games' legs.
+    const linkedBetIds = await tx.betSelection.findMany({
+      where: { selectionId: id },
+      select: { betId: true },
+    });
+    const alreadyGraded = new Set(openBetSelections.map((b) => b.betId));
+    for (const { betId } of linkedBetIds) {
+      if (alreadyGraded.has(betId)) continue;
+      await betService.gradeBetIfComplete(tx, betId);
+    }
+
     if (isWinning === null) {
       const pending = await tx.betSelection.count({ where: { selection: { marketId: selection.marketId }, result: 'PENDING' } });
       if (pending === 0) await tx.market.update({ where: { id: selection.marketId }, data: { status: 'SETTLED' } });

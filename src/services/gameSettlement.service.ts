@@ -579,7 +579,7 @@ async function buildSettlement(gameId: string) {
     where: { selections: { some: { selection: { market: { gameId } } } } },
     include: {
       user: { select: { id: true, email: true, name: true } },
-      selections: { include: { selection: { select: { id: true, name: true, marketId: true, isWinning: true, market: { select: { id: true, name: true, type: true } } } } } },
+      selections: { include: { selection: { select: { id: true, name: true, marketId: true, isWinning: true, market: { select: { id: true, name: true, type: true, gameId: true } } } } } },
     },
     orderBy: { placedAt: 'asc' },
   });
@@ -619,6 +619,7 @@ async function buildSettlement(gameId: string) {
         selectionName: l.selection.name,
         marketName: l.selection.market.name,
         marketType: l.selection.market.type,
+        gameId: l.selection.market.gameId,
         odds: Number(l.oddsAtPlacement),
         result: l.result,
       })),
@@ -708,13 +709,19 @@ export async function calculateGameSettlement(gameId: string, adminId?: string) 
 
   let legsGraded = 0;
   let betsMarkedLost = 0;
+  let lostTicketsTouched = 0;
 
+  // NOTE: LOST tickets are included on purpose — a ticket killed by another
+  // game's leg still gets its legs on THIS game graded WON/LOST/VOID so the
+  // record is accurate. Their bet status stays LOST and no money ever moves
+  // here (grading+credit happens only in the settle steps).
   const pendingBets = await prisma.bet.findMany({
-    where: { status: 'PENDING', selections: { some: { selection: { market: { gameId } } } } },
+    where: { status: { in: ['PENDING', 'LOST'] }, selections: { some: { selection: { market: { gameId } } } } },
     include: { selections: { include: { selection: { select: { id: true, marketId: true } } } } },
   });
 
   for (const b of pendingBets) {
+    const alreadyLost = b.status === 'LOST';
     const legUpdates: { id: string; result: 'WON' | 'LOST' | 'VOID' }[] = [];
     for (const leg of b.selections) {
       if (leg.result !== 'PENDING') continue; // manual grades + other games' legs stay as they are
@@ -731,8 +738,11 @@ export async function calculateGameSettlement(gameId: string, adminId?: string) 
         await tx.betSelection.update({ where: { id: lu.id }, data: { result: lu.result } });
       }
       legsGraded += legUpdates.length;
-      // A single lost leg kills the whole ticket — mark it now; payout stays for settle-payments
-      if (legUpdates.some((lu) => lu.result === 'LOST')) {
+      if (alreadyLost) {
+        // Ticket was already dead — status stays LOST, legs just recorded.
+        lostTicketsTouched += 1;
+      } else if (legUpdates.some((lu) => lu.result === 'LOST')) {
+        // A single lost leg kills the whole ticket — mark it now; payout stays for settle-payments
         await tx.bet.update({ where: { id: b.id }, data: { status: 'LOST' } });
         betsMarkedLost += 1;
       }
@@ -754,12 +764,13 @@ export async function calculateGameSettlement(gameId: string, adminId?: string) 
       profit,
       legsGraded,
       betsMarkedLost,
+      lostTicketsTouched,
     },
   };
 
   if (adminId && (legsGraded > 0 || betsMarkedLost > 0)) {
     await prisma.adminActionLog.create({
-      data: { userId: adminId, action: 'GAME_CALCULATED', targetType: 'Game', targetId: gameId, metadata: { legsGraded, betsMarkedLost } as never },
+      data: { userId: adminId, action: 'GAME_CALCULATED', targetType: 'Game', targetId: gameId, metadata: { legsGraded, betsMarkedLost, lostTicketsTouched } as never },
     });
   }
   return out;
@@ -997,6 +1008,102 @@ export async function settleGamePayments(gameId: string, adminId?: string) {
     });
   }
   return { ...settled, meta: { ...settled.meta, notified } };
+}
+
+/**
+ * Explicit "Submit payment" step for the admin bet-games page: pays every
+ * PENDING ticket on this game whose legs are ALL already decided (no PENDING
+ * leg left) but which was never graded+credited — e.g. tickets stranded by an
+ * earlier Calculate run, or tickets completed via manual leg grading.
+ *
+ * - all non-void legs WON  -> WON + wallet credited (BET_WON ledger row)
+ * - any leg LOST            -> LOST (no money)
+ * - all legs VOID           -> VOID + stake refunded (BET_REFUND ledger row)
+ * Tickets still waiting on other games' legs are left untouched.
+ * Idempotent: re-running grades nothing new.
+ *
+ * Pass `betIds` to pay only a selected subset (admin ticked winners in the
+ * Who-wins table). Requested bets that cannot be paid yet are reported in
+ * `meta.skipped` with a reason instead of failing the whole batch. Only
+ * PENDING tickets on this game are ever touched, so already-paid tickets can
+ * never be credited twice.
+ */
+export async function submitPendingPayments(gameId: string, adminId?: string, betIds?: string[]) {
+  const onlyIds = Array.isArray(betIds) && betIds.length > 0 ? [...new Set(betIds)] : null;
+  const skipped: { betId: string; reason: string }[] = [];
+  const pendingBets = await prisma.bet.findMany({
+    where: {
+      status: 'PENDING',
+      ...(onlyIds ? { id: { in: onlyIds } } : {}),
+      selections: { some: { selection: { market: { gameId } } } },
+    },
+    include: { selections: true },
+  });
+  if (onlyIds) {
+    const found = new Set(pendingBets.map((b) => b.id));
+    for (const id of onlyIds) {
+      if (!found.has(id)) {
+        const existing = await prisma.bet.findUnique({ where: { id }, select: { id: true, status: true } });
+        skipped.push({
+          betId: id,
+          reason: !existing ? 'ticket not found' : existing.status !== 'PENDING' ? `already settled as ${existing.status}` : 'ticket is not on this game',
+        });
+      }
+    }
+  }
+  const payable = pendingBets.filter(
+    (b) => b.selections.length > 0 && b.selections.every((l) => l.result !== 'PENDING')
+  );
+  if (onlyIds) {
+    const payableIds = new Set(payable.map((b) => b.id));
+    for (const b of pendingBets) {
+      if (!payableIds.has(b.id)) {
+        const pendingLegs = b.selections.filter((l) => l.result === 'PENDING').length;
+        skipped.push({
+          betId: b.id,
+          reason: b.selections.length === 0 ? 'ticket has no legs' : `waiting on ${pendingLegs} leg(s) on other games — cannot pay yet`,
+        });
+      }
+    }
+  }
+
+  let paidCount = 0;
+  let paidTotal = 0;
+  let lostCount = 0;
+  let refundedCount = 0;
+  let refundedTotal = 0;
+  const details: { betId: string; userId: string; status: string; payout: number }[] = [];
+  for (const b of payable) {
+    const g = await betService.recomputeBet(b.id);
+    if (!g) continue;
+    if (g.status === 'WON') {
+      paidCount++;
+      paidTotal = round2(paidTotal + g.payout);
+    } else if (g.status === 'LOST') {
+      lostCount++;
+    } else if (g.status === 'VOID') {
+      refundedCount++;
+      refundedTotal = round2(refundedTotal + g.payout);
+    }
+    details.push({ betId: b.id, userId: b.userId, status: g.status, payout: g.payout });
+  }
+
+  if (adminId && (payable.length > 0 || skipped.length > 0)) {
+    await prisma.adminActionLog.create({
+      data: {
+        userId: adminId,
+        action: 'GAME_SUBMIT_PAYMENTS',
+        targetType: 'Game',
+        targetId: gameId,
+        metadata: { submitted: payable.length, paidCount, paidTotal, lostCount, refundedCount, skipped: skipped.length, onlyIds } as never,
+      },
+    });
+  }
+  const s = await buildSettlement(gameId);
+  return {
+    ...s,
+    meta: { submitted: payable.length, paidCount, paidTotal, lostCount, refundedCount, refundedTotal, skipped, details },
+  };
 }
 
 export async function markPayout(gameId: string, payoutStatus: 'SUBMITTED' | 'PAID' | 'PENDING', adminId?: string) {
