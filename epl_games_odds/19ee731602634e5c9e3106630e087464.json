@@ -1,0 +1,4450 @@
+{
+  "id": "19ee731602634e5c9e3106630e087464",
+  "sport_key": "soccer_spain_la_liga",
+  "sport_title": "La Liga - Spain",
+  "commence_time": "2026-10-16T19:00:00Z",
+  "home_team": "Deportivo La Coruña",
+  "away_team": "Levante",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:43Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.58
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:25:43Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.82,
+              "point": -0.25
+            },
+            {
+              "name": "Levante",
+              "price": 2.1,
+              "point": 0.25
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:43Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.93,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.95,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:25:43Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.82,
+              "point": -0.25
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 3.57,
+              "point": -1.25
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 3.13,
+              "point": -1
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.45,
+              "point": -0.75
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1,
+              "point": -0.5
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.53,
+              "point": 0
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.41,
+              "point": 0.25
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.32,
+              "point": 0.5
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.22,
+              "point": 0.75
+            },
+            {
+              "name": "Levante",
+              "price": 2.1,
+              "point": 0.25
+            },
+            {
+              "name": "Levante",
+              "price": 1.32,
+              "point": 1.25
+            },
+            {
+              "name": "Levante",
+              "price": 1.4,
+              "point": 1
+            },
+            {
+              "name": "Levante",
+              "price": 1.6,
+              "point": 0.75
+            },
+            {
+              "name": "Levante",
+              "price": 1.81,
+              "point": 0.5
+            },
+            {
+              "name": "Levante",
+              "price": 2.65,
+              "point": 0
+            },
+            {
+              "name": "Levante",
+              "price": 3.12,
+              "point": -0.25
+            },
+            {
+              "name": "Levante",
+              "price": 3.57,
+              "point": -0.5
+            },
+            {
+              "name": "Levante",
+              "price": 4.64,
+              "point": -0.75
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:25:43Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.93,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.29,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.35,
+              "point": 1.75
+            },
+            {
+              "name": "Over",
+              "price": 1.45,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 1.69,
+              "point": 2.25
+            },
+            {
+              "name": "Over",
+              "price": 2.19,
+              "point": 2.75
+            },
+            {
+              "name": "Over",
+              "price": 2.63,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.95,
+              "point": 3.25
+            },
+            {
+              "name": "Over",
+              "price": 3.29,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.95,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 3.74,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 3.3,
+              "point": 1.75
+            },
+            {
+              "name": "Under",
+              "price": 2.88,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 2.26,
+              "point": 2.25
+            },
+            {
+              "name": "Under",
+              "price": 1.74,
+              "point": 2.75
+            },
+            {
+              "name": "Under",
+              "price": 1.53,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.42,
+              "point": 3.25
+            },
+            {
+              "name": "Under",
+              "price": 1.36,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:43Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.58
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:49Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.76
+            },
+            {
+              "name": "No",
+              "price": 2.12
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T14:25:49Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 4.71
+            },
+            {
+              "name": "No",
+              "price": 1.2
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:25:49Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña:0|Levante:0",
+              "price": 11.57
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:1",
+              "price": 11.89
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:2",
+              "price": 18.93
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:3",
+              "price": 41.21
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:4",
+              "price": 105.89
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:0",
+              "price": 8.73
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:1",
+              "price": 6.96
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:2",
+              "price": 12.62
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:3",
+              "price": 28.28
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:4",
+              "price": 75.27
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:0",
+              "price": 10.78
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:1",
+              "price": 9.45
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:2",
+              "price": 15.37
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:3",
+              "price": 34.15
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:4",
+              "price": 89.37
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:0",
+              "price": 18.75
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:1",
+              "price": 16.56
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:2",
+              "price": 26.17
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:3",
+              "price": 56.61
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:4",
+              "price": 141.6
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:0",
+              "price": 40.56
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:1",
+              "price": 36.09
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:2",
+              "price": 55.3
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:3",
+              "price": 112.56
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:0",
+              "price": 98.99
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:1",
+              "price": 88.88
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:2",
+              "price": 130.93
+            }
+          ]
+        },
+        {
+          "key": "correct_score_h1",
+          "last_update": "2026-10-12T14:25:49Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña:0|Levante:0",
+              "price": 3.12
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:1",
+              "price": 6.01
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:2",
+              "price": 19.79
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:3",
+              "price": 74.52
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:0",
+              "price": 4.31
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:1",
+              "price": 8.14
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:2",
+              "price": 25.83
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:3",
+              "price": 92.91
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:0",
+              "price": 11.12
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:1",
+              "price": 19.77
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:2",
+              "price": 56.16
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:3",
+              "price": 174.85
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:0",
+              "price": 36.48
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:1",
+              "price": 60.01
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:2",
+              "price": 145.75
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:25:49Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.55
+            },
+            {
+              "name": "Levante",
+              "price": 2.55
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:25:49Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.71
+            },
+            {
+              "name": "Levante",
+              "price": 4.22
+            },
+            {
+              "name": "Draw",
+              "price": 2.31
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T14:25:49Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.83,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 2.01,
+              "point": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:23:47Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:23:47Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.88,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.88,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:23:47Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:23:46Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:23:46Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 3.15,
+              "point": -1
+            },
+            {
+              "name": "Levante",
+              "price": 1.4,
+              "point": 1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:23:46Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.92,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.97,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:23:46Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 9.3,
+              "point": -2.5
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.13,
+              "point": 1
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.09,
+              "point": 1.5
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 7.7,
+              "point": -2
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 3.15,
+              "point": -1
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 4.1,
+              "point": -1.5
+            },
+            {
+              "name": "Levante",
+              "price": 1.08,
+              "point": 2.5
+            },
+            {
+              "name": "Levante",
+              "price": 7,
+              "point": -1
+            },
+            {
+              "name": "Levante",
+              "price": 8.6,
+              "point": -1.5
+            },
+            {
+              "name": "Levante",
+              "price": 1.11,
+              "point": 2
+            },
+            {
+              "name": "Levante",
+              "price": 1.4,
+              "point": 1
+            },
+            {
+              "name": "Levante",
+              "price": 1.27,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:23:46Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 3.3,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 6.6,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 13,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 1.92,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.06,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.08,
+              "point": 1
+            },
+            {
+              "name": "Over",
+              "price": 5.7,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 1.46,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 1.3,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 2.6,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.38,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.14,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.05,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1.97,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 11,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 9.8,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 1.17,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 2.9,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 3.8,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.55,
+              "point": 3
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:23:46Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betway",
+      "title": "Betway",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:00Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:00Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.95,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.83,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:00Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.75
+            },
+            {
+              "name": "No",
+              "price": 2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:25:00Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña or Draw",
+              "price": 1.3
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.7
+            },
+            {
+              "name": "Deportivo La Coruña or Levante",
+              "price": 1.33
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:25:00Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.29,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.95,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 3.5,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.83,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:00Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:26:03Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña:1|Levante:0",
+              "price": 7.5
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:0",
+              "price": 10
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:1",
+              "price": 8
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:0",
+              "price": 17
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:1",
+              "price": 15
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:2",
+              "price": 23
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:0",
+              "price": 41
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:1",
+              "price": 36
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:2",
+              "price": 56
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:3",
+              "price": 91
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:0",
+              "price": 91
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:1",
+              "price": 81
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:2",
+              "price": 101
+            },
+            {
+              "name": "Deportivo La Coruña:6|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Deportivo La Coruña:6|Levante:1",
+              "price": 126
+            },
+            {
+              "name": "Deportivo La Coruña:6|Levante:2",
+              "price": 151
+            },
+            {
+              "name": "Deportivo La Coruña:7|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Deportivo La Coruña:7|Levante:1",
+              "price": 151
+            },
+            {
+              "name": "Deportivo La Coruña:8|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Deportivo La Coruña:9|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Deportivo La Coruña:10|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:0",
+              "price": 10
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:1",
+              "price": 6
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:2",
+              "price": 13
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:3",
+              "price": 51
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:4",
+              "price": 151
+            },
+            {
+              "name": "Levante:1|Deportivo La Coruña:0",
+              "price": 10
+            },
+            {
+              "name": "Levante:2|Deportivo La Coruña:0",
+              "price": 17
+            },
+            {
+              "name": "Levante:2|Deportivo La Coruña:1",
+              "price": 11
+            },
+            {
+              "name": "Levante:3|Deportivo La Coruña:0",
+              "price": 36
+            },
+            {
+              "name": "Levante:3|Deportivo La Coruña:1",
+              "price": 26
+            },
+            {
+              "name": "Levante:3|Deportivo La Coruña:2",
+              "price": 29
+            },
+            {
+              "name": "Levante:4|Deportivo La Coruña:0",
+              "price": 91
+            },
+            {
+              "name": "Levante:4|Deportivo La Coruña:1",
+              "price": 71
+            },
+            {
+              "name": "Levante:4|Deportivo La Coruña:2",
+              "price": 81
+            },
+            {
+              "name": "Levante:4|Deportivo La Coruña:3",
+              "price": 101
+            },
+            {
+              "name": "Levante:5|Deportivo La Coruña:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:5|Deportivo La Coruña:1",
+              "price": 126
+            },
+            {
+              "name": "Levante:5|Deportivo La Coruña:2",
+              "price": 151
+            },
+            {
+              "name": "Levante:6|Deportivo La Coruña:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:6|Deportivo La Coruña:1",
+              "price": 151
+            },
+            {
+              "name": "Levante:6|Deportivo La Coruña:2",
+              "price": 151
+            },
+            {
+              "name": "Levante:7|Deportivo La Coruña:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:7|Deportivo La Coruña:1",
+              "price": 151
+            },
+            {
+              "name": "Levante:8|Deportivo La Coruña:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:9|Deportivo La Coruña:0",
+              "price": 151
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:26:03Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.5
+            },
+            {
+              "name": "Levante",
+              "price": 2.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas",
+      "title": "LeoVegas",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.12
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.85,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.85,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.02
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.04,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.29,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.85,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 3.05,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 5.5,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 9.5,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 8.5,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 3.35,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.85,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.33,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.12,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.6,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.42,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h2",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.05,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.67,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.12
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:26:00Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:26:00Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.83,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.93,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:26:00Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:16Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:16Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:44Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:44Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfred_uk",
+      "title": "Betfred (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.73
+            },
+            {
+              "name": "No",
+              "price": 2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.15
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.86,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.81,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña or Draw",
+              "price": 1.32
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.71
+            },
+            {
+              "name": "Deportivo La Coruña or Levante",
+              "price": 1.32
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.05,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.27,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.86,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 3.05,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 5.4,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 8.6,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 7.6,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 3.3,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.81,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.31,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.1,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.15
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:46Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:46Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "boylesports",
+      "title": "BoyleSports",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:40Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:40Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:28Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.17
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.62
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:25:28Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.58,
+              "point": 0
+            },
+            {
+              "name": "Levante",
+              "price": 2.62,
+              "point": 0
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:28Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.98,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.96,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:28Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.72
+            },
+            {
+              "name": "No",
+              "price": 2.02
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:25:28Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña or Draw",
+              "price": 1.34
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.77
+            },
+            {
+              "name": "Deportivo La Coruña or Levante",
+              "price": 1.33
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:28Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.17
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.62
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:21:49Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 7.4,
+              "point": -2.5
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 6.65,
+              "point": -2
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 3.66,
+              "point": -1.5
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.99,
+              "point": -1
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.58,
+              "point": 0
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.08,
+              "point": 1
+            },
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.05,
+              "point": 1.5
+            },
+            {
+              "name": "Levante",
+              "price": 1.03,
+              "point": 2.5
+            },
+            {
+              "name": "Levante",
+              "price": 1.05,
+              "point": 2
+            },
+            {
+              "name": "Levante",
+              "price": 1.22,
+              "point": 1.5
+            },
+            {
+              "name": "Levante",
+              "price": 1.34,
+              "point": 1
+            },
+            {
+              "name": "Levante",
+              "price": 2.62,
+              "point": 0
+            },
+            {
+              "name": "Levante",
+              "price": 6.3,
+              "point": -1
+            },
+            {
+              "name": "Levante",
+              "price": 7.1,
+              "point": -1.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:21:49Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 1
+            },
+            {
+              "name": "Over",
+              "price": 1.27,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.43,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 1.98,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.53,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 3.08,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 5.05,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 5.65,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 10,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 12,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 26,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 50,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 8.6,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 7.6,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 3.34,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.66,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 1.96,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.47,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.31,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.08,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.02,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1.04,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 7.5
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T14:21:49Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 4.3
+            },
+            {
+              "name": "No",
+              "price": 1.19
+            }
+          ]
+        },
+        {
+          "key": "double_chance_h1",
+          "last_update": "2026-10-12T14:21:49Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña or Draw",
+              "price": 1.19
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.41
+            },
+            {
+              "name": "Deportivo La Coruña or Levante",
+              "price": 1.62
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.89,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.93,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "smarkets",
+      "title": "Smarkets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:47Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.14
+            },
+            {
+              "name": "Levante",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:25:47Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.18
+            },
+            {
+              "name": "Levante",
+              "price": 3.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:47Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.14
+            },
+            {
+              "name": "Levante",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "paddypower",
+      "title": "Paddy Power",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:24:16Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:24:16Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:25:08Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.85,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 3.3,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.25,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 6.5,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.85,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 11,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.29,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 3.6,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.08,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:08Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.65
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T14:25:08Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 4
+            },
+            {
+              "name": "No",
+              "price": 1.2
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:25:08Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña:1|Levante:0",
+              "price": 7.5
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:0",
+              "price": 9.5
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:1",
+              "price": 8
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:0",
+              "price": 15
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:1",
+              "price": 14
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:2",
+              "price": 26
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:0",
+              "price": 36
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:1",
+              "price": 31
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:2",
+              "price": 56
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:3",
+              "price": 101
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:0",
+              "price": 91
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:1",
+              "price": 91
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:2",
+              "price": 151
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:3",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:4",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:6|Levante:0",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:6|Levante:1",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:6|Levante:2",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:6|Levante:3",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:6|Levante:4",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:6|Levante:5",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:7|Levante:0",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:7|Levante:1",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:7|Levante:2",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:7|Levante:3",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:7|Levante:4",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:8|Levante:0",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:8|Levante:1",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:8|Levante:2",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:8|Levante:3",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:9|Levante:0",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:9|Levante:1",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:9|Levante:2",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:10|Levante:0",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:10|Levante:1",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:11|Levante:0",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:0",
+              "price": 11
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:1",
+              "price": 6
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:2",
+              "price": 12
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:3",
+              "price": 51
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:4",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:5",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:1",
+              "price": 10
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:2",
+              "price": 15
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:2",
+              "price": 11
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:3",
+              "price": 41
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:3",
+              "price": 23
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:3",
+              "price": 26
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:4",
+              "price": 101
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:4",
+              "price": 81
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:4",
+              "price": 101
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:4",
+              "price": 126
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:5",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:5",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:5",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:5",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:5",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:6",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:6",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:6",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:6",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:6",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:5|Levante:6",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:7",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:7",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:7",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:7",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:4|Levante:7",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:8",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:8",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:8",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:8",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:9",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:9",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:9",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:10",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:10",
+              "price": 201
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:11",
+              "price": 201
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:25:08Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña or Draw",
+              "price": 1.25
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.73
+            },
+            {
+              "name": "Deportivo La Coruña or Levante",
+              "price": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "skybet",
+      "title": "Sky Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:24:44Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:24:44Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_uk",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:26:00Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.12
+            },
+            {
+              "name": "Levante",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:26:00Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.18
+            },
+            {
+              "name": "Levante",
+              "price": 3.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:26:00Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.12
+            },
+            {
+              "name": "Levante",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:26:02Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.96,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.07,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.97,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 11,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:26:02Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.79
+            },
+            {
+              "name": "No",
+              "price": 2.16
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:26:02Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña:0|Levante:0",
+              "price": 12.5
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:1",
+              "price": 12.5
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:2",
+              "price": 9.2
+            },
+            {
+              "name": "Deportivo La Coruña:0|Levante:3",
+              "price": 12
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:0",
+              "price": 8.8
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:1",
+              "price": 7.4
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:2",
+              "price": 13.5
+            },
+            {
+              "name": "Deportivo La Coruña:1|Levante:3",
+              "price": 10.5
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:0",
+              "price": 11
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:1",
+              "price": 9.6
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:2",
+              "price": 15.5
+            },
+            {
+              "name": "Deportivo La Coruña:2|Levante:3",
+              "price": 11
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:0",
+              "price": 9
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:1",
+              "price": 8.6
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:2",
+              "price": 10
+            },
+            {
+              "name": "Deportivo La Coruña:3|Levante:3",
+              "price": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:26:02Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.12
+            },
+            {
+              "name": "Levante",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:26:02Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.18
+            },
+            {
+              "name": "Levante",
+              "price": 3.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:26:02Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.12
+            },
+            {
+              "name": "Levante",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.11
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.52
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.53,
+              "point": 0
+            },
+            {
+              "name": "Levante",
+              "price": 2.54,
+              "point": 0
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.92,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.9,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña or Draw",
+              "price": 1.33
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.76
+            },
+            {
+              "name": "Deportivo La Coruña or Levante",
+              "price": 1.32
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:34Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.11
+            },
+            {
+              "name": "Levante",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.52
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.02
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.87,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.88,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.02
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.02
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.77,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.79,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.02
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "livescorebet",
+      "title": "LiveScore Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.02
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.04
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña or Draw",
+              "price": 1.25
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.7
+            },
+            {
+              "name": "Deportivo La Coruña or Levante",
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.47
+            },
+            {
+              "name": "Levante",
+              "price": 2.45
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 6.1,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.81,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 12,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 3.1,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.23,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.07,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 10,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.83,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 3.5,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.29,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.02
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "virginbet",
+      "title": "Virgin Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.98
+            },
+            {
+              "name": "Levante",
+              "price": 3.35
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.04
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña or Draw",
+              "price": 1.28
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.73
+            },
+            {
+              "name": "Deportivo La Coruña or Levante",
+              "price": 1.28
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.47
+            },
+            {
+              "name": "Levante",
+              "price": 2.45
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 6.1,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 3.1,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 12,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 1.81,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.23,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.07,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 10,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 3.5,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.83,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.29,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:29Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.98
+            },
+            {
+              "name": "Levante",
+              "price": 3.35
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.87,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.88,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "grosvenor",
+      "title": "Grosvenor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.87,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.88,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:58Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.88,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.91,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "casumo",
+      "title": "Casumo",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:35Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:35Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.87,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.88,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:35Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matchbook",
+      "title": "Matchbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.12
+            },
+            {
+              "name": "Levante",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.18
+            },
+            {
+              "name": "Levante",
+              "price": 3.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.08,
+              "point": -0.5
+            },
+            {
+              "name": "Levante",
+              "price": 1.84,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.92,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.93,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.79
+            },
+            {
+              "name": "No",
+              "price": 2.16
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:59Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.12
+            },
+            {
+              "name": "Levante",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betano_uk",
+      "title": "Betano (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:12Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:12Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betvictor",
+      "title": "Bet Victor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:24:32Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:24:32Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_sb_uk",
+      "title": "Betfair Sportsbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:43Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:43Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.05
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coral",
+      "title": "Coral",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.75
+            },
+            {
+              "name": "No",
+              "price": 2
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.5
+            },
+            {
+              "name": "Levante",
+              "price": 2.4
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.91,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.28,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 12,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 3.2,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 23,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 1.04,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 6.5,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.83,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 3.4,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.3,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 10,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.1,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.6
+            },
+            {
+              "name": "Levante",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 2.2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ladbrokes_uk",
+      "title": "Ladbrokes",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:44Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:25:44Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.75
+            },
+            {
+              "name": "No",
+              "price": 2
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:25:44Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 1.5
+            },
+            {
+              "name": "Levante",
+              "price": 2.4
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:25:44Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.04,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 23,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 1.91,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 6.5,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 12,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 1.28,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 3.2,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 10,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.83,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.1,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 3.4,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.3,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:25:44Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.6
+            },
+            {
+              "name": "Levante",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 2.2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:44Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "everygame",
+      "title": "Everygame",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:24:07Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:24:07Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betonlineag",
+      "title": "BetOnline.ag",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.56
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1,
+              "point": -0.5
+            },
+            {
+              "name": "Levante",
+              "price": 1.75,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.93,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.9,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:25:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:23:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.03
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:23:14Z",
+          "outcomes": [
+            {
+              "name": "Deportivo La Coruña",
+              "price": 2.03
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

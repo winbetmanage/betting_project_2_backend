@@ -28,6 +28,7 @@ export const listGames = async (filters: Record<string, unknown> = {}) => {
     include: {
       competition: { include: { sport: true } },
       score: { select: { footballDataMatchId: true, homeScoreHT: true, awayScoreHT: true, homeScoreFT: true, awayScoreFT: true, winner: true, status: true } },
+      _count: { select: { markets: true } },
       ...(filters.include === 'markets'
         ? { markets: { include: { selections: { orderBy: { name: 'asc' as const } } } } }
         : {}),
@@ -43,9 +44,17 @@ export const listGames = async (filters: Record<string, unknown> = {}) => {
       ? spec.sport_key
       : compName.includes('champions')
         ? 'soccer_uefa_champs_league'
-        : compName
-          ? 'soccer_epl'
-          : null;
+        : compName.includes('la liga')
+          ? 'soccer_spain_la_liga'
+          : compName.includes('bundesliga')
+            ? 'soccer_germany_bundesliga'
+            : compName.includes('serie a')
+              ? 'soccer_italy_serie_a'
+              : compName.includes('ligue')
+                ? 'soccer_france_ligue_one'
+                : compName
+                  ? 'soccer_epl'
+                  : null;
     const score = g.score
       ? {
           footballDataMatchId: g.score.footballDataMatchId,
@@ -64,6 +73,7 @@ export const listGames = async (filters: Record<string, unknown> = {}) => {
       hasOddsApi: !!g.externalEventId,
       hasFootballData: fdMatchId != null,
       apiSportKey,
+      marketCount: g._count?.markets ?? 0,
     };
   });
 };

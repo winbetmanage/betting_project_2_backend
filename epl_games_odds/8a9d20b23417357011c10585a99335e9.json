@@ -1,0 +1,3996 @@
+{
+  "id": "8a9d20b23417357011c10585a99335e9",
+  "sport_key": "soccer_uefa_champs_league",
+  "sport_title": "UEFA Champions League",
+  "commence_time": "2026-10-13T19:00:00Z",
+  "home_team": "Viking FK",
+  "away_team": "Bayern Munich",
+  "bookmakers": [
+    {
+      "key": "betfred_uk",
+      "title": "Betfred (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:18Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 19
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:46:18Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.67
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:18Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 19
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "paddypower",
+      "title": "Paddy Power",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:44:52Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 19
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:44:52Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 19
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "skybet",
+      "title": "Sky Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:43:10Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 17
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:43:10Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 17
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 25
+            },
+            {
+              "name": "Draw",
+              "price": 15.5
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.78,
+              "point": -2.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.21,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.07,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.88,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.73
+            },
+            {
+              "name": "No",
+              "price": 2.02
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich or Draw",
+              "price": 1.01
+            },
+            {
+              "name": "Viking FK or Draw",
+              "price": 8.7
+            },
+            {
+              "name": "Bayern Munich or Viking FK",
+              "price": 1.04
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 25
+            },
+            {
+              "name": "Draw",
+              "price": 15.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T13:42:01Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.02,
+              "point": 0
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.09,
+              "point": -1
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.25,
+              "point": -1.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.36,
+              "point": -2
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.78,
+              "point": -2.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 2.08,
+              "point": -3
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 2.48,
+              "point": -3.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 3.42,
+              "point": -4
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 3.94,
+              "point": -4.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 6.2,
+              "point": -5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 6.75,
+              "point": -5.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 17,
+              "point": 0
+            },
+            {
+              "name": "Viking FK",
+              "price": 5.35,
+              "point": 1
+            },
+            {
+              "name": "Viking FK",
+              "price": 3.34,
+              "point": 1.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.84,
+              "point": 2
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.21,
+              "point": 2.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.77,
+              "point": 3
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.49,
+              "point": 3.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.26,
+              "point": 4
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.18,
+              "point": 4.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.06,
+              "point": 5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.04,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:42:01Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 1.11,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.16,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 1.41,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.6,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 2.07,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 2.5,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 2.96,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 4.3,
+              "point": 6
+            },
+            {
+              "name": "Over",
+              "price": 4.8,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 7.8,
+              "point": 7
+            },
+            {
+              "name": "Over",
+              "price": 8,
+              "point": 7.5
+            },
+            {
+              "name": "Over",
+              "price": 15,
+              "point": 8.5
+            },
+            {
+              "name": "Over",
+              "price": 26,
+              "point": 9.5
+            },
+            {
+              "name": "Over",
+              "price": 50,
+              "point": 10.5
+            },
+            {
+              "name": "Under",
+              "price": 50,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 14,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 11,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 4.95,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 4.25,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 2.64,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 2.22,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.88,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.48,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1.33,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.15,
+              "point": 6
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.02,
+              "point": 7
+            },
+            {
+              "name": "Under",
+              "price": 1.08,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 8.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 9.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 10.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_uk",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.12
+            },
+            {
+              "name": "Viking FK",
+              "price": 26
+            },
+            {
+              "name": "Draw",
+              "price": 14.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.13
+            },
+            {
+              "name": "Viking FK",
+              "price": 27
+            },
+            {
+              "name": "Draw",
+              "price": 15
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.12
+            },
+            {
+              "name": "Viking FK",
+              "price": 26
+            },
+            {
+              "name": "Draw",
+              "price": 14.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:50Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.12
+            },
+            {
+              "name": "Viking FK",
+              "price": 26
+            },
+            {
+              "name": "Draw",
+              "price": 14.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T13:46:50Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.13
+            },
+            {
+              "name": "Viking FK",
+              "price": 27
+            },
+            {
+              "name": "Draw",
+              "price": 15
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:50Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.12
+            },
+            {
+              "name": "Viking FK",
+              "price": 26
+            },
+            {
+              "name": "Draw",
+              "price": 14.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:53Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 21
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:46:53Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 2.08,
+              "point": -3
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.77,
+              "point": 3
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:53Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.01,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.82,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T13:46:53Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich or Draw",
+              "price": 1
+            },
+            {
+              "name": "Viking FK or Draw",
+              "price": 8.2
+            },
+            {
+              "name": "Bayern Munich or Viking FK",
+              "price": 1.04
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:53Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 21
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:47Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 18.25
+            },
+            {
+              "name": "Draw",
+              "price": 14.1
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:46:47Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.87,
+              "point": -2.75
+            },
+            {
+              "name": "Viking FK",
+              "price": 2,
+              "point": 2.75
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:47Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.96,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.89,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T13:46:47Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.87,
+              "point": -2.75
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.53,
+              "point": -2.25
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.7,
+              "point": -2.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 2.08,
+              "point": -3
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 2.29,
+              "point": -3.25
+            },
+            {
+              "name": "Viking FK",
+              "price": 2,
+              "point": 2.75
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.51,
+              "point": 2.25
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.19,
+              "point": 2.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.78,
+              "point": 3
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.62,
+              "point": 3.25
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:46:47Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.96,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.55,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 1.75,
+              "point": 4.25
+            },
+            {
+              "name": "Over",
+              "price": 2.16,
+              "point": 4.75
+            },
+            {
+              "name": "Over",
+              "price": 2.47,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1.89,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 2.43,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 2.1,
+              "point": 4.25
+            },
+            {
+              "name": "Under",
+              "price": 1.71,
+              "point": 4.75
+            },
+            {
+              "name": "Under",
+              "price": 1.53,
+              "point": 5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:47Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 18.25
+            },
+            {
+              "name": "Draw",
+              "price": 14.1
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads_cards",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.81,
+              "point": 0.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.46,
+              "point": 1
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 2.55,
+              "point": 0
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.91,
+              "point": -0.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.5,
+              "point": -1
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.45,
+              "point": 0
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads_corners",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.79,
+              "point": -4
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.47,
+              "point": -3
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.62,
+              "point": -3.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.92,
+              "point": -4.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 2.12,
+              "point": -5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.93,
+              "point": 4
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.31,
+              "point": 3
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.05,
+              "point": 3.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.72,
+              "point": 4.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.57,
+              "point": 5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals_cards",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.93,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.36,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.54,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.44,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 2.91,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.88,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 2.96,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.44,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.53,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.38,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals_corners",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.76,
+              "point": 10
+            },
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 9
+            },
+            {
+              "name": "Over",
+              "price": 1.57,
+              "point": 9.5
+            },
+            {
+              "name": "Over",
+              "price": 1.93,
+              "point": 10.5
+            },
+            {
+              "name": "Over",
+              "price": 2.18,
+              "point": 11
+            },
+            {
+              "name": "Under",
+              "price": 1.95,
+              "point": 10
+            },
+            {
+              "name": "Under",
+              "price": 2.5,
+              "point": 9
+            },
+            {
+              "name": "Under",
+              "price": 2.13,
+              "point": 9.5
+            },
+            {
+              "name": "Under",
+              "price": 1.71,
+              "point": 10.5
+            },
+            {
+              "name": "Under",
+              "price": 1.54,
+              "point": 11
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.74
+            },
+            {
+              "name": "No",
+              "price": 2.11
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 3.62
+            },
+            {
+              "name": "No",
+              "price": 1.28
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Viking FK:0|Bayern Munich:1",
+              "price": 18.88
+            },
+            {
+              "name": "Viking FK:0|Bayern Munich:2",
+              "price": 10.92
+            },
+            {
+              "name": "Viking FK:0|Bayern Munich:3",
+              "price": 9.44
+            },
+            {
+              "name": "Viking FK:0|Bayern Munich:4",
+              "price": 9.7
+            },
+            {
+              "name": "Viking FK:0|Bayern Munich:5",
+              "price": 11.71
+            },
+            {
+              "name": "Viking FK:0|Bayern Munich:6",
+              "price": 18.11
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:0",
+              "price": 57.88
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:1",
+              "price": 42.67
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:2",
+              "price": 12.79
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:3",
+              "price": 10.6
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:4",
+              "price": 11.33
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:5",
+              "price": 14.46
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:6",
+              "price": 21.34
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:0",
+              "price": 100.5
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:1",
+              "price": 41.72
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:2",
+              "price": 20.69
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:3",
+              "price": 21.36
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:4",
+              "price": 23.12
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:5",
+              "price": 30.98
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:6",
+              "price": 42.99
+            },
+            {
+              "name": "Viking FK:3|Bayern Munich:1",
+              "price": 98.72
+            },
+            {
+              "name": "Viking FK:3|Bayern Munich:2",
+              "price": 64.94
+            },
+            {
+              "name": "Viking FK:3|Bayern Munich:3",
+              "price": 46.37
+            },
+            {
+              "name": "Viking FK:3|Bayern Munich:4",
+              "price": 61.56
+            },
+            {
+              "name": "Viking FK:3|Bayern Munich:5",
+              "price": 75.06
+            }
+          ]
+        },
+        {
+          "key": "correct_score_h1",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Viking FK:0|Bayern Munich:0",
+              "price": 7.29
+            },
+            {
+              "name": "Viking FK:0|Bayern Munich:1",
+              "price": 4.3
+            },
+            {
+              "name": "Viking FK:0|Bayern Munich:2",
+              "price": 4.78
+            },
+            {
+              "name": "Viking FK:0|Bayern Munich:3",
+              "price": 7.74
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:0",
+              "price": 16.5
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:1",
+              "price": 10.15
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:2",
+              "price": 11.21
+            },
+            {
+              "name": "Viking FK:1|Bayern Munich:3",
+              "price": 17.48
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:0",
+              "price": 53.96
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:1",
+              "price": 37.08
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:2",
+              "price": 40.25
+            },
+            {
+              "name": "Viking FK:2|Bayern Munich:3",
+              "price": 56.49
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich or Draw",
+              "price": 1.03
+            },
+            {
+              "name": "Viking FK or Draw",
+              "price": 8.36
+            },
+            {
+              "name": "Bayern Munich or Viking FK",
+              "price": 1.04
+            }
+          ]
+        },
+        {
+          "key": "double_chance_h1",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich or Draw",
+              "price": 1.05
+            },
+            {
+              "name": "Viking FK or Draw",
+              "price": 3.38
+            },
+            {
+              "name": "Bayern Munich or Viking FK",
+              "price": 1.21
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.03
+            },
+            {
+              "name": "Viking FK",
+              "price": 16.35
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.33
+            },
+            {
+              "name": "Viking FK",
+              "price": 12.17
+            },
+            {
+              "name": "Draw",
+              "price": 4.47
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T13:46:28Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.95,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 1.85,
+              "point": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.06
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 10
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.06
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas",
+      "title": "LeoVegas",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.88,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.88,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.68
+            },
+            {
+              "name": "No",
+              "price": 2.12
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.02,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.14,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.38,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.88,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 2.75,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 4.4,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 10,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 5.25,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.85,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.88,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.42,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.19,
+              "point": 6.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals_corners",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.31,
+              "point": 8.5
+            },
+            {
+              "name": "Over",
+              "price": 1.52,
+              "point": 9.5
+            },
+            {
+              "name": "Over",
+              "price": 1.83,
+              "point": 10.5
+            },
+            {
+              "name": "Over",
+              "price": 2.3,
+              "point": 11.5
+            },
+            {
+              "name": "Over",
+              "price": 2.9,
+              "point": 12.5
+            },
+            {
+              "name": "Under",
+              "price": 2.9,
+              "point": 8.5
+            },
+            {
+              "name": "Under",
+              "price": 2.2,
+              "point": 9.5
+            },
+            {
+              "name": "Under",
+              "price": 1.77,
+              "point": 10.5
+            },
+            {
+              "name": "Under",
+              "price": 1.48,
+              "point": 11.5
+            },
+            {
+              "name": "Under",
+              "price": 1.31,
+              "point": 12.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.48,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.35,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h2",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.92,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.73,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_uk",
+      "title": "Unibet (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 18
+            },
+            {
+              "name": "Draw",
+              "price": 10
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 18
+            },
+            {
+              "name": "Draw",
+              "price": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:01Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.06
+            },
+            {
+              "name": "Viking FK",
+              "price": 18.25
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:01Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.06
+            },
+            {
+              "name": "Viking FK",
+              "price": 18.25
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "smarkets",
+      "title": "Smarkets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.12
+            },
+            {
+              "name": "Viking FK",
+              "price": 23.98
+            },
+            {
+              "name": "Draw",
+              "price": 14.49
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.13
+            },
+            {
+              "name": "Viking FK",
+              "price": 27.03
+            },
+            {
+              "name": "Draw",
+              "price": 14.99
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.12
+            },
+            {
+              "name": "Viking FK",
+              "price": 23.98
+            },
+            {
+              "name": "Draw",
+              "price": 14.49
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:18Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.11
+            },
+            {
+              "name": "Viking FK",
+              "price": 18
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:18Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.85,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.82,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:46:18Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.13,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.38,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.85,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 2.7,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 4.2,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 8.6,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 4.8,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.75,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.82,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.39,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.17,
+              "point": 6.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:18Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.11
+            },
+            {
+              "name": "Viking FK",
+              "price": 18
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.07
+            },
+            {
+              "name": "Viking FK",
+              "price": 14.5
+            },
+            {
+              "name": "Draw",
+              "price": 12.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.07
+            },
+            {
+              "name": "Viking FK",
+              "price": 14.5
+            },
+            {
+              "name": "Draw",
+              "price": 12.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:21Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 13.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:21Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 13.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "virginbet",
+      "title": "Virgin Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.06
+            },
+            {
+              "name": "Viking FK",
+              "price": 19
+            },
+            {
+              "name": "Draw",
+              "price": 10.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.77
+            },
+            {
+              "name": "No",
+              "price": 1.96
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.89,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 4.9,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 1.36,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.1,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 15,
+              "point": 8.5
+            },
+            {
+              "name": "Over",
+              "price": 8.5,
+              "point": 7.5
+            },
+            {
+              "name": "Over",
+              "price": 2.88,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 11,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.72,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 2.65,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 4.9,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.3,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 7.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.06
+            },
+            {
+              "name": "Viking FK",
+              "price": 19
+            },
+            {
+              "name": "Draw",
+              "price": 10.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:33Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.06
+            },
+            {
+              "name": "Viking FK",
+              "price": 18
+            },
+            {
+              "name": "Draw",
+              "price": 10.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:33Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.87,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.7,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:33Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.06
+            },
+            {
+              "name": "Viking FK",
+              "price": 18
+            },
+            {
+              "name": "Draw",
+              "price": 10.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "grosvenor",
+      "title": "Grosvenor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:20Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 21
+            },
+            {
+              "name": "Draw",
+              "price": 11.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:20Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.96,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.78,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:20Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 21
+            },
+            {
+              "name": "Draw",
+              "price": 11.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "casumo",
+      "title": "Casumo",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.05
+            },
+            {
+              "name": "Viking FK",
+              "price": 18
+            },
+            {
+              "name": "Draw",
+              "price": 10
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.97,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.81,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.05
+            },
+            {
+              "name": "Viking FK",
+              "price": 18
+            },
+            {
+              "name": "Draw",
+              "price": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:48Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 21
+            },
+            {
+              "name": "Draw",
+              "price": 11.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:48Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.97,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.81,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:48Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 21
+            },
+            {
+              "name": "Draw",
+              "price": 11.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "livescorebet",
+      "title": "LiveScore Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:04Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.06
+            },
+            {
+              "name": "Viking FK",
+              "price": 19
+            },
+            {
+              "name": "Draw",
+              "price": 10.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:46:04Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.77
+            },
+            {
+              "name": "No",
+              "price": 1.96
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:04Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.06
+            },
+            {
+              "name": "Viking FK",
+              "price": 19
+            },
+            {
+              "name": "Draw",
+              "price": 10.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 25
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.97,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.81,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 25
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:20Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 25
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:20Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.97,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.81,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:20Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 25
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:48Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 25
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:48Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.14,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 5.97,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:48Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 25
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 26
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.13,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 5.9,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 26
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "boylesports",
+      "title": "BoyleSports",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:22Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 23
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:22Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 23
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betway",
+      "title": "Betway",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 21
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 21
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 21
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.15,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 5.5,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.73
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich or Draw",
+              "price": 1.02
+            },
+            {
+              "name": "Viking FK or Draw",
+              "price": 8
+            },
+            {
+              "name": "Bayern Munich or Viking FK",
+              "price": 1.04
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.15,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 5.5,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 15,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 21
+            },
+            {
+              "name": "Draw",
+              "price": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coral",
+      "title": "Coral",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.05
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.03
+            },
+            {
+              "name": "Viking FK",
+              "price": 13
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.15,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 4.5,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 7.5,
+              "point": 7.5
+            },
+            {
+              "name": "Over",
+              "price": 1.91,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 2.8,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 5,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.18,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 12,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.07,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 1.83,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 2.75,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.4,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.35
+            },
+            {
+              "name": "Viking FK",
+              "price": 8.5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:45:50Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ladbrokes_uk",
+      "title": "Ladbrokes",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.05
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.03
+            },
+            {
+              "name": "Viking FK",
+              "price": 13
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.15,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 4.5,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.91,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 7.5,
+              "point": 7.5
+            },
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 2.8,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 5,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.18,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 12,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.83,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.07,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 2.75,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.4,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.35
+            },
+            {
+              "name": "Viking FK",
+              "price": 8.5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.1
+            },
+            {
+              "name": "Viking FK",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.11
+            },
+            {
+              "name": "Viking FK",
+              "price": 20
+            },
+            {
+              "name": "Draw",
+              "price": 14
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 2.06,
+              "point": -3
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.82,
+              "point": 3
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.96,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.91,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 6.5,
+              "point": -5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 4.2,
+              "point": -4.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.29,
+              "point": -1.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 2.55,
+              "point": -3.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 2.06,
+              "point": -3
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.72,
+              "point": -2.5
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 3.5,
+              "point": -4
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.13,
+              "point": -1
+            },
+            {
+              "name": "Bayern Munich",
+              "price": 1.4,
+              "point": -2
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.13,
+              "point": 5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.26,
+              "point": 4.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 3.85,
+              "point": 1.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.56,
+              "point": 3.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.82,
+              "point": 3
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.21,
+              "point": 2.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 1.34,
+              "point": 4
+            },
+            {
+              "name": "Viking FK",
+              "price": 6.6,
+              "point": 1
+            },
+            {
+              "name": "Viking FK",
+              "price": 3.1,
+              "point": 2
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.17,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.96,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 2.47,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 4.3,
+              "point": 6
+            },
+            {
+              "name": "Over",
+              "price": 1.04,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 1.44,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 8,
+              "point": 7
+            },
+            {
+              "name": "Over",
+              "price": 1.21,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 1.6,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 4.9,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 2.95,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 1.04,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 5.6,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.91,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.59,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1.25,
+              "point": 6
+            },
+            {
+              "name": "Under",
+              "price": 13,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 2.95,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.1,
+              "point": 7
+            },
+            {
+              "name": "Under",
+              "price": 4.8,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 2.43,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.2,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.43,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 14.5,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.11
+            },
+            {
+              "name": "Viking FK",
+              "price": 20
+            },
+            {
+              "name": "Draw",
+              "price": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betvictor",
+      "title": "Bet Victor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:45:11Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 22
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:45:11Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.08
+            },
+            {
+              "name": "Viking FK",
+              "price": 22
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gtbets",
+      "title": "GTbets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.11
+            },
+            {
+              "name": "Viking FK",
+              "price": 18.73
+            },
+            {
+              "name": "Draw",
+              "price": 12.47
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:46:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.7,
+              "point": -2.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.11,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:49Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.93,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.84,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T13:46:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.34
+            },
+            {
+              "name": "Viking FK",
+              "price": 10.38
+            },
+            {
+              "name": "Draw",
+              "price": 4.27
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T13:46:49Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.56,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.33,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.11
+            },
+            {
+              "name": "Viking FK",
+              "price": 18.73
+            },
+            {
+              "name": "Draw",
+              "price": 12.47
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matchbook",
+      "title": "Matchbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.12
+            },
+            {
+              "name": "Viking FK",
+              "price": 26
+            },
+            {
+              "name": "Draw",
+              "price": 14.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.13
+            },
+            {
+              "name": "Viking FK",
+              "price": 27
+            },
+            {
+              "name": "Draw",
+              "price": 15.5
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.86,
+              "point": -2.75
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.02,
+              "point": 2.75
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.94,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.82
+            },
+            {
+              "name": "No",
+              "price": 2.18
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:34Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.12
+            },
+            {
+              "name": "Viking FK",
+              "price": 26
+            },
+            {
+              "name": "Draw",
+              "price": 14.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betonlineag",
+      "title": "BetOnline.ag",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 20.5
+            },
+            {
+              "name": "Draw",
+              "price": 14.5
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.69,
+              "point": -2.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.19,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.97,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.85,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.83,
+              "point": -2.75
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.02,
+              "point": 2.75
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.74,
+              "point": 4.25
+            },
+            {
+              "name": "Under",
+              "price": 2.11,
+              "point": 4.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:46:19Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 20.5
+            },
+            {
+              "name": "Draw",
+              "price": 14.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betanysports",
+      "title": "BetAnything",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 20.5
+            },
+            {
+              "name": "Draw",
+              "price": 14.5
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.69,
+              "point": -2.5
+            },
+            {
+              "name": "Viking FK",
+              "price": 2.25,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.98,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.85,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:45:49Z",
+          "outcomes": [
+            {
+              "name": "Bayern Munich",
+              "price": 1.09
+            },
+            {
+              "name": "Viking FK",
+              "price": 20.5
+            },
+            {
+              "name": "Draw",
+              "price": 14.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

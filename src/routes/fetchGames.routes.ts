@@ -10,6 +10,8 @@ router.get('/staged', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGa
 router.post('/staged/fetch', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.fetchAndStage);
 router.post('/staged/stage-selected', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.stageSelected);
 router.post('/staged/refresh', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.refreshStaged);
+router.post('/staged/bulk-find-link', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.bulkFindAndLink);
+router.post('/staged/bulk-confirm', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.bulkConfirm);
 router.post('/staged/delete', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.deleteSelected);
 router.post('/staged/clear-finished', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.clearFinished);
 router.get('/staged/staged-ids', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.getStagedIds);
@@ -25,6 +27,12 @@ router.post('/staged/:id/confirm', authenticate, authorize('ADMIN', 'ODDS_MANAGE
 // UEFA Champions League browse (The Odds API, via new codes.ts)
 router.get('/champions-league', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listChampionsLeague);
 
+// La Liga / Bundesliga / Serie A / Ligue 1 browse (same staged flow as above)
+router.get('/la-liga', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listLaLiga);
+router.get('/bundesliga', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listBundesliga);
+router.get('/serie-a', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listSerieA);
+router.get('/ligue-1', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listLigue1);
+
 // Premier League browse (same service as CL; legacy /premier-league routes below stay for now)
 router.get('/premier-league-events', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listPremierLeagueEvents);
 
@@ -35,8 +43,12 @@ router.get('/premier-league/published-ids', authenticate, authorize('ADMIN', 'OD
 router.post('/premier-league/:id/publish', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), fetchGamesController.publishOne);
 router.post('/premier-league/publish-bulk', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), fetchGamesController.publishBulk);
 
-// Premier League Results (Football-Data.org)
+// Premier League Results (Football-Data.org) — legacy, kept for back-compat
 router.get('/premier-league-results', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), fetchGamesController.listResults);
 router.post('/premier-league-results/fetch', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), fetchGamesController.fetchResults);
+
+// Recorded results per league (?league=PL|PD|BL1|SA|FL1|CL, default PL)
+router.get('/results', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), fetchGamesController.listLeagueResults);
+router.post('/results/fetch', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), fetchGamesController.fetchLeagueResults);
 
 export default router;

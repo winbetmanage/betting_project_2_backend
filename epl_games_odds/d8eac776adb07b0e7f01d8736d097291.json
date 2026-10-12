@@ -1,0 +1,4700 @@
+{
+  "id": "d8eac776adb07b0e7f01d8736d097291",
+  "sport_key": "soccer_germany_bundesliga",
+  "sport_title": "Bundesliga - Germany",
+  "commence_time": "2026-10-17T13:30:00Z",
+  "home_team": "Union Berlin",
+  "away_team": "Borussia Dortmund",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.76
+            },
+            {
+              "name": "Draw",
+              "price": 4.41
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.84,
+              "point": -0.75
+            },
+            {
+              "name": "Union Berlin",
+              "price": 2.08,
+              "point": 0.75
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.06,
+              "point": 3.25
+            },
+            {
+              "name": "Under",
+              "price": 1.84,
+              "point": 3.25
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.84,
+              "point": -0.75
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.25,
+              "point": 0.25
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.3,
+              "point": 0
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.49,
+              "point": -0.25
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.66,
+              "point": -0.5
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.09,
+              "point": -1
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.38,
+              "point": -1.25
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.66,
+              "point": -1.5
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 3.2,
+              "point": -1.75
+            },
+            {
+              "name": "Union Berlin",
+              "price": 2.08,
+              "point": 0.75
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.22,
+              "point": -0.25
+            },
+            {
+              "name": "Union Berlin",
+              "price": 3.73,
+              "point": 0
+            },
+            {
+              "name": "Union Berlin",
+              "price": 2.79,
+              "point": 0.25
+            },
+            {
+              "name": "Union Berlin",
+              "price": 2.32,
+              "point": 0.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.81,
+              "point": 1
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.64,
+              "point": 1.25
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.52,
+              "point": 1.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.38,
+              "point": 1.75
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.06,
+              "point": 3.25
+            },
+            {
+              "name": "Over",
+              "price": 1.36,
+              "point": 2.25
+            },
+            {
+              "name": "Over",
+              "price": 1.51,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.62,
+              "point": 2.75
+            },
+            {
+              "name": "Over",
+              "price": 1.79,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.28,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 2.61,
+              "point": 3.75
+            },
+            {
+              "name": "Over",
+              "price": 3.2,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 3.53,
+              "point": 4.25
+            },
+            {
+              "name": "Under",
+              "price": 1.84,
+              "point": 3.25
+            },
+            {
+              "name": "Under",
+              "price": 3.2,
+              "point": 2.25
+            },
+            {
+              "name": "Under",
+              "price": 2.6,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.34,
+              "point": 2.75
+            },
+            {
+              "name": "Under",
+              "price": 2.08,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.67,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.51,
+              "point": 3.75
+            },
+            {
+              "name": "Under",
+              "price": 1.36,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.31,
+              "point": 4.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.76
+            },
+            {
+              "name": "Draw",
+              "price": 4.41
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:53:39Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.57
+            },
+            {
+              "name": "No",
+              "price": 2.47
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T14:53:39Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 3.84
+            },
+            {
+              "name": "No",
+              "price": 1.27
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:53:39Z",
+          "outcomes": [
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:0",
+              "price": 19.09
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:1",
+              "price": 11.38
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:2",
+              "price": 10.51
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:3",
+              "price": 14.07
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:4",
+              "price": 24.07
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:5",
+              "price": 48
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:0",
+              "price": 18.82
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:1",
+              "price": 9.16
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:2",
+              "price": 9.15
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:3",
+              "price": 12.13
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:4",
+              "price": 20.71
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:5",
+              "price": 41.86
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:6",
+              "price": 93.99
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:0",
+              "price": 28.98
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:1",
+              "price": 15.12
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:2",
+              "price": 13.83
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:3",
+              "price": 19.26
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:4",
+              "price": 31.97
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:5",
+              "price": 63.34
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:0",
+              "price": 60.96
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:1",
+              "price": 33.06
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:2",
+              "price": 30.9
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:3",
+              "price": 39.59
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:4",
+              "price": 67.99
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:1",
+              "price": 85.45
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:2",
+              "price": 80.28
+            }
+          ]
+        },
+        {
+          "key": "correct_score_h1",
+          "last_update": "2026-10-12T14:53:39Z",
+          "outcomes": [
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:0",
+              "price": 4.01
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:1",
+              "price": 4.15
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:2",
+              "price": 8.14
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:3",
+              "price": 21.32
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:0",
+              "price": 7.44
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:1",
+              "price": 7.69
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:2",
+              "price": 14.45
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:3",
+              "price": 35.72
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:0",
+              "price": 23.76
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:1",
+              "price": 24.46
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:2",
+              "price": 42.56
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:3",
+              "price": 93.29
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:0",
+              "price": 87.54
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:1",
+              "price": 89.66
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:53:39Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.3
+            },
+            {
+              "name": "Union Berlin",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:53:39Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.13
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.04
+            },
+            {
+              "name": "Draw",
+              "price": 2.68
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T14:53:39Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.87,
+              "point": 1.25
+            },
+            {
+              "name": "Under",
+              "price": 1.97,
+              "point": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "smarkets",
+      "title": "Smarkets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:40Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.69
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:53:40Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.71
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.7
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:40Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.69
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_uk",
+      "title": "Unibet (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:25Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.65
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:25Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.65
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:25Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.56
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:25Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.56
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "boylesports",
+      "title": "BoyleSports",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:05Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.57
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:05Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.57
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.9
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.2,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.6,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.9
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:51:42Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.73
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.72
+            },
+            {
+              "name": "Draw",
+              "price": 4.45
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:51:42Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.82,
+              "point": -1.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.51,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:51:42Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.32,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.71,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:51:42Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.5
+            },
+            {
+              "name": "No",
+              "price": 2.45
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:51:42Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.23
+            },
+            {
+              "name": "Union Berlin or Draw",
+              "price": 2.24
+            },
+            {
+              "name": "Borussia Dortmund or Union Berlin",
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:51:42Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.73
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.72
+            },
+            {
+              "name": "Draw",
+              "price": 4.45
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:42:08Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.03,
+              "point": 1.5
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.02,
+              "point": 1
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.27,
+              "point": 0
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.12,
+              "point": -1
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.82,
+              "point": -1.5
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 4.2,
+              "point": -2
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 4.9,
+              "point": -2.5
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 9.1,
+              "point": -3
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 9.5,
+              "point": -3.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 9.4,
+              "point": -1.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 8.7,
+              "point": -1
+            },
+            {
+              "name": "Union Berlin",
+              "price": 3.4,
+              "point": 0
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.74,
+              "point": 1
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.51,
+              "point": 1.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.18,
+              "point": 2
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.12,
+              "point": 2.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1,
+              "point": 3
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.03,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:42:08Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.02,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 1
+            },
+            {
+              "name": "Over",
+              "price": 1.09,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.15,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 1.44,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.73,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.32,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 3.1,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 3.64,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 6.1,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 6.75,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 13,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 26,
+              "point": 7.5
+            },
+            {
+              "name": "Over",
+              "price": 50,
+              "point": 8.5
+            },
+            {
+              "name": "Under",
+              "price": 20,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 14.5,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 5.3,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 4.35,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 2.53,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.02,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.71,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.33,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.23,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.07,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1.04,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.04,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 8.5
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T14:40:07Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 3.4
+            },
+            {
+              "name": "No",
+              "price": 1.28
+            }
+          ]
+        },
+        {
+          "key": "double_chance_h1",
+          "last_update": "2026-10-12T14:40:07Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.15
+            },
+            {
+              "name": "Union Berlin or Draw",
+              "price": 1.61
+            },
+            {
+              "name": "Borussia Dortmund or Union Berlin",
+              "price": 1.47
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.33
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.5,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.5,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.53
+            },
+            {
+              "name": "No",
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.2
+            },
+            {
+              "name": "Union Berlin or Draw",
+              "price": 2.15
+            },
+            {
+              "name": "Borussia Dortmund or Union Berlin",
+              "price": 1.22
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.5,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.15,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.5,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 5.5,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.33
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:53:15Z",
+          "outcomes": [
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:0",
+              "price": 17
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:0",
+              "price": 26
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:1",
+              "price": 13
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:0",
+              "price": 51
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:1",
+              "price": 29
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:2",
+              "price": 26
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:0",
+              "price": 101
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:1",
+              "price": 71
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:2",
+              "price": 67
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:3",
+              "price": 81
+            },
+            {
+              "name": "Union Berlin:5|Borussia Dortmund:0",
+              "price": 151
+            },
+            {
+              "name": "Union Berlin:5|Borussia Dortmund:1",
+              "price": 126
+            },
+            {
+              "name": "Union Berlin:5|Borussia Dortmund:2",
+              "price": 126
+            },
+            {
+              "name": "Union Berlin:6|Borussia Dortmund:0",
+              "price": 151
+            },
+            {
+              "name": "Union Berlin:6|Borussia Dortmund:1",
+              "price": 151
+            },
+            {
+              "name": "Union Berlin:6|Borussia Dortmund:2",
+              "price": 151
+            },
+            {
+              "name": "Union Berlin:7|Borussia Dortmund:0",
+              "price": 151
+            },
+            {
+              "name": "Union Berlin:7|Borussia Dortmund:1",
+              "price": 151
+            },
+            {
+              "name": "Union Berlin:8|Borussia Dortmund:0",
+              "price": 151
+            },
+            {
+              "name": "Union Berlin:9|Borussia Dortmund:0",
+              "price": 151
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:0",
+              "price": 19
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:1",
+              "price": 8.5
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:2",
+              "price": 12
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:3",
+              "price": 34
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:4",
+              "price": 101
+            },
+            {
+              "name": "Borussia Dortmund:1|Union Berlin:0",
+              "price": 10
+            },
+            {
+              "name": "Borussia Dortmund:2|Union Berlin:0",
+              "price": 10
+            },
+            {
+              "name": "Borussia Dortmund:2|Union Berlin:1",
+              "price": 8
+            },
+            {
+              "name": "Borussia Dortmund:3|Union Berlin:0",
+              "price": 13
+            },
+            {
+              "name": "Borussia Dortmund:3|Union Berlin:1",
+              "price": 11
+            },
+            {
+              "name": "Borussia Dortmund:3|Union Berlin:2",
+              "price": 15
+            },
+            {
+              "name": "Borussia Dortmund:4|Union Berlin:0",
+              "price": 23
+            },
+            {
+              "name": "Borussia Dortmund:4|Union Berlin:1",
+              "price": 19
+            },
+            {
+              "name": "Borussia Dortmund:4|Union Berlin:2",
+              "price": 29
+            },
+            {
+              "name": "Borussia Dortmund:4|Union Berlin:3",
+              "price": 56
+            },
+            {
+              "name": "Borussia Dortmund:5|Union Berlin:0",
+              "price": 46
+            },
+            {
+              "name": "Borussia Dortmund:5|Union Berlin:1",
+              "price": 36
+            },
+            {
+              "name": "Borussia Dortmund:5|Union Berlin:2",
+              "price": 56
+            },
+            {
+              "name": "Borussia Dortmund:6|Union Berlin:0",
+              "price": 91
+            },
+            {
+              "name": "Borussia Dortmund:6|Union Berlin:1",
+              "price": 81
+            },
+            {
+              "name": "Borussia Dortmund:6|Union Berlin:2",
+              "price": 101
+            },
+            {
+              "name": "Borussia Dortmund:7|Union Berlin:0",
+              "price": 126
+            },
+            {
+              "name": "Borussia Dortmund:7|Union Berlin:1",
+              "price": 126
+            },
+            {
+              "name": "Borussia Dortmund:8|Union Berlin:0",
+              "price": 151
+            },
+            {
+              "name": "Borussia Dortmund:9|Union Berlin:0",
+              "price": 151
+            },
+            {
+              "name": "Borussia Dortmund:10|Union Berlin:0",
+              "price": 151
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:53:15Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.3
+            },
+            {
+              "name": "Union Berlin",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:25Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.33
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:25Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.33
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:48Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:48Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfred_uk",
+      "title": "Betfred (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:56Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.33
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:52:56Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.5
+            },
+            {
+              "name": "No",
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:56Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas",
+      "title": "LeoVegas",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:10Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.64
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:10Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.18,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.62,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:53:10Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.52
+            },
+            {
+              "name": "No",
+              "price": 2.38
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:53:10Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.02,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.14,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.48,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.18,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 3.55,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 6,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 11,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 5,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.5,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.62,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.26,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.1,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals_corners",
+          "last_update": "2026-10-12T14:53:10Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.8,
+              "point": 9.5
+            },
+            {
+              "name": "Under",
+              "price": 1.83,
+              "point": 9.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T14:53:10Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.08,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.64,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h2",
+          "last_update": "2026-10-12T14:53:10Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.68,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.02,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:10Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.64
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:57Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.6
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:57Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.6
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betway",
+      "title": "Betway",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:10Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.61
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.33
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:10Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.61
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.33
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:00Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.57
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.45
+            },
+            {
+              "name": "Draw",
+              "price": 4.15
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:00Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.57
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.45
+            },
+            {
+              "name": "Draw",
+              "price": 4.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "paddypower",
+      "title": "Paddy Power",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:40Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:40Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:53:15Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 7,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 3.6,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.44,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.2,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.11,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.07,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.25,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 17,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 2.6,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.6,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 5.5,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:53:15Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.45
+            },
+            {
+              "name": "No",
+              "price": 2.55
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T14:53:15Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 3.25
+            },
+            {
+              "name": "No",
+              "price": 1.29
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:53:15Z",
+          "outcomes": [
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:0",
+              "price": 15
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:0",
+              "price": 23
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:1",
+              "price": 13
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:0",
+              "price": 67
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:1",
+              "price": 26
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:2",
+              "price": 23
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:0",
+              "price": 176
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:1",
+              "price": 91
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:2",
+              "price": 76
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:3",
+              "price": 101
+            },
+            {
+              "name": "Union Berlin:5|Borussia Dortmund:0",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:5|Borussia Dortmund:1",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:5|Borussia Dortmund:2",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:5|Borussia Dortmund:3",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:5|Borussia Dortmund:4",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:6|Borussia Dortmund:0",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:6|Borussia Dortmund:1",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:6|Borussia Dortmund:2",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:6|Borussia Dortmund:3",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:6|Borussia Dortmund:4",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:6|Borussia Dortmund:5",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:7|Borussia Dortmund:0",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:7|Borussia Dortmund:1",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:7|Borussia Dortmund:2",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:7|Borussia Dortmund:3",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:7|Borussia Dortmund:4",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:8|Borussia Dortmund:0",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:8|Borussia Dortmund:1",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:8|Borussia Dortmund:2",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:8|Borussia Dortmund:3",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:9|Borussia Dortmund:0",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:9|Borussia Dortmund:1",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:9|Borussia Dortmund:2",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:10|Borussia Dortmund:0",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:10|Borussia Dortmund:1",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:11|Borussia Dortmund:0",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:0",
+              "price": 17
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:1",
+              "price": 8.5
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:2",
+              "price": 12
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:3",
+              "price": 31
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:4",
+              "price": 126
+            },
+            {
+              "name": "Union Berlin:5|Borussia Dortmund:5",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:1",
+              "price": 10
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:2",
+              "price": 9.5
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:2",
+              "price": 7.5
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:3",
+              "price": 13
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:3",
+              "price": 11
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:3",
+              "price": 14
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:4",
+              "price": 26
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:4",
+              "price": 17
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:4",
+              "price": 23
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:4",
+              "price": 56
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:5",
+              "price": 46
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:5",
+              "price": 36
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:5",
+              "price": 67
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:5",
+              "price": 101
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:5",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:6",
+              "price": 101
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:6",
+              "price": 101
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:6",
+              "price": 151
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:6",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:6",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:5|Borussia Dortmund:6",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:7",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:7",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:7",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:7",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:4|Borussia Dortmund:7",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:8",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:8",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:8",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:8",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:9",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:9",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:9",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:10",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:10",
+              "price": 201
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:11",
+              "price": 201
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:53:15Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.14
+            },
+            {
+              "name": "Union Berlin or Draw",
+              "price": 2.2
+            },
+            {
+              "name": "Borussia Dortmund or Union Berlin",
+              "price": 1.17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "skybet",
+      "title": "Sky Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:40Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:40Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_uk",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.69
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.71
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.8
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.69
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:53:15Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.54,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 2.72,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:53:15Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.62
+            },
+            {
+              "name": "No",
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:53:15Z",
+          "outcomes": [
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:0",
+              "price": 8
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:1",
+              "price": 11.5
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:2",
+              "price": 11
+            },
+            {
+              "name": "Union Berlin:0|Borussia Dortmund:3",
+              "price": 6.8
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:0",
+              "price": 7.8
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:1",
+              "price": 9.6
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:2",
+              "price": 9.4
+            },
+            {
+              "name": "Union Berlin:1|Borussia Dortmund:3",
+              "price": 13.5
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:0",
+              "price": 8.8
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:1",
+              "price": 7.2
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:2",
+              "price": 15
+            },
+            {
+              "name": "Union Berlin:2|Borussia Dortmund:3",
+              "price": 7.8
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:0",
+              "price": 9.2
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:1",
+              "price": 8.6
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:2",
+              "price": 9
+            },
+            {
+              "name": "Union Berlin:3|Borussia Dortmund:3",
+              "price": 8.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.69
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.71
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.8
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.69
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:29Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.68
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.33
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:53:29Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.12,
+              "point": -1
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.74,
+              "point": 1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:29Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.25,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.66,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:53:29Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.22
+            },
+            {
+              "name": "Union Berlin or Draw",
+              "price": 2.24
+            },
+            {
+              "name": "Borussia Dortmund or Union Berlin",
+              "price": 1.24
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:29Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.68
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:11Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.95
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:11Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.49,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.58,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:11Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.95
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ladbrokes_uk",
+      "title": "Ladbrokes",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.65
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.5
+            },
+            {
+              "name": "No",
+              "price": 2.37
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.28
+            },
+            {
+              "name": "Union Berlin",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.12,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 6.5,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 12,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 2.15,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.44,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 3.6,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 5.25,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.09,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 17,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.65,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 2.5,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.25,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.05
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 2.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.65
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coral",
+      "title": "Coral",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:51:57Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.65
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.33
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:51:57Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.53
+            },
+            {
+              "name": "No",
+              "price": 2.4
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:51:57Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.28
+            },
+            {
+              "name": "Union Berlin",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:51:57Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.13,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 6.5,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 12,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 2.15,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.48,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 3.6,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 5.25,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.09,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 17,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.65,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 2.6,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.25,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:51:57Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.05
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 2.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:51:57Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.65
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.95
+            },
+            {
+              "name": "Draw",
+              "price": 4.05
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.51,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.61,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.62
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.95
+            },
+            {
+              "name": "Draw",
+              "price": 4.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "livescorebet",
+      "title": "LiveScore Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:13Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.52
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.9
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:53:13Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.52
+            },
+            {
+              "name": "No",
+              "price": 2.43
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:53:13Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.11
+            },
+            {
+              "name": "Union Berlin or Draw",
+              "price": 2.33
+            },
+            {
+              "name": "Borussia Dortmund or Union Berlin",
+              "price": 1.16
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:53:13Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.21
+            },
+            {
+              "name": "Union Berlin",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:53:13Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 6.5,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 1.09,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 3.5,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 2.07,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 13,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 2.6,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.23,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.06,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.62,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 5.75,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 17,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:13Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.52
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.9
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:56Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.57
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:52:56Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.14,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.68,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:56Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.57
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "grosvenor",
+      "title": "Grosvenor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.56
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.14,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.68,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.56
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:55Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.57
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:52:55Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.17,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.7,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:55Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.57
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.9
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.02,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.57,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.9
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "virginbet",
+      "title": "Virgin Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.54
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.52
+            },
+            {
+              "name": "No",
+              "price": 2.43
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.14
+            },
+            {
+              "name": "Union Berlin or Draw",
+              "price": 2.38
+            },
+            {
+              "name": "Borussia Dortmund or Union Berlin",
+              "price": 1.19
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.21
+            },
+            {
+              "name": "Union Berlin",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 6.5,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 1.09,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 3.5,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 2.07,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 13,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 2.6,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.06,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.23,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.62,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 5.75,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 17,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.54
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "casumo",
+      "title": "Casumo",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.54
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.2
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.14,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.68,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.54
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.2
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:56Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.53
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:52:56Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.17,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.7,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:56Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.53
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betvictor",
+      "title": "Bet Victor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:51:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.6
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:51:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.6
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betano_uk",
+      "title": "Betano (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:22Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.6
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:22Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.6
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matchbook",
+      "title": "Matchbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.69
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.71
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.7
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.78,
+              "point": -0.75
+            },
+            {
+              "name": "Union Berlin",
+              "price": 2.02,
+              "point": 0.75
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.24,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.63,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.62
+            },
+            {
+              "name": "No",
+              "price": 2.52
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:38Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.69
+            },
+            {
+              "name": "Union Berlin",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:55Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.66
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:52:55Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.15,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.6,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:52:55Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.2
+            },
+            {
+              "name": "Union Berlin or Draw",
+              "price": 2.22
+            },
+            {
+              "name": "Borussia Dortmund or Union Berlin",
+              "price": 1.22
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:52:55Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.02,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.14,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.47,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.15,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 3.55,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 6,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 9.4,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 4.7,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.44,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.6,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.24,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.09,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:55Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.66
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_sb_uk",
+      "title": "Betfair Sportsbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.65
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.33
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.65
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gtbets",
+      "title": "GTbets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:52:41Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.67
+            },
+            {
+              "name": "Draw",
+              "price": 4.24
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:52:41Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.63,
+              "point": -0.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 2.24,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:52:41Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.2,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.65,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:52:41Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.14
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.54
+            },
+            {
+              "name": "Draw",
+              "price": 2.61
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T14:52:41Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.15,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.65,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:52:41Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.67
+            },
+            {
+              "name": "Draw",
+              "price": 4.24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:46Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:53:46Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.1,
+              "point": -1
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.78,
+              "point": 1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:46Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.73,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 2.12,
+              "point": 3
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:53:46Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.1,
+              "point": -1
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.7,
+              "point": -1.5
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 4.3,
+              "point": -2
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 9.5,
+              "point": -3
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.06,
+              "point": 1
+            },
+            {
+              "name": "Borussia Dortmund",
+              "price": 5,
+              "point": -2.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.78,
+              "point": 1
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.5,
+              "point": 1.5
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.24,
+              "point": 2
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.07,
+              "point": 3
+            },
+            {
+              "name": "Union Berlin",
+              "price": 10,
+              "point": -1
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.19,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:53:46Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 6.4,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 12.6,
+              "point": 6
+            },
+            {
+              "name": "Over",
+              "price": 3.72,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.15,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 3.07,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 1.73,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 1.2,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 7.1,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 1.47,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.2,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.12,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 6
+            },
+            {
+              "name": "Under",
+              "price": 1.28,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 5.5,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.38,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 2.12,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 4.6,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 1.1,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 2.7,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.68,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:46Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betonlineag",
+      "title": "BetOnline.ag",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:53:09Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.42
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:53:09Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 2.08,
+              "point": -1
+            },
+            {
+              "name": "Union Berlin",
+              "price": 1.77,
+              "point": 1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:53:09Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.77,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 2.06,
+              "point": 3
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:53:09Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.67
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.42
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "everygame",
+      "title": "Everygame",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.6
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.6
+            },
+            {
+              "name": "Union Berlin",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

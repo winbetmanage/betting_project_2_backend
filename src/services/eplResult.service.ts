@@ -2,7 +2,15 @@ import fs from 'fs';
 import path from 'path';
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
-import { getEplMatchesUrl, footballDataFetchOptions } from '../../codes';
+import {
+  getEplMatchesUrl,
+  getLaLigaMatchesUrl,
+  getBundesligaMatchesUrl,
+  getSerieAMatchesUrl,
+  getLigue1MatchesUrl,
+  getChampionsLeagueMatchesUrl,
+  footballDataFetchOptions,
+} from '../../codes';
 
 type FdMatch = {
   id: number;
@@ -30,14 +38,34 @@ function normalizeTeam(name: string | undefined | null): string {
 }
 
 async function ensureEplCompetition() {
+  return ensureLeagueCompetition('PL');
+}
+
+export const RESULT_LEAGUES = {
+  PL: { matchesUrl: getEplMatchesUrl, matchNames: ['Premier', 'EPL'], name: 'English Premier League', country: 'England', label: 'English Premier League' },
+  PD: { matchesUrl: getLaLigaMatchesUrl, matchNames: ['La Liga'], name: 'Spain La Liga', country: 'Spain', label: 'Spain LaLiga' },
+  BL1: { matchesUrl: getBundesligaMatchesUrl, matchNames: ['Bundesliga'], name: 'Germany Bundesliga', country: 'Germany', label: 'Bundesliga' },
+  SA: { matchesUrl: getSerieAMatchesUrl, matchNames: ['Serie A'], name: 'Italy Serie A', country: 'Italy', label: 'Serie A' },
+  FL1: { matchesUrl: getLigue1MatchesUrl, matchNames: ['Ligue 1'], name: 'France Ligue 1', country: 'France', label: 'Ligue 1' },
+  CL: { matchesUrl: getChampionsLeagueMatchesUrl, matchNames: ['Champions'], name: 'UEFA Champions League', country: 'Europe', label: 'Champions League' },
+} as const;
+
+export type ResultLeagueCode = keyof typeof RESULT_LEAGUES;
+
+export const isResultLeagueCode = (v: unknown): v is ResultLeagueCode =>
+  typeof v === 'string' && Object.prototype.hasOwnProperty.call(RESULT_LEAGUES, v);
+
+async function ensureLeagueCompetition(code: ResultLeagueCode) {
+  const cfg = RESULT_LEAGUES[code];
   let sport = await prisma.sport.findFirst({ where: { slug: 'soccer' } });
   if (!sport) sport = await prisma.sport.findFirst({ where: { gameType: 'SOCCER' } });
   if (!sport) sport = await prisma.sport.create({ data: { name: 'Soccer', slug: 'soccer', gameType: 'SOCCER' } });
 
-  let competition = await prisma.competition.findFirst({ where: { sportId: sport.id, name: { contains: 'Premier' } } });
-  if (!competition) competition = await prisma.competition.findFirst({ where: { sportId: sport.id, name: 'EPL' } });
-  if (!competition) competition = await prisma.competition.create({ data: { name: 'English Premier League', country: 'England', sportId: sport.id } });
-  return competition;
+  for (const m of cfg.matchNames) {
+    const competition = await prisma.competition.findFirst({ where: { sportId: sport.id, name: { contains: m } } });
+    if (competition) return competition;
+  }
+  return prisma.competition.create({ data: { name: cfg.name, country: cfg.country, sportId: sport.id } });
 }
 
 async function findOrCreateGame(m: FdMatch, competitionId: string) {
@@ -46,9 +74,10 @@ async function findOrCreateGame(m: FdMatch, competitionId: string) {
   const homeNorm = normalizeTeam(homeShort);
   const awayNorm = normalizeTeam(awayShort);
 
-  // Try to find an existing game by normalized team names
+  // Try to find an existing game by normalized team names (scoped to this league)
   const existing = await prisma.game.findFirst({
     where: {
+      competitionId,
       homeTeam: { contains: homeShort },
       awayTeam: { contains: awayShort },
     },
@@ -57,6 +86,7 @@ async function findOrCreateGame(m: FdMatch, competitionId: string) {
 
   const alt = await prisma.game.findFirst({
     where: {
+      competitionId,
       homeTeam: { contains: homeNorm },
       awayTeam: { contains: awayNorm },
     },
@@ -89,7 +119,12 @@ function scoresDir(): string {
 }
 
 export async function fetchEplMatchesAndUpsert() {
-  const url = getEplMatchesUrl();
+  return fetchLeagueMatchesAndUpsert('PL');
+}
+
+export async function fetchLeagueMatchesAndUpsert(code: ResultLeagueCode) {
+  const cfg = RESULT_LEAGUES[code];
+  const url = cfg.matchesUrl();
   const res = await fetch(url, footballDataFetchOptions());
   if (!res.ok) {
     const text = await res.text().catch(() => '');
@@ -99,7 +134,7 @@ export async function fetchEplMatchesAndUpsert() {
   const matches = data.matches ?? [];
   if (!Array.isArray(matches)) throw new ApiError(500, 'Invalid Football-Data response');
 
-  const competition = await ensureEplCompetition();
+  const competition = await ensureLeagueCompetition(code);
   const dir = scoresDir();
 
   let added = 0;
@@ -151,8 +186,14 @@ export async function fetchEplMatchesAndUpsert() {
 }
 
 export async function listEplScores() {
+  return listLeagueScores('PL');
+}
+
+export async function listLeagueScores(code: ResultLeagueCode) {
+  const competition = await ensureLeagueCompetition(code);
   return prisma.gameScore.findMany({
-    include: { game: true },
+    where: { game: { competitionId: competition.id } },
+    include: { game: { include: { competition: true } } },
     orderBy: { game: { startTime: 'asc' } },
   });
 }

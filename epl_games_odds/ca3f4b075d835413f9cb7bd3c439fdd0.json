@@ -1,0 +1,4154 @@
+{
+  "id": "ca3f4b075d835413f9cb7bd3c439fdd0",
+  "sport_key": "soccer_uefa_champs_league",
+  "sport_title": "UEFA Champions League",
+  "commence_time": "2026-10-13T19:00:00Z",
+  "home_team": "Inter Milan",
+  "away_team": "Club Brugge",
+  "bookmakers": [
+    {
+      "key": "betfred_uk",
+      "title": "Betfred (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.83
+            },
+            {
+              "name": "No",
+              "price": 1.83
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "paddypower",
+      "title": "Paddy Power",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:49:14Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:49:14Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "skybet",
+      "title": "Sky Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:27Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:27Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.3
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 6.67
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 2.23,
+              "point": 1.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.76,
+              "point": -1.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.15,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.81,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.83
+            },
+            {
+              "name": "No",
+              "price": 1.89
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge or Draw",
+              "price": 4.14
+            },
+            {
+              "name": "Inter Milan or Draw",
+              "price": 1.04
+            },
+            {
+              "name": "Club Brugge or Inter Milan",
+              "price": 1.14
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:44:36Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.3
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 6.67
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T13:50:37Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 1.02,
+              "point": 4.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.03,
+              "point": 4
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.14,
+              "point": 3.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.2,
+              "point": 3
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.44,
+              "point": 2.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.69,
+              "point": 2
+            },
+            {
+              "name": "Club Brugge",
+              "price": 2.23,
+              "point": 1.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 3.15,
+              "point": 1
+            },
+            {
+              "name": "Club Brugge",
+              "price": 7.4,
+              "point": 0
+            },
+            {
+              "name": "Inter Milan",
+              "price": 8.2,
+              "point": -4.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 7.5,
+              "point": -4
+            },
+            {
+              "name": "Inter Milan",
+              "price": 4.4,
+              "point": -3.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 3.76,
+              "point": -3
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.55,
+              "point": -2.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.07,
+              "point": -2
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.76,
+              "point": -1.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.32,
+              "point": -1
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.05,
+              "point": 0
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:50:37Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 1
+            },
+            {
+              "name": "Over",
+              "price": 1.08,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.13,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.61,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.15,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 2.73,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 3.26,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 5.1,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 5.7,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 21,
+              "point": 7.5
+            },
+            {
+              "name": "Over",
+              "price": 41,
+              "point": 8.5
+            },
+            {
+              "name": "Under",
+              "price": 23,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 17,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 5.55,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 4.7,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 2.68,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.19,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.81,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.41,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.28,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1.08,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.05,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 8.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:49:22Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11.75
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6.35
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:49:22Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 2.17,
+              "point": 1.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.71,
+              "point": -1.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:49:22Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.09,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.76,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T13:49:22Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge or Draw",
+              "price": 4.15
+            },
+            {
+              "name": "Inter Milan or Draw",
+              "price": 1.05
+            },
+            {
+              "name": "Club Brugge or Inter Milan",
+              "price": 1.13
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:49:22Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11.75
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_uk",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:58Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 6.8
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T13:50:58Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 13.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.29
+            },
+            {
+              "name": "Draw",
+              "price": 7.2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:58Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 6.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 6.8
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 13
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.29
+            },
+            {
+              "name": "Draw",
+              "price": 7.2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 6.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:10Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11.1
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6.64
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:51:10Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 2,
+              "point": 1.75
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.88,
+              "point": -1.75
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:51:10Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.87,
+              "point": 3.25
+            },
+            {
+              "name": "Under",
+              "price": 2,
+              "point": 3.25
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T13:51:10Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 2,
+              "point": 1.75
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.34,
+              "point": 2.75
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.46,
+              "point": 2.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.56,
+              "point": 2.25
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.74,
+              "point": 2
+            },
+            {
+              "name": "Club Brugge",
+              "price": 2.23,
+              "point": 1.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 2.62,
+              "point": 1.25
+            },
+            {
+              "name": "Club Brugge",
+              "price": 3.4,
+              "point": 1
+            },
+            {
+              "name": "Club Brugge",
+              "price": 3.83,
+              "point": 0.75
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.88,
+              "point": -1.75
+            },
+            {
+              "name": "Inter Milan",
+              "price": 3.3,
+              "point": -2.75
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.75,
+              "point": -2.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.45,
+              "point": -2.25
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.16,
+              "point": -2
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.69,
+              "point": -1.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.5,
+              "point": -1.25
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.33,
+              "point": -1
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27,
+              "point": -0.75
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:51:10Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.87,
+              "point": 3.25
+            },
+            {
+              "name": "Over",
+              "price": 1.29,
+              "point": 2.25
+            },
+            {
+              "name": "Over",
+              "price": 1.41,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.5,
+              "point": 2.75
+            },
+            {
+              "name": "Over",
+              "price": 1.63,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.07,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 2.35,
+              "point": 3.75
+            },
+            {
+              "name": "Over",
+              "price": 2.85,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 3.18,
+              "point": 4.25
+            },
+            {
+              "name": "Under",
+              "price": 2,
+              "point": 3.25
+            },
+            {
+              "name": "Under",
+              "price": 3.59,
+              "point": 2.25
+            },
+            {
+              "name": "Under",
+              "price": 2.89,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.6,
+              "point": 2.75
+            },
+            {
+              "name": "Under",
+              "price": 2.32,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.78,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.6,
+              "point": 3.75
+            },
+            {
+              "name": "Under",
+              "price": 1.43,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.35,
+              "point": 4.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:10Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11.1
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6.64
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads_cards",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 1.87,
+              "point": -0.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.41,
+              "point": 0
+            },
+            {
+              "name": "Club Brugge",
+              "price": 2.47,
+              "point": -1
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.85,
+              "point": 0.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.66,
+              "point": 0
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.47,
+              "point": 1
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads_corners",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 1.93,
+              "point": 3.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.6,
+              "point": 4.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.74,
+              "point": 4
+            },
+            {
+              "name": "Club Brugge",
+              "price": 2.2,
+              "point": 3
+            },
+            {
+              "name": "Club Brugge",
+              "price": 2.44,
+              "point": 2.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.84,
+              "point": -3.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.22,
+              "point": -4.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.03,
+              "point": -4
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.62,
+              "point": -3
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.49,
+              "point": -2.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals_cards",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.12,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.42,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.65,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.74,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 3.2,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.72,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 2.74,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.2,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.43,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.32,
+              "point": 4.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals_corners",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.85,
+              "point": 9.5
+            },
+            {
+              "name": "Over",
+              "price": 1.47,
+              "point": 8.5
+            },
+            {
+              "name": "Over",
+              "price": 1.61,
+              "point": 9
+            },
+            {
+              "name": "Over",
+              "price": 2.08,
+              "point": 10
+            },
+            {
+              "name": "Over",
+              "price": 2.32,
+              "point": 10.5
+            },
+            {
+              "name": "Under",
+              "price": 1.96,
+              "point": 9.5
+            },
+            {
+              "name": "Under",
+              "price": 2.56,
+              "point": 8.5
+            },
+            {
+              "name": "Under",
+              "price": 2.27,
+              "point": 9
+            },
+            {
+              "name": "Under",
+              "price": 1.73,
+              "point": 10
+            },
+            {
+              "name": "Under",
+              "price": 1.57,
+              "point": 10.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.83
+            },
+            {
+              "name": "No",
+              "price": 2.02
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 4.78
+            },
+            {
+              "name": "No",
+              "price": 1.19
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Inter Milan:0|Club Brugge:0",
+              "price": 23.5
+            },
+            {
+              "name": "Inter Milan:0|Club Brugge:1",
+              "price": 29.04
+            },
+            {
+              "name": "Inter Milan:0|Club Brugge:2",
+              "price": 61.9
+            },
+            {
+              "name": "Inter Milan:1|Club Brugge:0",
+              "price": 9.99
+            },
+            {
+              "name": "Inter Milan:1|Club Brugge:1",
+              "price": 13.76
+            },
+            {
+              "name": "Inter Milan:1|Club Brugge:2",
+              "price": 27.77
+            },
+            {
+              "name": "Inter Milan:1|Club Brugge:3",
+              "price": 76.04
+            },
+            {
+              "name": "Inter Milan:2|Club Brugge:0",
+              "price": 7.8
+            },
+            {
+              "name": "Inter Milan:2|Club Brugge:1",
+              "price": 9.45
+            },
+            {
+              "name": "Inter Milan:2|Club Brugge:2",
+              "price": 18.88
+            },
+            {
+              "name": "Inter Milan:2|Club Brugge:3",
+              "price": 61
+            },
+            {
+              "name": "Inter Milan:3|Club Brugge:0",
+              "price": 8.58
+            },
+            {
+              "name": "Inter Milan:3|Club Brugge:1",
+              "price": 9.99
+            },
+            {
+              "name": "Inter Milan:3|Club Brugge:2",
+              "price": 22.75
+            },
+            {
+              "name": "Inter Milan:3|Club Brugge:3",
+              "price": 61.18
+            },
+            {
+              "name": "Inter Milan:4|Club Brugge:0",
+              "price": 11.98
+            },
+            {
+              "name": "Inter Milan:4|Club Brugge:1",
+              "price": 14.76
+            },
+            {
+              "name": "Inter Milan:4|Club Brugge:2",
+              "price": 31.96
+            },
+            {
+              "name": "Inter Milan:4|Club Brugge:3",
+              "price": 87.96
+            },
+            {
+              "name": "Inter Milan:5|Club Brugge:0",
+              "price": 21.26
+            },
+            {
+              "name": "Inter Milan:5|Club Brugge:1",
+              "price": 25.86
+            },
+            {
+              "name": "Inter Milan:5|Club Brugge:2",
+              "price": 53.38
+            },
+            {
+              "name": "Inter Milan:6|Club Brugge:0",
+              "price": 42.09
+            },
+            {
+              "name": "Inter Milan:6|Club Brugge:1",
+              "price": 50.41
+            },
+            {
+              "name": "Inter Milan:6|Club Brugge:2",
+              "price": 97.78
+            }
+          ]
+        },
+        {
+          "key": "correct_score_h1",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Inter Milan:0|Club Brugge:0",
+              "price": 4.13
+            },
+            {
+              "name": "Inter Milan:0|Club Brugge:1",
+              "price": 11.09
+            },
+            {
+              "name": "Inter Milan:0|Club Brugge:2",
+              "price": 43.98
+            },
+            {
+              "name": "Inter Milan:1|Club Brugge:0",
+              "price": 3.51
+            },
+            {
+              "name": "Inter Milan:1|Club Brugge:1",
+              "price": 9.49
+            },
+            {
+              "name": "Inter Milan:1|Club Brugge:2",
+              "price": 38.63
+            },
+            {
+              "name": "Inter Milan:2|Club Brugge:0",
+              "price": 5.78
+            },
+            {
+              "name": "Inter Milan:2|Club Brugge:1",
+              "price": 14.88
+            },
+            {
+              "name": "Inter Milan:2|Club Brugge:2",
+              "price": 55.21
+            },
+            {
+              "name": "Inter Milan:3|Club Brugge:0",
+              "price": 13.19
+            },
+            {
+              "name": "Inter Milan:3|Club Brugge:1",
+              "price": 31.08
+            },
+            {
+              "name": "Inter Milan:3|Club Brugge:2",
+              "price": 101
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge or Draw",
+              "price": 4.25
+            },
+            {
+              "name": "Inter Milan or Draw",
+              "price": 1.07
+            },
+            {
+              "name": "Club Brugge or Inter Milan",
+              "price": 1.13
+            }
+          ]
+        },
+        {
+          "key": "double_chance_h1",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge or Draw",
+              "price": 2.25
+            },
+            {
+              "name": "Inter Milan or Draw",
+              "price": 1.08
+            },
+            {
+              "name": "Club Brugge or Inter Milan",
+              "price": 1.4
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 9.24
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.08
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 8.7
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.66
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        },
+        {
+          "key": "halftime_fulltime",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge/Club Brugge",
+              "price": 20.17
+            },
+            {
+              "name": "Club Brugge/Inter Milan",
+              "price": 21.73
+            },
+            {
+              "name": "Club Brugge/Draw",
+              "price": 23.2
+            },
+            {
+              "name": "Inter Milan/Club Brugge",
+              "price": 69.66
+            },
+            {
+              "name": "Inter Milan/Inter Milan",
+              "price": 1.77
+            },
+            {
+              "name": "Inter Milan/Draw",
+              "price": 25.3
+            },
+            {
+              "name": "Draw/Club Brugge",
+              "price": 20.78
+            },
+            {
+              "name": "Draw/Inter Milan",
+              "price": 4.54
+            },
+            {
+              "name": "Draw/Draw",
+              "price": 10.46
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T13:51:05Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.81,
+              "point": 1.25
+            },
+            {
+              "name": "Under",
+              "price": 2.02,
+              "point": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:43Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 9.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.21
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:43Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 9.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.21
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas",
+      "title": "LeoVegas",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:15Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 9.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.24
+            },
+            {
+              "name": "Draw",
+              "price": 6.25
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:50:15Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.75,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:50:15Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.8
+            },
+            {
+              "name": "No",
+              "price": 1.92
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:50:15Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.12,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 3.2,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 5.5,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 5.75,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.85,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.75,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.32,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.12,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals_corners",
+          "last_update": "2026-10-12T13:50:15Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.22,
+              "point": 7.5
+            },
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 8.5
+            },
+            {
+              "name": "Over",
+              "price": 1.68,
+              "point": 9.5
+            },
+            {
+              "name": "Over",
+              "price": 2.08,
+              "point": 10.5
+            },
+            {
+              "name": "Over",
+              "price": 2.65,
+              "point": 11.5
+            },
+            {
+              "name": "Under",
+              "price": 3.4,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 2.5,
+              "point": 8.5
+            },
+            {
+              "name": "Under",
+              "price": 1.95,
+              "point": 9.5
+            },
+            {
+              "name": "Under",
+              "price": 1.6,
+              "point": 10.5
+            },
+            {
+              "name": "Under",
+              "price": 1.36,
+              "point": 11.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T13:50:15Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.92,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.73,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h2",
+          "last_update": "2026-10-12T13:50:15Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.62,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.1,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:15Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 9.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.24
+            },
+            {
+              "name": "Draw",
+              "price": 6.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:54Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:54Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "smarkets",
+      "title": "Smarkets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:58Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 6.8
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T13:50:58Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 13.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.29
+            },
+            {
+              "name": "Draw",
+              "price": 7
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:58Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 6.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_uk",
+      "title": "Unibet (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:14Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:14Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6.4
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.97,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.72,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge or Draw",
+              "price": 3.9
+            },
+            {
+              "name": "Inter Milan or Draw",
+              "price": 1.05
+            },
+            {
+              "name": "Club Brugge or Inter Milan",
+              "price": 1.11
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.11,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.39,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.97,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 3.1,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 5.2,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 10,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 5.2,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.7,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.72,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.3,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:29Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 9
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:29Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 9
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:15Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 9.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.23
+            },
+            {
+              "name": "Draw",
+              "price": 6.75
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:15Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 9.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.23
+            },
+            {
+              "name": "Draw",
+              "price": 6.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "grosvenor",
+      "title": "Grosvenor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.24
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.02,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.75,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:12Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.24
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "virginbet",
+      "title": "Virgin Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:13Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 5.75
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:50:13Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.8
+            },
+            {
+              "name": "No",
+              "price": 1.92
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T13:50:13Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 7.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.06
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:50:13Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.06,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.34,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 3.2,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 10.5,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 5.75,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 21,
+              "point": 7.5
+            },
+            {
+              "name": "Over",
+              "price": 1.94,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 6.25,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.75,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.26,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.07,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 18,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.68,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:13Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 5.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "casumo",
+      "title": "Casumo",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.2
+            },
+            {
+              "name": "Draw",
+              "price": 5.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.04,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.77,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.2
+            },
+            {
+              "name": "Draw",
+              "price": 5.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:27Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.24
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:50:27Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.04,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.77,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:27Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.24
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 6.4
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.04,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.77,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 6.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "livescorebet",
+      "title": "LiveScore Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:56Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 5.75
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:50:56Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.8
+            },
+            {
+              "name": "No",
+              "price": 1.92
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T13:50:56Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 7.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.06
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:50:56Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.06,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.34,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 5.75,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 10.5,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 3.2,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.94,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 21,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 2.75,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 6.25,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.26,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.07,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 18,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.68,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:56Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 5.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 6.4
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.04,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.77,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 6.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:28Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 5.7
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:50:28Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.43,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.87,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:28Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 5.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 5.8
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.42,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.85,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 5.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "boylesports",
+      "title": "BoyleSports",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:14Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:14Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betway",
+      "title": "Betway",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.9,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.8
+            },
+            {
+              "name": "No",
+              "price": 2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge or Draw",
+              "price": 3.9
+            },
+            {
+              "name": "Inter Milan or Draw",
+              "price": 1.05
+            },
+            {
+              "name": "Club Brugge or Inter Milan",
+              "price": 1.12
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.12,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.9,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 6,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:42Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coral",
+      "title": "Coral",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.91
+            },
+            {
+              "name": "No",
+              "price": 1.83
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 7.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.06
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.44,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 3.3,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.12,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 2.05,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 5.75,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 2.7,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.3,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 17,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 5.75,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.7,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 7
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.61
+            },
+            {
+              "name": "Draw",
+              "price": 2.9
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ladbrokes_uk",
+      "title": "Ladbrokes",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.91
+            },
+            {
+              "name": "No",
+              "price": 1.83
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 7.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.06
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.44,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 3.3,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 2.05,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.12,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 5.75,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 2.7,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 17,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.3,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.7,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 5.75,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 7
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.61
+            },
+            {
+              "name": "Draw",
+              "price": 2.9
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:45Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:16Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 6.65
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:50:16Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 1.76,
+              "point": 2
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.15,
+              "point": -2
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:50:16Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.1,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.79,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T13:50:16Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 24,
+              "point": -1
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.26,
+              "point": 3
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.76,
+              "point": 2
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.5,
+              "point": 2.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 3.25,
+              "point": 1
+            },
+            {
+              "name": "Club Brugge",
+              "price": 2.2,
+              "point": 1.5
+            },
+            {
+              "name": "Club Brugge",
+              "price": 1.2,
+              "point": 3.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.01,
+              "point": 1
+            },
+            {
+              "name": "Inter Milan",
+              "price": 4.1,
+              "point": -3
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.15,
+              "point": -2
+            },
+            {
+              "name": "Inter Milan",
+              "price": 2.73,
+              "point": -2.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.37,
+              "point": -1
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.72,
+              "point": -1.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 5,
+              "point": -3.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:50:16Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 3.5,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.18,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 11.5,
+              "point": 6
+            },
+            {
+              "name": "Over",
+              "price": 1.02,
+              "point": 1
+            },
+            {
+              "name": "Over",
+              "price": 22.5,
+              "point": 7
+            },
+            {
+              "name": "Over",
+              "price": 1,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 12.5,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 2.85,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 5.7,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 1.66,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 1.44,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.14,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 2.1,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 6.4,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.33,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 5.3,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 1.05,
+              "point": 6
+            },
+            {
+              "name": "Under",
+              "price": 18.5,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 7
+            },
+            {
+              "name": "Under",
+              "price": 25,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.05,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.46,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.17,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 2.31,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 2.9,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 6.4,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.79,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.14,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:16Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 6.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gtbets",
+      "title": "GTbets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:29Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11.22
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.31
+            },
+            {
+              "name": "Draw",
+              "price": 5.95
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:50:29Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 2.1,
+              "point": 1.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.71,
+              "point": -1.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:50:29Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.04,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.74,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T13:50:29Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 7.87
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.65
+            },
+            {
+              "name": "Draw",
+              "price": 2.87
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T13:50:29Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.13,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.67,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:29Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 11.22
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.31
+            },
+            {
+              "name": "Draw",
+              "price": 5.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betvictor",
+      "title": "Bet Victor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:03Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:03Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 6.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:16Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 5.6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:50:16Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.91,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.66,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:16Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 10
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.22
+            },
+            {
+              "name": "Draw",
+              "price": 5.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matchbook",
+      "title": "Matchbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:57Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 6.8
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T13:50:57Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 13.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.29
+            },
+            {
+              "name": "Draw",
+              "price": 7
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:50:57Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 2.02,
+              "point": 1.75
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.92,
+              "point": -1.75
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T13:50:57Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.87
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:57Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 6.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betonlineag",
+      "title": "BetOnline.ag",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6.6
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 2.21,
+              "point": 1.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.69,
+              "point": -1.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.11,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.74,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 1.97,
+              "point": 1.75
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.88,
+              "point": -1.75
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.86,
+              "point": 3.25
+            },
+            {
+              "name": "Under",
+              "price": 1.97,
+              "point": 3.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:51:11Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betanysports",
+      "title": "BetAnything",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T13:50:43Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6.6
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T13:50:43Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 2.25,
+              "point": 1.5
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.69,
+              "point": -1.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T13:50:43Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.15,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.74,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T13:50:43Z",
+          "outcomes": [
+            {
+              "name": "Club Brugge",
+              "price": 12
+            },
+            {
+              "name": "Inter Milan",
+              "price": 1.25
+            },
+            {
+              "name": "Draw",
+              "price": 6.6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

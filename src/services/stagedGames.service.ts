@@ -1,7 +1,7 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
 import { Prisma, FootballDataMatchStatus } from '@prisma/client';
-import { getEplEventsUrl, getChampionsLeagueEventsUrl, getEplMatchesUrl, getChampionsLeagueMatchesUrl, getFootballDataMatchDetailUrl, footballDataFetchOptions } from '../../codes';
+import { getEplEventsUrl, getChampionsLeagueEventsUrl, getLaLigaEventsUrl, getBundesligaEventsUrl, getSerieAEventsUrl, getLigue1EventsUrl, getEplMatchesUrl, getChampionsLeagueMatchesUrl, getLaLigaMatchesUrl, getBundesligaMatchesUrl, getSerieAMatchesUrl, getLigue1MatchesUrl, getFootballDataMatchDetailUrl, footballDataFetchOptions } from '../../codes';
 
 export type FdTeam = { id: number; name: string; shortName?: string; tla?: string };
 export type FdMatch = {
@@ -26,13 +26,43 @@ export const SPORTS = {
     label: 'Premier League',
     sportKey: 'soccer_epl',
     url: () => getEplEventsUrl(),
+    fdMatchesUrl: () => getEplMatchesUrl(),
     competition: { name: 'English Premier League', country: 'England', matchName: 'Premier' },
   },
   'champions-league': {
     label: 'UEFA Champions League',
     sportKey: 'soccer_uefa_champs_league',
     url: () => getChampionsLeagueEventsUrl(),
+    fdMatchesUrl: () => getChampionsLeagueMatchesUrl(),
     competition: { name: 'UEFA Champions League', country: 'Europe', matchName: 'Champions' },
+  },
+  'la-liga': {
+    label: 'La Liga',
+    sportKey: 'soccer_spain_la_liga',
+    url: () => getLaLigaEventsUrl(),
+    fdMatchesUrl: () => getLaLigaMatchesUrl(),
+    competition: { name: 'Spain La Liga', country: 'Spain', matchName: 'La Liga' },
+  },
+  'bundesliga': {
+    label: 'Bundesliga',
+    sportKey: 'soccer_germany_bundesliga',
+    url: () => getBundesligaEventsUrl(),
+    fdMatchesUrl: () => getBundesligaMatchesUrl(),
+    competition: { name: 'Germany Bundesliga', country: 'Germany', matchName: 'Bundesliga' },
+  },
+  'serie-a': {
+    label: 'Serie A',
+    sportKey: 'soccer_italy_serie_a',
+    url: () => getSerieAEventsUrl(),
+    fdMatchesUrl: () => getSerieAMatchesUrl(),
+    competition: { name: 'Italy Serie A', country: 'Italy', matchName: 'Serie A' },
+  },
+  'ligue-1': {
+    label: 'Ligue 1',
+    sportKey: 'soccer_france_ligue_one',
+    url: () => getLigue1EventsUrl(),
+    fdMatchesUrl: () => getLigue1MatchesUrl(),
+    competition: { name: 'France Ligue 1', country: 'France', matchName: 'Ligue 1' },
   },
 } as const;
 
@@ -431,6 +461,10 @@ export const listStagedGames = async (filters: Record<string, unknown> = {}) => 
 export function choiceForCompetitionName(name: string | null | undefined): SportChoice {
   const lower = (name ?? '').toLowerCase();
   if (lower.includes('champions')) return 'champions-league';
+  if (lower.includes('la liga')) return 'la-liga';
+  if (lower.includes('bundesliga')) return 'bundesliga';
+  if (lower.includes('serie a')) return 'serie-a';
+  if (lower.includes('ligue')) return 'ligue-1';
   return 'premier-league';
 }
 
@@ -494,7 +528,7 @@ export function mapFootballDataStatus(raw: unknown): FootballDataMatchStatus | n
 }
 
 export async function fetchFdMatchesByDay(choice: SportChoice, dayIso: string): Promise<FdMatch[]> {
-  const base = choice === 'champions-league' ? getChampionsLeagueMatchesUrl() : getEplMatchesUrl();
+  const base = SPORTS[choice].fdMatchesUrl();
   const url = `${base}?date=${dayIso}`;
   const res = await fetch(url, footballDataFetchOptions());
   if (!res.ok) {
@@ -698,5 +732,209 @@ export const getStagedGame = async (id: string) => {
   });
   if (!staged) throw new ApiError(404, 'Staged game not found');
   return staged;
+};
+
+async function resolveDayFixtures(rows: { id: string }[]) {
+  // One football-data fetch per (competition, UTC day) — reused across that day's rows.
+  const cache = new Map<string, FdMatch[]>();
+
+  const loaded = await prisma.stagedGame.findMany({
+    where: { id: { in: rows.map((r) => r.id) } },
+    include: {
+      homeTeam: { select: { fullName: true, footballDataTeamId: true, footballDataName: true } },
+      awayTeam: { select: { fullName: true, footballDataTeamId: true, footballDataName: true } },
+      competition: { select: { name: true } },
+    },
+  });
+
+  const dayOf = (id: string) => isoDay(new Date(loaded.find((l) => l.id === id)!.oddsApiStartTime));
+  for (const s of loaded) {
+    const choice = choiceForCompetitionName(s.competition.name);
+    const day = isoDay(new Date(s.oddsApiStartTime));
+    const key = `${choice}::${day}`;
+    if (!cache.has(key)) {
+      try {
+        cache.set(key, await fetchFdMatchesByDay(choice, day));
+      } catch {
+        cache.set(key, []);
+      }
+    }
+  }
+  return { cache, loaded, dayOf };
+}
+
+export type BulkFdResultItem = {
+  id: string;
+  home: string;
+  away: string;
+  competition: string;
+  day: string;
+  outcome: 'linked' | 'already_linked' | 'linked_conflict' | 'not_found' | 'teams_not_mapped' | 'in_games' | 'error';
+  matchId: number | null;
+  note: string;
+};
+
+/**
+ * Auto "Find & link" for many staged games in one pass: for each row, look up the
+ * football-data fixture on the same UTC day and link it when the teams match.
+ * Rows already linked / already in the games table are left untouched. Duplicate
+ * football-data ids inside the batch are resolved first-come-first-served.
+ */
+export const bulkFindAndLinkFootballData = async (ids: unknown) => {
+  // ids omitted/empty → target every staged game that still needs a football-data link
+  // (not already linked, not already in the games table). Otherwise only the given ids.
+  const provided = Array.isArray(ids) ? Array.from(new Set(ids.filter((v): v is string => typeof v === 'string' && v.length > 0))) : [];
+  let wanted = provided;
+  if (wanted.length === 0) {
+    const needLink = await prisma.stagedGame.findMany({
+      where: { footballDataMatchId: null, gameId: null, status: { not: 'REJECTED' } },
+      select: { id: true },
+    });
+    wanted = needLink.map((r) => r.id);
+  }
+  if (wanted.length === 0) return { results: [], summary: {}, total: 0 };
+
+  const { cache, loaded, dayOf } = await resolveDayFixtures(wanted.map((id) => ({ id })));
+  const committed = new Set<number>();
+  // Preserve any pre-existing links so the batch never double-uses a match id.
+  const existing = await prisma.stagedGame.findMany({ where: { footballDataMatchId: { not: null } }, select: { footballDataMatchId: true } });
+  for (const e of existing) if (e.footballDataMatchId != null) committed.add(e.footballDataMatchId);
+
+  const results: BulkFdResultItem[] = [];
+
+  for (const id of wanted) {
+    const s = loaded.find((l) => l.id === id);
+    const base = { id, home: s?.homeTeam?.fullName ?? '', away: s?.awayTeam?.fullName ?? '', day: dayOf(id) };
+    if (!s) {
+      results.push({ ...base, competition: '', outcome: 'error', matchId: null, note: 'staged game not found' });
+      continue;
+    }
+    base.home = s.homeTeam.fullName;
+    base.away = s.awayTeam.fullName;
+    const competition = s.competition.name;
+
+    if (s.gameId) {
+      results.push({ ...base, competition, outcome: 'in_games', matchId: s.footballDataMatchId, note: 'already in the games table' });
+      continue;
+    }
+    if (s.footballDataMatchId != null) {
+      results.push({ ...base, competition, outcome: 'already_linked', matchId: s.footballDataMatchId, note: 'already linked' });
+      continue;
+    }
+    if (!teamHasFdMapping(s.homeTeam) || !teamHasFdMapping(s.awayTeam)) {
+      results.push({ ...base, competition, outcome: 'teams_not_mapped', matchId: null, note: 'team has no football-data mapping' });
+      continue;
+    }
+
+    const choice = choiceForCompetitionName(competition);
+    const dayMatches = (cache.get(`${choice}::${base.day}`) ?? []).filter((m) => m.utcDate && isoDay(new Date(m.utcDate)) === base.day);
+    const match = dayMatches.find(
+      (m) =>
+        !committed.has(m.id) &&
+        fdTeamMatchesTeam(m.homeTeam, s.homeTeam) &&
+        fdTeamMatchesTeam(m.awayTeam, s.awayTeam)
+    );
+
+    if (!match) {
+      const taken = dayMatches.some((m) => fdTeamMatchesTeam(m.homeTeam, s.homeTeam) && fdTeamMatchesTeam(m.awayTeam, s.awayTeam));
+      results.push({
+        ...base,
+        competition,
+        outcome: taken ? 'linked_conflict' : 'not_found',
+        matchId: null,
+        note: taken ? 'matching fixture already linked to another staged game' : `no football-data fixture on ${base.day}`,
+      });
+      continue;
+    }
+
+    try {
+      await prisma.stagedGame.update({
+        where: { id },
+        data: {
+          footballDataMatchId: match.id,
+          footballDataStartTime: match.utcDate ? new Date(match.utcDate) : null,
+          footballDataRaw: match as unknown as Prisma.InputJsonValue,
+          footballDataStatus: mapFootballDataStatus(match.status),
+        },
+      });
+      committed.add(match.id);
+      results.push({ ...base, competition, outcome: 'linked', matchId: match.id, note: `linked to FD match #${match.id}` });
+    } catch (e) {
+      const code = (e as { code?: string })?.code;
+      results.push({
+        ...base,
+        competition,
+        outcome: code === 'P2002' ? 'linked_conflict' : 'error',
+        matchId: null,
+        note: code === 'P2002' ? 'that football-data match is already linked elsewhere' : (e instanceof Error ? e.message : 'link failed'),
+      });
+    }
+  }
+
+  const summary = results.reduce<Record<string, number>>((acc, r) => {
+    acc[r.outcome] = (acc[r.outcome] ?? 0) + 1;
+    return acc;
+  }, {});
+  return { results, summary, total: results.length };
+};
+
+export type BulkConfirmResultItem = {
+  id: string;
+  home: string;
+  away: string;
+  outcome: 'added' | 'skipped' | 'error';
+  gameId: string | null;
+  note: string;
+};
+
+/**
+ * Confirm many staged games into the Games table in one pass. Only rows that are
+ * linked to football-data and not yet in the games table are attempted; anything
+ * else (no link, already added, rejected) is reported as skipped. Each row is
+ * independent, so one failure never blocks the rest.
+ */
+export const bulkConfirmStagedGames = async (ids: unknown, adminId?: string) => {
+  if (!Array.isArray(ids) || ids.length === 0) throw new ApiError(400, 'ids (non-empty array) is required');
+  const wanted = Array.from(new Set(ids.filter((v): v is string => typeof v === 'string' && v.length > 0)));
+  if (wanted.length === 0) throw new ApiError(400, 'ids (non-empty array) is required');
+
+  const rows = await prisma.stagedGame.findMany({
+    where: { id: { in: wanted } },
+    include: { homeTeam: { select: { fullName: true } }, awayTeam: { select: { fullName: true } } },
+  });
+
+  const results: BulkConfirmResultItem[] = [];
+  for (const id of wanted) {
+    const s = rows.find((r) => r.id === id);
+    if (!s) {
+      results.push({ id, home: '', away: '', outcome: 'error', gameId: null, note: 'staged game not found' });
+      continue;
+    }
+    const base = { id, home: s.homeTeam.fullName, away: s.awayTeam.fullName };
+    if (s.gameId) {
+      results.push({ ...base, outcome: 'skipped', gameId: s.gameId, note: 'already in the games table' });
+      continue;
+    }
+    if (s.status === 'REJECTED') {
+      results.push({ ...base, outcome: 'skipped', gameId: null, note: 'rejected staged game' });
+      continue;
+    }
+    if (s.footballDataMatchId == null) {
+      results.push({ ...base, outcome: 'skipped', gameId: null, note: 'no football-data match linked' });
+      continue;
+    }
+    try {
+      const updated = await confirmStagedGameToGames(id, adminId);
+      results.push({ ...base, outcome: 'added', gameId: updated.gameId ?? updated.game?.id ?? null, note: 'added to games table' });
+    } catch (e) {
+      results.push({ ...base, outcome: 'error', gameId: null, note: e instanceof Error ? e.message : 'confirm failed' });
+    }
+  }
+
+  const summary = results.reduce<Record<string, number>>((acc, r) => {
+    acc[r.outcome] = (acc[r.outcome] ?? 0) + 1;
+    return acc;
+  }, {});
+  return { results, summary, total: results.length };
 };
 

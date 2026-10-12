@@ -9,11 +9,14 @@ const router = Router();
 
 router.get('/', gameController.list);
 router.get('/results', gameController.results);
+router.get('/market-types', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), gameController.marketTypes);
 router.get('/settlement-list', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), gameSettlementController.listBetGames);
 router.get('/:id', gameController.getById);
 router.post('/', authenticate, authorize('ADMIN'), gameController.create);
 router.patch('/:id', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), gameController.update);
 router.post('/bulk-delete', authenticate, authorize('ADMIN'), gameController.removeBulk);
+router.post('/bulk-fetch-odds', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), gameController.bulkFetchOdds);
+router.post('/bulk-auto-fill', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), gameController.bulkAutoFill);
 router.post('/clear-all', authenticate, authorize('ADMIN'), gameController.clearAllGamesData);
 router.post('/refresh-times', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), gameController.refreshTimes);
 

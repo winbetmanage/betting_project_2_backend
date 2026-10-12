@@ -1,0 +1,4386 @@
+{
+  "id": "6436925dd15916d7041ba32b60000d48",
+  "sport_key": "soccer_spain_la_liga",
+  "sport_title": "La Liga - Spain",
+  "commence_time": "2026-10-17T12:00:00Z",
+  "home_team": "Espanyol",
+  "away_team": "Atlético Madrid",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.46
+            },
+            {
+              "name": "Draw",
+              "price": 3.88
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81,
+              "point": -0.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 2.11,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.05,
+              "point": 2.75
+            },
+            {
+              "name": "Under",
+              "price": 1.85,
+              "point": 2.75
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81,
+              "point": -0.5
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 1.24,
+              "point": 0.5
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 1.28,
+              "point": 0.25
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 1.36,
+              "point": 0
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 1.58,
+              "point": -0.25
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 2.05,
+              "point": -0.75
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 2.49,
+              "point": -1
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 2.87,
+              "point": -1.25
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 3.25,
+              "point": -1.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 2.11,
+              "point": 0.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.41,
+              "point": -0.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 3.89,
+              "point": -0.25
+            },
+            {
+              "name": "Espanyol",
+              "price": 3.38,
+              "point": 0
+            },
+            {
+              "name": "Espanyol",
+              "price": 2.51,
+              "point": 0.25
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.85,
+              "point": 0.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.59,
+              "point": 1
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.45,
+              "point": 1.25
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.37,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.05,
+              "point": 2.75
+            },
+            {
+              "name": "Over",
+              "price": 1.31,
+              "point": 1.75
+            },
+            {
+              "name": "Over",
+              "price": 1.38,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 1.61,
+              "point": 2.25
+            },
+            {
+              "name": "Over",
+              "price": 1.82,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.4,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.72,
+              "point": 3.25
+            },
+            {
+              "name": "Over",
+              "price": 3.02,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 3.65,
+              "point": 3.75
+            },
+            {
+              "name": "Under",
+              "price": 1.85,
+              "point": 2.75
+            },
+            {
+              "name": "Under",
+              "price": 3.6,
+              "point": 1.75
+            },
+            {
+              "name": "Under",
+              "price": 3.14,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 2.42,
+              "point": 2.25
+            },
+            {
+              "name": "Under",
+              "price": 2.06,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.62,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.5,
+              "point": 3.25
+            },
+            {
+              "name": "Under",
+              "price": 1.41,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.3,
+              "point": 3.75
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.46
+            },
+            {
+              "name": "Draw",
+              "price": 3.88
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:48:02Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.74
+            },
+            {
+              "name": "No",
+              "price": 2.16
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T14:48:02Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 4.6
+            },
+            {
+              "name": "No",
+              "price": 1.21
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:48:02Z",
+          "outcomes": [
+            {
+              "name": "Espanyol:0|Atlético Madrid:0",
+              "price": 12.93
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:1",
+              "price": 8.52
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:2",
+              "price": 9.68
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:3",
+              "price": 15.56
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:4",
+              "price": 30.58
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:5",
+              "price": 67.9
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:6",
+              "price": 160.55
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:0",
+              "price": 14.19
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:1",
+              "price": 7.45
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:2",
+              "price": 8.7
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:3",
+              "price": 14.14
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:4",
+              "price": 28.34
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:5",
+              "price": 64.8
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:6",
+              "price": 157.74
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:0",
+              "price": 23.91
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:1",
+              "price": 14.37
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:2",
+              "price": 15.86
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:3",
+              "price": 22.93
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:4",
+              "price": 45.76
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:5",
+              "price": 103.15
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:6",
+              "price": 245.51
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:0",
+              "price": 56.89
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:1",
+              "price": 34.01
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:2",
+              "price": 36.39
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:3",
+              "price": 55.46
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:4",
+              "price": 97.62
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:5",
+              "price": 211.41
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:0",
+              "price": 160.02
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:1",
+              "price": 96.81
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:2",
+              "price": 100.59
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:3",
+              "price": 145.44
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:4",
+              "price": 258.25
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:1",
+              "price": 297.7
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:2",
+              "price": 299.08
+            }
+          ]
+        },
+        {
+          "key": "correct_score_h1",
+          "last_update": "2026-10-12T14:48:02Z",
+          "outcomes": [
+            {
+              "name": "Espanyol:0|Atlético Madrid:0",
+              "price": 3.22
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:1",
+              "price": 4.14
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:2",
+              "price": 9.79
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:3",
+              "price": 29.84
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:0",
+              "price": 6.4
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:1",
+              "price": 8.1
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:2",
+              "price": 18.26
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:3",
+              "price": 51.31
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:0",
+              "price": 21.97
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:1",
+              "price": 26.89
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:2",
+              "price": 54.55
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:3",
+              "price": 132.99
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:0",
+              "price": 85.4
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:1",
+              "price": 101.16
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:2",
+              "price": 178.34
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:3",
+              "price": 354.68
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:48:02Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.35
+            },
+            {
+              "name": "Espanyol",
+              "price": 3.35
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:48:02Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 2.46
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.67
+            },
+            {
+              "name": "Draw",
+              "price": 2.38
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T14:48:02Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.76,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 2.11,
+              "point": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:04Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:04Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.75,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.02,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:04Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "smarkets",
+      "title": "Smarkets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:18Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:48:18Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.87
+            },
+            {
+              "name": "Espanyol",
+              "price": 5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:18Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:18Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.85
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:48:18Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 2.52,
+              "point": -1
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.58,
+              "point": 1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:18Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.81,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.09,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:48:18Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.06,
+              "point": 1.5
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 2.52,
+              "point": -1
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 1.09,
+              "point": 1
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 6.9,
+              "point": -2.5
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 3.3,
+              "point": -1.5
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 5.7,
+              "point": -2
+            },
+            {
+              "name": "Espanyol",
+              "price": 11,
+              "point": -1.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.58,
+              "point": 1
+            },
+            {
+              "name": "Espanyol",
+              "price": 9.2,
+              "point": -1
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.13,
+              "point": 2.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.37,
+              "point": 1.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.17,
+              "point": 2
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:48:18Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.38,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 1.27,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.39,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 12,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 3,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 5.9,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 11.5,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 5,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 1.07,
+              "point": 1
+            },
+            {
+              "name": "Over",
+              "price": 1.81,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.64,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 4.15,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 3.2,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 1.06,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.43,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.16,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.06,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1.2,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 11,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 2.09,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:18Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.85
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betway",
+      "title": "Betway",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_uk",
+      "title": "Unibet (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:24Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:24Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.75,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.05,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.73
+            },
+            {
+              "name": "No",
+              "price": 2.05
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid or Draw",
+              "price": 1.22
+            },
+            {
+              "name": "Espanyol or Draw",
+              "price": 1.91
+            },
+            {
+              "name": "Atlético Madrid or Espanyol",
+              "price": 1.29
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.25,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.75,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 3.8,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.05,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:48:11Z",
+          "outcomes": [
+            {
+              "name": "Espanyol:1|Atlético Madrid:0",
+              "price": 12
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:0",
+              "price": 21
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:1",
+              "price": 12
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:0",
+              "price": 46
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:1",
+              "price": 29
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:2",
+              "price": 34
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:0",
+              "price": 101
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:1",
+              "price": 81
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:2",
+              "price": 81
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:3",
+              "price": 101
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:0",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:1",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:2",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:6|Atlético Madrid:0",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:6|Atlético Madrid:1",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:6|Atlético Madrid:2",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:7|Atlético Madrid:0",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:7|Atlético Madrid:1",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:8|Atlético Madrid:0",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:9|Atlético Madrid:0",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:0",
+              "price": 12
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:1",
+              "price": 7
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:2",
+              "price": 13
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:3",
+              "price": 46
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:4",
+              "price": 126
+            },
+            {
+              "name": "Atlético Madrid:1|Espanyol:0",
+              "price": 7.5
+            },
+            {
+              "name": "Atlético Madrid:2|Espanyol:0",
+              "price": 9
+            },
+            {
+              "name": "Atlético Madrid:2|Espanyol:1",
+              "price": 7.5
+            },
+            {
+              "name": "Atlético Madrid:3|Espanyol:0",
+              "price": 15
+            },
+            {
+              "name": "Atlético Madrid:3|Espanyol:1",
+              "price": 13
+            },
+            {
+              "name": "Atlético Madrid:3|Espanyol:2",
+              "price": 21
+            },
+            {
+              "name": "Atlético Madrid:4|Espanyol:0",
+              "price": 29
+            },
+            {
+              "name": "Atlético Madrid:4|Espanyol:1",
+              "price": 26
+            },
+            {
+              "name": "Atlético Madrid:4|Espanyol:2",
+              "price": 46
+            },
+            {
+              "name": "Atlético Madrid:4|Espanyol:3",
+              "price": 81
+            },
+            {
+              "name": "Atlético Madrid:5|Espanyol:0",
+              "price": 67
+            },
+            {
+              "name": "Atlético Madrid:5|Espanyol:1",
+              "price": 61
+            },
+            {
+              "name": "Atlético Madrid:5|Espanyol:2",
+              "price": 91
+            },
+            {
+              "name": "Atlético Madrid:6|Espanyol:0",
+              "price": 126
+            },
+            {
+              "name": "Atlético Madrid:6|Espanyol:1",
+              "price": 101
+            },
+            {
+              "name": "Atlético Madrid:6|Espanyol:2",
+              "price": 126
+            },
+            {
+              "name": "Atlético Madrid:7|Espanyol:0",
+              "price": 151
+            },
+            {
+              "name": "Atlético Madrid:7|Espanyol:1",
+              "price": 151
+            },
+            {
+              "name": "Atlético Madrid:8|Espanyol:0",
+              "price": 151
+            },
+            {
+              "name": "Atlético Madrid:9|Espanyol:0",
+              "price": 151
+            },
+            {
+              "name": "Atlético Madrid:10|Espanyol:0",
+              "price": 151
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:48:11Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.36
+            },
+            {
+              "name": "Espanyol",
+              "price": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas",
+      "title": "LeoVegas",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.77
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.75,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.98,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.68
+            },
+            {
+              "name": "No",
+              "price": 2.05
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.24,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.75,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.8,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 4.9,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 8.5,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 9.5,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 3.7,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.98,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.38,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.14,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.04,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.45,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.47,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h2",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.95,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.73,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:19Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.77
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.75,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.05,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:46:46Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.71
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.68
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:46:46Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.71
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.68
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:46:54Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.78
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:46:54Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.78
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfred_uk",
+      "title": "Betfred (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.73
+            },
+            {
+              "name": "No",
+              "price": 2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.74,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.94,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid or Draw",
+              "price": 1.22
+            },
+            {
+              "name": "Espanyol or Draw",
+              "price": 2
+            },
+            {
+              "name": "Atlético Madrid or Espanyol",
+              "price": 1.27
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.23,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.74,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.8,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 4.9,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 8,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 8,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 3.6,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.94,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.37,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.13,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.04,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:50Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.76
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:50Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.76
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "boylesports",
+      "title": "BoyleSports",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:52Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.73
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:52Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.73
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:46:05Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.91
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.32
+            },
+            {
+              "name": "Draw",
+              "price": 3.84
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:46:05Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.39,
+              "point": 0
+            },
+            {
+              "name": "Espanyol",
+              "price": 3.41,
+              "point": 0
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:46:05Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.87,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.08,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:46:05Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.69
+            },
+            {
+              "name": "No",
+              "price": 2.07
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:46:05Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid or Draw",
+              "price": 1.26
+            },
+            {
+              "name": "Espanyol or Draw",
+              "price": 1.99
+            },
+            {
+              "name": "Atlético Madrid or Espanyol",
+              "price": 1.31
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:46:05Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.91
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.32
+            },
+            {
+              "name": "Draw",
+              "price": 3.84
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:45:44Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.02,
+              "point": 1.5
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 1.04,
+              "point": 1
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 1.39,
+              "point": 0
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 2.52,
+              "point": -1
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 3.1,
+              "point": -1.5
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 5.35,
+              "point": -2
+            },
+            {
+              "name": "Atlético Madrid",
+              "price": 5.95,
+              "point": -2.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 8.1,
+              "point": -1.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 7.4,
+              "point": -1
+            },
+            {
+              "name": "Espanyol",
+              "price": 3.41,
+              "point": 0
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.54,
+              "point": 1
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.33,
+              "point": 1.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.11,
+              "point": 2
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.07,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:45:44Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.02,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.02,
+              "point": 1
+            },
+            {
+              "name": "Over",
+              "price": 1.23,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.36,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 1.87,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.28,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.84,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 4.45,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 5.05,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 8.6,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 9.1,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 23,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 50,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 12.5,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 8.5,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 3.64,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.94,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 2.08,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.57,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.36,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.15,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.1,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 7.5
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T14:41:34Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 4.15
+            },
+            {
+              "name": "No",
+              "price": 1.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance_h1",
+          "last_update": "2026-10-12T14:41:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid or Draw",
+              "price": 1.15
+            },
+            {
+              "name": "Espanyol or Draw",
+              "price": 1.5
+            },
+            {
+              "name": "Atlético Madrid or Espanyol",
+              "price": 1.58
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.78,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.06,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "paddypower",
+      "title": "Paddy Power",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:46:50Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:46:50Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:47:54Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.88,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.73,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 5.5,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.2,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 10,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.36,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 2,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 11,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 4,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.02,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:47:54Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.65
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T14:47:54Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 4
+            },
+            {
+              "name": "No",
+              "price": 1.2
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:47:54Z",
+          "outcomes": [
+            {
+              "name": "Espanyol:1|Atlético Madrid:0",
+              "price": 12
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:0",
+              "price": 18
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:1",
+              "price": 12
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:0",
+              "price": 46
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:1",
+              "price": 26
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:2",
+              "price": 26
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:0",
+              "price": 126
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:1",
+              "price": 91
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:2",
+              "price": 101
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:3",
+              "price": 126
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:0",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:1",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:2",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:3",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:4",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:6|Atlético Madrid:0",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:6|Atlético Madrid:1",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:6|Atlético Madrid:2",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:6|Atlético Madrid:3",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:6|Atlético Madrid:4",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:6|Atlético Madrid:5",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:7|Atlético Madrid:0",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:7|Atlético Madrid:1",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:7|Atlético Madrid:2",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:7|Atlético Madrid:3",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:7|Atlético Madrid:4",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:8|Atlético Madrid:0",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:8|Atlético Madrid:1",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:8|Atlético Madrid:2",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:8|Atlético Madrid:3",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:9|Atlético Madrid:0",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:9|Atlético Madrid:1",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:9|Atlético Madrid:2",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:10|Atlético Madrid:0",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:10|Atlético Madrid:1",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:11|Atlético Madrid:0",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:0",
+              "price": 13
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:1",
+              "price": 7
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:2",
+              "price": 13
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:3",
+              "price": 46
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:4",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:5",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:1",
+              "price": 8
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:2",
+              "price": 8.5
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:2",
+              "price": 8
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:3",
+              "price": 13
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:3",
+              "price": 13
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:3",
+              "price": 19
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:4",
+              "price": 26
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:4",
+              "price": 23
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:4",
+              "price": 36
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:4",
+              "price": 91
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:5",
+              "price": 61
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:5",
+              "price": 67
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:5",
+              "price": 101
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:5",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:5",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:6",
+              "price": 176
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:6",
+              "price": 176
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:6",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:6",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:6",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:5|Atlético Madrid:6",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:7",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:7",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:7",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:7",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:4|Atlético Madrid:7",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:8",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:8",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:8",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:8",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:9",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:9",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:9",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:10",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:10",
+              "price": 201
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:11",
+              "price": 201
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:47:54Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid or Draw",
+              "price": 1.2
+            },
+            {
+              "name": "Espanyol or Draw",
+              "price": 1.91
+            },
+            {
+              "name": "Atlético Madrid or Espanyol",
+              "price": 1.22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "skybet",
+      "title": "Sky Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:47Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:47Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.8
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_uk",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.82
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.87
+            },
+            {
+              "name": "Espanyol",
+              "price": 5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.82
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:47:53Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.06,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.86,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 13.5,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 2.08,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:47:53Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.8
+            },
+            {
+              "name": "No",
+              "price": 2.16
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:47:53Z",
+          "outcomes": [
+            {
+              "name": "Espanyol:0|Atlético Madrid:0",
+              "price": 14.5
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:1",
+              "price": 8.6
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:2",
+              "price": 10
+            },
+            {
+              "name": "Espanyol:0|Atlético Madrid:3",
+              "price": 17
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:0",
+              "price": 15
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:1",
+              "price": 8
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:2",
+              "price": 9.2
+            },
+            {
+              "name": "Espanyol:1|Atlético Madrid:3",
+              "price": 16
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:0",
+              "price": 8.6
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:1",
+              "price": 16
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:2",
+              "price": 16
+            },
+            {
+              "name": "Espanyol:2|Atlético Madrid:3",
+              "price": 8.4
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:0",
+              "price": 10
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:1",
+              "price": 9.4
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:2",
+              "price": 9.4
+            },
+            {
+              "name": "Espanyol:3|Atlético Madrid:3",
+              "price": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:52Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.82
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:47:52Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.87
+            },
+            {
+              "name": "Espanyol",
+              "price": 5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:52Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.82
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:08Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.86
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.74
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:48:08Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 2.52,
+              "point": -1
+            },
+            {
+              "name": "Espanyol",
+              "price": 1.54,
+              "point": 1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:08Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.81,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.02,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:48:08Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid or Draw",
+              "price": 1.25
+            },
+            {
+              "name": "Espanyol or Draw",
+              "price": 1.99
+            },
+            {
+              "name": "Atlético Madrid or Espanyol",
+              "price": 1.29
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:08Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.86
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.74
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "livescorebet",
+      "title": "LiveScore Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:50Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.74
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:47:50Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.67
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:47:50Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid or Draw",
+              "price": 1.16
+            },
+            {
+              "name": "Espanyol or Draw",
+              "price": 1.95
+            },
+            {
+              "name": "Atlético Madrid or Espanyol",
+              "price": 1.22
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:47:50Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.3
+            },
+            {
+              "name": "Espanyol",
+              "price": 3.05
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:47:50Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.68,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.75,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.19,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 23,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 5.2,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.98,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.1,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.36,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 3.95,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 11.5,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:50Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.74
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.65,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.93,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.74
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.74,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.05,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.74
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "virginbet",
+      "title": "Virgin Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.73
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.67
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid or Draw",
+              "price": 1.19
+            },
+            {
+              "name": "Espanyol or Draw",
+              "price": 2
+            },
+            {
+              "name": "Atlético Madrid or Espanyol",
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.3
+            },
+            {
+              "name": "Espanyol",
+              "price": 3.05
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.68,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.19,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 23,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 2.75,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 5.2,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.98,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.1,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.36,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 3.95,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 11.5,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.73
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:49Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.82
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:47:49Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.74,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.05,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:49Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.82
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "grosvenor",
+      "title": "Grosvenor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.79
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.74,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.05,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.79
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.82
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.75,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.07,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:17Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.82
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "casumo",
+      "title": "Casumo",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.78
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.74,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.05,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:48Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.78
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_sb_uk",
+      "title": "Betfair Sportsbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:49Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.85
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:49Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.85
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betvictor",
+      "title": "Bet Victor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:46:43Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:46:43Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betano_uk",
+      "title": "Betano (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:05Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:05Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.75
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coral",
+      "title": "Coral",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.83
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.05
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.35
+            },
+            {
+              "name": "Espanyol",
+              "price": 2.9
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.9,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.25,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 5.5,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.75,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 21,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.36,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 3.75,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.12,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.95,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 11,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 6.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 2.3
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 2.3
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.83
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ladbrokes_uk",
+      "title": "Ladbrokes",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.83
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.05
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.35
+            },
+            {
+              "name": "Espanyol",
+              "price": 2.9
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.9,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.25,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 5.5,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.75,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.03,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 21,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.36,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 3.75,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.12,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.95,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 11,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 6.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 2.3
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 2.3
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:34Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.83
+            },
+            {
+              "name": "Espanyol",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "everygame",
+      "title": "Everygame",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:47:00Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.73
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:47:00Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.73
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betonlineag",
+      "title": "BetOnline.ag",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81,
+              "point": -0.5
+            },
+            {
+              "name": "Espanyol",
+              "price": 2.03,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.8,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.04,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:48:03Z",
+          "outcomes": [
+            {
+              "name": "Atlético Madrid",
+              "price": 1.81
+            },
+            {
+              "name": "Espanyol",
+              "price": 4.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3916 @@
+{
+  "id": "5d6f9accd6f79ae4216dfd29ccc342b2",
+  "sport_key": "soccer_uefa_champs_league",
+  "sport_title": "UEFA Champions League",
+  "commence_time": "2026-10-14T16:45:00Z",
+  "home_team": "Feyenoord",
+  "away_team": "Como",
+  "bookmakers": [
+    {
+      "key": "betfred_uk",
+      "title": "Betfred (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.83
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:02:11Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.4
+            },
+            {
+              "name": "No",
+              "price": 2.75
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.83
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "skybet",
+      "title": "Sky Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.91
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.91
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "paddypower",
+      "title": "Paddy Power",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:26Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.91
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:26Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.91
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:00:28Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.98
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.58
+            },
+            {
+              "name": "Draw",
+              "price": 4.32
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:00:28Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.55,
+              "point": 0
+            },
+            {
+              "name": "Feyenoord",
+              "price": 2.71,
+              "point": 0
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:00:28Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.15,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.81,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:00:28Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.4
+            },
+            {
+              "name": "No",
+              "price": 2.77
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:00:28Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.34
+            },
+            {
+              "name": "Feyenoord or Draw",
+              "price": 1.92
+            },
+            {
+              "name": "Como or Feyenoord",
+              "price": 1.26
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:00:28Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.98
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.58
+            },
+            {
+              "name": "Draw",
+              "price": 4.32
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T13:50:03Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.07,
+              "point": 1.5
+            },
+            {
+              "name": "Como",
+              "price": 1.1,
+              "point": 1
+            },
+            {
+              "name": "Como",
+              "price": 1.55,
+              "point": 0
+            },
+            {
+              "name": "Como",
+              "price": 2.5,
+              "point": -1
+            },
+            {
+              "name": "Como",
+              "price": 3.04,
+              "point": -1.5
+            },
+            {
+              "name": "Como",
+              "price": 4.95,
+              "point": -2
+            },
+            {
+              "name": "Como",
+              "price": 5.6,
+              "point": -2.5
+            },
+            {
+              "name": "Como",
+              "price": 10.5,
+              "point": -3
+            },
+            {
+              "name": "Como",
+              "price": 11.5,
+              "point": -3.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 6.3,
+              "point": -1.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 5.7,
+              "point": -1
+            },
+            {
+              "name": "Feyenoord",
+              "price": 2.71,
+              "point": 0
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.47,
+              "point": 1
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.31,
+              "point": 1.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.11,
+              "point": 2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.08,
+              "point": 2.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.02,
+              "point": 3
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.01,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T13:50:03Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.02,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.02,
+              "point": 1
+            },
+            {
+              "name": "Over",
+              "price": 1.08,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.13,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.61,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.15,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 2.73,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 3.26,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 5.05,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 5.55,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 9.2,
+              "point": 6
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 21,
+              "point": 7.5
+            },
+            {
+              "name": "Over",
+              "price": 41,
+              "point": 8.5
+            },
+            {
+              "name": "Under",
+              "price": 22,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 17,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 5.45,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 4.65,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 2.68,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.19,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.81,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.41,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.28,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 1.08,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 6
+            },
+            {
+              "name": "Under",
+              "price": 1.05,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 1,
+              "point": 8.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:46Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.93
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.48
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:02:46Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.5,
+              "point": 0
+            },
+            {
+              "name": "Feyenoord",
+              "price": 2.62,
+              "point": 0
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:46Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.09,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.76,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:02:46Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.33
+            },
+            {
+              "name": "Feyenoord or Draw",
+              "price": 1.91
+            },
+            {
+              "name": "Como or Feyenoord",
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:46Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.93
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.48
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.65
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2.02
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.65
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_uk",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.65
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2.02
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.65
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.47
+            },
+            {
+              "name": "Draw",
+              "price": 4.26
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.96,
+              "point": -0.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.94,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.91,
+              "point": 3.25
+            },
+            {
+              "name": "Under",
+              "price": 1.98,
+              "point": 3.25
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.96,
+              "point": -0.5
+            },
+            {
+              "name": "Como",
+              "price": 1.34,
+              "point": 0.5
+            },
+            {
+              "name": "Como",
+              "price": 1.4,
+              "point": 0.25
+            },
+            {
+              "name": "Como",
+              "price": 1.51,
+              "point": 0
+            },
+            {
+              "name": "Como",
+              "price": 1.72,
+              "point": -0.25
+            },
+            {
+              "name": "Como",
+              "price": 2.2,
+              "point": -0.75
+            },
+            {
+              "name": "Como",
+              "price": 2.64,
+              "point": -1
+            },
+            {
+              "name": "Como",
+              "price": 2.96,
+              "point": -1.25
+            },
+            {
+              "name": "Como",
+              "price": 3.29,
+              "point": -1.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.94,
+              "point": 0.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.43,
+              "point": -0.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.06,
+              "point": -0.25
+            },
+            {
+              "name": "Feyenoord",
+              "price": 2.69,
+              "point": 0
+            },
+            {
+              "name": "Feyenoord",
+              "price": 2.2,
+              "point": 0.25
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.72,
+              "point": 0.75
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.53,
+              "point": 1
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.43,
+              "point": 1.25
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.36,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.91,
+              "point": 3.25
+            },
+            {
+              "name": "Over",
+              "price": 1.31,
+              "point": 2.25
+            },
+            {
+              "name": "Over",
+              "price": 1.44,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1.54,
+              "point": 2.75
+            },
+            {
+              "name": "Over",
+              "price": 1.67,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 2.11,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 2.41,
+              "point": 3.75
+            },
+            {
+              "name": "Over",
+              "price": 2.88,
+              "point": 4
+            },
+            {
+              "name": "Over",
+              "price": 3.19,
+              "point": 4.25
+            },
+            {
+              "name": "Under",
+              "price": 1.98,
+              "point": 3.25
+            },
+            {
+              "name": "Under",
+              "price": 3.58,
+              "point": 2.25
+            },
+            {
+              "name": "Under",
+              "price": 2.85,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.58,
+              "point": 2.75
+            },
+            {
+              "name": "Under",
+              "price": 2.28,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 1.77,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.61,
+              "point": 3.75
+            },
+            {
+              "name": "Under",
+              "price": 1.44,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.37,
+              "point": 4.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.47
+            },
+            {
+              "name": "Draw",
+              "price": 4.26
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:03:12Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.44
+            },
+            {
+              "name": "No",
+              "price": 2.89
+            }
+          ]
+        },
+        {
+          "key": "btts_h1",
+          "last_update": "2026-10-12T14:03:12Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 3.38
+            },
+            {
+              "name": "No",
+              "price": 1.33
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-12T14:03:12Z",
+          "outcomes": [
+            {
+              "name": "Feyenoord:0|Como:0",
+              "price": 22.1
+            },
+            {
+              "name": "Feyenoord:0|Como:1",
+              "price": 14.02
+            },
+            {
+              "name": "Feyenoord:0|Como:2",
+              "price": 13.75
+            },
+            {
+              "name": "Feyenoord:0|Como:3",
+              "price": 18.69
+            },
+            {
+              "name": "Feyenoord:0|Como:4",
+              "price": 32.27
+            },
+            {
+              "name": "Feyenoord:0|Como:5",
+              "price": 66.64
+            },
+            {
+              "name": "Feyenoord:1|Como:0",
+              "price": 18.45
+            },
+            {
+              "name": "Feyenoord:1|Como:1",
+              "price": 8.91
+            },
+            {
+              "name": "Feyenoord:1|Como:2",
+              "price": 9.58
+            },
+            {
+              "name": "Feyenoord:1|Como:3",
+              "price": 13.31
+            },
+            {
+              "name": "Feyenoord:1|Como:4",
+              "price": 24.29
+            },
+            {
+              "name": "Feyenoord:1|Como:5",
+              "price": 50.75
+            },
+            {
+              "name": "Feyenoord:2|Como:0",
+              "price": 23.15
+            },
+            {
+              "name": "Feyenoord:2|Como:1",
+              "price": 12.58
+            },
+            {
+              "name": "Feyenoord:2|Como:2",
+              "price": 12.73
+            },
+            {
+              "name": "Feyenoord:2|Como:3",
+              "price": 17.87
+            },
+            {
+              "name": "Feyenoord:2|Como:4",
+              "price": 31.83
+            },
+            {
+              "name": "Feyenoord:2|Como:5",
+              "price": 64.79
+            },
+            {
+              "name": "Feyenoord:3|Como:0",
+              "price": 40.27
+            },
+            {
+              "name": "Feyenoord:3|Como:1",
+              "price": 22.43
+            },
+            {
+              "name": "Feyenoord:3|Como:2",
+              "price": 23.15
+            },
+            {
+              "name": "Feyenoord:3|Como:3",
+              "price": 33.56
+            },
+            {
+              "name": "Feyenoord:3|Como:4",
+              "price": 56.28
+            },
+            {
+              "name": "Feyenoord:4|Como:0",
+              "price": 87.53
+            },
+            {
+              "name": "Feyenoord:4|Como:1",
+              "price": 51.45
+            },
+            {
+              "name": "Feyenoord:4|Como:2",
+              "price": 51.65
+            },
+            {
+              "name": "Feyenoord:4|Como:3",
+              "price": 71.04
+            }
+          ]
+        },
+        {
+          "key": "correct_score_h1",
+          "last_update": "2026-10-12T14:03:12Z",
+          "outcomes": [
+            {
+              "name": "Feyenoord:0|Como:0",
+              "price": 4.31
+            },
+            {
+              "name": "Feyenoord:0|Como:1",
+              "price": 4.73
+            },
+            {
+              "name": "Feyenoord:0|Como:2",
+              "price": 9.7
+            },
+            {
+              "name": "Feyenoord:0|Como:3",
+              "price": 26.21
+            },
+            {
+              "name": "Feyenoord:1|Como:0",
+              "price": 6.43
+            },
+            {
+              "name": "Feyenoord:1|Como:1",
+              "price": 7.03
+            },
+            {
+              "name": "Feyenoord:1|Como:2",
+              "price": 14.02
+            },
+            {
+              "name": "Feyenoord:1|Como:3",
+              "price": 36.39
+            },
+            {
+              "name": "Feyenoord:2|Como:0",
+              "price": 17.27
+            },
+            {
+              "name": "Feyenoord:2|Como:1",
+              "price": 18.72
+            },
+            {
+              "name": "Feyenoord:2|Como:2",
+              "price": 34.77
+            },
+            {
+              "name": "Feyenoord:2|Como:3",
+              "price": 81.3
+            },
+            {
+              "name": "Feyenoord:3|Como:0",
+              "price": 57.09
+            },
+            {
+              "name": "Feyenoord:3|Como:1",
+              "price": 61.15
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:03:12Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.34
+            },
+            {
+              "name": "Feyenoord or Draw",
+              "price": 1.92
+            },
+            {
+              "name": "Como or Feyenoord",
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "key": "double_chance_h1",
+          "last_update": "2026-10-12T14:03:12Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.27
+            },
+            {
+              "name": "Feyenoord or Draw",
+              "price": 1.58
+            },
+            {
+              "name": "Como or Feyenoord",
+              "price": 1.49
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:03:12Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 2.68
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:03:12Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2.44
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.9
+            },
+            {
+              "name": "Draw",
+              "price": 2.69
+            }
+          ]
+        },
+        {
+          "key": "halftime_fulltime",
+          "last_update": "2026-10-12T14:03:12Z",
+          "outcomes": [
+            {
+              "name": "Como/Como",
+              "price": 2.96
+            },
+            {
+              "name": "Como/Feyenoord",
+              "price": 31.34
+            },
+            {
+              "name": "Como/Draw",
+              "price": 16.15
+            },
+            {
+              "name": "Feyenoord/Como",
+              "price": 22.48
+            },
+            {
+              "name": "Feyenoord/Feyenoord",
+              "price": 5.7
+            },
+            {
+              "name": "Feyenoord/Draw",
+              "price": 16.6
+            },
+            {
+              "name": "Draw/Como",
+              "price": 6.53
+            },
+            {
+              "name": "Draw/Feyenoord",
+              "price": 9.4
+            },
+            {
+              "name": "Draw/Draw",
+              "price": 7.18
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T14:03:12Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.77,
+              "point": 1.25
+            },
+            {
+              "name": "Under",
+              "price": 2.09,
+              "point": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:58Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.84
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:58Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.84
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas",
+      "title": "LeoVegas",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.92
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.02,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.75,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.4
+            },
+            {
+              "name": "No",
+              "price": 2.75
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.12,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.42,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2.02,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 3.25,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 5.4,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 5.6,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.7,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.75,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.31,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.12,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals_corners",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.29,
+              "point": 7.5
+            },
+            {
+              "name": "Over",
+              "price": 1.48,
+              "point": 8.5
+            },
+            {
+              "name": "Over",
+              "price": 1.77,
+              "point": 9.5
+            },
+            {
+              "name": "Over",
+              "price": 2.2,
+              "point": 10.5
+            },
+            {
+              "name": "Over",
+              "price": 2.8,
+              "point": 11.5
+            },
+            {
+              "name": "Under",
+              "price": 3.05,
+              "point": 7.5
+            },
+            {
+              "name": "Under",
+              "price": 2.3,
+              "point": 8.5
+            },
+            {
+              "name": "Under",
+              "price": 1.83,
+              "point": 9.5
+            },
+            {
+              "name": "Under",
+              "price": 1.52,
+              "point": 10.5
+            },
+            {
+              "name": "Under",
+              "price": 1.32,
+              "point": 11.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.95,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.7,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "totals_h2",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.6,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.12,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.92
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_uk",
+      "title": "Unibet (UK)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:28Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.91
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:28Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.91
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "smarkets",
+      "title": "Smarkets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:52Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.65
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:02:52Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2.02
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:52Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.65
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:13Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.93
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:13Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.7,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:02:13Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.31
+            },
+            {
+              "name": "Feyenoord or Draw",
+              "price": 1.89
+            },
+            {
+              "name": "Como or Feyenoord",
+              "price": 1.24
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:02:13Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 1.11,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.41,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 2,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 3.2,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 5.4,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 9.8,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 5.2,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.65,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.7,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.29,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 5.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:13Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.93
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "virginbet",
+      "title": "Virgin Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.82
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.38
+            },
+            {
+              "name": "No",
+              "price": 2.88
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.27
+            },
+            {
+              "name": "Feyenoord or Draw",
+              "price": 1.89
+            },
+            {
+              "name": "Como or Feyenoord",
+              "price": 1.22
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.41
+            },
+            {
+              "name": "Feyenoord",
+              "price": 2.63
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.82
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "grosvenor",
+      "title": "Grosvenor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:16Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.87
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:16Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.97,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.77,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:16Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.87
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "casumo",
+      "title": "Casumo",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:12Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.8
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:12Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.79,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:12Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.8
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:41Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.87
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:41Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.79,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:41Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.87
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.92
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.79,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.92
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "livescorebet",
+      "title": "LiveScore Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.85
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.55
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.38
+            },
+            {
+              "name": "No",
+              "price": 2.88
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.25
+            },
+            {
+              "name": "Feyenoord or Draw",
+              "price": 1.87
+            },
+            {
+              "name": "Como or Feyenoord",
+              "price": 1.21
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.41
+            },
+            {
+              "name": "Feyenoord",
+              "price": 2.63
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.85
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.55
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:15Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.92
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:15Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.79,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:15Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.92
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:41Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.92
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.55
+            },
+            {
+              "name": "Draw",
+              "price": 4.05
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:41Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.43,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.87,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:41Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.92
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.55
+            },
+            {
+              "name": "Draw",
+              "price": 4.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:01:42Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.55
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:01:42Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.43,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.85,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:01:42Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.55
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "boylesports",
+      "title": "BoyleSports",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:30Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.87
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:30Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.87
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betway",
+      "title": "Betway",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:12Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.88
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:12Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.88
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.91
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:55Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.91
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:59Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.91
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:59Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 2.8,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:02:59Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.4
+            },
+            {
+              "name": "No",
+              "price": 2.88
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-12T14:02:59Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.3
+            },
+            {
+              "name": "Feyenoord or Draw",
+              "price": 1.91
+            },
+            {
+              "name": "Como or Feyenoord",
+              "price": 1.22
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:02:59Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.12,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 6,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 2.8,
+              "point": 2.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:59Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.91
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coral",
+      "title": "Coral",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.85
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.4
+            },
+            {
+              "name": "No",
+              "price": 2.7
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.4
+            },
+            {
+              "name": "Feyenoord",
+              "price": 2.75
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.05,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 6,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 3.3,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 1.11,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.73,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 2.75,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 1.3,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 19,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 6,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2.25
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 2.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.85
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ladbrokes_uk",
+      "title": "Ladbrokes",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:57Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.85
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:02:57Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.4
+            },
+            {
+              "name": "No",
+              "price": 2.7
+            }
+          ]
+        },
+        {
+          "key": "draw_no_bet",
+          "last_update": "2026-10-12T14:02:57Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.4
+            },
+            {
+              "name": "Feyenoord",
+              "price": 2.75
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:02:57Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.05,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 6,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 1.4,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 1,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 3.3,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 11,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 1.11,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.73,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.11,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 2.75,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 19,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.3,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 1.03,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 6,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:02:57Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2.25
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 2.6
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:57Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.85
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:31Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.96
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:02:31Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2.58,
+              "point": -1
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.54,
+              "point": 1
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:31Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.09,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.79,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:02:31Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.14,
+              "point": 1
+            },
+            {
+              "name": "Como",
+              "price": 6.5,
+              "point": -2.5
+            },
+            {
+              "name": "Como",
+              "price": 2.58,
+              "point": -1
+            },
+            {
+              "name": "Como",
+              "price": 3.3,
+              "point": -1.5
+            },
+            {
+              "name": "Como",
+              "price": 5.4,
+              "point": -2
+            },
+            {
+              "name": "Como",
+              "price": 1.11,
+              "point": 1.5
+            },
+            {
+              "name": "Como",
+              "price": 1.02,
+              "point": 2.5
+            },
+            {
+              "name": "Como",
+              "price": 1.03,
+              "point": 2
+            },
+            {
+              "name": "Como",
+              "price": 12,
+              "point": -3
+            },
+            {
+              "name": "Como",
+              "price": 14.5,
+              "point": -3.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 6.3,
+              "point": -1
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.14,
+              "point": 2.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.54,
+              "point": 1
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.37,
+              "point": 1.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.18,
+              "point": 2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 7.6,
+              "point": -1.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 18,
+              "point": -2.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 15,
+              "point": -2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.05,
+              "point": 3
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.04,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:02:31Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 5.6,
+              "point": 5
+            },
+            {
+              "name": "Over",
+              "price": 1.66,
+              "point": 3
+            },
+            {
+              "name": "Over",
+              "price": 1.45,
+              "point": 2.5
+            },
+            {
+              "name": "Over",
+              "price": 6.4,
+              "point": 5.5
+            },
+            {
+              "name": "Over",
+              "price": 1.02,
+              "point": 1
+            },
+            {
+              "name": "Over",
+              "price": 3.5,
+              "point": 4.5
+            },
+            {
+              "name": "Over",
+              "price": 1.14,
+              "point": 1.5
+            },
+            {
+              "name": "Over",
+              "price": 1.18,
+              "point": 2
+            },
+            {
+              "name": "Over",
+              "price": 11.5,
+              "point": 6
+            },
+            {
+              "name": "Over",
+              "price": 12.5,
+              "point": 6.5
+            },
+            {
+              "name": "Over",
+              "price": 1.01,
+              "point": 0.5
+            },
+            {
+              "name": "Over",
+              "price": 22.5,
+              "point": 7
+            },
+            {
+              "name": "Over",
+              "price": 2.09,
+              "point": 3.5
+            },
+            {
+              "name": "Over",
+              "price": 2.85,
+              "point": 4
+            },
+            {
+              "name": "Under",
+              "price": 1.17,
+              "point": 5
+            },
+            {
+              "name": "Under",
+              "price": 2.31,
+              "point": 3
+            },
+            {
+              "name": "Under",
+              "price": 2.9,
+              "point": 2.5
+            },
+            {
+              "name": "Under",
+              "price": 1.14,
+              "point": 5.5
+            },
+            {
+              "name": "Under",
+              "price": 18,
+              "point": 1
+            },
+            {
+              "name": "Under",
+              "price": 1.33,
+              "point": 4.5
+            },
+            {
+              "name": "Under",
+              "price": 6.4,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 5.3,
+              "point": 2
+            },
+            {
+              "name": "Under",
+              "price": 1.05,
+              "point": 6
+            },
+            {
+              "name": "Under",
+              "price": 1.05,
+              "point": 6.5
+            },
+            {
+              "name": "Under",
+              "price": 24.5,
+              "point": 0.5
+            },
+            {
+              "name": "Under",
+              "price": 1.01,
+              "point": 7
+            },
+            {
+              "name": "Under",
+              "price": 1.79,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.46,
+              "point": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:31Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.96
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gtbets",
+      "title": "GTbets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:42Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.68
+            },
+            {
+              "name": "Draw",
+              "price": 4.02
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:02:42Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.83,
+              "point": -0.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.95,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:42Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.05,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.75,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_h1",
+          "last_update": "2026-10-12T14:02:42Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2.4
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.72
+            },
+            {
+              "name": "Draw",
+              "price": 2.6
+            }
+          ]
+        },
+        {
+          "key": "totals_h1",
+          "last_update": "2026-10-12T14:02:42Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.03,
+              "point": 1.5
+            },
+            {
+              "name": "Under",
+              "price": 1.73,
+              "point": 1.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:42Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.68
+            },
+            {
+              "name": "Draw",
+              "price": 4.02
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:18Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.9
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:18Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.9
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betvictor",
+      "title": "Bet Victor",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:13Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.9
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:13Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.9
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:46Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.88
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:46Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.88
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.82
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.88,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.68,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:27Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.82
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:00:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.83
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.43
+            },
+            {
+              "name": "Draw",
+              "price": 3.95
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:00:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.83
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.43
+            },
+            {
+              "name": "Draw",
+              "price": 3.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matchbook",
+      "title": "Matchbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.65
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2.02
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2,
+              "point": -0.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.98,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.14,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.84,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.48
+            },
+            {
+              "name": "No",
+              "price": 2.94
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:03:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.65
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betonlineag",
+      "title": "BetOnline.ag",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.37
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:02:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95,
+              "point": -0.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.88,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:11Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.08,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.75,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "alternate_spreads",
+          "last_update": "2026-10-12T14:02:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 2.15,
+              "point": -0.75
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.71,
+              "point": 0.75
+            }
+          ]
+        },
+        {
+          "key": "alternate_totals",
+          "last_update": "2026-10-12T14:02:11Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 1.88,
+              "point": 3.25
+            },
+            {
+              "name": "Under",
+              "price": 1.93,
+              "point": 3.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:11Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.37
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betanysports",
+      "title": "BetAnything",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.37
+            }
+          ]
+        },
+        {
+          "key": "spreads",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.94,
+              "point": -0.5
+            },
+            {
+              "name": "Feyenoord",
+              "price": 1.88,
+              "point": 0.5
+            }
+          ]
+        },
+        {
+          "key": "totals",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Over",
+              "price": 2.13,
+              "point": 3.5
+            },
+            {
+              "name": "Under",
+              "price": 1.75,
+              "point": 3.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_3_way",
+          "last_update": "2026-10-12T14:02:56Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.95
+            },
+            {
+              "name": "Feyenoord",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.37
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

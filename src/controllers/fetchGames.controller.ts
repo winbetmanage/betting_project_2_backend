@@ -1,5 +1,7 @@
 import * as fetchGamesService from '../services/fetchGames.service';
 import * as eplResultService from '../services/eplResult.service';
+import { isResultLeagueCode, RESULT_LEAGUES } from '../services/eplResult.service';
+import ApiError from '../utils/ApiError';
 import asyncHandler from '../utils/asyncHandler';
 
 export const listPremierLeague = asyncHandler(async (req, res) => {
@@ -41,4 +43,25 @@ export const fetchResults = asyncHandler(async (_req, res) => {
   const result = await eplResultService.fetchEplMatchesAndUpsert();
   const data = await eplResultService.listEplScores();
   res.json({ message: `${result.added} added, ${result.updated} updated (${result.total} total matches)`, data: data, stats: result });
+});
+
+const parseLeague = (v: unknown) => {
+  const code = typeof v === 'string' && v ? v.toUpperCase() : 'PL';
+  if (!isResultLeagueCode(code)) {
+    throw new ApiError(400, `league must be one of ${Object.keys(RESULT_LEAGUES).join(', ')}`);
+  }
+  return code;
+};
+
+export const listLeagueResults = asyncHandler(async (req, res) => {
+  const code = parseLeague(req.query.league);
+  const data = await eplResultService.listLeagueScores(code);
+  res.json({ data, league: code, label: RESULT_LEAGUES[code].label });
+});
+
+export const fetchLeagueResults = asyncHandler(async (req, res) => {
+  const code = parseLeague((req.body as { league?: unknown }).league ?? req.query.league);
+  const result = await eplResultService.fetchLeagueMatchesAndUpsert(code);
+  const data = await eplResultService.listLeagueScores(code);
+  res.json({ message: `${RESULT_LEAGUES[code].label}: ${result.added} added, ${result.updated} updated (${result.total} total matches)`, data, stats: result, league: code });
 });

@@ -44,6 +44,43 @@ export const approveMarket = asyncHandler(async (req, res) => {
   res.json({ message: 'Market approved', data: market });
 });
 
+const TRANSIENT_DB = ["Server has closed", "max_statement_time", "Can't reach", "Timed out", "ETIMEDOUT", "ECONNRESET", "connection", "P1001", "P1017"];
+
+async function withRetry<T>(fn: () => Promise<T>, tries = 4, waitMs = 800): Promise<T> {
+  let last: unknown;
+  for (let i = 0; i < tries; i++) {
+    try {
+      return await fn();
+    } catch (e) {
+      last = e;
+      const msg = e instanceof Error ? e.message : String(e);
+      if (TRANSIENT_DB.some((s) => msg.includes(s))) {
+        await new Promise((r) => setTimeout(r, waitMs * (i + 1)));
+        continue;
+      }
+      throw e;
+    }
+  }
+  throw last;
+}
+
+// Run async tasks with a bounded concurrency so a large batch finishes fast
+// without hammering the database, and every item is attempted regardless of
+// another item's failure.
+async function mapLimit<T, R>(items: T[], limit: number, worker: (item: T, index: number) => Promise<R>): Promise<R[]> {
+  const results: R[] = new Array(items.length);
+  let cursor = 0;
+  const runners = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    for (;;) {
+      const i = cursor++;
+      if (i >= items.length) return;
+      results[i] = await worker(items[i], i);
+    }
+  });
+  await Promise.all(runners);
+  return results;
+}
+
 export const approveMarketsBulk = asyncHandler(async (req, res) => {
   const gameId = req.params.id as string;
   const adminUserId = req.user!.id;
@@ -54,15 +91,22 @@ export const approveMarketsBulk = asyncHandler(async (req, res) => {
     res.status(400).json({ message: 'approvals array required' });
     return;
   }
-  const results = [];
-  for (const a of approvals) {
+
+  const results = await mapLimit(approvals, 6, async (a) => {
     try {
-      const market = await marketApprovalService.approveMarket(gameId, { marketKey: a.marketKey, point: a.point ?? null, bookmakerKey: a.bookmakerKey, selections: a.selections }, adminUserId);
-      results.push({ marketKey: a.marketKey, point: a.point ?? null, success: true, marketId: market!.id });
+      const market = await withRetry(() =>
+        marketApprovalService.approveMarket(
+          gameId,
+          { marketKey: a.marketKey, point: a.point ?? null, bookmakerKey: a.bookmakerKey, selections: a.selections },
+          adminUserId
+        )
+      );
+      return { marketKey: a.marketKey, point: a.point ?? null, success: true, marketId: market!.id };
     } catch (e) {
-      results.push({ marketKey: a.marketKey, point: a.point ?? null, success: false, message: e instanceof Error ? e.message : 'Failed' });
+      return { marketKey: a.marketKey, point: a.point ?? null, success: false, message: e instanceof Error ? e.message : 'Failed' };
     }
-  }
+  });
+
   const ok = results.filter((r) => r.success).length;
   res.json({ message: `${ok}/${results.length} markets recorded`, data: results });
 });
