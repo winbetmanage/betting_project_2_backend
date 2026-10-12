@@ -121,9 +121,6 @@ export const placeBet = async (userId: string, { type, stake, selections }: Plac
   const totalOdds = roundOdds(betSelections.reduce((acc, s) => acc * Number(s.oddsAtPlacement), 1));
   const potentialPayout = roundMoney(stakeAmount * totalOdds);
 
-  const maxPayout = await getNumberSetting('betting.max_payout', Number.POSITIVE_INFINITY);
-  if (potentialPayout > maxPayout) throw new ApiError(400, `Maximum ticket payout is ETB ${maxPayout}`);
-
   const bet = await prisma.$transaction(async (tx) => {
     const updatedUser = await tx.user.update({
       where: { id: userId },
