@@ -1,0 +1,1002 @@
+{
+  "id": "07014d9adc65ca39710bd9f0c7c0d3f0",
+  "sport_key": "soccer_italy_serie_a",
+  "sport_title": "Serie A - Italy",
+  "commence_time": "2026-10-19T18:45:00Z",
+  "home_team": "Parma",
+  "away_team": "Torino",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:46Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.21
+            },
+            {
+              "name": "Torino",
+              "price": 2.52
+            },
+            {
+              "name": "Draw",
+              "price": 3.03
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:16:21Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 2.01
+            },
+            {
+              "name": "No",
+              "price": 1.83
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:16:21Z",
+          "outcomes": [
+            {
+              "name": "Parma:0|Torino:0",
+              "price": 7.73
+            },
+            {
+              "name": "Parma:0|Torino:1",
+              "price": 7.49
+            },
+            {
+              "name": "Parma:0|Torino:2",
+              "price": 11.56
+            },
+            {
+              "name": "Parma:0|Torino:3",
+              "price": 24.28
+            },
+            {
+              "name": "Parma:0|Torino:4",
+              "price": 58.5
+            },
+            {
+              "name": "Parma:0|Torino:5",
+              "price": 149.81
+            },
+            {
+              "name": "Parma:1|Torino:0",
+              "price": 8.72
+            },
+            {
+              "name": "Parma:1|Torino:1",
+              "price": 5.89
+            },
+            {
+              "name": "Parma:1|Torino:2",
+              "price": 10.72
+            },
+            {
+              "name": "Parma:1|Torino:3",
+              "price": 22.3
+            },
+            {
+              "name": "Parma:1|Torino:4",
+              "price": 55.15
+            },
+            {
+              "name": "Parma:1|Torino:5",
+              "price": 145.1
+            },
+            {
+              "name": "Parma:2|Torino:0",
+              "price": 14.87
+            },
+            {
+              "name": "Parma:2|Torino:1",
+              "price": 12.3
+            },
+            {
+              "name": "Parma:2|Torino:2",
+              "price": 18.32
+            },
+            {
+              "name": "Parma:2|Torino:3",
+              "price": 35.78
+            },
+            {
+              "name": "Parma:2|Torino:4",
+              "price": 85.98
+            },
+            {
+              "name": "Parma:3|Torino:0",
+              "price": 35.03
+            },
+            {
+              "name": "Parma:3|Torino:1",
+              "price": 28.23
+            },
+            {
+              "name": "Parma:3|Torino:2",
+              "price": 40.42
+            },
+            {
+              "name": "Parma:3|Torino:3",
+              "price": 78.88
+            },
+            {
+              "name": "Parma:3|Torino:4",
+              "price": 171.09
+            },
+            {
+              "name": "Parma:4|Torino:0",
+              "price": 93.91
+            },
+            {
+              "name": "Parma:4|Torino:1",
+              "price": 76.97
+            },
+            {
+              "name": "Parma:4|Torino:2",
+              "price": 105.02
+            },
+            {
+              "name": "Parma:4|Torino:3",
+              "price": 188.59
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:03Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 2.9
+            },
+            {
+              "name": "Torino",
+              "price": 2.25
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:14:03Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.25
+            },
+            {
+              "name": "Torino",
+              "price": 2.54
+            },
+            {
+              "name": "Draw",
+              "price": 3.17
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:14:03Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.96
+            },
+            {
+              "name": "No",
+              "price": 1.77
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:14:03Z",
+          "outcomes": [
+            {
+              "name": "Parma or Draw",
+              "price": 1.58
+            },
+            {
+              "name": "Torino or Draw",
+              "price": 1.39
+            },
+            {
+              "name": "Parma or Torino",
+              "price": 1.41
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:44Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 2.92
+            },
+            {
+              "name": "Torino",
+              "price": 2.33
+            },
+            {
+              "name": "Draw",
+              "price": 3.03
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:46Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3
+            },
+            {
+              "name": "Torino",
+              "price": 2.49
+            },
+            {
+              "name": "Draw",
+              "price": 3.15
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:16:46Z",
+          "outcomes": [
+            {
+              "name": "Parma or Draw",
+              "price": 1.54
+            },
+            {
+              "name": "Torino or Draw",
+              "price": 1.39
+            },
+            {
+              "name": "Parma or Torino",
+              "price": 1.36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:04Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.1
+            },
+            {
+              "name": "Torino",
+              "price": 2.45
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:04Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 2.9
+            },
+            {
+              "name": "Torino",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:03Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 2.85
+            },
+            {
+              "name": "Torino",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:55Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.16
+            },
+            {
+              "name": "Torino",
+              "price": 2.47
+            },
+            {
+              "name": "Draw",
+              "price": 3.08
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:15:55Z",
+          "outcomes": [
+            {
+              "name": "Parma or Draw",
+              "price": 1.57
+            },
+            {
+              "name": "Torino or Draw",
+              "price": 1.38
+            },
+            {
+              "name": "Parma or Torino",
+              "price": 1.39
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:46Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3
+            },
+            {
+              "name": "Torino",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:51Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3
+            },
+            {
+              "name": "Torino",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:15:51Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.91
+            },
+            {
+              "name": "No",
+              "price": 1.85
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:15:51Z",
+          "outcomes": [
+            {
+              "name": "Parma or Draw",
+              "price": 1.55
+            },
+            {
+              "name": "Torino or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Parma or Torino",
+              "price": 1.36
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:15:58Z",
+          "outcomes": [
+            {
+              "name": "Parma:1|Torino:0",
+              "price": 7.5
+            },
+            {
+              "name": "Parma:2|Torino:0",
+              "price": 13
+            },
+            {
+              "name": "Parma:2|Torino:1",
+              "price": 10
+            },
+            {
+              "name": "Parma:3|Torino:0",
+              "price": 34
+            },
+            {
+              "name": "Parma:3|Torino:1",
+              "price": 29
+            },
+            {
+              "name": "Parma:3|Torino:2",
+              "price": 36
+            },
+            {
+              "name": "Parma:4|Torino:0",
+              "price": 81
+            },
+            {
+              "name": "Parma:4|Torino:1",
+              "price": 71
+            },
+            {
+              "name": "Parma:4|Torino:2",
+              "price": 101
+            },
+            {
+              "name": "Parma:4|Torino:3",
+              "price": 126
+            },
+            {
+              "name": "Parma:5|Torino:0",
+              "price": 151
+            },
+            {
+              "name": "Parma:5|Torino:1",
+              "price": 151
+            },
+            {
+              "name": "Parma:5|Torino:2",
+              "price": 151
+            },
+            {
+              "name": "Parma:6|Torino:0",
+              "price": 151
+            },
+            {
+              "name": "Parma:6|Torino:1",
+              "price": 151
+            },
+            {
+              "name": "Parma:6|Torino:2",
+              "price": 151
+            },
+            {
+              "name": "Parma:7|Torino:0",
+              "price": 151
+            },
+            {
+              "name": "Parma:7|Torino:1",
+              "price": 151
+            },
+            {
+              "name": "Parma:8|Torino:0",
+              "price": 151
+            },
+            {
+              "name": "Parma:9|Torino:0",
+              "price": 151
+            },
+            {
+              "name": "Parma:0|Torino:0",
+              "price": 7
+            },
+            {
+              "name": "Parma:1|Torino:1",
+              "price": 5.8
+            },
+            {
+              "name": "Parma:2|Torino:2",
+              "price": 15
+            },
+            {
+              "name": "Parma:3|Torino:3",
+              "price": 71
+            },
+            {
+              "name": "Parma:4|Torino:4",
+              "price": 151
+            },
+            {
+              "name": "Torino:1|Parma:0",
+              "price": 6.5
+            },
+            {
+              "name": "Torino:2|Parma:0",
+              "price": 11
+            },
+            {
+              "name": "Torino:2|Parma:1",
+              "price": 9
+            },
+            {
+              "name": "Torino:3|Parma:0",
+              "price": 23
+            },
+            {
+              "name": "Torino:3|Parma:1",
+              "price": 23
+            },
+            {
+              "name": "Torino:3|Parma:2",
+              "price": 34
+            },
+            {
+              "name": "Torino:4|Parma:0",
+              "price": 61
+            },
+            {
+              "name": "Torino:4|Parma:1",
+              "price": 56
+            },
+            {
+              "name": "Torino:4|Parma:2",
+              "price": 81
+            },
+            {
+              "name": "Torino:4|Parma:3",
+              "price": 126
+            },
+            {
+              "name": "Torino:5|Parma:0",
+              "price": 126
+            },
+            {
+              "name": "Torino:5|Parma:1",
+              "price": 126
+            },
+            {
+              "name": "Torino:5|Parma:2",
+              "price": 151
+            },
+            {
+              "name": "Torino:6|Parma:0",
+              "price": 151
+            },
+            {
+              "name": "Torino:6|Parma:1",
+              "price": 151
+            },
+            {
+              "name": "Torino:6|Parma:2",
+              "price": 151
+            },
+            {
+              "name": "Torino:7|Parma:0",
+              "price": 151
+            },
+            {
+              "name": "Torino:7|Parma:1",
+              "price": 151
+            },
+            {
+              "name": "Torino:8|Parma:0",
+              "price": 151
+            },
+            {
+              "name": "Torino:9|Parma:0",
+              "price": 151
+            },
+            {
+              "name": "Torino:10|Parma:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:32Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.25
+            },
+            {
+              "name": "Torino",
+              "price": 2.54
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T12:16:32Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.45
+            },
+            {
+              "name": "Torino",
+              "price": 2.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:19Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.15
+            },
+            {
+              "name": "Torino",
+              "price": 2.42
+            },
+            {
+              "name": "Draw",
+              "price": 3.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:03Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.15
+            },
+            {
+              "name": "Torino",
+              "price": 2.42
+            },
+            {
+              "name": "Draw",
+              "price": 3.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:17Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.2
+            },
+            {
+              "name": "Torino",
+              "price": 2.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:02Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 2.95
+            },
+            {
+              "name": "Torino",
+              "price": 2.33
+            },
+            {
+              "name": "Draw",
+              "price": 2.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:17Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3
+            },
+            {
+              "name": "Torino",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 2.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:35Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.2
+            },
+            {
+              "name": "Torino",
+              "price": 2.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "everygame",
+      "title": "Everygame",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:08:15Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.05
+            },
+            {
+              "name": "Torino",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 2.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matchbook",
+      "title": "Matchbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:46Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.2
+            },
+            {
+              "name": "Torino",
+              "price": 2.52
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T12:16:46Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.5
+            },
+            {
+              "name": "Torino",
+              "price": 2.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:16:46Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 2.02
+            },
+            {
+              "name": "No",
+              "price": 1.89
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gtbets",
+      "title": "GTbets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:33Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.09
+            },
+            {
+              "name": "Torino",
+              "price": 2.47
+            },
+            {
+              "name": "Draw",
+              "price": 3.11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:48Z",
+          "outcomes": [
+            {
+              "name": "Parma",
+              "price": 3.23
+            },
+            {
+              "name": "Torino",
+              "price": 2.55
+            },
+            {
+              "name": "Draw",
+              "price": 3.05
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

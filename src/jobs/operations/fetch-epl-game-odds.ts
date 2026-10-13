@@ -1,11 +1,17 @@
 import prisma from '../../utils/prisma.js';
 import * as eplGameOdds from '../../services/eplGameOdds.service.js';
+import { getBoolSetting } from '../../services/settings.service.js';
 
 const FETCH_WINDOW_HOURS = 48;
 
 export async function runFetchEplGameOddsJob() {
   const timestamp = new Date().toISOString();
   try {
+    // Respect the admin "auto odds refresh" toggle — when OFF, no automatic fetch.
+    if (!(await getBoolSetting('odds.auto_refresh_enabled', true))) {
+      console.log(`[fetch-epl-game-odds] ${timestamp} - paused (auto odds refresh disabled)`);
+      return { games: 0, fetched: 0, skipped: 0, paused: true };
+    }
     // Games with an externalEventId that are upcoming/live/suspended
     const games = await prisma.game.findMany({
       where: {

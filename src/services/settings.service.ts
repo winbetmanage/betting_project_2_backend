@@ -83,6 +83,13 @@ export const KNOWN_SETTINGS: Record<string, SettingDef> = {
     group: 'Betting',
     unit: 'ETB',
   },
+  'odds.auto_refresh_enabled': {
+    kind: 'boolean',
+    label: 'Auto-fetch & update odds',
+    description: 'When ON, the system periodically refreshes the odds of published games (tiered: 24h→30m before kickoff). When OFF, automatic odds fetching/updating is paused — odds only change when you fetch them manually.',
+    group: 'Odds',
+    defaultValue: true,
+  },
   'registration.require_agent': {
     kind: 'boolean',
     label: 'Require an agent to register',

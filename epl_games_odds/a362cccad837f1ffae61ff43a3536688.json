@@ -1,0 +1,636 @@
+{
+  "id": "a362cccad837f1ffae61ff43a3536688",
+  "sport_key": "soccer_spain_la_liga",
+  "sport_title": "La Liga - Spain",
+  "commence_time": "2026-10-21T18:00:00Z",
+  "home_team": "Levante",
+  "away_team": "Athletic Bilbao",
+  "bookmakers": [
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:48Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:25:44Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2.1
+            },
+            {
+              "name": "Levante",
+              "price": 3.8
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:06Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.94
+            },
+            {
+              "name": "Levante",
+              "price": 3.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:01Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2.24
+            },
+            {
+              "name": "Levante",
+              "price": 3.52
+            },
+            {
+              "name": "Draw",
+              "price": 3.52
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T11:27:01Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.74
+            },
+            {
+              "name": "No",
+              "price": 2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T11:27:01Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao or Draw",
+              "price": 1.35
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.73
+            },
+            {
+              "name": "Athletic Bilbao or Levante",
+              "price": 1.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:47Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:16Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2.2
+            },
+            {
+              "name": "Levante",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T11:27:16Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.8
+            },
+            {
+              "name": "No",
+              "price": 1.95
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T11:27:16Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao or Draw",
+              "price": 1.33
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.67
+            },
+            {
+              "name": "Athletic Bilbao or Levante",
+              "price": 1.33
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T11:27:30Z",
+          "outcomes": [
+            {
+              "name": "Levante:1|Athletic Bilbao:0",
+              "price": 9.5
+            },
+            {
+              "name": "Levante:2|Athletic Bilbao:0",
+              "price": 15
+            },
+            {
+              "name": "Levante:2|Athletic Bilbao:1",
+              "price": 11
+            },
+            {
+              "name": "Levante:3|Athletic Bilbao:0",
+              "price": 36
+            },
+            {
+              "name": "Levante:3|Athletic Bilbao:1",
+              "price": 26
+            },
+            {
+              "name": "Levante:3|Athletic Bilbao:2",
+              "price": 34
+            },
+            {
+              "name": "Levante:4|Athletic Bilbao:0",
+              "price": 81
+            },
+            {
+              "name": "Levante:4|Athletic Bilbao:1",
+              "price": 67
+            },
+            {
+              "name": "Levante:4|Athletic Bilbao:2",
+              "price": 81
+            },
+            {
+              "name": "Levante:4|Athletic Bilbao:3",
+              "price": 101
+            },
+            {
+              "name": "Levante:5|Athletic Bilbao:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:5|Athletic Bilbao:1",
+              "price": 126
+            },
+            {
+              "name": "Levante:5|Athletic Bilbao:2",
+              "price": 151
+            },
+            {
+              "name": "Levante:6|Athletic Bilbao:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:6|Athletic Bilbao:1",
+              "price": 151
+            },
+            {
+              "name": "Levante:6|Athletic Bilbao:2",
+              "price": 151
+            },
+            {
+              "name": "Levante:7|Athletic Bilbao:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:7|Athletic Bilbao:1",
+              "price": 151
+            },
+            {
+              "name": "Levante:8|Athletic Bilbao:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:9|Athletic Bilbao:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:0|Athletic Bilbao:0",
+              "price": 9.5
+            },
+            {
+              "name": "Levante:1|Athletic Bilbao:1",
+              "price": 6
+            },
+            {
+              "name": "Levante:2|Athletic Bilbao:2",
+              "price": 13
+            },
+            {
+              "name": "Levante:3|Athletic Bilbao:3",
+              "price": 51
+            },
+            {
+              "name": "Levante:4|Athletic Bilbao:4",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:1|Levante:0",
+              "price": 7.5
+            },
+            {
+              "name": "Athletic Bilbao:2|Levante:0",
+              "price": 10
+            },
+            {
+              "name": "Athletic Bilbao:2|Levante:1",
+              "price": 9
+            },
+            {
+              "name": "Athletic Bilbao:3|Levante:0",
+              "price": 19
+            },
+            {
+              "name": "Athletic Bilbao:3|Levante:1",
+              "price": 17
+            },
+            {
+              "name": "Athletic Bilbao:3|Levante:2",
+              "price": 26
+            },
+            {
+              "name": "Athletic Bilbao:4|Levante:0",
+              "price": 41
+            },
+            {
+              "name": "Athletic Bilbao:4|Levante:1",
+              "price": 36
+            },
+            {
+              "name": "Athletic Bilbao:4|Levante:2",
+              "price": 61
+            },
+            {
+              "name": "Athletic Bilbao:4|Levante:3",
+              "price": 101
+            },
+            {
+              "name": "Athletic Bilbao:5|Levante:0",
+              "price": 91
+            },
+            {
+              "name": "Athletic Bilbao:5|Levante:1",
+              "price": 91
+            },
+            {
+              "name": "Athletic Bilbao:5|Levante:2",
+              "price": 101
+            },
+            {
+              "name": "Athletic Bilbao:6|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:6|Levante:1",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:6|Levante:2",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:7|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:7|Levante:1",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:8|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:9|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:10|Levante:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:25:43Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.27
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:46Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2.14
+            },
+            {
+              "name": "Levante",
+              "price": 3.65
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T11:27:46Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2.38
+            },
+            {
+              "name": "Levante",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:37Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2.18
+            },
+            {
+              "name": "Levante",
+              "price": 3.42
+            },
+            {
+              "name": "Draw",
+              "price": 3.42
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T11:27:37Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao or Draw",
+              "price": 1.33
+            },
+            {
+              "name": "Levante or Draw",
+              "price": 1.72
+            },
+            {
+              "name": "Athletic Bilbao or Levante",
+              "price": 1.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:15Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2.14
+            },
+            {
+              "name": "Levante",
+              "price": 3.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:46Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2.07
+            },
+            {
+              "name": "Levante",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:26:46Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2.07
+            },
+            {
+              "name": "Levante",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:17Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 2
+            },
+            {
+              "name": "Levante",
+              "price": 3.55
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:32Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.95
+            },
+            {
+              "name": "Levante",
+              "price": 3.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

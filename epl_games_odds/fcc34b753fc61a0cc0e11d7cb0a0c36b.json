@@ -1,0 +1,660 @@
+{
+  "id": "fcc34b753fc61a0cc0e11d7cb0a0c36b",
+  "sport_key": "soccer_france_ligue_one",
+  "sport_title": "Ligue 1 - France",
+  "commence_time": "2026-10-25T16:15:00Z",
+  "home_team": "Marseille",
+  "away_team": "Le Havre",
+  "bookmakers": [
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:12:48Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 4.6
+            },
+            {
+              "name": "Marseille",
+              "price": 1.56
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:01Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 4.5
+            },
+            {
+              "name": "Marseille",
+              "price": 1.51
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:33Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 4.2
+            },
+            {
+              "name": "Marseille",
+              "price": 1.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:00Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 5.33
+            },
+            {
+              "name": "Marseille",
+              "price": 1.64
+            },
+            {
+              "name": "Draw",
+              "price": 4.57
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:13:00Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.63
+            },
+            {
+              "name": "No",
+              "price": 2.17
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:13:00Z",
+          "outcomes": [
+            {
+              "name": "Le Havre or Draw",
+              "price": 2.4
+            },
+            {
+              "name": "Marseille or Draw",
+              "price": 1.19
+            },
+            {
+              "name": "Le Havre or Marseille",
+              "price": 1.24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:12:59Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 4.8
+            },
+            {
+              "name": "Marseille",
+              "price": 1.55
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:28Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 4.7
+            },
+            {
+              "name": "Marseille",
+              "price": 1.52
+            },
+            {
+              "name": "Draw",
+              "price": 4.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:30Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 4.8
+            },
+            {
+              "name": "Marseille",
+              "price": 1.57
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:01Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 4.8
+            },
+            {
+              "name": "Marseille",
+              "price": 1.57
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:13:01Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.67
+            },
+            {
+              "name": "No",
+              "price": 2.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:13:01Z",
+          "outcomes": [
+            {
+              "name": "Le Havre or Draw",
+              "price": 2.3
+            },
+            {
+              "name": "Marseille or Draw",
+              "price": 1.17
+            },
+            {
+              "name": "Le Havre or Marseille",
+              "price": 1.22
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T13:12:54Z",
+          "outcomes": [
+            {
+              "name": "Marseille:1|Le Havre:0",
+              "price": 8
+            },
+            {
+              "name": "Marseille:2|Le Havre:0",
+              "price": 8
+            },
+            {
+              "name": "Marseille:2|Le Havre:1",
+              "price": 7
+            },
+            {
+              "name": "Marseille:3|Le Havre:0",
+              "price": 11
+            },
+            {
+              "name": "Marseille:3|Le Havre:1",
+              "price": 11
+            },
+            {
+              "name": "Marseille:3|Le Havre:2",
+              "price": 17
+            },
+            {
+              "name": "Marseille:4|Le Havre:0",
+              "price": 21
+            },
+            {
+              "name": "Marseille:4|Le Havre:1",
+              "price": 19
+            },
+            {
+              "name": "Marseille:4|Le Havre:2",
+              "price": 34
+            },
+            {
+              "name": "Marseille:4|Le Havre:3",
+              "price": 71
+            },
+            {
+              "name": "Marseille:5|Le Havre:0",
+              "price": 41
+            },
+            {
+              "name": "Marseille:5|Le Havre:1",
+              "price": 41
+            },
+            {
+              "name": "Marseille:5|Le Havre:2",
+              "price": 67
+            },
+            {
+              "name": "Marseille:6|Le Havre:0",
+              "price": 91
+            },
+            {
+              "name": "Marseille:6|Le Havre:1",
+              "price": 81
+            },
+            {
+              "name": "Marseille:6|Le Havre:2",
+              "price": 101
+            },
+            {
+              "name": "Marseille:7|Le Havre:0",
+              "price": 126
+            },
+            {
+              "name": "Marseille:7|Le Havre:1",
+              "price": 126
+            },
+            {
+              "name": "Marseille:8|Le Havre:0",
+              "price": 151
+            },
+            {
+              "name": "Marseille:9|Le Havre:0",
+              "price": 151
+            },
+            {
+              "name": "Marseille:10|Le Havre:0",
+              "price": 151
+            },
+            {
+              "name": "Marseille:0|Le Havre:0",
+              "price": 15
+            },
+            {
+              "name": "Marseille:1|Le Havre:1",
+              "price": 7.5
+            },
+            {
+              "name": "Marseille:2|Le Havre:2",
+              "price": 13
+            },
+            {
+              "name": "Marseille:3|Le Havre:3",
+              "price": 46
+            },
+            {
+              "name": "Marseille:4|Le Havre:4",
+              "price": 126
+            },
+            {
+              "name": "Le Havre:1|Marseille:0",
+              "price": 17
+            },
+            {
+              "name": "Le Havre:2|Marseille:0",
+              "price": 29
+            },
+            {
+              "name": "Le Havre:2|Marseille:1",
+              "price": 15
+            },
+            {
+              "name": "Le Havre:3|Marseille:0",
+              "price": 67
+            },
+            {
+              "name": "Le Havre:3|Marseille:1",
+              "price": 41
+            },
+            {
+              "name": "Le Havre:3|Marseille:2",
+              "price": 36
+            },
+            {
+              "name": "Le Havre:4|Marseille:0",
+              "price": 126
+            },
+            {
+              "name": "Le Havre:4|Marseille:1",
+              "price": 91
+            },
+            {
+              "name": "Le Havre:4|Marseille:2",
+              "price": 91
+            },
+            {
+              "name": "Le Havre:4|Marseille:3",
+              "price": 101
+            },
+            {
+              "name": "Le Havre:5|Marseille:0",
+              "price": 151
+            },
+            {
+              "name": "Le Havre:5|Marseille:1",
+              "price": 151
+            },
+            {
+              "name": "Le Havre:5|Marseille:2",
+              "price": 151
+            },
+            {
+              "name": "Le Havre:6|Marseille:0",
+              "price": 151
+            },
+            {
+              "name": "Le Havre:6|Marseille:1",
+              "price": 151
+            },
+            {
+              "name": "Le Havre:6|Marseille:2",
+              "price": 151
+            },
+            {
+              "name": "Le Havre:7|Marseille:0",
+              "price": 151
+            },
+            {
+              "name": "Le Havre:7|Marseille:1",
+              "price": 151
+            },
+            {
+              "name": "Le Havre:8|Marseille:0",
+              "price": 151
+            },
+            {
+              "name": "Le Havre:9|Marseille:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:36Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 5.2
+            },
+            {
+              "name": "Marseille",
+              "price": 1.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.45
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:13:36Z",
+          "outcomes": [
+            {
+              "name": "Le Havre or Draw",
+              "price": 2.4
+            },
+            {
+              "name": "Marseille or Draw",
+              "price": 1.18
+            },
+            {
+              "name": "Le Havre or Marseille",
+              "price": 1.23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:46Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 5.2
+            },
+            {
+              "name": "Marseille",
+              "price": 1.62
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T13:13:46Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 5.8
+            },
+            {
+              "name": "Marseille",
+              "price": 1.69
+            },
+            {
+              "name": "Draw",
+              "price": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:45Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 4.79
+            },
+            {
+              "name": "Marseille",
+              "price": 1.59
+            },
+            {
+              "name": "Draw",
+              "price": 4.59
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:31Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 5.3
+            },
+            {
+              "name": "Marseille",
+              "price": 1.62
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:12:59Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 5.1
+            },
+            {
+              "name": "Marseille",
+              "price": 1.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:31Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 4.7
+            },
+            {
+              "name": "Marseille",
+              "price": 1.53
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:13:15Z",
+          "outcomes": [
+            {
+              "name": "Le Havre",
+              "price": 5.3
+            },
+            {
+              "name": "Marseille",
+              "price": 1.62
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

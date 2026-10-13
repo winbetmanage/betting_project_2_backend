@@ -1,0 +1,574 @@
+{
+  "id": "2fd479cbb110c8f057e363bb06195f2b",
+  "sport_key": "soccer_germany_bundesliga",
+  "sport_title": "Bundesliga - Germany",
+  "commence_time": "2026-10-25T14:30:00Z",
+  "home_team": "TSG Hoffenheim",
+  "away_team": "Bayer Leverkusen",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:01:18Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.37
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.67
+            },
+            {
+              "name": "Draw",
+              "price": 3.96
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:01:17Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.15
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:00:45Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.1
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.62
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:01:00Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.3
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.7
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:01:30Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.25
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:01:20Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.33
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.69
+            },
+            {
+              "name": "Draw",
+              "price": 4.15
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:01:20Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen or Draw",
+              "price": 1.5
+            },
+            {
+              "name": "TSG Hoffenheim or Draw",
+              "price": 1.64
+            },
+            {
+              "name": "Bayer Leverkusen or TSG Hoffenheim",
+              "price": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:00:46Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.1
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.62
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:00:46Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.35
+            },
+            {
+              "name": "No",
+              "price": 3.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:00:46Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen or Draw",
+              "price": 1.4
+            },
+            {
+              "name": "TSG Hoffenheim or Draw",
+              "price": 1.67
+            },
+            {
+              "name": "Bayer Leverkusen or TSG Hoffenheim",
+              "price": 1.22
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T13:00:34Z",
+          "outcomes": [
+            {
+              "name": "TSG Hoffenheim:1|Bayer Leverkusen:0",
+              "price": 17
+            },
+            {
+              "name": "TSG Hoffenheim:2|Bayer Leverkusen:0",
+              "price": 21
+            },
+            {
+              "name": "TSG Hoffenheim:2|Bayer Leverkusen:1",
+              "price": 11
+            },
+            {
+              "name": "TSG Hoffenheim:3|Bayer Leverkusen:0",
+              "price": 34
+            },
+            {
+              "name": "TSG Hoffenheim:3|Bayer Leverkusen:1",
+              "price": 19
+            },
+            {
+              "name": "TSG Hoffenheim:3|Bayer Leverkusen:2",
+              "price": 19
+            },
+            {
+              "name": "TSG Hoffenheim:4|Bayer Leverkusen:0",
+              "price": 61
+            },
+            {
+              "name": "TSG Hoffenheim:4|Bayer Leverkusen:1",
+              "price": 36
+            },
+            {
+              "name": "TSG Hoffenheim:4|Bayer Leverkusen:2",
+              "price": 36
+            },
+            {
+              "name": "TSG Hoffenheim:4|Bayer Leverkusen:3",
+              "price": 51
+            },
+            {
+              "name": "TSG Hoffenheim:5|Bayer Leverkusen:0",
+              "price": 101
+            },
+            {
+              "name": "TSG Hoffenheim:5|Bayer Leverkusen:1",
+              "price": 81
+            },
+            {
+              "name": "TSG Hoffenheim:5|Bayer Leverkusen:2",
+              "price": 81
+            },
+            {
+              "name": "TSG Hoffenheim:6|Bayer Leverkusen:0",
+              "price": 151
+            },
+            {
+              "name": "TSG Hoffenheim:6|Bayer Leverkusen:1",
+              "price": 126
+            },
+            {
+              "name": "TSG Hoffenheim:6|Bayer Leverkusen:2",
+              "price": 126
+            },
+            {
+              "name": "TSG Hoffenheim:7|Bayer Leverkusen:0",
+              "price": 151
+            },
+            {
+              "name": "TSG Hoffenheim:7|Bayer Leverkusen:1",
+              "price": 151
+            },
+            {
+              "name": "TSG Hoffenheim:8|Bayer Leverkusen:0",
+              "price": 151
+            },
+            {
+              "name": "TSG Hoffenheim:9|Bayer Leverkusen:0",
+              "price": 151
+            },
+            {
+              "name": "TSG Hoffenheim:10|Bayer Leverkusen:0",
+              "price": 151
+            },
+            {
+              "name": "TSG Hoffenheim:0|Bayer Leverkusen:0",
+              "price": 26
+            },
+            {
+              "name": "TSG Hoffenheim:1|Bayer Leverkusen:1",
+              "price": 8.5
+            },
+            {
+              "name": "TSG Hoffenheim:2|Bayer Leverkusen:2",
+              "price": 10
+            },
+            {
+              "name": "TSG Hoffenheim:3|Bayer Leverkusen:3",
+              "price": 23
+            },
+            {
+              "name": "TSG Hoffenheim:4|Bayer Leverkusen:4",
+              "price": 71
+            },
+            {
+              "name": "Bayer Leverkusen:1|TSG Hoffenheim:0",
+              "price": 15
+            },
+            {
+              "name": "Bayer Leverkusen:2|TSG Hoffenheim:0",
+              "price": 15
+            },
+            {
+              "name": "Bayer Leverkusen:2|TSG Hoffenheim:1",
+              "price": 9.5
+            },
+            {
+              "name": "Bayer Leverkusen:3|TSG Hoffenheim:0",
+              "price": 21
+            },
+            {
+              "name": "Bayer Leverkusen:3|TSG Hoffenheim:1",
+              "price": 13
+            },
+            {
+              "name": "Bayer Leverkusen:3|TSG Hoffenheim:2",
+              "price": 15
+            },
+            {
+              "name": "Bayer Leverkusen:4|TSG Hoffenheim:0",
+              "price": 36
+            },
+            {
+              "name": "Bayer Leverkusen:4|TSG Hoffenheim:1",
+              "price": 23
+            },
+            {
+              "name": "Bayer Leverkusen:4|TSG Hoffenheim:2",
+              "price": 26
+            },
+            {
+              "name": "Bayer Leverkusen:4|TSG Hoffenheim:3",
+              "price": 41
+            },
+            {
+              "name": "Bayer Leverkusen:5|TSG Hoffenheim:0",
+              "price": 71
+            },
+            {
+              "name": "Bayer Leverkusen:5|TSG Hoffenheim:1",
+              "price": 46
+            },
+            {
+              "name": "Bayer Leverkusen:5|TSG Hoffenheim:2",
+              "price": 56
+            },
+            {
+              "name": "Bayer Leverkusen:6|TSG Hoffenheim:0",
+              "price": 101
+            },
+            {
+              "name": "Bayer Leverkusen:6|TSG Hoffenheim:1",
+              "price": 91
+            },
+            {
+              "name": "Bayer Leverkusen:6|TSG Hoffenheim:2",
+              "price": 101
+            },
+            {
+              "name": "Bayer Leverkusen:7|TSG Hoffenheim:0",
+              "price": 151
+            },
+            {
+              "name": "Bayer Leverkusen:7|TSG Hoffenheim:1",
+              "price": 151
+            },
+            {
+              "name": "Bayer Leverkusen:8|TSG Hoffenheim:0",
+              "price": 151
+            },
+            {
+              "name": "Bayer Leverkusen:9|TSG Hoffenheim:0",
+              "price": 151
+            },
+            {
+              "name": "Bayer Leverkusen:10|TSG Hoffenheim:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:01:16Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.2
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:00:28Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.22
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.52
+            },
+            {
+              "name": "Draw",
+              "price": 3.68
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:01:01Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.39
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.76
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:01:01Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.32
+            },
+            {
+              "name": "No",
+              "price": 3.15
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:01:01Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen or Draw",
+              "price": 1.51
+            },
+            {
+              "name": "TSG Hoffenheim or Draw",
+              "price": 1.65
+            },
+            {
+              "name": "Bayer Leverkusen or TSG Hoffenheim",
+              "price": 1.26
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:00:33Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.35
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.65
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:01:03Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 2.35
+            },
+            {
+              "name": "TSG Hoffenheim",
+              "price": 2.65
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

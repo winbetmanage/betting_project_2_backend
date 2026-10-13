@@ -1,7 +1,7 @@
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
 import { Prisma, FootballDataMatchStatus } from '@prisma/client';
-import { getEplEventsUrl, getChampionsLeagueEventsUrl, getLaLigaEventsUrl, getBundesligaEventsUrl, getSerieAEventsUrl, getLigue1EventsUrl, getEplMatchesUrl, getChampionsLeagueMatchesUrl, getLaLigaMatchesUrl, getBundesligaMatchesUrl, getSerieAMatchesUrl, getLigue1MatchesUrl, getFootballDataMatchDetailUrl, footballDataFetchOptions } from '../../codes';
+import { getEplEventsUrl, getChampionsLeagueEventsUrl, getLaLigaEventsUrl, getBundesligaEventsUrl, getSerieAEventsUrl, getLigue1EventsUrl, getFaCupEventsUrl, getEflCupEventsUrl, getEplMatchesUrl, getChampionsLeagueMatchesUrl, getLaLigaMatchesUrl, getBundesligaMatchesUrl, getSerieAMatchesUrl, getLigue1MatchesUrl, getFootballDataMatchDetailUrl, footballDataFetchOptions } from '../../codes';
 
 export type FdTeam = { id: number; name: string; shortName?: string; tla?: string };
 export type FdMatch = {
@@ -28,6 +28,7 @@ export const SPORTS = {
     url: () => getEplEventsUrl(),
     fdMatchesUrl: () => getEplMatchesUrl(),
     competition: { name: 'English Premier League', country: 'England', matchName: 'Premier' },
+    dataSource: 'football-data' as const,
   },
   'champions-league': {
     label: 'UEFA Champions League',
@@ -35,6 +36,7 @@ export const SPORTS = {
     url: () => getChampionsLeagueEventsUrl(),
     fdMatchesUrl: () => getChampionsLeagueMatchesUrl(),
     competition: { name: 'UEFA Champions League', country: 'Europe', matchName: 'Champions' },
+    dataSource: 'football-data' as const,
   },
   'la-liga': {
     label: 'La Liga',
@@ -42,6 +44,7 @@ export const SPORTS = {
     url: () => getLaLigaEventsUrl(),
     fdMatchesUrl: () => getLaLigaMatchesUrl(),
     competition: { name: 'Spain La Liga', country: 'Spain', matchName: 'La Liga' },
+    dataSource: 'football-data' as const,
   },
   'bundesliga': {
     label: 'Bundesliga',
@@ -49,6 +52,7 @@ export const SPORTS = {
     url: () => getBundesligaEventsUrl(),
     fdMatchesUrl: () => getBundesligaMatchesUrl(),
     competition: { name: 'Germany Bundesliga', country: 'Germany', matchName: 'Bundesliga' },
+    dataSource: 'football-data' as const,
   },
   'serie-a': {
     label: 'Serie A',
@@ -56,6 +60,7 @@ export const SPORTS = {
     url: () => getSerieAEventsUrl(),
     fdMatchesUrl: () => getSerieAMatchesUrl(),
     competition: { name: 'Italy Serie A', country: 'Italy', matchName: 'Serie A' },
+    dataSource: 'football-data' as const,
   },
   'ligue-1': {
     label: 'Ligue 1',
@@ -63,8 +68,39 @@ export const SPORTS = {
     url: () => getLigue1EventsUrl(),
     fdMatchesUrl: () => getLigue1MatchesUrl(),
     competition: { name: 'France Ligue 1', country: 'France', matchName: 'Ligue 1' },
+    dataSource: 'football-data' as const,
+  },
+  // --- Odds-api-only competitions: NO football-data.org involvement at all.
+  // Staged directly from The Odds API, confirmed to Games without an FD link,
+  // and settled from The Odds API scores endpoint. ---
+  'fa-cup': {
+    label: 'FA Cup',
+    sportKey: 'soccer_fa_cup',
+    url: () => getFaCupEventsUrl(),
+    fdMatchesUrl: null,
+    competition: { name: 'FA Cup', country: 'England', matchName: 'FA Cup' },
+    dataSource: 'odds' as const,
+  },
+  'efl-cup': {
+    label: 'EFL Cup',
+    sportKey: 'soccer_england_efl_cup',
+    url: () => getEflCupEventsUrl(),
+    fdMatchesUrl: null,
+    competition: { name: 'EFL Cup', country: 'England', matchName: 'EFL Cup' },
+    dataSource: 'odds' as const,
   },
 } as const;
+
+/** True when a competition is handled purely from The Odds API (no football-data). */
+export function isOddsOnlyChoice(choice: SportChoice): boolean {
+  return SPORTS[choice]?.dataSource === 'odds';
+}
+
+/** True when a stored competition name maps to an odds-api-only competition. */
+export function isOddsOnlyCompetitionName(name: string | null | undefined): boolean {
+  const n = (name ?? '').toLowerCase();
+  return n.includes('fa cup') || n.includes('efl cup') || n.includes('league cup');
+}
 
 export type SportChoice = keyof typeof SPORTS;
 
@@ -341,8 +377,10 @@ export type RefreshStagedSummary = {
  */
 export const refreshStagedGames = async (): Promise<RefreshStagedSummary> => {
   const summary: RefreshStagedSummary = { checked: 0, oddsUpdated: 0, fdUpdated: 0, errors: [] };
-  const [epl, cl] = await Promise.all([fetchEvents('premier-league', true), fetchEvents('champions-league', true)]);
-  const feed = new Map<string, OddsEvent>([...epl, ...cl].map((e) => [e.id, e]));
+  const feedResults = await Promise.all(
+    (Object.keys(SPORTS) as SportChoice[]).map((c) => fetchEvents(c, true).catch(() => [] as OddsEvent[]))
+  );
+  const feed = new Map<string, OddsEvent>(feedResults.flat().map((e) => [e.id, e]));
 
   const rows = await prisma.stagedGame.findMany({
     select: { id: true, oddsApiEventId: true, oddsApiStartTime: true, footballDataMatchId: true },
@@ -461,6 +499,8 @@ export const listStagedGames = async (filters: Record<string, unknown> = {}) => 
 export function choiceForCompetitionName(name: string | null | undefined): SportChoice {
   const lower = (name ?? '').toLowerCase();
   if (lower.includes('champions')) return 'champions-league';
+  if (lower.includes('fa cup')) return 'fa-cup';
+  if (lower.includes('efl cup') || lower.includes('league cup')) return 'efl-cup';
   if (lower.includes('la liga')) return 'la-liga';
   if (lower.includes('bundesliga')) return 'bundesliga';
   if (lower.includes('serie a')) return 'serie-a';
@@ -528,7 +568,9 @@ export function mapFootballDataStatus(raw: unknown): FootballDataMatchStatus | n
 }
 
 export async function fetchFdMatchesByDay(choice: SportChoice, dayIso: string): Promise<FdMatch[]> {
-  const base = SPORTS[choice].fdMatchesUrl();
+  const urlFn = SPORTS[choice].fdMatchesUrl;
+  if (!urlFn) return []; // odds-api-only competition: no football-data fixtures
+  const base = urlFn();
   const url = `${base}?date=${dayIso}`;
   const res = await fetch(url, footballDataFetchOptions());
   if (!res.ok) {
@@ -652,22 +694,30 @@ export const unlinkFootballDataMatch = async (id: string) => {
 export const confirmStagedGameToGames = async (id: string, adminId?: string) => {
   const staged = await prisma.stagedGame.findUnique({
     where: { id },
-    include: { homeTeam: { select: { id: true, fullName: true } }, awayTeam: { select: { id: true, fullName: true } } },
+    include: { homeTeam: { select: { id: true, fullName: true } }, awayTeam: { select: { id: true, fullName: true } }, competition: { select: { name: true } } },
   });
   if (!staged) throw new ApiError(404, 'Staged game not found');
   if (staged.gameId) throw new ApiError(409, 'This staged game is already added to the games table.');
   if (staged.status === 'REJECTED') throw new ApiError(400, 'A rejected staged game cannot be added to the games table.');
-  if (staged.footballDataMatchId == null) throw new ApiError(400, 'Link a football-data match before adding this game to the games table.');
 
   const raw = staged.oddsApiRaw as { sport_key?: unknown } | null;
   const sportKey = typeof raw?.sport_key === 'string' ? raw.sport_key : null;
+  const oddsOnly = isOddsOnlyCompetitionName(staged.competition?.name) || (sportKey != null && (sportKey === 'soccer_fa_cup' || sportKey === 'soccer_england_efl_cup'));
+
+  // football-data competitions require a linked FD match before promotion.
+  if (!oddsOnly && staged.footballDataMatchId == null) {
+    throw new ApiError(400, 'Link a football-data match before adding this game to the games table.');
+  }
+
   const startTime = staged.footballDataStartTime ?? staged.oddsApiStartTime;
 
   // Prevent duplicate football-data match id (GameScore.footballDataMatchId is @unique).
   // Seeded games may already own this match id — confirming a duplicate would break
-  // settlement (Duplicate entry on GameScore).
-  const existingByFd = await prisma.gameScore.findUnique({ where: { footballDataMatchId: staged.footballDataMatchId } });
-  if (existingByFd) throw new ApiError(409, `A game for football-data match ${staged.footballDataMatchId} already exists (game ${existingByFd.gameId}). Delete or archive the old game first.`);
+  // settlement (Duplicate entry on GameScore). Odds-only cups have no FD id.
+  if (staged.footballDataMatchId != null) {
+    const existingByFd = await prisma.gameScore.findUnique({ where: { footballDataMatchId: staged.footballDataMatchId } });
+    if (existingByFd) throw new ApiError(409, `A game for football-data match ${staged.footballDataMatchId} already exists (game ${existingByFd.gameId}). Delete or archive the old game first.`);
+  }
 
   try {
     await prisma.$transaction(async (tx) => {
@@ -686,11 +736,13 @@ export const confirmStagedGameToGames = async (id: string, adminId?: string) => 
             source: 'staged',
             stagedGameId: staged.id,
             sport_key: sportKey,
-            footballDataMatchId: staged.footballDataMatchId,
             oddsApiEventId: staged.oddsApiEventId,
             oddsApiStartTime: staged.oddsApiStartTime.toISOString(),
             footballDataStartTime: staged.footballDataStartTime ? staged.footballDataStartTime.toISOString() : null,
             footballDataStatus: staged.footballDataStatus,
+            ...(oddsOnly
+              ? { dataSource: 'odds' }
+              : { footballDataMatchId: staged.footballDataMatchId }),
           } as never,
         },
       });
@@ -819,6 +871,11 @@ export const bulkFindAndLinkFootballData = async (ids: unknown) => {
     }
     if (s.footballDataMatchId != null) {
       results.push({ ...base, competition, outcome: 'already_linked', matchId: s.footballDataMatchId, note: 'already linked' });
+      continue;
+    }
+    // Odds-api-only competitions (FA Cup / EFL Cup) never use football-data.
+    if (isOddsOnlyCompetitionName(competition)) {
+      results.push({ ...base, competition, outcome: 'not_found', matchId: null, note: 'odds-api-only competition — no football-data' });
       continue;
     }
     if (!teamHasFdMapping(s.homeTeam) || !teamHasFdMapping(s.awayTeam)) {

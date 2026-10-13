@@ -1,0 +1,570 @@
+{
+  "id": "3ed4d1e775910625c50518a384e9c547",
+  "sport_key": "soccer_germany_bundesliga",
+  "sport_title": "Bundesliga - Germany",
+  "commence_time": "2026-10-24T16:30:00Z",
+  "home_team": "Borussia Dortmund",
+  "away_team": "Eintracht Frankfurt",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:44:01Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.45
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 5.76
+            },
+            {
+              "name": "Draw",
+              "price": 5.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:43:48Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.38
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:43:46Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.44
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 5.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:43:17Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.42
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 6
+            },
+            {
+              "name": "Draw",
+              "price": 5.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:43:46Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.38
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 5.2
+            },
+            {
+              "name": "Draw",
+              "price": 4.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:42:22Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.45
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 6.15
+            },
+            {
+              "name": "Draw",
+              "price": 5.25
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:42:22Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.14
+            },
+            {
+              "name": "Eintracht Frankfurt or Draw",
+              "price": 2.84
+            },
+            {
+              "name": "Borussia Dortmund or Eintracht Frankfurt",
+              "price": 1.17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:43:49Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.44
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 5.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.8
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:43:49Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.44
+            },
+            {
+              "name": "No",
+              "price": 2.62
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:43:49Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.14
+            },
+            {
+              "name": "Eintracht Frankfurt or Draw",
+              "price": 2.7
+            },
+            {
+              "name": "Borussia Dortmund or Eintracht Frankfurt",
+              "price": 1.17
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:43:14Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund:1|Eintracht Frankfurt:0",
+              "price": 12
+            },
+            {
+              "name": "Borussia Dortmund:2|Eintracht Frankfurt:0",
+              "price": 10
+            },
+            {
+              "name": "Borussia Dortmund:2|Eintracht Frankfurt:1",
+              "price": 8
+            },
+            {
+              "name": "Borussia Dortmund:3|Eintracht Frankfurt:0",
+              "price": 11
+            },
+            {
+              "name": "Borussia Dortmund:3|Eintracht Frankfurt:1",
+              "price": 9.5
+            },
+            {
+              "name": "Borussia Dortmund:3|Eintracht Frankfurt:2",
+              "price": 13
+            },
+            {
+              "name": "Borussia Dortmund:4|Eintracht Frankfurt:0",
+              "price": 17
+            },
+            {
+              "name": "Borussia Dortmund:4|Eintracht Frankfurt:1",
+              "price": 13
+            },
+            {
+              "name": "Borussia Dortmund:4|Eintracht Frankfurt:2",
+              "price": 23
+            },
+            {
+              "name": "Borussia Dortmund:4|Eintracht Frankfurt:3",
+              "price": 46
+            },
+            {
+              "name": "Borussia Dortmund:5|Eintracht Frankfurt:0",
+              "price": 29
+            },
+            {
+              "name": "Borussia Dortmund:5|Eintracht Frankfurt:1",
+              "price": 26
+            },
+            {
+              "name": "Borussia Dortmund:5|Eintracht Frankfurt:2",
+              "price": 36
+            },
+            {
+              "name": "Borussia Dortmund:6|Eintracht Frankfurt:0",
+              "price": 56
+            },
+            {
+              "name": "Borussia Dortmund:6|Eintracht Frankfurt:1",
+              "price": 51
+            },
+            {
+              "name": "Borussia Dortmund:6|Eintracht Frankfurt:2",
+              "price": 71
+            },
+            {
+              "name": "Borussia Dortmund:7|Eintracht Frankfurt:0",
+              "price": 101
+            },
+            {
+              "name": "Borussia Dortmund:7|Eintracht Frankfurt:1",
+              "price": 91
+            },
+            {
+              "name": "Borussia Dortmund:8|Eintracht Frankfurt:0",
+              "price": 151
+            },
+            {
+              "name": "Borussia Dortmund:9|Eintracht Frankfurt:0",
+              "price": 151
+            },
+            {
+              "name": "Borussia Dortmund:10|Eintracht Frankfurt:0",
+              "price": 151
+            },
+            {
+              "name": "Borussia Dortmund:0|Eintracht Frankfurt:0",
+              "price": 26
+            },
+            {
+              "name": "Borussia Dortmund:1|Eintracht Frankfurt:1",
+              "price": 10
+            },
+            {
+              "name": "Borussia Dortmund:2|Eintracht Frankfurt:2",
+              "price": 13
+            },
+            {
+              "name": "Borussia Dortmund:3|Eintracht Frankfurt:3",
+              "price": 34
+            },
+            {
+              "name": "Borussia Dortmund:4|Eintracht Frankfurt:4",
+              "price": 101
+            },
+            {
+              "name": "Eintracht Frankfurt:1|Borussia Dortmund:0",
+              "price": 26
+            },
+            {
+              "name": "Eintracht Frankfurt:2|Borussia Dortmund:0",
+              "price": 41
+            },
+            {
+              "name": "Eintracht Frankfurt:2|Borussia Dortmund:1",
+              "price": 19
+            },
+            {
+              "name": "Eintracht Frankfurt:3|Borussia Dortmund:0",
+              "price": 81
+            },
+            {
+              "name": "Eintracht Frankfurt:3|Borussia Dortmund:1",
+              "price": 41
+            },
+            {
+              "name": "Eintracht Frankfurt:3|Borussia Dortmund:2",
+              "price": 34
+            },
+            {
+              "name": "Eintracht Frankfurt:4|Borussia Dortmund:0",
+              "price": 126
+            },
+            {
+              "name": "Eintracht Frankfurt:4|Borussia Dortmund:1",
+              "price": 91
+            },
+            {
+              "name": "Eintracht Frankfurt:4|Borussia Dortmund:2",
+              "price": 81
+            },
+            {
+              "name": "Eintracht Frankfurt:4|Borussia Dortmund:3",
+              "price": 81
+            },
+            {
+              "name": "Eintracht Frankfurt:5|Borussia Dortmund:0",
+              "price": 151
+            },
+            {
+              "name": "Eintracht Frankfurt:5|Borussia Dortmund:1",
+              "price": 151
+            },
+            {
+              "name": "Eintracht Frankfurt:5|Borussia Dortmund:2",
+              "price": 151
+            },
+            {
+              "name": "Eintracht Frankfurt:6|Borussia Dortmund:0",
+              "price": 151
+            },
+            {
+              "name": "Eintracht Frankfurt:6|Borussia Dortmund:1",
+              "price": 151
+            },
+            {
+              "name": "Eintracht Frankfurt:6|Borussia Dortmund:2",
+              "price": 151
+            },
+            {
+              "name": "Eintracht Frankfurt:7|Borussia Dortmund:0",
+              "price": 151
+            },
+            {
+              "name": "Eintracht Frankfurt:7|Borussia Dortmund:1",
+              "price": 151
+            },
+            {
+              "name": "Eintracht Frankfurt:8|Borussia Dortmund:0",
+              "price": 151
+            },
+            {
+              "name": "Eintracht Frankfurt:9|Borussia Dortmund:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:44:18Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.39
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 4.8
+            },
+            {
+              "name": "Draw",
+              "price": 4.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:41:42Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.4
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:42:45Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.49
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 6.31
+            },
+            {
+              "name": "Draw",
+              "price": 5.39
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:42:45Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.44
+            },
+            {
+              "name": "No",
+              "price": 2.62
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:42:45Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund or Draw",
+              "price": 1.14
+            },
+            {
+              "name": "Eintracht Frankfurt or Draw",
+              "price": 2.82
+            },
+            {
+              "name": "Borussia Dortmund or Eintracht Frankfurt",
+              "price": 1.19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:43:32Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.46
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 6.2
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:43:42Z",
+          "outcomes": [
+            {
+              "name": "Borussia Dortmund",
+              "price": 1.46
+            },
+            {
+              "name": "Eintracht Frankfurt",
+              "price": 6.2
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

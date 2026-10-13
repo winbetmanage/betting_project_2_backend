@@ -4,8 +4,9 @@ import asyncHandler from '../utils/asyncHandler';
 import prisma from '../utils/prisma';
 
 export const fetchForGame = asyncHandler(async (req, res) => {
-  const result = await bookmakerOddsService.fetchAndStoreForGame(req.params.id as string);
-  res.json({ message: `Fetched ${result.stored} odds`, data: result });
+  const minimal = !!(req.body as { minimal?: unknown } | undefined)?.minimal;
+  const result = await bookmakerOddsService.fetchAndStoreForGame(req.params.id as string, { minimal });
+  res.json({ message: `Fetched ${result.stored} odds${result.minimal ? " (minimalistic)" : ""}`, data: result });
 });
 
 export const apiDetails = asyncHandler(async (req, res) => {

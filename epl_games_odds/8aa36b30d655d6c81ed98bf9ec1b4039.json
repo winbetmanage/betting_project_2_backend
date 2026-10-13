@@ -1,0 +1,664 @@
+{
+  "id": "8aa36b30d655d6c81ed98bf9ec1b4039",
+  "sport_key": "soccer_france_ligue_one",
+  "sport_title": "Ligue 1 - France",
+  "commence_time": "2026-10-23T18:45:00Z",
+  "home_team": "Brest",
+  "away_team": "Nice",
+  "bookmakers": [
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:05:06Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.2
+            },
+            {
+              "name": "Nice",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:04:34Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.2
+            },
+            {
+              "name": "Nice",
+              "price": 2.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:04:54Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2
+            },
+            {
+              "name": "Nice",
+              "price": 2.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:04:40Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.05
+            },
+            {
+              "name": "Nice",
+              "price": 2.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:05:06Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.2
+            },
+            {
+              "name": "Nice",
+              "price": 2.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:05:06Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.62
+            },
+            {
+              "name": "No",
+              "price": 2.25
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:05:06Z",
+          "outcomes": [
+            {
+              "name": "Brest or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Nice or Draw",
+              "price": 1.62
+            },
+            {
+              "name": "Brest or Nice",
+              "price": 1.29
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:05:05Z",
+          "outcomes": [
+            {
+              "name": "Brest:1|Nice:0",
+              "price": 8.5
+            },
+            {
+              "name": "Brest:2|Nice:0",
+              "price": 10
+            },
+            {
+              "name": "Brest:2|Nice:1",
+              "price": 8
+            },
+            {
+              "name": "Brest:3|Nice:0",
+              "price": 19
+            },
+            {
+              "name": "Brest:3|Nice:1",
+              "price": 15
+            },
+            {
+              "name": "Brest:3|Nice:2",
+              "price": 21
+            },
+            {
+              "name": "Brest:4|Nice:0",
+              "price": 36
+            },
+            {
+              "name": "Brest:4|Nice:1",
+              "price": 29
+            },
+            {
+              "name": "Brest:4|Nice:2",
+              "price": 46
+            },
+            {
+              "name": "Brest:4|Nice:3",
+              "price": 81
+            },
+            {
+              "name": "Brest:5|Nice:0",
+              "price": 81
+            },
+            {
+              "name": "Brest:5|Nice:1",
+              "price": 71
+            },
+            {
+              "name": "Brest:5|Nice:2",
+              "price": 91
+            },
+            {
+              "name": "Brest:6|Nice:0",
+              "price": 126
+            },
+            {
+              "name": "Brest:6|Nice:1",
+              "price": 126
+            },
+            {
+              "name": "Brest:6|Nice:2",
+              "price": 151
+            },
+            {
+              "name": "Brest:7|Nice:0",
+              "price": 151
+            },
+            {
+              "name": "Brest:7|Nice:1",
+              "price": 151
+            },
+            {
+              "name": "Brest:8|Nice:0",
+              "price": 151
+            },
+            {
+              "name": "Brest:9|Nice:0",
+              "price": 151
+            },
+            {
+              "name": "Brest:10|Nice:0",
+              "price": 151
+            },
+            {
+              "name": "Brest:0|Nice:0",
+              "price": 12
+            },
+            {
+              "name": "Brest:1|Nice:1",
+              "price": 6.5
+            },
+            {
+              "name": "Brest:2|Nice:2",
+              "price": 12
+            },
+            {
+              "name": "Brest:3|Nice:3",
+              "price": 41
+            },
+            {
+              "name": "Brest:4|Nice:4",
+              "price": 126
+            },
+            {
+              "name": "Nice:1|Brest:0",
+              "price": 11
+            },
+            {
+              "name": "Nice:2|Brest:0",
+              "price": 17
+            },
+            {
+              "name": "Nice:2|Brest:1",
+              "price": 11
+            },
+            {
+              "name": "Nice:3|Brest:0",
+              "price": 36
+            },
+            {
+              "name": "Nice:3|Brest:1",
+              "price": 23
+            },
+            {
+              "name": "Nice:3|Brest:2",
+              "price": 26
+            },
+            {
+              "name": "Nice:4|Brest:0",
+              "price": 81
+            },
+            {
+              "name": "Nice:4|Brest:1",
+              "price": 61
+            },
+            {
+              "name": "Nice:4|Brest:2",
+              "price": 71
+            },
+            {
+              "name": "Nice:4|Brest:3",
+              "price": 91
+            },
+            {
+              "name": "Nice:5|Brest:0",
+              "price": 126
+            },
+            {
+              "name": "Nice:5|Brest:1",
+              "price": 126
+            },
+            {
+              "name": "Nice:5|Brest:2",
+              "price": 126
+            },
+            {
+              "name": "Nice:6|Brest:0",
+              "price": 151
+            },
+            {
+              "name": "Nice:6|Brest:1",
+              "price": 151
+            },
+            {
+              "name": "Nice:6|Brest:2",
+              "price": 151
+            },
+            {
+              "name": "Nice:7|Brest:0",
+              "price": 151
+            },
+            {
+              "name": "Nice:7|Brest:1",
+              "price": 151
+            },
+            {
+              "name": "Nice:8|Brest:0",
+              "price": 151
+            },
+            {
+              "name": "Nice:9|Brest:0",
+              "price": 151
+            },
+            {
+              "name": "Nice:10|Brest:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:04:36Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.31
+            },
+            {
+              "name": "Nice",
+              "price": 3.37
+            },
+            {
+              "name": "Draw",
+              "price": 3.49
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:04:36Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.55
+            },
+            {
+              "name": "No",
+              "price": 2.32
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:04:36Z",
+          "outcomes": [
+            {
+              "name": "Brest or Draw",
+              "price": 1.37
+            },
+            {
+              "name": "Nice or Draw",
+              "price": 1.69
+            },
+            {
+              "name": "Brest or Nice",
+              "price": 1.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:04:20Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.1
+            },
+            {
+              "name": "Nice",
+              "price": 2.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:03:16Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.05
+            },
+            {
+              "name": "Nice",
+              "price": 2.95
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:03:54Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.25
+            },
+            {
+              "name": "Nice",
+              "price": 3.28
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:03:54Z",
+          "outcomes": [
+            {
+              "name": "Brest or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Nice or Draw",
+              "price": 1.68
+            },
+            {
+              "name": "Brest or Nice",
+              "price": 1.34
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:05:06Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.26
+            },
+            {
+              "name": "Nice",
+              "price": 3.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T12:05:06Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.52
+            },
+            {
+              "name": "Nice",
+              "price": 3.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:05:05Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.24
+            },
+            {
+              "name": "Nice",
+              "price": 3.28
+            },
+            {
+              "name": "Draw",
+              "price": 3.34
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:05:07Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.2
+            },
+            {
+              "name": "Nice",
+              "price": 3.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:04:50Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.1
+            },
+            {
+              "name": "Nice",
+              "price": 2.95
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:04:50Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.23
+            },
+            {
+              "name": "Nice",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:05:06Z",
+          "outcomes": [
+            {
+              "name": "Brest",
+              "price": 2.23
+            },
+            {
+              "name": "Nice",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

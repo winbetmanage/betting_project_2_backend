@@ -1,0 +1,494 @@
+{
+  "id": "4806684ec57f3070332946cf3bc123f1",
+  "sport_key": "soccer_england_efl_cup",
+  "sport_title": "EFL Cup",
+  "commence_time": "2026-10-28T19:45:00Z",
+  "home_team": "Sunderland",
+  "away_team": "Brentford",
+  "bookmakers": [
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:28Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.31
+            },
+            {
+              "name": "Sunderland",
+              "price": 3.17
+            },
+            {
+              "name": "Draw",
+              "price": 3.42
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T10:50:28Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.67
+            },
+            {
+              "name": "No",
+              "price": 2.11
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T10:50:28Z",
+          "outcomes": [
+            {
+              "name": "Brentford or Draw",
+              "price": 1.38
+            },
+            {
+              "name": "Sunderland or Draw",
+              "price": 1.66
+            },
+            {
+              "name": "Brentford or Sunderland",
+              "price": 1.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:22Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 1.1
+            },
+            {
+              "name": "Sunderland",
+              "price": 1.1
+            },
+            {
+              "name": "Draw",
+              "price": 1.1
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T10:50:22Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 110
+            },
+            {
+              "name": "Sunderland",
+              "price": 110
+            },
+            {
+              "name": "Draw",
+              "price": 900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:40Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.29
+            },
+            {
+              "name": "Sunderland",
+              "price": 3.18
+            },
+            {
+              "name": "Draw",
+              "price": 3.42
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T10:49:40Z",
+          "outcomes": [
+            {
+              "name": "Brentford or Draw",
+              "price": 1.38
+            },
+            {
+              "name": "Sunderland or Draw",
+              "price": 1.66
+            },
+            {
+              "name": "Brentford or Sunderland",
+              "price": 1.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:22Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.05
+            },
+            {
+              "name": "Sunderland",
+              "price": 2.8
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:24Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.05
+            },
+            {
+              "name": "Sunderland",
+              "price": 2.85
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:24Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.2
+            },
+            {
+              "name": "Sunderland",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:36Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.26
+            },
+            {
+              "name": "Sunderland",
+              "price": 3.12
+            },
+            {
+              "name": "Draw",
+              "price": 3.49
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:36Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.22
+            },
+            {
+              "name": "Sunderland",
+              "price": 3.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:52Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.22
+            },
+            {
+              "name": "Sunderland",
+              "price": 3.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:06Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.2
+            },
+            {
+              "name": "Sunderland",
+              "price": 2.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:22Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.2
+            },
+            {
+              "name": "Sunderland",
+              "price": 3
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T10:50:22Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.67
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T10:50:22Z",
+          "outcomes": [
+            {
+              "name": "Brentford or Draw",
+              "price": 1.35
+            },
+            {
+              "name": "Sunderland or Draw",
+              "price": 1.62
+            },
+            {
+              "name": "Brentford or Sunderland",
+              "price": 1.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:06Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.25
+            },
+            {
+              "name": "Sunderland",
+              "price": 3.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:22Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.15
+            },
+            {
+              "name": "Sunderland",
+              "price": 2.85
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:22Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.25
+            },
+            {
+              "name": "Sunderland",
+              "price": 3
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:06Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.25
+            },
+            {
+              "name": "Sunderland",
+              "price": 3
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:50:23Z",
+          "outcomes": [
+            {
+              "name": "Brentford",
+              "price": 2.25
+            },
+            {
+              "name": "Sunderland",
+              "price": 3
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

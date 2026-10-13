@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import ApiError from '../utils/ApiError';
-import { getAllMarketsOddsUrl, getOddsApiEventAllMarketsUrl, getOddsApiEventDetailUrl, getEventMarketsUrl, ODDS_API_ALL_MARKETS } from '../../codes';
+import { getAllMarketsOddsUrl, getOddsApiEventAllMarketsUrl, getOddsApiEventDetailUrl, getEventMarketsUrl, ODDS_API_ALL_MARKETS, ODDS_API_MINIMAL_REGIONS, ODDS_API_MINIMAL_MARKETS } from '../../codes';
 
 export type BookmakerGroup = {
   marketKey: string;
@@ -120,7 +120,20 @@ export async function fetchSupportedKeys(sportKey: string, eventId: string): Pro
 
 type RawEvent = { id?: string; bookmakers?: RawBookmaker[] };
 
-async function fetchEventAll(sportKey: string, eventId: string): Promise<{ event: RawEvent; marketsUsed: string }> {
+async function fetchEventAll(sportKey: string, eventId: string, opts?: { minimal?: boolean }): Promise<{ event: RawEvent; marketsUsed: string }> {
+  // Mineralistic: EU books only + a fixed short market list (sent as the request filters).
+  if (opts?.minimal) {
+    const res = await fetch(getOddsApiEventDetailUrl(sportKey, eventId, ODDS_API_MINIMAL_MARKETS, ODDS_API_MINIMAL_REGIONS));
+    if (!res.ok) {
+      const text = await res.text().catch(() => '');
+      throw new ApiError(res.status, `Failed to fetch minimal event odds: ${res.status} ${text.slice(0, 160)}`);
+    }
+    const data = (await res.json()) as RawEvent | RawEvent[];
+    const ev = Array.isArray(data) ? data.find((e) => e?.id === eventId) ?? data[0] : data;
+    if (!ev) throw new ApiError(502, 'odds-api returned no event');
+    return { event: ev, marketsUsed: `minimal(${ODDS_API_MINIMAL_MARKETS})` };
+  }
+
   // 1. ALL markets in one per-event call
   let res = await fetch(getOddsApiEventAllMarketsUrl(sportKey, eventId));
   if (res.ok) {
@@ -164,8 +177,8 @@ async function fetchEventAll(sportKey: string, eventId: string): Promise<{ event
  * "fetch all-market odds" button). Falls back to the supported subset, then
  * featured markets, so it never 422s fatally.
  */
-export async function fetchAndSaveEventOdds(externalEventId: string, sportKey: string = "soccer_epl"): Promise<number> {
-  const { event, marketsUsed } = await fetchEventAll(sportKey, externalEventId);
+export async function fetchAndSaveEventOdds(externalEventId: string, sportKey: string = "soccer_epl", opts?: { minimal?: boolean }): Promise<number> {
+  const { event, marketsUsed } = await fetchEventAll(sportKey, externalEventId, opts);
   const file = jsonPathFor(externalEventId);
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, JSON.stringify(event, null, 2), "utf-8");

@@ -1,0 +1,638 @@
+{
+  "id": "9c4254cba9944a839b421db27260504d",
+  "sport_key": "soccer_spain_la_liga",
+  "sport_title": "La Liga - Spain",
+  "commence_time": "2026-10-25T13:00:00Z",
+  "home_team": "Athletic Bilbao",
+  "away_team": "Getafe",
+  "bookmakers": [
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:31:33Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.58
+            },
+            {
+              "name": "Getafe",
+              "price": 5.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:31:48Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.57
+            },
+            {
+              "name": "Getafe",
+              "price": 6
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T11:31:48Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 2.1
+            },
+            {
+              "name": "No",
+              "price": 1.7
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T11:31:48Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao or Draw",
+              "price": 1.12
+            },
+            {
+              "name": "Getafe or Draw",
+              "price": 2.3
+            },
+            {
+              "name": "Athletic Bilbao or Getafe",
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T11:31:56Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao:1|Getafe:0",
+              "price": 5
+            },
+            {
+              "name": "Athletic Bilbao:2|Getafe:0",
+              "price": 6.5
+            },
+            {
+              "name": "Athletic Bilbao:2|Getafe:1",
+              "price": 7.5
+            },
+            {
+              "name": "Athletic Bilbao:3|Getafe:0",
+              "price": 12
+            },
+            {
+              "name": "Athletic Bilbao:3|Getafe:1",
+              "price": 15
+            },
+            {
+              "name": "Athletic Bilbao:3|Getafe:2",
+              "price": 29
+            },
+            {
+              "name": "Athletic Bilbao:4|Getafe:0",
+              "price": 26
+            },
+            {
+              "name": "Athletic Bilbao:4|Getafe:1",
+              "price": 34
+            },
+            {
+              "name": "Athletic Bilbao:4|Getafe:2",
+              "price": 71
+            },
+            {
+              "name": "Athletic Bilbao:4|Getafe:3",
+              "price": 126
+            },
+            {
+              "name": "Athletic Bilbao:5|Getafe:0",
+              "price": 61
+            },
+            {
+              "name": "Athletic Bilbao:5|Getafe:1",
+              "price": 71
+            },
+            {
+              "name": "Athletic Bilbao:5|Getafe:2",
+              "price": 126
+            },
+            {
+              "name": "Athletic Bilbao:6|Getafe:0",
+              "price": 101
+            },
+            {
+              "name": "Athletic Bilbao:6|Getafe:1",
+              "price": 126
+            },
+            {
+              "name": "Athletic Bilbao:6|Getafe:2",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:7|Getafe:0",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:7|Getafe:1",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:8|Getafe:0",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:9|Getafe:0",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:10|Getafe:0",
+              "price": 151
+            },
+            {
+              "name": "Athletic Bilbao:0|Getafe:0",
+              "price": 8
+            },
+            {
+              "name": "Athletic Bilbao:1|Getafe:1",
+              "price": 7
+            },
+            {
+              "name": "Athletic Bilbao:2|Getafe:2",
+              "price": 21
+            },
+            {
+              "name": "Athletic Bilbao:3|Getafe:3",
+              "price": 91
+            },
+            {
+              "name": "Athletic Bilbao:4|Getafe:4",
+              "price": 151
+            },
+            {
+              "name": "Getafe:1|Athletic Bilbao:0",
+              "price": 11
+            },
+            {
+              "name": "Getafe:2|Athletic Bilbao:0",
+              "price": 26
+            },
+            {
+              "name": "Getafe:2|Athletic Bilbao:1",
+              "price": 15
+            },
+            {
+              "name": "Getafe:3|Athletic Bilbao:0",
+              "price": 81
+            },
+            {
+              "name": "Getafe:3|Athletic Bilbao:1",
+              "price": 56
+            },
+            {
+              "name": "Getafe:3|Athletic Bilbao:2",
+              "price": 56
+            },
+            {
+              "name": "Getafe:4|Athletic Bilbao:0",
+              "price": 151
+            },
+            {
+              "name": "Getafe:4|Athletic Bilbao:1",
+              "price": 126
+            },
+            {
+              "name": "Getafe:4|Athletic Bilbao:2",
+              "price": 126
+            },
+            {
+              "name": "Getafe:4|Athletic Bilbao:3",
+              "price": 151
+            },
+            {
+              "name": "Getafe:5|Athletic Bilbao:0",
+              "price": 151
+            },
+            {
+              "name": "Getafe:5|Athletic Bilbao:1",
+              "price": 151
+            },
+            {
+              "name": "Getafe:5|Athletic Bilbao:2",
+              "price": 151
+            },
+            {
+              "name": "Getafe:6|Athletic Bilbao:0",
+              "price": 151
+            },
+            {
+              "name": "Getafe:6|Athletic Bilbao:1",
+              "price": 151
+            },
+            {
+              "name": "Getafe:6|Athletic Bilbao:2",
+              "price": 151
+            },
+            {
+              "name": "Getafe:7|Athletic Bilbao:0",
+              "price": 151
+            },
+            {
+              "name": "Getafe:7|Athletic Bilbao:1",
+              "price": 151
+            },
+            {
+              "name": "Getafe:8|Athletic Bilbao:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:30:46Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.63
+            },
+            {
+              "name": "Getafe",
+              "price": 6.67
+            },
+            {
+              "name": "Draw",
+              "price": 3.94
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T11:30:46Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 2.21
+            },
+            {
+              "name": "No",
+              "price": 1.61
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T11:30:46Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao or Draw",
+              "price": 1.14
+            },
+            {
+              "name": "Getafe or Draw",
+              "price": 2.42
+            },
+            {
+              "name": "Athletic Bilbao or Getafe",
+              "price": 1.29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:31:34Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.6
+            },
+            {
+              "name": "Getafe",
+              "price": 5.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:32:05Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.5
+            },
+            {
+              "name": "Getafe",
+              "price": 4.8
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:31:18Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.5
+            },
+            {
+              "name": "Getafe",
+              "price": 5.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:30:16Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.53
+            },
+            {
+              "name": "Getafe",
+              "price": 5.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.58
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:31:23Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.59
+            },
+            {
+              "name": "Getafe",
+              "price": 6.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.84
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T11:31:23Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao or Draw",
+              "price": 1.13
+            },
+            {
+              "name": "Getafe or Draw",
+              "price": 2.42
+            },
+            {
+              "name": "Athletic Bilbao or Getafe",
+              "price": 1.28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:31:47Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.63
+            },
+            {
+              "name": "Getafe",
+              "price": 5.11
+            },
+            {
+              "name": "Draw",
+              "price": 4.06
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:31:17Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.56
+            },
+            {
+              "name": "Getafe",
+              "price": 5.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:31:18Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.64
+            },
+            {
+              "name": "Getafe",
+              "price": 6.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:31:49Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.64
+            },
+            {
+              "name": "Getafe",
+              "price": 6.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:32:03Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.57
+            },
+            {
+              "name": "Getafe",
+              "price": 5.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:32:05Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.6
+            },
+            {
+              "name": "Getafe",
+              "price": 6
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:31:49Z",
+          "outcomes": [
+            {
+              "name": "Athletic Bilbao",
+              "price": 1.6
+            },
+            {
+              "name": "Getafe",
+              "price": 6
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

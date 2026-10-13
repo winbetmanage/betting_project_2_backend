@@ -1,0 +1,660 @@
+{
+  "id": "0bbce95e5764e706e6c428bb52dc5536",
+  "sport_key": "soccer_france_ligue_one",
+  "sport_title": "Ligue 1 - France",
+  "commence_time": "2026-10-24T15:15:00Z",
+  "home_team": "Toulouse",
+  "away_team": "Troyes",
+  "bookmakers": [
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:12Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.6
+            },
+            {
+              "name": "Troyes",
+              "price": 3.85
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:24Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.61
+            },
+            {
+              "name": "Troyes",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:59Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.75
+            },
+            {
+              "name": "Troyes",
+              "price": 4.88
+            },
+            {
+              "name": "Draw",
+              "price": 4.21
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:53:59Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.61
+            },
+            {
+              "name": "No",
+              "price": 2.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:53:59Z",
+          "outcomes": [
+            {
+              "name": "Toulouse or Draw",
+              "price": 1.22
+            },
+            {
+              "name": "Troyes or Draw",
+              "price": 2.21
+            },
+            {
+              "name": "Toulouse or Troyes",
+              "price": 1.27
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:56Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.62
+            },
+            {
+              "name": "Troyes",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:43Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.66
+            },
+            {
+              "name": "Troyes",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:41Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.6
+            },
+            {
+              "name": "Troyes",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:11Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.67
+            },
+            {
+              "name": "Troyes",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:26Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.67
+            },
+            {
+              "name": "Troyes",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:54:26Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.65
+            },
+            {
+              "name": "No",
+              "price": 2.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:54:26Z",
+          "outcomes": [
+            {
+              "name": "Toulouse or Draw",
+              "price": 1.2
+            },
+            {
+              "name": "Troyes or Draw",
+              "price": 2.15
+            },
+            {
+              "name": "Toulouse or Troyes",
+              "price": 1.22
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:55:01Z",
+          "outcomes": [
+            {
+              "name": "Toulouse:1|Troyes:0",
+              "price": 8
+            },
+            {
+              "name": "Toulouse:2|Troyes:0",
+              "price": 8.5
+            },
+            {
+              "name": "Toulouse:2|Troyes:1",
+              "price": 7.5
+            },
+            {
+              "name": "Toulouse:3|Troyes:0",
+              "price": 12
+            },
+            {
+              "name": "Toulouse:3|Troyes:1",
+              "price": 11
+            },
+            {
+              "name": "Toulouse:3|Troyes:2",
+              "price": 17
+            },
+            {
+              "name": "Toulouse:4|Troyes:0",
+              "price": 23
+            },
+            {
+              "name": "Toulouse:4|Troyes:1",
+              "price": 21
+            },
+            {
+              "name": "Toulouse:4|Troyes:2",
+              "price": 36
+            },
+            {
+              "name": "Toulouse:4|Troyes:3",
+              "price": 71
+            },
+            {
+              "name": "Toulouse:5|Troyes:0",
+              "price": 51
+            },
+            {
+              "name": "Toulouse:5|Troyes:1",
+              "price": 46
+            },
+            {
+              "name": "Toulouse:5|Troyes:2",
+              "price": 71
+            },
+            {
+              "name": "Toulouse:6|Troyes:0",
+              "price": 101
+            },
+            {
+              "name": "Toulouse:6|Troyes:1",
+              "price": 91
+            },
+            {
+              "name": "Toulouse:6|Troyes:2",
+              "price": 126
+            },
+            {
+              "name": "Toulouse:7|Troyes:0",
+              "price": 151
+            },
+            {
+              "name": "Toulouse:7|Troyes:1",
+              "price": 151
+            },
+            {
+              "name": "Toulouse:8|Troyes:0",
+              "price": 151
+            },
+            {
+              "name": "Toulouse:9|Troyes:0",
+              "price": 151
+            },
+            {
+              "name": "Toulouse:10|Troyes:0",
+              "price": 151
+            },
+            {
+              "name": "Toulouse:0|Troyes:0",
+              "price": 13
+            },
+            {
+              "name": "Toulouse:1|Troyes:1",
+              "price": 7.5
+            },
+            {
+              "name": "Toulouse:2|Troyes:2",
+              "price": 13
+            },
+            {
+              "name": "Toulouse:3|Troyes:3",
+              "price": 41
+            },
+            {
+              "name": "Toulouse:4|Troyes:4",
+              "price": 126
+            },
+            {
+              "name": "Troyes:1|Toulouse:0",
+              "price": 17
+            },
+            {
+              "name": "Troyes:2|Toulouse:0",
+              "price": 29
+            },
+            {
+              "name": "Troyes:2|Toulouse:1",
+              "price": 15
+            },
+            {
+              "name": "Troyes:3|Toulouse:0",
+              "price": 61
+            },
+            {
+              "name": "Troyes:3|Toulouse:1",
+              "price": 36
+            },
+            {
+              "name": "Troyes:3|Toulouse:2",
+              "price": 36
+            },
+            {
+              "name": "Troyes:4|Toulouse:0",
+              "price": 126
+            },
+            {
+              "name": "Troyes:4|Toulouse:1",
+              "price": 91
+            },
+            {
+              "name": "Troyes:4|Toulouse:2",
+              "price": 91
+            },
+            {
+              "name": "Troyes:4|Toulouse:3",
+              "price": 101
+            },
+            {
+              "name": "Troyes:5|Toulouse:0",
+              "price": 151
+            },
+            {
+              "name": "Troyes:5|Toulouse:1",
+              "price": 151
+            },
+            {
+              "name": "Troyes:5|Toulouse:2",
+              "price": 151
+            },
+            {
+              "name": "Troyes:6|Toulouse:0",
+              "price": 151
+            },
+            {
+              "name": "Troyes:6|Toulouse:1",
+              "price": 151
+            },
+            {
+              "name": "Troyes:6|Toulouse:2",
+              "price": 151
+            },
+            {
+              "name": "Troyes:7|Toulouse:0",
+              "price": 151
+            },
+            {
+              "name": "Troyes:7|Toulouse:1",
+              "price": 151
+            },
+            {
+              "name": "Troyes:8|Toulouse:0",
+              "price": 151
+            },
+            {
+              "name": "Troyes:9|Toulouse:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:31Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.7
+            },
+            {
+              "name": "Troyes",
+              "price": 4.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:54:31Z",
+          "outcomes": [
+            {
+              "name": "Toulouse or Draw",
+              "price": 1.21
+            },
+            {
+              "name": "Troyes or Draw",
+              "price": 2.21
+            },
+            {
+              "name": "Toulouse or Troyes",
+              "price": 1.26
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:29Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.7
+            },
+            {
+              "name": "Troyes",
+              "price": 4.8
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T12:54:29Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.78
+            },
+            {
+              "name": "Troyes",
+              "price": 5.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:56Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.68
+            },
+            {
+              "name": "Troyes",
+              "price": 4.68
+            },
+            {
+              "name": "Draw",
+              "price": 4.07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:11Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.71
+            },
+            {
+              "name": "Troyes",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:56Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.71
+            },
+            {
+              "name": "Troyes",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:26Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.7
+            },
+            {
+              "name": "Troyes",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:54:41Z",
+          "outcomes": [
+            {
+              "name": "Toulouse",
+              "price": 1.63
+            },
+            {
+              "name": "Troyes",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

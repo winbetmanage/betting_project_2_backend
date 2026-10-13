@@ -1,0 +1,962 @@
+{
+  "id": "471f891b1f6516a864ad94c8eb649f5e",
+  "sport_key": "soccer_france_ligue_one",
+  "sport_title": "Ligue 1 - France",
+  "commence_time": "2026-10-18T18:45:00Z",
+  "home_team": "Lyon",
+  "away_team": "Nice",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:26:02Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.69
+            },
+            {
+              "name": "Nice",
+              "price": 4.82
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:26:23Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.21
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:26:23Z",
+          "outcomes": [
+            {
+              "name": "Lyon:0|Nice:0",
+              "price": 15.53
+            },
+            {
+              "name": "Lyon:0|Nice:1",
+              "price": 16.03
+            },
+            {
+              "name": "Lyon:0|Nice:2",
+              "price": 27.29
+            },
+            {
+              "name": "Lyon:0|Nice:3",
+              "price": 61.64
+            },
+            {
+              "name": "Lyon:1|Nice:0",
+              "price": 9.21
+            },
+            {
+              "name": "Lyon:1|Nice:1",
+              "price": 8.39
+            },
+            {
+              "name": "Lyon:1|Nice:2",
+              "price": 15.08
+            },
+            {
+              "name": "Lyon:1|Nice:3",
+              "price": 35.9
+            },
+            {
+              "name": "Lyon:1|Nice:4",
+              "price": 100.76
+            },
+            {
+              "name": "Lyon:2|Nice:0",
+              "price": 9.5
+            },
+            {
+              "name": "Lyon:2|Nice:1",
+              "price": 8.7
+            },
+            {
+              "name": "Lyon:2|Nice:2",
+              "price": 14.75
+            },
+            {
+              "name": "Lyon:2|Nice:3",
+              "price": 36.58
+            },
+            {
+              "name": "Lyon:3|Nice:0",
+              "price": 13.78
+            },
+            {
+              "name": "Lyon:3|Nice:1",
+              "price": 12.81
+            },
+            {
+              "name": "Lyon:3|Nice:2",
+              "price": 21.96
+            },
+            {
+              "name": "Lyon:3|Nice:3",
+              "price": 50.1
+            },
+            {
+              "name": "Lyon:4|Nice:0",
+              "price": 25.86
+            },
+            {
+              "name": "Lyon:4|Nice:1",
+              "price": 24.24
+            },
+            {
+              "name": "Lyon:4|Nice:2",
+              "price": 40.27
+            },
+            {
+              "name": "Lyon:4|Nice:3",
+              "price": 88.74
+            },
+            {
+              "name": "Lyon:5|Nice:0",
+              "price": 57.39
+            },
+            {
+              "name": "Lyon:5|Nice:1",
+              "price": 53.43
+            },
+            {
+              "name": "Lyon:5|Nice:2",
+              "price": 84.81
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:26:32Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.67
+            },
+            {
+              "name": "Nice",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:26:06Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.62
+            },
+            {
+              "name": "Nice",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:26:07Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.62
+            },
+            {
+              "name": "Nice",
+              "price": 4.8
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:34Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.62
+            },
+            {
+              "name": "Nice",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:26:20Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.64
+            },
+            {
+              "name": "Nice",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:16Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.71
+            },
+            {
+              "name": "Nice",
+              "price": 5.18
+            },
+            {
+              "name": "Draw",
+              "price": 4.21
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:23:16Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.65
+            },
+            {
+              "name": "No",
+              "price": 2.13
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:23:16Z",
+          "outcomes": [
+            {
+              "name": "Lyon or Draw",
+              "price": 1.2
+            },
+            {
+              "name": "Nice or Draw",
+              "price": 2.27
+            },
+            {
+              "name": "Lyon or Nice",
+              "price": 1.27
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:32Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.67
+            },
+            {
+              "name": "Nice",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:25:32Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.65
+            },
+            {
+              "name": "No",
+              "price": 2.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:25:32Z",
+          "outcomes": [
+            {
+              "name": "Lyon or Draw",
+              "price": 1.18
+            },
+            {
+              "name": "Nice or Draw",
+              "price": 2.15
+            },
+            {
+              "name": "Lyon or Nice",
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:25:35Z",
+          "outcomes": [
+            {
+              "name": "Lyon:1|Nice:0",
+              "price": 7.5
+            },
+            {
+              "name": "Lyon:2|Nice:0",
+              "price": 8.5
+            },
+            {
+              "name": "Lyon:2|Nice:1",
+              "price": 7.5
+            },
+            {
+              "name": "Lyon:3|Nice:0",
+              "price": 12
+            },
+            {
+              "name": "Lyon:3|Nice:1",
+              "price": 12
+            },
+            {
+              "name": "Lyon:3|Nice:2",
+              "price": 19
+            },
+            {
+              "name": "Lyon:4|Nice:0",
+              "price": 23
+            },
+            {
+              "name": "Lyon:4|Nice:1",
+              "price": 23
+            },
+            {
+              "name": "Lyon:4|Nice:2",
+              "price": 41
+            },
+            {
+              "name": "Lyon:4|Nice:3",
+              "price": 81
+            },
+            {
+              "name": "Lyon:5|Nice:0",
+              "price": 51
+            },
+            {
+              "name": "Lyon:5|Nice:1",
+              "price": 51
+            },
+            {
+              "name": "Lyon:5|Nice:2",
+              "price": 81
+            },
+            {
+              "name": "Lyon:6|Nice:0",
+              "price": 101
+            },
+            {
+              "name": "Lyon:6|Nice:1",
+              "price": 101
+            },
+            {
+              "name": "Lyon:6|Nice:2",
+              "price": 126
+            },
+            {
+              "name": "Lyon:7|Nice:0",
+              "price": 151
+            },
+            {
+              "name": "Lyon:7|Nice:1",
+              "price": 151
+            },
+            {
+              "name": "Lyon:8|Nice:0",
+              "price": 151
+            },
+            {
+              "name": "Lyon:9|Nice:0",
+              "price": 151
+            },
+            {
+              "name": "Lyon:10|Nice:0",
+              "price": 151
+            },
+            {
+              "name": "Lyon:0|Nice:0",
+              "price": 13
+            },
+            {
+              "name": "Lyon:1|Nice:1",
+              "price": 7
+            },
+            {
+              "name": "Lyon:2|Nice:2",
+              "price": 13
+            },
+            {
+              "name": "Lyon:3|Nice:3",
+              "price": 46
+            },
+            {
+              "name": "Lyon:4|Nice:4",
+              "price": 126
+            },
+            {
+              "name": "Nice:1|Lyon:0",
+              "price": 13
+            },
+            {
+              "name": "Nice:2|Lyon:0",
+              "price": 26
+            },
+            {
+              "name": "Nice:2|Lyon:1",
+              "price": 13
+            },
+            {
+              "name": "Nice:3|Lyon:0",
+              "price": 61
+            },
+            {
+              "name": "Nice:3|Lyon:1",
+              "price": 36
+            },
+            {
+              "name": "Nice:3|Lyon:2",
+              "price": 36
+            },
+            {
+              "name": "Nice:4|Lyon:0",
+              "price": 126
+            },
+            {
+              "name": "Nice:4|Lyon:1",
+              "price": 91
+            },
+            {
+              "name": "Nice:4|Lyon:2",
+              "price": 101
+            },
+            {
+              "name": "Nice:4|Lyon:3",
+              "price": 101
+            },
+            {
+              "name": "Nice:5|Lyon:0",
+              "price": 151
+            },
+            {
+              "name": "Nice:5|Lyon:1",
+              "price": 151
+            },
+            {
+              "name": "Nice:5|Lyon:2",
+              "price": 151
+            },
+            {
+              "name": "Nice:6|Lyon:0",
+              "price": 151
+            },
+            {
+              "name": "Nice:6|Lyon:1",
+              "price": 151
+            },
+            {
+              "name": "Nice:6|Lyon:2",
+              "price": 151
+            },
+            {
+              "name": "Nice:7|Lyon:0",
+              "price": 151
+            },
+            {
+              "name": "Nice:7|Lyon:1",
+              "price": 151
+            },
+            {
+              "name": "Nice:8|Lyon:0",
+              "price": 151
+            },
+            {
+              "name": "Nice:9|Lyon:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:22Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.67
+            },
+            {
+              "name": "Nice",
+              "price": 5.05
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:25:22Z",
+          "outcomes": [
+            {
+              "name": "Lyon or Draw",
+              "price": 1.18
+            },
+            {
+              "name": "Nice or Draw",
+              "price": 2.27
+            },
+            {
+              "name": "Lyon or Nice",
+              "price": 1.26
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:26:29Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.61
+            },
+            {
+              "name": "Nice",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:18Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.68
+            },
+            {
+              "name": "Nice",
+              "price": 5.25
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:26:32Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.57
+            },
+            {
+              "name": "Nice",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:33Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.68
+            },
+            {
+              "name": "Nice",
+              "price": 5.25
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:26:18Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.65
+            },
+            {
+              "name": "Nice",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:48Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.62
+            },
+            {
+              "name": "Nice",
+              "price": 4.9
+            },
+            {
+              "name": "Draw",
+              "price": 4.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:54Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.62
+            },
+            {
+              "name": "Nice",
+              "price": 4.9
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:26:03Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.71
+            },
+            {
+              "name": "Nice",
+              "price": 5
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T12:26:03Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.78
+            },
+            {
+              "name": "Nice",
+              "price": 5.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:33Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.69
+            },
+            {
+              "name": "Nice",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:25:33Z",
+          "outcomes": [
+            {
+              "name": "Lyon or Draw",
+              "price": 1.2
+            },
+            {
+              "name": "Nice or Draw",
+              "price": 2.19
+            },
+            {
+              "name": "Lyon or Nice",
+              "price": 1.24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:20Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.7
+            },
+            {
+              "name": "Nice",
+              "price": 5
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "everygame",
+      "title": "Everygame",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:26:32Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.65
+            },
+            {
+              "name": "Nice",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gtbets",
+      "title": "GTbets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:18Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.66
+            },
+            {
+              "name": "Nice",
+              "price": 5.07
+            },
+            {
+              "name": "Draw",
+              "price": 3.98
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betonlineag",
+      "title": "BetOnline.ag",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:33Z",
+          "outcomes": [
+            {
+              "name": "Lyon",
+              "price": 1.67
+            },
+            {
+              "name": "Nice",
+              "price": 4.95
+            },
+            {
+              "name": "Draw",
+              "price": 4.26
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

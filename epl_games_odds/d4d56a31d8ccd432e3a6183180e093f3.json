@@ -1,0 +1,570 @@
+{
+  "id": "d4d56a31d8ccd432e3a6183180e093f3",
+  "sport_key": "soccer_germany_bundesliga",
+  "sport_title": "Bundesliga - Germany",
+  "commence_time": "2026-10-23T18:30:00Z",
+  "home_team": "VfB Stuttgart",
+  "away_team": "Borussia Monchengladbach",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:12:56Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 6.12
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.41
+            },
+            {
+              "name": "Draw",
+              "price": 5.46
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:13:00Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 5.1
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.32
+            },
+            {
+              "name": "Draw",
+              "price": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:12:27Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 6
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.36
+            },
+            {
+              "name": "Draw",
+              "price": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:12:57Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 6.5
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.37
+            },
+            {
+              "name": "Draw",
+              "price": 5.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:12:42Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 5.6
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.32
+            },
+            {
+              "name": "Draw",
+              "price": 5.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:12:01Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 6.8
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.39
+            },
+            {
+              "name": "Draw",
+              "price": 5.65
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:12:01Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach or Draw",
+              "price": 3.1
+            },
+            {
+              "name": "VfB Stuttgart or Draw",
+              "price": 1.12
+            },
+            {
+              "name": "Borussia Monchengladbach or VfB Stuttgart",
+              "price": 1.16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:12:27Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 6
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.36
+            },
+            {
+              "name": "Draw",
+              "price": 5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:12:27Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.44
+            },
+            {
+              "name": "No",
+              "price": 2.7
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:12:27Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach or Draw",
+              "price": 2.9
+            },
+            {
+              "name": "VfB Stuttgart or Draw",
+              "price": 1.11
+            },
+            {
+              "name": "Borussia Monchengladbach or VfB Stuttgart",
+              "price": 1.15
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:12:54Z",
+          "outcomes": [
+            {
+              "name": "VfB Stuttgart:1|Borussia Monchengladbach:0",
+              "price": 13
+            },
+            {
+              "name": "VfB Stuttgart:2|Borussia Monchengladbach:0",
+              "price": 11
+            },
+            {
+              "name": "VfB Stuttgart:2|Borussia Monchengladbach:1",
+              "price": 8.5
+            },
+            {
+              "name": "VfB Stuttgart:3|Borussia Monchengladbach:0",
+              "price": 12
+            },
+            {
+              "name": "VfB Stuttgart:3|Borussia Monchengladbach:1",
+              "price": 10
+            },
+            {
+              "name": "VfB Stuttgart:3|Borussia Monchengladbach:2",
+              "price": 13
+            },
+            {
+              "name": "VfB Stuttgart:4|Borussia Monchengladbach:0",
+              "price": 17
+            },
+            {
+              "name": "VfB Stuttgart:4|Borussia Monchengladbach:1",
+              "price": 13
+            },
+            {
+              "name": "VfB Stuttgart:4|Borussia Monchengladbach:2",
+              "price": 21
+            },
+            {
+              "name": "VfB Stuttgart:4|Borussia Monchengladbach:3",
+              "price": 41
+            },
+            {
+              "name": "VfB Stuttgart:5|Borussia Monchengladbach:0",
+              "price": 26
+            },
+            {
+              "name": "VfB Stuttgart:5|Borussia Monchengladbach:1",
+              "price": 23
+            },
+            {
+              "name": "VfB Stuttgart:5|Borussia Monchengladbach:2",
+              "price": 34
+            },
+            {
+              "name": "VfB Stuttgart:6|Borussia Monchengladbach:0",
+              "price": 51
+            },
+            {
+              "name": "VfB Stuttgart:6|Borussia Monchengladbach:1",
+              "price": 41
+            },
+            {
+              "name": "VfB Stuttgart:6|Borussia Monchengladbach:2",
+              "price": 61
+            },
+            {
+              "name": "VfB Stuttgart:7|Borussia Monchengladbach:0",
+              "price": 91
+            },
+            {
+              "name": "VfB Stuttgart:7|Borussia Monchengladbach:1",
+              "price": 81
+            },
+            {
+              "name": "VfB Stuttgart:8|Borussia Monchengladbach:0",
+              "price": 126
+            },
+            {
+              "name": "VfB Stuttgart:9|Borussia Monchengladbach:0",
+              "price": 151
+            },
+            {
+              "name": "VfB Stuttgart:10|Borussia Monchengladbach:0",
+              "price": 151
+            },
+            {
+              "name": "VfB Stuttgart:0|Borussia Monchengladbach:0",
+              "price": 29
+            },
+            {
+              "name": "VfB Stuttgart:1|Borussia Monchengladbach:1",
+              "price": 11
+            },
+            {
+              "name": "VfB Stuttgart:2|Borussia Monchengladbach:2",
+              "price": 13
+            },
+            {
+              "name": "VfB Stuttgart:3|Borussia Monchengladbach:3",
+              "price": 29
+            },
+            {
+              "name": "VfB Stuttgart:4|Borussia Monchengladbach:4",
+              "price": 81
+            },
+            {
+              "name": "Borussia Monchengladbach:1|VfB Stuttgart:0",
+              "price": 29
+            },
+            {
+              "name": "Borussia Monchengladbach:2|VfB Stuttgart:0",
+              "price": 46
+            },
+            {
+              "name": "Borussia Monchengladbach:2|VfB Stuttgart:1",
+              "price": 19
+            },
+            {
+              "name": "Borussia Monchengladbach:3|VfB Stuttgart:0",
+              "price": 81
+            },
+            {
+              "name": "Borussia Monchengladbach:3|VfB Stuttgart:1",
+              "price": 41
+            },
+            {
+              "name": "Borussia Monchengladbach:3|VfB Stuttgart:2",
+              "price": 29
+            },
+            {
+              "name": "Borussia Monchengladbach:4|VfB Stuttgart:0",
+              "price": 126
+            },
+            {
+              "name": "Borussia Monchengladbach:4|VfB Stuttgart:1",
+              "price": 91
+            },
+            {
+              "name": "Borussia Monchengladbach:4|VfB Stuttgart:2",
+              "price": 71
+            },
+            {
+              "name": "Borussia Monchengladbach:4|VfB Stuttgart:3",
+              "price": 71
+            },
+            {
+              "name": "Borussia Monchengladbach:5|VfB Stuttgart:0",
+              "price": 151
+            },
+            {
+              "name": "Borussia Monchengladbach:5|VfB Stuttgart:1",
+              "price": 151
+            },
+            {
+              "name": "Borussia Monchengladbach:5|VfB Stuttgart:2",
+              "price": 126
+            },
+            {
+              "name": "Borussia Monchengladbach:6|VfB Stuttgart:0",
+              "price": 151
+            },
+            {
+              "name": "Borussia Monchengladbach:6|VfB Stuttgart:1",
+              "price": 151
+            },
+            {
+              "name": "Borussia Monchengladbach:6|VfB Stuttgart:2",
+              "price": 151
+            },
+            {
+              "name": "Borussia Monchengladbach:7|VfB Stuttgart:0",
+              "price": 151
+            },
+            {
+              "name": "Borussia Monchengladbach:7|VfB Stuttgart:1",
+              "price": 151
+            },
+            {
+              "name": "Borussia Monchengladbach:8|VfB Stuttgart:0",
+              "price": 151
+            },
+            {
+              "name": "Borussia Monchengladbach:9|VfB Stuttgart:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:12:34Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 5.2
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.33
+            },
+            {
+              "name": "Draw",
+              "price": 5.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:11:24Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 5.6
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.34
+            },
+            {
+              "name": "Draw",
+              "price": 5.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:11:26Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 6.98
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.43
+            },
+            {
+              "name": "Draw",
+              "price": 5.8
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:11:26Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.43
+            },
+            {
+              "name": "No",
+              "price": 2.66
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:11:26Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach or Draw",
+              "price": 3.07
+            },
+            {
+              "name": "VfB Stuttgart or Draw",
+              "price": 1.12
+            },
+            {
+              "name": "Borussia Monchengladbach or VfB Stuttgart",
+              "price": 1.17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:13:13Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 7.2
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.39
+            },
+            {
+              "name": "Draw",
+              "price": 4.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:12:42Z",
+          "outcomes": [
+            {
+              "name": "Borussia Monchengladbach",
+              "price": 7.2
+            },
+            {
+              "name": "VfB Stuttgart",
+              "price": 1.39
+            },
+            {
+              "name": "Draw",
+              "price": 4.95
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

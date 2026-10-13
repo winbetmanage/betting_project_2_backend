@@ -1,0 +1,666 @@
+{
+  "id": "124c70f8f3248a845bdb983a54e74720",
+  "sport_key": "soccer_italy_serie_a",
+  "sport_title": "Serie A - Italy",
+  "commence_time": "2026-10-23T18:45:00Z",
+  "home_team": "Torino",
+  "away_team": "Monza",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:07:42Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.36
+            },
+            {
+              "name": "Torino",
+              "price": 2.17
+            },
+            {
+              "name": "Draw",
+              "price": 3.43
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:07:19Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.25
+            },
+            {
+              "name": "Torino",
+              "price": 2.05
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:07:16Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.05
+            },
+            {
+              "name": "Torino",
+              "price": 1.96
+            },
+            {
+              "name": "Draw",
+              "price": 3.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:07:13Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.3
+            },
+            {
+              "name": "Torino",
+              "price": 1.93
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:06:25Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.27
+            },
+            {
+              "name": "Torino",
+              "price": 1.98
+            },
+            {
+              "name": "Draw",
+              "price": 3.22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:05:39Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.64
+            },
+            {
+              "name": "Torino",
+              "price": 2.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.62
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:05:39Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.81
+            },
+            {
+              "name": "No",
+              "price": 1.91
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:05:39Z",
+          "outcomes": [
+            {
+              "name": "Monza or Draw",
+              "price": 1.78
+            },
+            {
+              "name": "Torino or Draw",
+              "price": 1.33
+            },
+            {
+              "name": "Monza or Torino",
+              "price": 1.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:06:57Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.4
+            },
+            {
+              "name": "Torino",
+              "price": 2.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:07:01Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.54
+            },
+            {
+              "name": "Torino",
+              "price": 2.09
+            },
+            {
+              "name": "Draw",
+              "price": 3.52
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:07:01Z",
+          "outcomes": [
+            {
+              "name": "Monza or Draw",
+              "price": 1.77
+            },
+            {
+              "name": "Torino or Draw",
+              "price": 1.32
+            },
+            {
+              "name": "Monza or Torino",
+              "price": 1.32
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:06:41Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.4
+            },
+            {
+              "name": "Torino",
+              "price": 2.05
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:07:18Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.4
+            },
+            {
+              "name": "Torino",
+              "price": 2.05
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:07:18Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.8
+            },
+            {
+              "name": "No",
+              "price": 1.95
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:07:18Z",
+          "outcomes": [
+            {
+              "name": "Monza or Draw",
+              "price": 1.73
+            },
+            {
+              "name": "Torino or Draw",
+              "price": 1.3
+            },
+            {
+              "name": "Monza or Torino",
+              "price": 1.3
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:06:59Z",
+          "outcomes": [
+            {
+              "name": "Torino:1|Monza:0",
+              "price": 6.5
+            },
+            {
+              "name": "Torino:2|Monza:0",
+              "price": 10
+            },
+            {
+              "name": "Torino:2|Monza:1",
+              "price": 8
+            },
+            {
+              "name": "Torino:3|Monza:0",
+              "price": 19
+            },
+            {
+              "name": "Torino:3|Monza:1",
+              "price": 17
+            },
+            {
+              "name": "Torino:3|Monza:2",
+              "price": 26
+            },
+            {
+              "name": "Torino:4|Monza:0",
+              "price": 46
+            },
+            {
+              "name": "Torino:4|Monza:1",
+              "price": 41
+            },
+            {
+              "name": "Torino:4|Monza:2",
+              "price": 61
+            },
+            {
+              "name": "Torino:4|Monza:3",
+              "price": 101
+            },
+            {
+              "name": "Torino:5|Monza:0",
+              "price": 101
+            },
+            {
+              "name": "Torino:5|Monza:1",
+              "price": 91
+            },
+            {
+              "name": "Torino:5|Monza:2",
+              "price": 126
+            },
+            {
+              "name": "Torino:6|Monza:0",
+              "price": 151
+            },
+            {
+              "name": "Torino:6|Monza:1",
+              "price": 151
+            },
+            {
+              "name": "Torino:6|Monza:2",
+              "price": 151
+            },
+            {
+              "name": "Torino:7|Monza:0",
+              "price": 151
+            },
+            {
+              "name": "Torino:7|Monza:1",
+              "price": 151
+            },
+            {
+              "name": "Torino:8|Monza:0",
+              "price": 151
+            },
+            {
+              "name": "Torino:9|Monza:0",
+              "price": 151
+            },
+            {
+              "name": "Torino:10|Monza:0",
+              "price": 151
+            },
+            {
+              "name": "Torino:0|Monza:0",
+              "price": 9
+            },
+            {
+              "name": "Torino:1|Monza:1",
+              "price": 6
+            },
+            {
+              "name": "Torino:2|Monza:2",
+              "price": 13
+            },
+            {
+              "name": "Torino:3|Monza:3",
+              "price": 56
+            },
+            {
+              "name": "Torino:4|Monza:4",
+              "price": 151
+            },
+            {
+              "name": "Monza:1|Torino:0",
+              "price": 10
+            },
+            {
+              "name": "Monza:2|Torino:0",
+              "price": 17
+            },
+            {
+              "name": "Monza:2|Torino:1",
+              "price": 11
+            },
+            {
+              "name": "Monza:3|Torino:0",
+              "price": 36
+            },
+            {
+              "name": "Monza:3|Torino:1",
+              "price": 29
+            },
+            {
+              "name": "Monza:3|Torino:2",
+              "price": 36
+            },
+            {
+              "name": "Monza:4|Torino:0",
+              "price": 91
+            },
+            {
+              "name": "Monza:4|Torino:1",
+              "price": 71
+            },
+            {
+              "name": "Monza:4|Torino:2",
+              "price": 91
+            },
+            {
+              "name": "Monza:4|Torino:3",
+              "price": 101
+            },
+            {
+              "name": "Monza:5|Torino:0",
+              "price": 151
+            },
+            {
+              "name": "Monza:5|Torino:1",
+              "price": 126
+            },
+            {
+              "name": "Monza:5|Torino:2",
+              "price": 151
+            },
+            {
+              "name": "Monza:6|Torino:0",
+              "price": 151
+            },
+            {
+              "name": "Monza:6|Torino:1",
+              "price": 151
+            },
+            {
+              "name": "Monza:6|Torino:2",
+              "price": 151
+            },
+            {
+              "name": "Monza:7|Torino:0",
+              "price": 151
+            },
+            {
+              "name": "Monza:7|Torino:1",
+              "price": 151
+            },
+            {
+              "name": "Monza:8|Torino:0",
+              "price": 151
+            },
+            {
+              "name": "Monza:9|Torino:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:07:12Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.35
+            },
+            {
+              "name": "Torino",
+              "price": 2.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:06:57Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.55
+            },
+            {
+              "name": "Torino",
+              "price": 2.18
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:06:57Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.55
+            },
+            {
+              "name": "Torino",
+              "price": 2.18
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:06:57Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.25
+            },
+            {
+              "name": "Torino",
+              "price": 2.05
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:04:19Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.35
+            },
+            {
+              "name": "Torino",
+              "price": 2.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:07:29Z",
+          "outcomes": [
+            {
+              "name": "Monza",
+              "price": 3.35
+            },
+            {
+              "name": "Torino",
+              "price": 2.18
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

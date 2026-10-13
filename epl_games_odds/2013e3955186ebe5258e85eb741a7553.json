@@ -1,0 +1,646 @@
+{
+  "id": "2013e3955186ebe5258e85eb741a7553",
+  "sport_key": "soccer_spain_la_liga",
+  "sport_title": "La Liga - Spain",
+  "commence_time": "2026-10-25T15:15:00Z",
+  "home_team": "Celta Vigo",
+  "away_team": "Real Betis",
+  "bookmakers": [
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:44:50Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.55
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:44:37Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.65
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:45:19Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.4
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:45:25Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.55
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:44:36Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.62
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:44:36Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.67
+            },
+            {
+              "name": "No",
+              "price": 2.15
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:44:36Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo or Draw",
+              "price": 1.5
+            },
+            {
+              "name": "Real Betis or Draw",
+              "price": 1.44
+            },
+            {
+              "name": "Celta Vigo or Real Betis",
+              "price": 1.3
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:44:43Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo:1|Real Betis:0",
+              "price": 9
+            },
+            {
+              "name": "Celta Vigo:2|Real Betis:0",
+              "price": 13
+            },
+            {
+              "name": "Celta Vigo:2|Real Betis:1",
+              "price": 9
+            },
+            {
+              "name": "Celta Vigo:3|Real Betis:0",
+              "price": 26
+            },
+            {
+              "name": "Celta Vigo:3|Real Betis:1",
+              "price": 19
+            },
+            {
+              "name": "Celta Vigo:3|Real Betis:2",
+              "price": 23
+            },
+            {
+              "name": "Celta Vigo:4|Real Betis:0",
+              "price": 61
+            },
+            {
+              "name": "Celta Vigo:4|Real Betis:1",
+              "price": 46
+            },
+            {
+              "name": "Celta Vigo:4|Real Betis:2",
+              "price": 61
+            },
+            {
+              "name": "Celta Vigo:4|Real Betis:3",
+              "price": 91
+            },
+            {
+              "name": "Celta Vigo:5|Real Betis:0",
+              "price": 101
+            },
+            {
+              "name": "Celta Vigo:5|Real Betis:1",
+              "price": 101
+            },
+            {
+              "name": "Celta Vigo:5|Real Betis:2",
+              "price": 101
+            },
+            {
+              "name": "Celta Vigo:6|Real Betis:0",
+              "price": 151
+            },
+            {
+              "name": "Celta Vigo:6|Real Betis:1",
+              "price": 151
+            },
+            {
+              "name": "Celta Vigo:6|Real Betis:2",
+              "price": 151
+            },
+            {
+              "name": "Celta Vigo:7|Real Betis:0",
+              "price": 151
+            },
+            {
+              "name": "Celta Vigo:7|Real Betis:1",
+              "price": 151
+            },
+            {
+              "name": "Celta Vigo:8|Real Betis:0",
+              "price": 151
+            },
+            {
+              "name": "Celta Vigo:9|Real Betis:0",
+              "price": 151
+            },
+            {
+              "name": "Celta Vigo:10|Real Betis:0",
+              "price": 151
+            },
+            {
+              "name": "Celta Vigo:0|Real Betis:0",
+              "price": 11
+            },
+            {
+              "name": "Celta Vigo:1|Real Betis:1",
+              "price": 6
+            },
+            {
+              "name": "Celta Vigo:2|Real Betis:2",
+              "price": 12
+            },
+            {
+              "name": "Celta Vigo:3|Real Betis:3",
+              "price": 41
+            },
+            {
+              "name": "Celta Vigo:4|Real Betis:4",
+              "price": 126
+            },
+            {
+              "name": "Real Betis:1|Celta Vigo:0",
+              "price": 9
+            },
+            {
+              "name": "Real Betis:2|Celta Vigo:0",
+              "price": 13
+            },
+            {
+              "name": "Real Betis:2|Celta Vigo:1",
+              "price": 9
+            },
+            {
+              "name": "Real Betis:3|Celta Vigo:0",
+              "price": 26
+            },
+            {
+              "name": "Real Betis:3|Celta Vigo:1",
+              "price": 19
+            },
+            {
+              "name": "Real Betis:3|Celta Vigo:2",
+              "price": 23
+            },
+            {
+              "name": "Real Betis:4|Celta Vigo:0",
+              "price": 56
+            },
+            {
+              "name": "Real Betis:4|Celta Vigo:1",
+              "price": 46
+            },
+            {
+              "name": "Real Betis:4|Celta Vigo:2",
+              "price": 61
+            },
+            {
+              "name": "Real Betis:4|Celta Vigo:3",
+              "price": 91
+            },
+            {
+              "name": "Real Betis:5|Celta Vigo:0",
+              "price": 101
+            },
+            {
+              "name": "Real Betis:5|Celta Vigo:1",
+              "price": 101
+            },
+            {
+              "name": "Real Betis:5|Celta Vigo:2",
+              "price": 101
+            },
+            {
+              "name": "Real Betis:6|Celta Vigo:0",
+              "price": 151
+            },
+            {
+              "name": "Real Betis:6|Celta Vigo:1",
+              "price": 151
+            },
+            {
+              "name": "Real Betis:6|Celta Vigo:2",
+              "price": 151
+            },
+            {
+              "name": "Real Betis:7|Celta Vigo:0",
+              "price": 151
+            },
+            {
+              "name": "Real Betis:7|Celta Vigo:1",
+              "price": 151
+            },
+            {
+              "name": "Real Betis:8|Celta Vigo:0",
+              "price": 151
+            },
+            {
+              "name": "Real Betis:9|Celta Vigo:0",
+              "price": 151
+            },
+            {
+              "name": "Real Betis:10|Celta Vigo:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:44:48Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.77
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.67
+            },
+            {
+              "name": "Draw",
+              "price": 3.57
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:44:48Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.64
+            },
+            {
+              "name": "No",
+              "price": 2.15
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:44:48Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo or Draw",
+              "price": 1.54
+            },
+            {
+              "name": "Real Betis or Draw",
+              "price": 1.5
+            },
+            {
+              "name": "Celta Vigo or Real Betis",
+              "price": 1.34
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:41:43Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.55
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:44:39Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.7
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.48
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:44:39Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo or Draw",
+              "price": 1.52
+            },
+            {
+              "name": "Real Betis or Draw",
+              "price": 1.49
+            },
+            {
+              "name": "Celta Vigo or Real Betis",
+              "price": 1.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:45:20Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.61
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:45:18Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.8
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:45:19Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.65
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.48
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:45:36Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.6
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.43
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:45:05Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.8
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:45:05Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.62
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.58
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:45:21Z",
+          "outcomes": [
+            {
+              "name": "Celta Vigo",
+              "price": 2.62
+            },
+            {
+              "name": "Real Betis",
+              "price": 2.55
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

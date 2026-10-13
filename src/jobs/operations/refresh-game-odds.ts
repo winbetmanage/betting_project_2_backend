@@ -1,5 +1,6 @@
 import prisma from '../../utils/prisma.js';
 import { refreshGameOdds } from '../../services/gameOddsRefresh.service.js';
+import { getBoolSetting } from '../../services/settings.service.js';
 
 /**
  * Confirmed update intervals by time remaining to kickoff (published games only):
@@ -27,6 +28,7 @@ export type OddsRefreshSummary = {
   refreshed: number;
   fresh: number;
   errored: number;
+  paused?: boolean;
   details: { gameId: string; fixture: string; oddsChanged: number; marketsUpdated: number; notes: string[] }[];
 };
 
@@ -35,6 +37,15 @@ let running = false;
 export async function runRefreshGameOddsJob(): Promise<OddsRefreshSummary> {
   const summary: OddsRefreshSummary = { candidates: 0, due: 0, refreshed: 0, fresh: 0, errored: 0, details: [] };
   if (running) return summary;
+
+  // Admin setting: when auto-refresh is OFF, periodic odds updates are paused.
+  // Manual fetch endpoints (admin "fetch odds") are unaffected.
+  const autoRefresh = await getBoolSetting('odds.auto_refresh_enabled', true);
+  if (!autoRefresh) {
+    summary.paused = true;
+    return summary;
+  }
+
   running = true;
   try {
     const now = new Date();

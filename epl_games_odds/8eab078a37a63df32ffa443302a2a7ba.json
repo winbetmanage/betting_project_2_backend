@@ -1,0 +1,664 @@
+{
+  "id": "8eab078a37a63df32ffa443302a2a7ba",
+  "sport_key": "soccer_france_ligue_one",
+  "sport_title": "Ligue 1 - France",
+  "commence_time": "2026-10-25T16:15:00Z",
+  "home_team": "Auxerre",
+  "away_team": "Le Mans FC",
+  "bookmakers": [
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:31Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.05
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:10:57Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.12
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:46Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.05
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:59Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.23
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.37
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:11:59Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.58
+            },
+            {
+              "name": "No",
+              "price": 2.26
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:11:59Z",
+          "outcomes": [
+            {
+              "name": "Auxerre or Draw",
+              "price": 1.37
+            },
+            {
+              "name": "Le Mans FC or Draw",
+              "price": 1.73
+            },
+            {
+              "name": "Auxerre or Le Mans FC",
+              "price": 1.32
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:02Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 1.96
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 2.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:14Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.1
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:58Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 1.98
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:58Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.1
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:11:58Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.65
+            },
+            {
+              "name": "No",
+              "price": 2.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:11:58Z",
+          "outcomes": [
+            {
+              "name": "Auxerre or Draw",
+              "price": 1.33
+            },
+            {
+              "name": "Le Mans FC or Draw",
+              "price": 1.67
+            },
+            {
+              "name": "Auxerre or Le Mans FC",
+              "price": 1.3
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T13:11:48Z",
+          "outcomes": [
+            {
+              "name": "Auxerre:1|Le Mans FC:0",
+              "price": 8.5
+            },
+            {
+              "name": "Auxerre:2|Le Mans FC:0",
+              "price": 11
+            },
+            {
+              "name": "Auxerre:2|Le Mans FC:1",
+              "price": 8.5
+            },
+            {
+              "name": "Auxerre:3|Le Mans FC:0",
+              "price": 21
+            },
+            {
+              "name": "Auxerre:3|Le Mans FC:1",
+              "price": 17
+            },
+            {
+              "name": "Auxerre:3|Le Mans FC:2",
+              "price": 23
+            },
+            {
+              "name": "Auxerre:4|Le Mans FC:0",
+              "price": 46
+            },
+            {
+              "name": "Auxerre:4|Le Mans FC:1",
+              "price": 36
+            },
+            {
+              "name": "Auxerre:4|Le Mans FC:2",
+              "price": 51
+            },
+            {
+              "name": "Auxerre:4|Le Mans FC:3",
+              "price": 81
+            },
+            {
+              "name": "Auxerre:5|Le Mans FC:0",
+              "price": 101
+            },
+            {
+              "name": "Auxerre:5|Le Mans FC:1",
+              "price": 81
+            },
+            {
+              "name": "Auxerre:5|Le Mans FC:2",
+              "price": 101
+            },
+            {
+              "name": "Auxerre:6|Le Mans FC:0",
+              "price": 151
+            },
+            {
+              "name": "Auxerre:6|Le Mans FC:1",
+              "price": 151
+            },
+            {
+              "name": "Auxerre:6|Le Mans FC:2",
+              "price": 151
+            },
+            {
+              "name": "Auxerre:7|Le Mans FC:0",
+              "price": 151
+            },
+            {
+              "name": "Auxerre:7|Le Mans FC:1",
+              "price": 151
+            },
+            {
+              "name": "Auxerre:8|Le Mans FC:0",
+              "price": 151
+            },
+            {
+              "name": "Auxerre:9|Le Mans FC:0",
+              "price": 151
+            },
+            {
+              "name": "Auxerre:10|Le Mans FC:0",
+              "price": 151
+            },
+            {
+              "name": "Auxerre:0|Le Mans FC:0",
+              "price": 11
+            },
+            {
+              "name": "Auxerre:1|Le Mans FC:1",
+              "price": 6
+            },
+            {
+              "name": "Auxerre:2|Le Mans FC:2",
+              "price": 12
+            },
+            {
+              "name": "Auxerre:3|Le Mans FC:3",
+              "price": 41
+            },
+            {
+              "name": "Auxerre:4|Le Mans FC:4",
+              "price": 126
+            },
+            {
+              "name": "Le Mans FC:1|Auxerre:0",
+              "price": 10
+            },
+            {
+              "name": "Le Mans FC:2|Auxerre:0",
+              "price": 15
+            },
+            {
+              "name": "Le Mans FC:2|Auxerre:1",
+              "price": 10
+            },
+            {
+              "name": "Le Mans FC:3|Auxerre:0",
+              "price": 29
+            },
+            {
+              "name": "Le Mans FC:3|Auxerre:1",
+              "price": 23
+            },
+            {
+              "name": "Le Mans FC:3|Auxerre:2",
+              "price": 26
+            },
+            {
+              "name": "Le Mans FC:4|Auxerre:0",
+              "price": 71
+            },
+            {
+              "name": "Le Mans FC:4|Auxerre:1",
+              "price": 56
+            },
+            {
+              "name": "Le Mans FC:4|Auxerre:2",
+              "price": 67
+            },
+            {
+              "name": "Le Mans FC:4|Auxerre:3",
+              "price": 91
+            },
+            {
+              "name": "Le Mans FC:5|Auxerre:0",
+              "price": 126
+            },
+            {
+              "name": "Le Mans FC:5|Auxerre:1",
+              "price": 101
+            },
+            {
+              "name": "Le Mans FC:5|Auxerre:2",
+              "price": 126
+            },
+            {
+              "name": "Le Mans FC:6|Auxerre:0",
+              "price": 151
+            },
+            {
+              "name": "Le Mans FC:6|Auxerre:1",
+              "price": 151
+            },
+            {
+              "name": "Le Mans FC:6|Auxerre:2",
+              "price": 151
+            },
+            {
+              "name": "Le Mans FC:7|Auxerre:0",
+              "price": 151
+            },
+            {
+              "name": "Le Mans FC:7|Auxerre:1",
+              "price": 151
+            },
+            {
+              "name": "Le Mans FC:8|Auxerre:0",
+              "price": 151
+            },
+            {
+              "name": "Le Mans FC:9|Auxerre:0",
+              "price": 151
+            },
+            {
+              "name": "Le Mans FC:10|Auxerre:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:08Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.17
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.28
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:11:08Z",
+          "outcomes": [
+            {
+              "name": "Auxerre or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Le Mans FC or Draw",
+              "price": 1.72
+            },
+            {
+              "name": "Auxerre or Le Mans FC",
+              "price": 1.31
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:44Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.16
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.35
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T13:11:44Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.3
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.65
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:43Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.12
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.61
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:15Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.2
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:51Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.17
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:15Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.07
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.05
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:11:13Z",
+          "outcomes": [
+            {
+              "name": "Auxerre",
+              "price": 2.2
+            },
+            {
+              "name": "Le Mans FC",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

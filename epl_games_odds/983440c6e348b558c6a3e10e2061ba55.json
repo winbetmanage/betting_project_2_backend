@@ -1,0 +1,574 @@
+{
+  "id": "983440c6e348b558c6a3e10e2061ba55",
+  "sport_key": "soccer_germany_bundesliga",
+  "sport_title": "Bundesliga - Germany",
+  "commence_time": "2026-10-24T13:30:00Z",
+  "home_team": "1. FC Köln",
+  "away_team": "FC Schalke 04",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:14Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 2
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 3.34
+            },
+            {
+              "name": "Draw",
+              "price": 3.96
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:24:30Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 1.88
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 2.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:24:43Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 2
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:24:59Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 1.97
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 3.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:24:44Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 1.9
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 3.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:24:33Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 2.06
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 3.34
+            },
+            {
+              "name": "Draw",
+              "price": 3.88
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:24:33Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln or Draw",
+              "price": 1.35
+            },
+            {
+              "name": "FC Schalke 04 or Draw",
+              "price": 1.8
+            },
+            {
+              "name": "1. FC Köln or FC Schalke 04",
+              "price": 1.28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:15Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 2
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:25:15Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.5
+            },
+            {
+              "name": "No",
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:25:15Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln or Draw",
+              "price": 1.33
+            },
+            {
+              "name": "FC Schalke 04 or Draw",
+              "price": 1.75
+            },
+            {
+              "name": "1. FC Köln or FC Schalke 04",
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:25:07Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln:1|FC Schalke 04:0",
+              "price": 11
+            },
+            {
+              "name": "1. FC Köln:2|FC Schalke 04:0",
+              "price": 12
+            },
+            {
+              "name": "1. FC Köln:2|FC Schalke 04:1",
+              "price": 9
+            },
+            {
+              "name": "1. FC Köln:3|FC Schalke 04:0",
+              "price": 19
+            },
+            {
+              "name": "1. FC Köln:3|FC Schalke 04:1",
+              "price": 13
+            },
+            {
+              "name": "1. FC Köln:3|FC Schalke 04:2",
+              "price": 19
+            },
+            {
+              "name": "1. FC Köln:4|FC Schalke 04:0",
+              "price": 36
+            },
+            {
+              "name": "1. FC Köln:4|FC Schalke 04:1",
+              "price": 29
+            },
+            {
+              "name": "1. FC Köln:4|FC Schalke 04:2",
+              "price": 36
+            },
+            {
+              "name": "1. FC Köln:4|FC Schalke 04:3",
+              "price": 67
+            },
+            {
+              "name": "1. FC Köln:5|FC Schalke 04:0",
+              "price": 71
+            },
+            {
+              "name": "1. FC Köln:5|FC Schalke 04:1",
+              "price": 61
+            },
+            {
+              "name": "1. FC Köln:5|FC Schalke 04:2",
+              "price": 81
+            },
+            {
+              "name": "1. FC Köln:6|FC Schalke 04:0",
+              "price": 126
+            },
+            {
+              "name": "1. FC Köln:6|FC Schalke 04:1",
+              "price": 101
+            },
+            {
+              "name": "1. FC Köln:6|FC Schalke 04:2",
+              "price": 126
+            },
+            {
+              "name": "1. FC Köln:7|FC Schalke 04:0",
+              "price": 151
+            },
+            {
+              "name": "1. FC Köln:7|FC Schalke 04:1",
+              "price": 151
+            },
+            {
+              "name": "1. FC Köln:8|FC Schalke 04:0",
+              "price": 151
+            },
+            {
+              "name": "1. FC Köln:9|FC Schalke 04:0",
+              "price": 151
+            },
+            {
+              "name": "1. FC Köln:10|FC Schalke 04:0",
+              "price": 151
+            },
+            {
+              "name": "1. FC Köln:0|FC Schalke 04:0",
+              "price": 15
+            },
+            {
+              "name": "1. FC Köln:1|FC Schalke 04:1",
+              "price": 7
+            },
+            {
+              "name": "1. FC Köln:2|FC Schalke 04:2",
+              "price": 10
+            },
+            {
+              "name": "1. FC Köln:3|FC Schalke 04:3",
+              "price": 29
+            },
+            {
+              "name": "1. FC Köln:4|FC Schalke 04:4",
+              "price": 101
+            },
+            {
+              "name": "FC Schalke 04:1|1. FC Köln:0",
+              "price": 12
+            },
+            {
+              "name": "FC Schalke 04:2|1. FC Köln:0",
+              "price": 17
+            },
+            {
+              "name": "FC Schalke 04:2|1. FC Köln:1",
+              "price": 10
+            },
+            {
+              "name": "FC Schalke 04:3|1. FC Köln:0",
+              "price": 34
+            },
+            {
+              "name": "FC Schalke 04:3|1. FC Köln:1",
+              "price": 21
+            },
+            {
+              "name": "FC Schalke 04:3|1. FC Köln:2",
+              "price": 23
+            },
+            {
+              "name": "FC Schalke 04:4|1. FC Köln:0",
+              "price": 71
+            },
+            {
+              "name": "FC Schalke 04:4|1. FC Köln:1",
+              "price": 51
+            },
+            {
+              "name": "FC Schalke 04:4|1. FC Köln:2",
+              "price": 56
+            },
+            {
+              "name": "FC Schalke 04:4|1. FC Köln:3",
+              "price": 71
+            },
+            {
+              "name": "FC Schalke 04:5|1. FC Köln:0",
+              "price": 126
+            },
+            {
+              "name": "FC Schalke 04:5|1. FC Köln:1",
+              "price": 101
+            },
+            {
+              "name": "FC Schalke 04:5|1. FC Köln:2",
+              "price": 101
+            },
+            {
+              "name": "FC Schalke 04:6|1. FC Köln:0",
+              "price": 151
+            },
+            {
+              "name": "FC Schalke 04:6|1. FC Köln:1",
+              "price": 151
+            },
+            {
+              "name": "FC Schalke 04:6|1. FC Köln:2",
+              "price": 151
+            },
+            {
+              "name": "FC Schalke 04:7|1. FC Köln:0",
+              "price": 151
+            },
+            {
+              "name": "FC Schalke 04:7|1. FC Köln:1",
+              "price": 151
+            },
+            {
+              "name": "FC Schalke 04:8|1. FC Köln:0",
+              "price": 151
+            },
+            {
+              "name": "FC Schalke 04:9|1. FC Köln:0",
+              "price": 151
+            },
+            {
+              "name": "FC Schalke 04:10|1. FC Köln:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:24:44Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 1.92
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 2.95
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:25:16Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 1.93
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 3.08
+            },
+            {
+              "name": "Draw",
+              "price": 3.63
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:28Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 2.12
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 3.43
+            },
+            {
+              "name": "Draw",
+              "price": 3.98
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:23:28Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.5
+            },
+            {
+              "name": "No",
+              "price": 2.45
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:23:28Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "FC Schalke 04 or Draw",
+              "price": 1.81
+            },
+            {
+              "name": "1. FC Köln or FC Schalke 04",
+              "price": 1.29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:24:44Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 2.02
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:21:50Z",
+          "outcomes": [
+            {
+              "name": "1. FC Köln",
+              "price": 2.02
+            },
+            {
+              "name": "FC Schalke 04",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

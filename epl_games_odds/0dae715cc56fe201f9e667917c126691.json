@@ -1,0 +1,646 @@
+{
+  "id": "0dae715cc56fe201f9e667917c126691",
+  "sport_key": "soccer_spain_la_liga",
+  "sport_title": "La Liga - Spain",
+  "commence_time": "2026-10-24T16:30:00Z",
+  "home_team": "Valencia",
+  "away_team": "Villarreal",
+  "bookmakers": [
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:29:04Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.2
+            },
+            {
+              "name": "Villarreal",
+              "price": 2
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:17Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.4
+            },
+            {
+              "name": "Villarreal",
+              "price": 2
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T11:28:17Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.65
+            },
+            {
+              "name": "No",
+              "price": 2.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T11:28:17Z",
+          "outcomes": [
+            {
+              "name": "Valencia or Draw",
+              "price": 1.73
+            },
+            {
+              "name": "Villarreal or Draw",
+              "price": 1.3
+            },
+            {
+              "name": "Valencia or Villarreal",
+              "price": 1.29
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T11:28:37Z",
+          "outcomes": [
+            {
+              "name": "Valencia:1|Villarreal:0",
+              "price": 11
+            },
+            {
+              "name": "Valencia:2|Villarreal:0",
+              "price": 17
+            },
+            {
+              "name": "Valencia:2|Villarreal:1",
+              "price": 11
+            },
+            {
+              "name": "Valencia:3|Villarreal:0",
+              "price": 36
+            },
+            {
+              "name": "Valencia:3|Villarreal:1",
+              "price": 23
+            },
+            {
+              "name": "Valencia:3|Villarreal:2",
+              "price": 29
+            },
+            {
+              "name": "Valencia:4|Villarreal:0",
+              "price": 81
+            },
+            {
+              "name": "Valencia:4|Villarreal:1",
+              "price": 61
+            },
+            {
+              "name": "Valencia:4|Villarreal:2",
+              "price": 67
+            },
+            {
+              "name": "Valencia:4|Villarreal:3",
+              "price": 91
+            },
+            {
+              "name": "Valencia:5|Villarreal:0",
+              "price": 126
+            },
+            {
+              "name": "Valencia:5|Villarreal:1",
+              "price": 126
+            },
+            {
+              "name": "Valencia:5|Villarreal:2",
+              "price": 126
+            },
+            {
+              "name": "Valencia:6|Villarreal:0",
+              "price": 151
+            },
+            {
+              "name": "Valencia:6|Villarreal:1",
+              "price": 151
+            },
+            {
+              "name": "Valencia:6|Villarreal:2",
+              "price": 151
+            },
+            {
+              "name": "Valencia:7|Villarreal:0",
+              "price": 151
+            },
+            {
+              "name": "Valencia:7|Villarreal:1",
+              "price": 151
+            },
+            {
+              "name": "Valencia:8|Villarreal:0",
+              "price": 151
+            },
+            {
+              "name": "Valencia:9|Villarreal:0",
+              "price": 151
+            },
+            {
+              "name": "Valencia:10|Villarreal:0",
+              "price": 151
+            },
+            {
+              "name": "Valencia:0|Villarreal:0",
+              "price": 12
+            },
+            {
+              "name": "Valencia:1|Villarreal:1",
+              "price": 6.5
+            },
+            {
+              "name": "Valencia:2|Villarreal:2",
+              "price": 12
+            },
+            {
+              "name": "Valencia:3|Villarreal:3",
+              "price": 41
+            },
+            {
+              "name": "Valencia:4|Villarreal:4",
+              "price": 126
+            },
+            {
+              "name": "Villarreal:1|Valencia:0",
+              "price": 8.5
+            },
+            {
+              "name": "Villarreal:2|Valencia:0",
+              "price": 10
+            },
+            {
+              "name": "Villarreal:2|Valencia:1",
+              "price": 8.5
+            },
+            {
+              "name": "Villarreal:3|Valencia:0",
+              "price": 17
+            },
+            {
+              "name": "Villarreal:3|Valencia:1",
+              "price": 15
+            },
+            {
+              "name": "Villarreal:3|Valencia:2",
+              "price": 21
+            },
+            {
+              "name": "Villarreal:4|Valencia:0",
+              "price": 36
+            },
+            {
+              "name": "Villarreal:4|Valencia:1",
+              "price": 29
+            },
+            {
+              "name": "Villarreal:4|Valencia:2",
+              "price": 46
+            },
+            {
+              "name": "Villarreal:4|Valencia:3",
+              "price": 81
+            },
+            {
+              "name": "Villarreal:5|Valencia:0",
+              "price": 81
+            },
+            {
+              "name": "Villarreal:5|Valencia:1",
+              "price": 71
+            },
+            {
+              "name": "Villarreal:5|Valencia:2",
+              "price": 91
+            },
+            {
+              "name": "Villarreal:6|Valencia:0",
+              "price": 126
+            },
+            {
+              "name": "Villarreal:6|Valencia:1",
+              "price": 126
+            },
+            {
+              "name": "Villarreal:6|Valencia:2",
+              "price": 151
+            },
+            {
+              "name": "Villarreal:7|Valencia:0",
+              "price": 151
+            },
+            {
+              "name": "Villarreal:7|Valencia:1",
+              "price": 151
+            },
+            {
+              "name": "Villarreal:8|Valencia:0",
+              "price": 151
+            },
+            {
+              "name": "Villarreal:9|Valencia:0",
+              "price": 151
+            },
+            {
+              "name": "Villarreal:10|Valencia:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:02Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.65
+            },
+            {
+              "name": "Villarreal",
+              "price": 2.09
+            },
+            {
+              "name": "Draw",
+              "price": 3.82
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T11:27:02Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.6
+            },
+            {
+              "name": "No",
+              "price": 2.22
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T11:27:02Z",
+          "outcomes": [
+            {
+              "name": "Valencia or Draw",
+              "price": 1.83
+            },
+            {
+              "name": "Villarreal or Draw",
+              "price": 1.33
+            },
+            {
+              "name": "Valencia or Villarreal",
+              "price": 1.31
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:07Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.4
+            },
+            {
+              "name": "Villarreal",
+              "price": 2.05
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:20Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3
+            },
+            {
+              "name": "Villarreal",
+              "price": 1.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:29:02Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.2
+            },
+            {
+              "name": "Villarreal",
+              "price": 1.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:27:59Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.2
+            },
+            {
+              "name": "Villarreal",
+              "price": 1.94
+            },
+            {
+              "name": "Draw",
+              "price": 3.42
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:52Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.55
+            },
+            {
+              "name": "Villarreal",
+              "price": 2.03
+            },
+            {
+              "name": "Draw",
+              "price": 3.72
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T11:28:52Z",
+          "outcomes": [
+            {
+              "name": "Valencia or Draw",
+              "price": 1.82
+            },
+            {
+              "name": "Villarreal or Draw",
+              "price": 1.32
+            },
+            {
+              "name": "Valencia or Villarreal",
+              "price": 1.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:48Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.24
+            },
+            {
+              "name": "Villarreal",
+              "price": 2.09
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:32Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.45
+            },
+            {
+              "name": "Villarreal",
+              "price": 1.93
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:49Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.35
+            },
+            {
+              "name": "Villarreal",
+              "price": 1.91
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:47Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.65
+            },
+            {
+              "name": "Villarreal",
+              "price": 2.02
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:04Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.65
+            },
+            {
+              "name": "Villarreal",
+              "price": 2.02
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:18Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.45
+            },
+            {
+              "name": "Villarreal",
+              "price": 2.02
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:28:17Z",
+          "outcomes": [
+            {
+              "name": "Valencia",
+              "price": 3.45
+            },
+            {
+              "name": "Villarreal",
+              "price": 2.02
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

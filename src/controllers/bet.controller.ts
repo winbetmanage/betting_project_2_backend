@@ -3,6 +3,7 @@ import * as settlementService from '../services/gameSettlement.service';
 import asyncHandler from '../utils/asyncHandler';
 import prisma from '../utils/prisma';
 import ApiError from '../utils/ApiError';
+import { isSubAdminRole } from '../constants/roles';
 
 export const place = asyncHandler(async (req, res) => {
   const bet = await betService.placeBet(req.user!.id, req.body);
@@ -15,8 +16,11 @@ export const myBets = asyncHandler(async (req, res) => {
 });
 
 export const getById = asyncHandler(async (req, res) => {
-  const isAdmin = req.user!.role === 'ADMIN';
-  const bet = await betService.getBetById(req.params.id as string, req.user!.id, isAdmin);
+  // Admins and sub-admins may open any ticket (the sub-admin console is read-only);
+  // everyone else is limited to their own bets.
+  const role = req.user!.role as string;
+  const isPrivileged = role === 'ADMIN' || isSubAdminRole(role);
+  const bet = await betService.getBetById(req.params.id as string, req.user!.id, isPrivileged);
   res.json({ data: bet });
 });
 

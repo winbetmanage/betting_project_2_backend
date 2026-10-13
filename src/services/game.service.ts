@@ -44,8 +44,12 @@ export const listGames = async (filters: Record<string, unknown> = {}) => {
       ? spec.sport_key
       : compName.includes('champions')
         ? 'soccer_uefa_champs_league'
-        : compName.includes('la liga')
-          ? 'soccer_spain_la_liga'
+        : compName.includes('fa cup')
+          ? 'soccer_fa_cup'
+          : compName.includes('efl cup') || compName.includes('league cup')
+            ? 'soccer_england_efl_cup'
+            : compName.includes('la liga')
+              ? 'soccer_spain_la_liga'
           : compName.includes('bundesliga')
             ? 'soccer_germany_bundesliga'
             : compName.includes('serie a')

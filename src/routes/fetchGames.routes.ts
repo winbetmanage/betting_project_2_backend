@@ -32,6 +32,9 @@ router.get('/la-liga', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedG
 router.get('/bundesliga', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listBundesliga);
 router.get('/serie-a', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listSerieA);
 router.get('/ligue-1', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listLigue1);
+// Odds-api-only competitions (no football-data.org)
+router.get('/fa-cup', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listFaCup);
+router.get('/efl-cup', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listEflCup);
 
 // Premier League browse (same service as CL; legacy /premier-league routes below stay for now)
 router.get('/premier-league-events', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), stagedGamesController.listPremierLeagueEvents);

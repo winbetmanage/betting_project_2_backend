@@ -1,0 +1,646 @@
+{
+  "id": "5960b1b6c20acfd78e78764fed47d505",
+  "sport_key": "soccer_spain_la_liga",
+  "sport_title": "La Liga - Spain",
+  "commence_time": "2026-10-24T14:15:00Z",
+  "home_team": "Real Racing Club de Santander",
+  "away_team": "Espanyol",
+  "bookmakers": [
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:32:26Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.7
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:31:55Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.75
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:31:55Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.57
+            },
+            {
+              "name": "No",
+              "price": 2.3
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:31:55Z",
+          "outcomes": [
+            {
+              "name": "Espanyol or Draw",
+              "price": 1.57
+            },
+            {
+              "name": "Real Racing Club de Santander or Draw",
+              "price": 1.4
+            },
+            {
+              "name": "Espanyol or Real Racing Club de Santander",
+              "price": 1.29
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:31:48Z",
+          "outcomes": [
+            {
+              "name": "Real Racing Club de Santander:1|Espanyol:0",
+              "price": 9.5
+            },
+            {
+              "name": "Real Racing Club de Santander:2|Espanyol:0",
+              "price": 12
+            },
+            {
+              "name": "Real Racing Club de Santander:2|Espanyol:1",
+              "price": 9
+            },
+            {
+              "name": "Real Racing Club de Santander:3|Espanyol:0",
+              "price": 23
+            },
+            {
+              "name": "Real Racing Club de Santander:3|Espanyol:1",
+              "price": 17
+            },
+            {
+              "name": "Real Racing Club de Santander:3|Espanyol:2",
+              "price": 23
+            },
+            {
+              "name": "Real Racing Club de Santander:4|Espanyol:0",
+              "price": 46
+            },
+            {
+              "name": "Real Racing Club de Santander:4|Espanyol:1",
+              "price": 36
+            },
+            {
+              "name": "Real Racing Club de Santander:4|Espanyol:2",
+              "price": 51
+            },
+            {
+              "name": "Real Racing Club de Santander:4|Espanyol:3",
+              "price": 81
+            },
+            {
+              "name": "Real Racing Club de Santander:5|Espanyol:0",
+              "price": 101
+            },
+            {
+              "name": "Real Racing Club de Santander:5|Espanyol:1",
+              "price": 81
+            },
+            {
+              "name": "Real Racing Club de Santander:5|Espanyol:2",
+              "price": 101
+            },
+            {
+              "name": "Real Racing Club de Santander:6|Espanyol:0",
+              "price": 151
+            },
+            {
+              "name": "Real Racing Club de Santander:6|Espanyol:1",
+              "price": 151
+            },
+            {
+              "name": "Real Racing Club de Santander:6|Espanyol:2",
+              "price": 151
+            },
+            {
+              "name": "Real Racing Club de Santander:7|Espanyol:0",
+              "price": 151
+            },
+            {
+              "name": "Real Racing Club de Santander:7|Espanyol:1",
+              "price": 151
+            },
+            {
+              "name": "Real Racing Club de Santander:8|Espanyol:0",
+              "price": 151
+            },
+            {
+              "name": "Real Racing Club de Santander:9|Espanyol:0",
+              "price": 151
+            },
+            {
+              "name": "Real Racing Club de Santander:10|Espanyol:0",
+              "price": 151
+            },
+            {
+              "name": "Real Racing Club de Santander:0|Espanyol:0",
+              "price": 13
+            },
+            {
+              "name": "Real Racing Club de Santander:1|Espanyol:1",
+              "price": 6.5
+            },
+            {
+              "name": "Real Racing Club de Santander:2|Espanyol:2",
+              "price": 11
+            },
+            {
+              "name": "Real Racing Club de Santander:3|Espanyol:3",
+              "price": 41
+            },
+            {
+              "name": "Real Racing Club de Santander:4|Espanyol:4",
+              "price": 126
+            },
+            {
+              "name": "Espanyol:1|Real Racing Club de Santander:0",
+              "price": 10
+            },
+            {
+              "name": "Espanyol:2|Real Racing Club de Santander:0",
+              "price": 13
+            },
+            {
+              "name": "Espanyol:2|Real Racing Club de Santander:1",
+              "price": 9.5
+            },
+            {
+              "name": "Espanyol:3|Real Racing Club de Santander:0",
+              "price": 26
+            },
+            {
+              "name": "Espanyol:3|Real Racing Club de Santander:1",
+              "price": 19
+            },
+            {
+              "name": "Espanyol:3|Real Racing Club de Santander:2",
+              "price": 23
+            },
+            {
+              "name": "Espanyol:4|Real Racing Club de Santander:0",
+              "price": 61
+            },
+            {
+              "name": "Espanyol:4|Real Racing Club de Santander:1",
+              "price": 46
+            },
+            {
+              "name": "Espanyol:4|Real Racing Club de Santander:2",
+              "price": 56
+            },
+            {
+              "name": "Espanyol:4|Real Racing Club de Santander:3",
+              "price": 81
+            },
+            {
+              "name": "Espanyol:5|Real Racing Club de Santander:0",
+              "price": 126
+            },
+            {
+              "name": "Espanyol:5|Real Racing Club de Santander:1",
+              "price": 101
+            },
+            {
+              "name": "Espanyol:5|Real Racing Club de Santander:2",
+              "price": 101
+            },
+            {
+              "name": "Espanyol:6|Real Racing Club de Santander:0",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:6|Real Racing Club de Santander:1",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:6|Real Racing Club de Santander:2",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:7|Real Racing Club de Santander:0",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:7|Real Racing Club de Santander:1",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:8|Real Racing Club de Santander:0",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:9|Real Racing Club de Santander:0",
+              "price": 151
+            },
+            {
+              "name": "Espanyol:10|Real Racing Club de Santander:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:32:09Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.93
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.47
+            },
+            {
+              "name": "Draw",
+              "price": 3.72
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:32:09Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.57
+            },
+            {
+              "name": "No",
+              "price": 2.28
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:32:09Z",
+          "outcomes": [
+            {
+              "name": "Espanyol or Draw",
+              "price": 1.61
+            },
+            {
+              "name": "Real Racing Club de Santander or Draw",
+              "price": 1.46
+            },
+            {
+              "name": "Espanyol or Real Racing Club de Santander",
+              "price": 1.32
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:31:39Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.8
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:31:55Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.55
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:32:25Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.7
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:32:38Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.65
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.23
+            },
+            {
+              "name": "Draw",
+              "price": 3.37
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:31:59Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.85
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.62
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:31:59Z",
+          "outcomes": [
+            {
+              "name": "Espanyol or Draw",
+              "price": 1.6
+            },
+            {
+              "name": "Real Racing Club de Santander or Draw",
+              "price": 1.45
+            },
+            {
+              "name": "Espanyol or Real Racing Club de Santander",
+              "price": 1.31
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:32:42Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.82
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.38
+            },
+            {
+              "name": "Draw",
+              "price": 3.62
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:31:54Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.8
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.17
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:32:25Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 3
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:31:54Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 3
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:32:10Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.85
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:32:43Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.85
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.38
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:29:22Z",
+          "outcomes": [
+            {
+              "name": "Espanyol",
+              "price": 2.85
+            },
+            {
+              "name": "Real Racing Club de Santander",
+              "price": 2.35
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,10 +5,121 @@ import path from 'path';
 import * as marketService from './market.service';
 import * as betService from './bet.service';
 import { notify } from './notification.service';
-import { getFootballDataMatchDetailUrl, footballDataFetchOptions } from '../../codes';
+import { getFootballDataMatchDetailUrl, footballDataFetchOptions, getScoresUrl } from '../../codes';
 
 const round2 = (n: unknown) => Math.round(Number(n) * 100) / 100;
 const norm = (s: unknown) => String(s ?? '').toLowerCase().replace(/\s+/g, ' ').trim();
+
+// --- Odds-api-only competitions (FA Cup / EFL Cup) --------------------------
+// These are never linked to football-data; their scores come from The Odds API
+// scores endpoint. The game's `specifications` carries `dataSource: 'odds'`.
+
+type OddsScoreEntry = {
+  id: string;
+  completed: boolean;
+  home_team: string;
+  away_team: string;
+  scores: { name: string; score: string }[] | null;
+  last_update: string | null;
+};
+
+function isOddsOnlyGameSpec(spec: unknown): boolean {
+  const s = (spec ?? {}) as Record<string, unknown>;
+  if (s.dataSource === 'odds') return true;
+  const key = typeof s.sport_key === 'string' ? s.sport_key : '';
+  return key === 'soccer_fa_cup' || key === 'soccer_england_efl_cup';
+}
+
+/** Map an odds-api scores entry to (homeFT, awayFT) using the two team names. */
+function parseOddsScore(entry: OddsScoreEntry, homeTeam: string, awayTeam: string): { home: number | null; away: number | null } {
+  const scores = entry.scores ?? [];
+  const find = (team: string): number | null => {
+    const t = norm(team);
+    const hit = scores.find((s) => norm(s.name) === t) ?? scores.find((s) => norm(s.name).includes(t) || t.includes(norm(s.name)));
+    if (!hit) return null;
+    const n = Number(hit.score);
+    return Number.isFinite(n) ? n : null;
+  };
+  return { home: find(homeTeam), away: find(awayTeam) };
+}
+
+/**
+ * Resolve a result for an odds-api-only game from The Odds API scores endpoint.
+ * The score is cached on `Game.specifications.oddsApiScore` so lists/settlement
+ * don't refetch on every read.
+ */
+async function resolveOddsApiResult(
+  gameId: string,
+  externalEventId: string | null,
+  homeTeam: string,
+  awayTeam: string,
+  specifications: unknown
+): Promise<GameResult> {
+  const spec = (specifications ?? {}) as Record<string, unknown>;
+  const sKey = typeof spec.sport_key === 'string' && spec.sport_key ? spec.sport_key : 'soccer_fa_cup';
+
+  // Cached finished score takes precedence.
+  const cached = spec.oddsApiScore as { home?: number | null; away?: number | null; completed?: boolean; status?: string } | undefined;
+  if (cached && cached.completed && cached.home != null && cached.away != null) {
+    return {
+      finished: true,
+      matchStatus: cached.status ?? 'FINISHED',
+      homeFT: cached.home,
+      awayFT: cached.away,
+      homeHT: null,
+      awayHT: null,
+      winner: cached.home > cached.away ? 'HOME' : cached.home < cached.away ? 'AWAY' : 'DRAW',
+      source: 'odds-api',
+    };
+  }
+
+  if (!externalEventId) {
+    return { finished: false, matchStatus: 'SCHEDULED', homeFT: null, awayFT: null, homeHT: null, awayHT: null, winner: null, source: 'none' };
+  }
+
+  try {
+    const res = await fetch(getScoresUrl(sKey, 3));
+    if (!res.ok) throw new Error(`scores ${res.status}`);
+    const data = (await res.json()) as OddsScoreEntry[];
+    const entry = Array.isArray(data) ? data.find((e) => e.id === externalEventId) : undefined;
+    if (!entry) {
+      return { finished: false, matchStatus: 'SCHEDULED', homeFT: null, awayFT: null, homeHT: null, awayHT: null, winner: null, source: 'odds-api' };
+    }
+    const { home, away } = parseOddsScore(entry, homeTeam, awayTeam);
+    const finished = entry.completed && home != null && away != null;
+
+    // Persist a lightweight score snapshot (no GameScore row: that requires an FD id).
+    await prisma.game.update({
+      where: { id: gameId },
+      data: { specifications: { ...spec, oddsApiScore: { home, away, completed: !!finished, status: entry.completed ? 'FINISHED' : 'IN_PLAY', updatedAt: new Date().toISOString() } } as never },
+    });
+
+    return {
+      finished,
+      matchStatus: entry.completed ? 'FINISHED' : 'IN_PLAY',
+      homeFT: home,
+      awayFT: away,
+      homeHT: null,
+      awayHT: null,
+      winner: finished && home != null && away != null ? (home > away ? 'HOME' : home < away ? 'AWAY' : 'DRAW') : null,
+      source: 'odds-api',
+    };
+  } catch {
+    if (cached && cached.home != null && cached.away != null) {
+      return {
+        finished: !!cached.completed,
+        matchStatus: cached.status ?? 'SCHEDULED',
+        homeFT: cached.home,
+        awayFT: cached.away,
+        homeHT: null,
+        awayHT: null,
+        winner: cached.home > cached.away ? 'HOME' : cached.home < cached.away ? 'AWAY' : 'DRAW',
+        source: 'odds-api',
+      };
+    }
+    return { finished: false, matchStatus: 'UNKNOWN', homeFT: null, awayFT: null, homeHT: null, awayHT: null, winner: null, source: 'none' };
+  }
+}
 
 export type GameResult = {
   finished: boolean;
@@ -18,7 +129,7 @@ export type GameResult = {
   homeHT: number | null;
   awayHT: number | null;
   winner: 'HOME' | 'AWAY' | 'DRAW' | null;
-  source: 'gamescore' | 'football-data' | 'none';
+  source: 'gamescore' | 'football-data' | 'odds-api' | 'none';
 };
 
 export type FdMatchDetail = {
@@ -81,6 +192,16 @@ async function findFootballDataMatchId(gameId: string): Promise<number | null> {
  * a GameScore from football-data (only when the match has actually finished).
  */
 export async function resolveGameResult(gameId: string): Promise<GameResult> {
+  // Odds-api-only competitions (FA Cup / EFL Cup): no football-data. Resolve the
+  // score from The Odds API scores endpoint using the game's external event id.
+  const oddsGame = await prisma.game.findUnique({
+    where: { id: gameId },
+    select: { externalEventId: true, homeTeam: true, awayTeam: true, specifications: true },
+  });
+  if (oddsGame && isOddsOnlyGameSpec(oddsGame.specifications)) {
+    return resolveOddsApiResult(gameId, oddsGame.externalEventId, oddsGame.homeTeam, oddsGame.awayTeam, oddsGame.specifications);
+  }
+
   const score = await prisma.gameScore.findUnique({ where: { gameId } });
   const storedFinished = !!score && (fdStatusBucket(score.status) === 'FINISHED' || (score.winner != null && score.homeScoreFT != null && score.awayScoreFT != null));
   if (score && storedFinished) {

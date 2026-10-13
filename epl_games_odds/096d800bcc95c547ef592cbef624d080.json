@@ -1,0 +1,1026 @@
+{
+  "id": "096d800bcc95c547ef592cbef624d080",
+  "sport_key": "soccer_germany_bundesliga",
+  "sport_title": "Bundesliga - Germany",
+  "commence_time": "2026-10-18T13:30:00Z",
+  "home_team": "Bayer Leverkusen",
+  "away_team": "SC Freiburg",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:16Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.75
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.24
+            },
+            {
+              "name": "Draw",
+              "price": 4.37
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:02:15Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.54
+            },
+            {
+              "name": "No",
+              "price": 2.58
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:02:15Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen:0|SC Freiburg:0",
+              "price": 19.83
+            },
+            {
+              "name": "Bayer Leverkusen:0|SC Freiburg:1",
+              "price": 18.12
+            },
+            {
+              "name": "Bayer Leverkusen:0|SC Freiburg:2",
+              "price": 26.25
+            },
+            {
+              "name": "Bayer Leverkusen:0|SC Freiburg:3",
+              "price": 51.57
+            },
+            {
+              "name": "Bayer Leverkusen:1|SC Freiburg:0",
+              "price": 11.95
+            },
+            {
+              "name": "Bayer Leverkusen:1|SC Freiburg:1",
+              "price": 9.25
+            },
+            {
+              "name": "Bayer Leverkusen:1|SC Freiburg:2",
+              "price": 14.23
+            },
+            {
+              "name": "Bayer Leverkusen:1|SC Freiburg:3",
+              "price": 29
+            },
+            {
+              "name": "Bayer Leverkusen:1|SC Freiburg:4",
+              "price": 70.76
+            },
+            {
+              "name": "Bayer Leverkusen:2|SC Freiburg:0",
+              "price": 11.19
+            },
+            {
+              "name": "Bayer Leverkusen:2|SC Freiburg:1",
+              "price": 9.39
+            },
+            {
+              "name": "Bayer Leverkusen:2|SC Freiburg:2",
+              "price": 13.24
+            },
+            {
+              "name": "Bayer Leverkusen:2|SC Freiburg:3",
+              "price": 28.33
+            },
+            {
+              "name": "Bayer Leverkusen:2|SC Freiburg:4",
+              "price": 69.92
+            },
+            {
+              "name": "Bayer Leverkusen:3|SC Freiburg:0",
+              "price": 15.09
+            },
+            {
+              "name": "Bayer Leverkusen:3|SC Freiburg:1",
+              "price": 12.46
+            },
+            {
+              "name": "Bayer Leverkusen:3|SC Freiburg:2",
+              "price": 19.13
+            },
+            {
+              "name": "Bayer Leverkusen:3|SC Freiburg:3",
+              "price": 37.3
+            },
+            {
+              "name": "Bayer Leverkusen:3|SC Freiburg:4",
+              "price": 93.11
+            },
+            {
+              "name": "Bayer Leverkusen:4|SC Freiburg:0",
+              "price": 25.96
+            },
+            {
+              "name": "Bayer Leverkusen:4|SC Freiburg:1",
+              "price": 21.49
+            },
+            {
+              "name": "Bayer Leverkusen:4|SC Freiburg:2",
+              "price": 32.12
+            },
+            {
+              "name": "Bayer Leverkusen:4|SC Freiburg:3",
+              "price": 65.69
+            },
+            {
+              "name": "Bayer Leverkusen:5|SC Freiburg:0",
+              "price": 53.51
+            },
+            {
+              "name": "Bayer Leverkusen:5|SC Freiburg:1",
+              "price": 44.13
+            },
+            {
+              "name": "Bayer Leverkusen:5|SC Freiburg:2",
+              "price": 63.62
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:33Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.7
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:01:34Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.62
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:01:45Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.7
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:00Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.75
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.62
+            },
+            {
+              "name": "Draw",
+              "price": 4.42
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:02:00Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.48
+            },
+            {
+              "name": "No",
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:02:00Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen or Draw",
+              "price": 1.24
+            },
+            {
+              "name": "SC Freiburg or Draw",
+              "price": 2.21
+            },
+            {
+              "name": "Bayer Leverkusen or SC Freiburg",
+              "price": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:00Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.67
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:01:38Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.68
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:01Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.67
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:02:01Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.5
+            },
+            {
+              "name": "No",
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:02:01Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen or Draw",
+              "price": 1.2
+            },
+            {
+              "name": "SC Freiburg or Draw",
+              "price": 2.2
+            },
+            {
+              "name": "Bayer Leverkusen or SC Freiburg",
+              "price": 1.22
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:02:28Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen:1|SC Freiburg:0",
+              "price": 10
+            },
+            {
+              "name": "Bayer Leverkusen:2|SC Freiburg:0",
+              "price": 9.5
+            },
+            {
+              "name": "Bayer Leverkusen:2|SC Freiburg:1",
+              "price": 7.5
+            },
+            {
+              "name": "Bayer Leverkusen:3|SC Freiburg:0",
+              "price": 13
+            },
+            {
+              "name": "Bayer Leverkusen:3|SC Freiburg:1",
+              "price": 11
+            },
+            {
+              "name": "Bayer Leverkusen:3|SC Freiburg:2",
+              "price": 15
+            },
+            {
+              "name": "Bayer Leverkusen:4|SC Freiburg:0",
+              "price": 23
+            },
+            {
+              "name": "Bayer Leverkusen:4|SC Freiburg:1",
+              "price": 19
+            },
+            {
+              "name": "Bayer Leverkusen:4|SC Freiburg:2",
+              "price": 29
+            },
+            {
+              "name": "Bayer Leverkusen:4|SC Freiburg:3",
+              "price": 56
+            },
+            {
+              "name": "Bayer Leverkusen:5|SC Freiburg:0",
+              "price": 46
+            },
+            {
+              "name": "Bayer Leverkusen:5|SC Freiburg:1",
+              "price": 41
+            },
+            {
+              "name": "Bayer Leverkusen:5|SC Freiburg:2",
+              "price": 56
+            },
+            {
+              "name": "Bayer Leverkusen:6|SC Freiburg:0",
+              "price": 91
+            },
+            {
+              "name": "Bayer Leverkusen:6|SC Freiburg:1",
+              "price": 81
+            },
+            {
+              "name": "Bayer Leverkusen:6|SC Freiburg:2",
+              "price": 101
+            },
+            {
+              "name": "Bayer Leverkusen:7|SC Freiburg:0",
+              "price": 126
+            },
+            {
+              "name": "Bayer Leverkusen:7|SC Freiburg:1",
+              "price": 126
+            },
+            {
+              "name": "Bayer Leverkusen:8|SC Freiburg:0",
+              "price": 151
+            },
+            {
+              "name": "Bayer Leverkusen:9|SC Freiburg:0",
+              "price": 151
+            },
+            {
+              "name": "Bayer Leverkusen:10|SC Freiburg:0",
+              "price": 151
+            },
+            {
+              "name": "Bayer Leverkusen:0|SC Freiburg:0",
+              "price": 19
+            },
+            {
+              "name": "Bayer Leverkusen:1|SC Freiburg:1",
+              "price": 8
+            },
+            {
+              "name": "Bayer Leverkusen:2|SC Freiburg:2",
+              "price": 12
+            },
+            {
+              "name": "Bayer Leverkusen:3|SC Freiburg:3",
+              "price": 36
+            },
+            {
+              "name": "Bayer Leverkusen:4|SC Freiburg:4",
+              "price": 101
+            },
+            {
+              "name": "SC Freiburg:1|Bayer Leverkusen:0",
+              "price": 17
+            },
+            {
+              "name": "SC Freiburg:2|Bayer Leverkusen:0",
+              "price": 26
+            },
+            {
+              "name": "SC Freiburg:2|Bayer Leverkusen:1",
+              "price": 13
+            },
+            {
+              "name": "SC Freiburg:3|Bayer Leverkusen:0",
+              "price": 56
+            },
+            {
+              "name": "SC Freiburg:3|Bayer Leverkusen:1",
+              "price": 29
+            },
+            {
+              "name": "SC Freiburg:3|Bayer Leverkusen:2",
+              "price": 29
+            },
+            {
+              "name": "SC Freiburg:4|Bayer Leverkusen:0",
+              "price": 101
+            },
+            {
+              "name": "SC Freiburg:4|Bayer Leverkusen:1",
+              "price": 71
+            },
+            {
+              "name": "SC Freiburg:4|Bayer Leverkusen:2",
+              "price": 71
+            },
+            {
+              "name": "SC Freiburg:4|Bayer Leverkusen:3",
+              "price": 81
+            },
+            {
+              "name": "SC Freiburg:5|Bayer Leverkusen:0",
+              "price": 151
+            },
+            {
+              "name": "SC Freiburg:5|Bayer Leverkusen:1",
+              "price": 126
+            },
+            {
+              "name": "SC Freiburg:5|Bayer Leverkusen:2",
+              "price": 126
+            },
+            {
+              "name": "SC Freiburg:6|Bayer Leverkusen:0",
+              "price": 151
+            },
+            {
+              "name": "SC Freiburg:6|Bayer Leverkusen:1",
+              "price": 151
+            },
+            {
+              "name": "SC Freiburg:6|Bayer Leverkusen:2",
+              "price": 151
+            },
+            {
+              "name": "SC Freiburg:7|Bayer Leverkusen:0",
+              "price": 151
+            },
+            {
+              "name": "SC Freiburg:7|Bayer Leverkusen:1",
+              "price": 151
+            },
+            {
+              "name": "SC Freiburg:8|Bayer Leverkusen:0",
+              "price": 151
+            },
+            {
+              "name": "SC Freiburg:9|Bayer Leverkusen:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T11:59:54Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.63
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.15
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:02Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.76
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T12:02:02Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.83
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:01:50Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.7
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:01:50Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen or Draw",
+              "price": 1.22
+            },
+            {
+              "name": "SC Freiburg or Draw",
+              "price": 2.21
+            },
+            {
+              "name": "Bayer Leverkusen or SC Freiburg",
+              "price": 1.24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:02Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.7
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:19Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.7
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:32Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.7
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:32Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.64
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.2
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:32Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.61
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:01Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.7
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:00Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.73
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:02:00Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen or Draw",
+              "price": 1.23
+            },
+            {
+              "name": "SC Freiburg or Draw",
+              "price": 2.12
+            },
+            {
+              "name": "Bayer Leverkusen or SC Freiburg",
+              "price": 1.23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:20Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.73
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "everygame",
+      "title": "Everygame",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:01:32Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.7
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matchbook",
+      "title": "Matchbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:18Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.77
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T12:02:18Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.83
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.7
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:02:18Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.57
+            },
+            {
+              "name": "No",
+              "price": 2.62
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gtbets",
+      "title": "GTbets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:02:01Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.69
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.46
+            },
+            {
+              "name": "Draw",
+              "price": 4.26
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betonlineag",
+      "title": "BetOnline.ag",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:01:45Z",
+          "outcomes": [
+            {
+              "name": "Bayer Leverkusen",
+              "price": 1.75
+            },
+            {
+              "name": "SC Freiburg",
+              "price": 4.3
+            },
+            {
+              "name": "Draw",
+              "price": 4.33
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -13,6 +13,7 @@ import fetchGamesRoutes from './fetchGames.routes';
 import fundRequestRoutes from './fundRequest.routes';
 import notificationRoutes from './notification.routes';
 import settingsRoutes from './settings.routes';
+import clubLogoRoutes from './clubLogo.routes';
 
 const router = Router();
 
@@ -30,5 +31,6 @@ router.use('/fetch-games', fetchGamesRoutes);
 router.use('/funds', fundRequestRoutes);
 router.use('/notifications', notificationRoutes);
 router.use('/settings', settingsRoutes);
+router.use('/club-logos', clubLogoRoutes);
 
 export default router;

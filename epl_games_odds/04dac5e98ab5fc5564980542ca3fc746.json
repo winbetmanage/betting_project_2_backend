@@ -1,0 +1,570 @@
+{
+  "id": "04dac5e98ab5fc5564980542ca3fc746",
+  "sport_key": "soccer_germany_bundesliga",
+  "sport_title": "Bundesliga - Germany",
+  "commence_time": "2026-10-24T13:30:00Z",
+  "home_team": "RB Leipzig",
+  "away_team": "Elversberg",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:21:35Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 7.94
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.33
+            },
+            {
+              "name": "Draw",
+              "price": 5.54
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:20:52Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 5.8
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.26
+            },
+            {
+              "name": "Draw",
+              "price": 5.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:21:06Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 7
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.33
+            },
+            {
+              "name": "Draw",
+              "price": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:21:06Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 8
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.32
+            },
+            {
+              "name": "Draw",
+              "price": 5.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:21:21Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 6.5
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.26
+            },
+            {
+              "name": "Draw",
+              "price": 5.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:20:56Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 7.5
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.35
+            },
+            {
+              "name": "Draw",
+              "price": 5.9
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:20:56Z",
+          "outcomes": [
+            {
+              "name": "Elversberg or Draw",
+              "price": 3.32
+            },
+            {
+              "name": "RB Leipzig or Draw",
+              "price": 1.1
+            },
+            {
+              "name": "Elversberg or RB Leipzig",
+              "price": 1.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:21:05Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 7
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.35
+            },
+            {
+              "name": "Draw",
+              "price": 5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:21:05Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.5
+            },
+            {
+              "name": "No",
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:21:05Z",
+          "outcomes": [
+            {
+              "name": "Elversberg or Draw",
+              "price": 3.1
+            },
+            {
+              "name": "RB Leipzig or Draw",
+              "price": 1.1
+            },
+            {
+              "name": "Elversberg or RB Leipzig",
+              "price": 1.15
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:21:23Z",
+          "outcomes": [
+            {
+              "name": "RB Leipzig:1|Elversberg:0",
+              "price": 13
+            },
+            {
+              "name": "RB Leipzig:2|Elversberg:0",
+              "price": 10
+            },
+            {
+              "name": "RB Leipzig:2|Elversberg:1",
+              "price": 8.5
+            },
+            {
+              "name": "RB Leipzig:3|Elversberg:0",
+              "price": 11
+            },
+            {
+              "name": "RB Leipzig:3|Elversberg:1",
+              "price": 10
+            },
+            {
+              "name": "RB Leipzig:3|Elversberg:2",
+              "price": 15
+            },
+            {
+              "name": "RB Leipzig:4|Elversberg:0",
+              "price": 15
+            },
+            {
+              "name": "RB Leipzig:4|Elversberg:1",
+              "price": 13
+            },
+            {
+              "name": "RB Leipzig:4|Elversberg:2",
+              "price": 21
+            },
+            {
+              "name": "RB Leipzig:4|Elversberg:3",
+              "price": 41
+            },
+            {
+              "name": "RB Leipzig:5|Elversberg:0",
+              "price": 23
+            },
+            {
+              "name": "RB Leipzig:5|Elversberg:1",
+              "price": 21
+            },
+            {
+              "name": "RB Leipzig:5|Elversberg:2",
+              "price": 34
+            },
+            {
+              "name": "RB Leipzig:6|Elversberg:0",
+              "price": 46
+            },
+            {
+              "name": "RB Leipzig:6|Elversberg:1",
+              "price": 41
+            },
+            {
+              "name": "RB Leipzig:6|Elversberg:2",
+              "price": 61
+            },
+            {
+              "name": "RB Leipzig:7|Elversberg:0",
+              "price": 81
+            },
+            {
+              "name": "RB Leipzig:7|Elversberg:1",
+              "price": 71
+            },
+            {
+              "name": "RB Leipzig:8|Elversberg:0",
+              "price": 126
+            },
+            {
+              "name": "RB Leipzig:9|Elversberg:0",
+              "price": 151
+            },
+            {
+              "name": "RB Leipzig:10|Elversberg:0",
+              "price": 151
+            },
+            {
+              "name": "RB Leipzig:0|Elversberg:0",
+              "price": 29
+            },
+            {
+              "name": "RB Leipzig:1|Elversberg:1",
+              "price": 11
+            },
+            {
+              "name": "RB Leipzig:2|Elversberg:2",
+              "price": 13
+            },
+            {
+              "name": "RB Leipzig:3|Elversberg:3",
+              "price": 34
+            },
+            {
+              "name": "RB Leipzig:4|Elversberg:4",
+              "price": 91
+            },
+            {
+              "name": "Elversberg:1|RB Leipzig:0",
+              "price": 29
+            },
+            {
+              "name": "Elversberg:2|RB Leipzig:0",
+              "price": 51
+            },
+            {
+              "name": "Elversberg:2|RB Leipzig:1",
+              "price": 19
+            },
+            {
+              "name": "Elversberg:3|RB Leipzig:0",
+              "price": 91
+            },
+            {
+              "name": "Elversberg:3|RB Leipzig:1",
+              "price": 46
+            },
+            {
+              "name": "Elversberg:3|RB Leipzig:2",
+              "price": 34
+            },
+            {
+              "name": "Elversberg:4|RB Leipzig:0",
+              "price": 151
+            },
+            {
+              "name": "Elversberg:4|RB Leipzig:1",
+              "price": 101
+            },
+            {
+              "name": "Elversberg:4|RB Leipzig:2",
+              "price": 81
+            },
+            {
+              "name": "Elversberg:4|RB Leipzig:3",
+              "price": 81
+            },
+            {
+              "name": "Elversberg:5|RB Leipzig:0",
+              "price": 151
+            },
+            {
+              "name": "Elversberg:5|RB Leipzig:1",
+              "price": 151
+            },
+            {
+              "name": "Elversberg:5|RB Leipzig:2",
+              "price": 151
+            },
+            {
+              "name": "Elversberg:6|RB Leipzig:0",
+              "price": 151
+            },
+            {
+              "name": "Elversberg:6|RB Leipzig:1",
+              "price": 151
+            },
+            {
+              "name": "Elversberg:6|RB Leipzig:2",
+              "price": 151
+            },
+            {
+              "name": "Elversberg:7|RB Leipzig:0",
+              "price": 151
+            },
+            {
+              "name": "Elversberg:7|RB Leipzig:1",
+              "price": 151
+            },
+            {
+              "name": "Elversberg:8|RB Leipzig:0",
+              "price": 151
+            },
+            {
+              "name": "Elversberg:9|RB Leipzig:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:21:24Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 6
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.27
+            },
+            {
+              "name": "Draw",
+              "price": 5.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:20:34Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 6.5
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.28
+            },
+            {
+              "name": "Draw",
+              "price": 5.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:20:05Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 7.7
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.39
+            },
+            {
+              "name": "Draw",
+              "price": 6.09
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:20:05Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.47
+            },
+            {
+              "name": "No",
+              "price": 2.53
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:20:05Z",
+          "outcomes": [
+            {
+              "name": "Elversberg or Draw",
+              "price": 3.28
+            },
+            {
+              "name": "RB Leipzig or Draw",
+              "price": 1.1
+            },
+            {
+              "name": "Elversberg or RB Leipzig",
+              "price": 1.16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:21:07Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 8
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.34
+            },
+            {
+              "name": "Draw",
+              "price": 5.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:21:50Z",
+          "outcomes": [
+            {
+              "name": "Elversberg",
+              "price": 8.1
+            },
+            {
+              "name": "RB Leipzig",
+              "price": 1.34
+            },
+            {
+              "name": "Draw",
+              "price": 5.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

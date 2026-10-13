@@ -1,0 +1,646 @@
+{
+  "id": "72089d103a5fe6a922c35e17efba6ffc",
+  "sport_key": "soccer_spain_la_liga",
+  "sport_title": "La Liga - Spain",
+  "commence_time": "2026-10-25T20:00:00Z",
+  "home_team": "Barcelona",
+  "away_team": "Real Madrid",
+  "bookmakers": [
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:26Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.61
+            },
+            {
+              "name": "Real Madrid",
+              "price": 5.08
+            },
+            {
+              "name": "Draw",
+              "price": 5.03
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:53:26Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.34
+            },
+            {
+              "name": "No",
+              "price": 3.04
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:53:26Z",
+          "outcomes": [
+            {
+              "name": "Barcelona or Draw",
+              "price": 1.21
+            },
+            {
+              "name": "Real Madrid or Draw",
+              "price": 2.46
+            },
+            {
+              "name": "Barcelona or Real Madrid",
+              "price": 1.21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:08Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.48
+            },
+            {
+              "name": "Real Madrid",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:52:55Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.5
+            },
+            {
+              "name": "Real Madrid",
+              "price": 5.2
+            },
+            {
+              "name": "Draw",
+              "price": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:52:56Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.46
+            },
+            {
+              "name": "Real Madrid",
+              "price": 4.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:52Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.52
+            },
+            {
+              "name": "Real Madrid",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:11Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.46
+            },
+            {
+              "name": "Real Madrid",
+              "price": 4.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:41Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.57
+            },
+            {
+              "name": "Real Madrid",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:53:41Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.35
+            },
+            {
+              "name": "No",
+              "price": 3.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:53:41Z",
+          "outcomes": [
+            {
+              "name": "Barcelona or Draw",
+              "price": 1.2
+            },
+            {
+              "name": "Real Madrid or Draw",
+              "price": 2.3
+            },
+            {
+              "name": "Barcelona or Real Madrid",
+              "price": 1.18
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:53:32Z",
+          "outcomes": [
+            {
+              "name": "Barcelona:1|Real Madrid:0",
+              "price": 15
+            },
+            {
+              "name": "Barcelona:2|Real Madrid:0",
+              "price": 13
+            },
+            {
+              "name": "Barcelona:2|Real Madrid:1",
+              "price": 9
+            },
+            {
+              "name": "Barcelona:3|Real Madrid:0",
+              "price": 15
+            },
+            {
+              "name": "Barcelona:3|Real Madrid:1",
+              "price": 10
+            },
+            {
+              "name": "Barcelona:3|Real Madrid:2",
+              "price": 13
+            },
+            {
+              "name": "Barcelona:4|Real Madrid:0",
+              "price": 23
+            },
+            {
+              "name": "Barcelona:4|Real Madrid:1",
+              "price": 15
+            },
+            {
+              "name": "Barcelona:4|Real Madrid:2",
+              "price": 21
+            },
+            {
+              "name": "Barcelona:4|Real Madrid:3",
+              "price": 36
+            },
+            {
+              "name": "Barcelona:5|Real Madrid:0",
+              "price": 41
+            },
+            {
+              "name": "Barcelona:5|Real Madrid:1",
+              "price": 29
+            },
+            {
+              "name": "Barcelona:5|Real Madrid:2",
+              "price": 36
+            },
+            {
+              "name": "Barcelona:6|Real Madrid:0",
+              "price": 71
+            },
+            {
+              "name": "Barcelona:6|Real Madrid:1",
+              "price": 56
+            },
+            {
+              "name": "Barcelona:6|Real Madrid:2",
+              "price": 71
+            },
+            {
+              "name": "Barcelona:7|Real Madrid:0",
+              "price": 126
+            },
+            {
+              "name": "Barcelona:7|Real Madrid:1",
+              "price": 101
+            },
+            {
+              "name": "Barcelona:8|Real Madrid:0",
+              "price": 151
+            },
+            {
+              "name": "Barcelona:9|Real Madrid:0",
+              "price": 151
+            },
+            {
+              "name": "Barcelona:10|Real Madrid:0",
+              "price": 151
+            },
+            {
+              "name": "Barcelona:0|Real Madrid:0",
+              "price": 29
+            },
+            {
+              "name": "Barcelona:1|Real Madrid:1",
+              "price": 10
+            },
+            {
+              "name": "Barcelona:2|Real Madrid:2",
+              "price": 11
+            },
+            {
+              "name": "Barcelona:3|Real Madrid:3",
+              "price": 23
+            },
+            {
+              "name": "Barcelona:4|Real Madrid:4",
+              "price": 71
+            },
+            {
+              "name": "Real Madrid:1|Barcelona:0",
+              "price": 26
+            },
+            {
+              "name": "Real Madrid:2|Barcelona:0",
+              "price": 29
+            },
+            {
+              "name": "Real Madrid:2|Barcelona:1",
+              "price": 15
+            },
+            {
+              "name": "Real Madrid:3|Barcelona:0",
+              "price": 56
+            },
+            {
+              "name": "Real Madrid:3|Barcelona:1",
+              "price": 26
+            },
+            {
+              "name": "Real Madrid:3|Barcelona:2",
+              "price": 23
+            },
+            {
+              "name": "Real Madrid:4|Barcelona:0",
+              "price": 101
+            },
+            {
+              "name": "Real Madrid:4|Barcelona:1",
+              "price": 61
+            },
+            {
+              "name": "Real Madrid:4|Barcelona:2",
+              "price": 51
+            },
+            {
+              "name": "Real Madrid:4|Barcelona:3",
+              "price": 56
+            },
+            {
+              "name": "Real Madrid:5|Barcelona:0",
+              "price": 151
+            },
+            {
+              "name": "Real Madrid:5|Barcelona:1",
+              "price": 101
+            },
+            {
+              "name": "Real Madrid:5|Barcelona:2",
+              "price": 101
+            },
+            {
+              "name": "Real Madrid:6|Barcelona:0",
+              "price": 151
+            },
+            {
+              "name": "Real Madrid:6|Barcelona:1",
+              "price": 151
+            },
+            {
+              "name": "Real Madrid:6|Barcelona:2",
+              "price": 151
+            },
+            {
+              "name": "Real Madrid:7|Barcelona:0",
+              "price": 151
+            },
+            {
+              "name": "Real Madrid:7|Barcelona:1",
+              "price": 151
+            },
+            {
+              "name": "Real Madrid:8|Barcelona:0",
+              "price": 151
+            },
+            {
+              "name": "Real Madrid:9|Barcelona:0",
+              "price": 151
+            },
+            {
+              "name": "Real Madrid:10|Barcelona:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:32Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.57
+            },
+            {
+              "name": "Real Madrid",
+              "price": 4.95
+            },
+            {
+              "name": "Draw",
+              "price": 4.9
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:53:32Z",
+          "outcomes": [
+            {
+              "name": "Barcelona or Draw",
+              "price": 1.19
+            },
+            {
+              "name": "Real Madrid or Draw",
+              "price": 2.47
+            },
+            {
+              "name": "Barcelona or Real Madrid",
+              "price": 1.19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:56Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.54
+            },
+            {
+              "name": "Real Madrid",
+              "price": 5.06
+            },
+            {
+              "name": "Draw",
+              "price": 4.79
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:40Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.56
+            },
+            {
+              "name": "Real Madrid",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:40Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.56
+            },
+            {
+              "name": "Real Madrid",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:41Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.51
+            },
+            {
+              "name": "Real Madrid",
+              "price": 4.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:53:41Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.5
+            },
+            {
+              "name": "Real Madrid",
+              "price": 4.6
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:51:26Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.52
+            },
+            {
+              "name": "Real Madrid",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:52:41Z",
+          "outcomes": [
+            {
+              "name": "Barcelona",
+              "price": 1.52
+            },
+            {
+              "name": "Real Madrid",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.75
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,642 @@
+{
+  "id": "3cb8660cd2375b60e81144a7572cfb89",
+  "sport_key": "soccer_spain_la_liga",
+  "sport_title": "La Liga - Spain",
+  "commence_time": "2026-10-25T17:30:00Z",
+  "home_team": "Real Sociedad",
+  "away_team": "Levante",
+  "bookmakers": [
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:21Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.72
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.76
+            },
+            {
+              "name": "Draw",
+              "price": 4.26
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:03:21Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.61
+            },
+            {
+              "name": "No",
+              "price": 2.19
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:03:21Z",
+          "outcomes": [
+            {
+              "name": "Levante or Draw",
+              "price": 2.19
+            },
+            {
+              "name": "Real Sociedad or Draw",
+              "price": 1.23
+            },
+            {
+              "name": "Levante or Real Sociedad",
+              "price": 1.26
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:22Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.3
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:38Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 3.75
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.62
+            },
+            {
+              "name": "Draw",
+              "price": 3.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:00:16Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.05
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.64
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:37Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.1
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.61
+            },
+            {
+              "name": "Draw",
+              "price": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:53Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.1
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.68
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:21Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.33
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:03:21Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.6
+            },
+            {
+              "name": "No",
+              "price": 2.25
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:03:21Z",
+          "outcomes": [
+            {
+              "name": "Levante or Draw",
+              "price": 2.15
+            },
+            {
+              "name": "Real Sociedad or Draw",
+              "price": 1.2
+            },
+            {
+              "name": "Levante or Real Sociedad",
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T13:03:53Z",
+          "outcomes": [
+            {
+              "name": "Real Sociedad:1|Levante:0",
+              "price": 8.5
+            },
+            {
+              "name": "Real Sociedad:2|Levante:0",
+              "price": 8.5
+            },
+            {
+              "name": "Real Sociedad:2|Levante:1",
+              "price": 8
+            },
+            {
+              "name": "Real Sociedad:3|Levante:0",
+              "price": 13
+            },
+            {
+              "name": "Real Sociedad:3|Levante:1",
+              "price": 12
+            },
+            {
+              "name": "Real Sociedad:3|Levante:2",
+              "price": 19
+            },
+            {
+              "name": "Real Sociedad:4|Levante:0",
+              "price": 23
+            },
+            {
+              "name": "Real Sociedad:4|Levante:1",
+              "price": 23
+            },
+            {
+              "name": "Real Sociedad:4|Levante:2",
+              "price": 36
+            },
+            {
+              "name": "Real Sociedad:4|Levante:3",
+              "price": 71
+            },
+            {
+              "name": "Real Sociedad:5|Levante:0",
+              "price": 51
+            },
+            {
+              "name": "Real Sociedad:5|Levante:1",
+              "price": 46
+            },
+            {
+              "name": "Real Sociedad:5|Levante:2",
+              "price": 71
+            },
+            {
+              "name": "Real Sociedad:6|Levante:0",
+              "price": 101
+            },
+            {
+              "name": "Real Sociedad:6|Levante:1",
+              "price": 101
+            },
+            {
+              "name": "Real Sociedad:6|Levante:2",
+              "price": 126
+            },
+            {
+              "name": "Real Sociedad:7|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Real Sociedad:7|Levante:1",
+              "price": 151
+            },
+            {
+              "name": "Real Sociedad:8|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Real Sociedad:9|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Real Sociedad:10|Levante:0",
+              "price": 151
+            },
+            {
+              "name": "Real Sociedad:0|Levante:0",
+              "price": 13
+            },
+            {
+              "name": "Real Sociedad:1|Levante:1",
+              "price": 7.5
+            },
+            {
+              "name": "Real Sociedad:2|Levante:2",
+              "price": 13
+            },
+            {
+              "name": "Real Sociedad:3|Levante:3",
+              "price": 41
+            },
+            {
+              "name": "Real Sociedad:4|Levante:4",
+              "price": 126
+            },
+            {
+              "name": "Levante:1|Real Sociedad:0",
+              "price": 13
+            },
+            {
+              "name": "Levante:2|Real Sociedad:0",
+              "price": 23
+            },
+            {
+              "name": "Levante:2|Real Sociedad:1",
+              "price": 13
+            },
+            {
+              "name": "Levante:3|Real Sociedad:0",
+              "price": 51
+            },
+            {
+              "name": "Levante:3|Real Sociedad:1",
+              "price": 29
+            },
+            {
+              "name": "Levante:3|Real Sociedad:2",
+              "price": 34
+            },
+            {
+              "name": "Levante:4|Real Sociedad:0",
+              "price": 101
+            },
+            {
+              "name": "Levante:4|Real Sociedad:1",
+              "price": 81
+            },
+            {
+              "name": "Levante:4|Real Sociedad:2",
+              "price": 81
+            },
+            {
+              "name": "Levante:4|Real Sociedad:3",
+              "price": 101
+            },
+            {
+              "name": "Levante:5|Real Sociedad:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:5|Real Sociedad:1",
+              "price": 151
+            },
+            {
+              "name": "Levante:5|Real Sociedad:2",
+              "price": 151
+            },
+            {
+              "name": "Levante:6|Real Sociedad:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:6|Real Sociedad:1",
+              "price": 151
+            },
+            {
+              "name": "Levante:6|Real Sociedad:2",
+              "price": 151
+            },
+            {
+              "name": "Levante:7|Real Sociedad:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:7|Real Sociedad:1",
+              "price": 151
+            },
+            {
+              "name": "Levante:8|Real Sociedad:0",
+              "price": 151
+            },
+            {
+              "name": "Levante:9|Real Sociedad:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:42Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.6
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.71
+            },
+            {
+              "name": "Draw",
+              "price": 4.15
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:03:42Z",
+          "outcomes": [
+            {
+              "name": "Levante or Draw",
+              "price": 2.19
+            },
+            {
+              "name": "Real Sociedad or Draw",
+              "price": 1.22
+            },
+            {
+              "name": "Levante or Real Sociedad",
+              "price": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:07Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.28
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.02
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:07Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.6
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.74
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:07Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.6
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.74
+            },
+            {
+              "name": "Draw",
+              "price": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:52Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.3
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.68
+            },
+            {
+              "name": "Draw",
+              "price": 3.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:37Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.2
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.65
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:21Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.6
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:03:39Z",
+          "outcomes": [
+            {
+              "name": "Levante",
+              "price": 4.65
+            },
+            {
+              "name": "Real Sociedad",
+              "price": 1.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.9
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

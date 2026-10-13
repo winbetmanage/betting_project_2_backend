@@ -57,6 +57,10 @@ export const listSerieA = listSport('serie-a');
 
 export const listLigue1 = listSport('ligue-1');
 
+export const listFaCup = listSport('fa-cup');
+
+export const listEflCup = listSport('efl-cup');
+
 export const getStagedIds = asyncHandler(async (_req, res) => {
   const ids = await stagedGamesService.getStagedEventIds();
   res.json({ data: Array.from(ids) });

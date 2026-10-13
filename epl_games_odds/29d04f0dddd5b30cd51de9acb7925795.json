@@ -1,0 +1,452 @@
+{
+  "id": "29d04f0dddd5b30cd51de9acb7925795",
+  "sport_key": "soccer_england_efl_cup",
+  "sport_title": "EFL Cup",
+  "commence_time": "2026-10-27T20:00:00Z",
+  "home_team": "Fleetwood Town",
+  "away_team": "Arsenal",
+  "bookmakers": [
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:41Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.04
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 15
+            },
+            {
+              "name": "Draw",
+              "price": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:36Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.04
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 16
+            },
+            {
+              "name": "Draw",
+              "price": 8.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:33Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.1
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 19
+            },
+            {
+              "name": "Draw",
+              "price": 10.5
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T10:46:33Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.13
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 260
+            },
+            {
+              "name": "Draw",
+              "price": 16.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:49Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.06
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 28
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:33Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.08
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 24.83
+            },
+            {
+              "name": "Draw",
+              "price": 12.98
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:50Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.08
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 33
+            },
+            {
+              "name": "Draw",
+              "price": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:07Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.08
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 33
+            },
+            {
+              "name": "Draw",
+              "price": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:45:48Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.08
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 28
+            },
+            {
+              "name": "Draw",
+              "price": 12
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T10:45:48Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 2.52
+            },
+            {
+              "name": "No",
+              "price": 1.47
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T10:45:48Z",
+          "outcomes": [
+            {
+              "name": "Arsenal or Draw",
+              "price": 1.01
+            },
+            {
+              "name": "Fleetwood Town or Draw",
+              "price": 8.5
+            },
+            {
+              "name": "Arsenal or Fleetwood Town",
+              "price": 1.04
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:50Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.06
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 26
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:45:50Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.07
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 26
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T10:45:50Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 2.5
+            },
+            {
+              "name": "No",
+              "price": 1.44
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T10:45:50Z",
+          "outcomes": [
+            {
+              "name": "Arsenal or Draw",
+              "price": 1.01
+            },
+            {
+              "name": "Fleetwood Town or Draw",
+              "price": 8
+            },
+            {
+              "name": "Arsenal or Fleetwood Town",
+              "price": 1.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:20Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.09
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 30
+            },
+            {
+              "name": "Draw",
+              "price": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:49Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.05
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 20
+            },
+            {
+              "name": "Draw",
+              "price": 8.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:45:50Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.09
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 23
+            },
+            {
+              "name": "Draw",
+              "price": 9.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:35Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.09
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 23
+            },
+            {
+              "name": "Draw",
+              "price": 9.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:46:50Z",
+          "outcomes": [
+            {
+              "name": "Arsenal",
+              "price": 1.09
+            },
+            {
+              "name": "Fleetwood Town",
+              "price": 23
+            },
+            {
+              "name": "Draw",
+              "price": 9.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

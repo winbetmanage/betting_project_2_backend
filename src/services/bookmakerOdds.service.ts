@@ -43,6 +43,8 @@ export function resolveSportKey(game: GameWithComp): string {
   if (typeof spec.sport_key === 'string' && spec.sport_key) return spec.sport_key;
   const name = (game.competition?.name ?? '').toLowerCase();
   if (name.includes('champions')) return 'soccer_uefa_champs_league';
+  if (name.includes('fa cup')) return 'soccer_fa_cup';
+  if (name.includes('efl cup') || name.includes('league cup')) return 'soccer_england_efl_cup';
   if (name.includes('la liga')) return 'soccer_spain_la_liga';
   if (name.includes('bundesliga')) return 'soccer_germany_bundesliga';
   if (name.includes('serie a')) return 'soccer_italy_serie_a';
@@ -50,19 +52,24 @@ export function resolveSportKey(game: GameWithComp): string {
   return 'soccer_epl';
 }
 
-export async function fetchAndStoreForGame(gameId: string) {
+export async function fetchAndStoreForGame(gameId: string, opts?: { minimal?: boolean }) {
   const game = await prisma.game.findUnique({ where: { id: gameId }, include: { competition: true } });
   if (!game) throw new ApiError(404, 'Game not found');
   if (!game.externalEventId) throw new ApiError(400, 'Game has no externalEventId');
   const sportKey = resolveSportKey(game);
-  // Per-event ALL-markets fetch (falls back gracefully) — saved to the game's JSON file
-  const bookmakers = await eplGameOdds.fetchAndSaveEventOdds(game.externalEventId, sportKey);
+  // FA Cup / EFL Cup are always fetched "minimalistic" (EU-only, short market list).
+  const compName = (game.competition?.name ?? '').toLowerCase();
+  const oddsOnlyCup = compName.includes('fa cup') || compName.includes('efl cup') || compName.includes('league cup');
+  const minimal = oddsOnlyCup || !!opts?.minimal;
+  // Per-event fetch — saved to the game's JSON file
+  const bookmakers = await eplGameOdds.fetchAndSaveEventOdds(game.externalEventId, sportKey, { minimal });
   const lastFetchedAt = new Date().toISOString();
   const spec = { ...((game.specifications ?? {}) as Record<string, unknown>) };
   spec.lastFetchedAt = lastFetchedAt;
   spec.sport_key = spec.sport_key ?? sportKey;
+  spec.minimalOdds = minimal;
   await prisma.game.update({ where: { id: gameId }, data: { specifications: spec as never } });
-  return { stored: bookmakers, eventId: game.externalEventId, sportKey, lastFetchedAt };
+  return { stored: bookmakers, eventId: game.externalEventId, sportKey, lastFetchedAt, minimal };
 }
 
 export async function getGroupedForGame(gameId: string) {

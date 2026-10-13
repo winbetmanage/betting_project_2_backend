@@ -1,0 +1,494 @@
+{
+  "id": "1abac694004a22d77d9a20ef61e6add5",
+  "sport_key": "soccer_england_efl_cup",
+  "sport_title": "EFL Cup",
+  "commence_time": "2026-10-28T19:45:00Z",
+  "home_team": "Bournemouth",
+  "away_team": "Aston Villa",
+  "bookmakers": [
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:06Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 3.25
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.24
+            },
+            {
+              "name": "Draw",
+              "price": 3.52
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T10:49:06Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.61
+            },
+            {
+              "name": "No",
+              "price": 2.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T10:49:06Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa or Draw",
+              "price": 1.69
+            },
+            {
+              "name": "Bournemouth or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Aston Villa or Bournemouth",
+              "price": 1.32
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:45Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 1.66
+            },
+            {
+              "name": "Bournemouth",
+              "price": 1.12
+            },
+            {
+              "name": "Draw",
+              "price": 1.63
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T10:49:45Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 120
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.72
+            },
+            {
+              "name": "Draw",
+              "price": 930
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:40Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 3.24
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.22
+            },
+            {
+              "name": "Draw",
+              "price": 3.52
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T10:49:40Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa or Draw",
+              "price": 1.69
+            },
+            {
+              "name": "Bournemouth or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Aston Villa or Bournemouth",
+              "price": 1.32
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:07Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 2.75
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:07Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 2.8
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.05
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:06Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 3.1
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:34Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 3.24
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.16
+            },
+            {
+              "name": "Draw",
+              "price": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:24Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 3.15
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.22
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:52Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 3.15
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.22
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:05Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 3
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:06Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 3
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T10:49:06Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.62
+            },
+            {
+              "name": "No",
+              "price": 2.15
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T10:49:06Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa or Draw",
+              "price": 1.65
+            },
+            {
+              "name": "Bournemouth or Draw",
+              "price": 1.35
+            },
+            {
+              "name": "Aston Villa or Bournemouth",
+              "price": 1.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:48:52Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 3.15
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:06Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 2.8
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.17
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:20Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 2.95
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.28
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:48:51Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 2.95
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.28
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T10:49:20Z",
+          "outcomes": [
+            {
+              "name": "Aston Villa",
+              "price": 2.95
+            },
+            {
+              "name": "Bournemouth",
+              "price": 2.28
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1014 @@
+{
+  "id": "ce94aca384a20f6af459366da6e1dd21",
+  "sport_key": "soccer_italy_serie_a",
+  "sport_title": "Serie A - Italy",
+  "commence_time": "2026-10-19T16:30:00Z",
+  "home_team": "Monza",
+  "away_team": "Cagliari",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:22Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.22
+            },
+            {
+              "name": "Monza",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.21
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:15:38Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.78
+            },
+            {
+              "name": "No",
+              "price": 2.07
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:15:38Z",
+          "outcomes": [
+            {
+              "name": "Monza:0|Cagliari:0",
+              "price": 10.01
+            },
+            {
+              "name": "Monza:0|Cagliari:1",
+              "price": 10.18
+            },
+            {
+              "name": "Monza:0|Cagliari:2",
+              "price": 15.63
+            },
+            {
+              "name": "Monza:0|Cagliari:3",
+              "price": 34.5
+            },
+            {
+              "name": "Monza:0|Cagliari:4",
+              "price": 90.88
+            },
+            {
+              "name": "Monza:1|Cagliari:0",
+              "price": 8.7
+            },
+            {
+              "name": "Monza:1|Cagliari:1",
+              "price": 6
+            },
+            {
+              "name": "Monza:1|Cagliari:2",
+              "price": 11.49
+            },
+            {
+              "name": "Monza:1|Cagliari:3",
+              "price": 25.51
+            },
+            {
+              "name": "Monza:1|Cagliari:4",
+              "price": 67.25
+            },
+            {
+              "name": "Monza:1|Cagliari:5",
+              "price": 188.59
+            },
+            {
+              "name": "Monza:2|Cagliari:0",
+              "price": 11.46
+            },
+            {
+              "name": "Monza:2|Cagliari:1",
+              "price": 9.92
+            },
+            {
+              "name": "Monza:2|Cagliari:2",
+              "price": 15.26
+            },
+            {
+              "name": "Monza:2|Cagliari:3",
+              "price": 33.35
+            },
+            {
+              "name": "Monza:2|Cagliari:4",
+              "price": 83.88
+            },
+            {
+              "name": "Monza:3|Cagliari:0",
+              "price": 21.99
+            },
+            {
+              "name": "Monza:3|Cagliari:1",
+              "price": 18.99
+            },
+            {
+              "name": "Monza:3|Cagliari:2",
+              "price": 29.22
+            },
+            {
+              "name": "Monza:3|Cagliari:3",
+              "price": 58.42
+            },
+            {
+              "name": "Monza:3|Cagliari:4",
+              "price": 139.02
+            },
+            {
+              "name": "Monza:4|Cagliari:0",
+              "price": 52
+            },
+            {
+              "name": "Monza:4|Cagliari:1",
+              "price": 44.35
+            },
+            {
+              "name": "Monza:4|Cagliari:2",
+              "price": 64.91
+            },
+            {
+              "name": "Monza:4|Cagliari:3",
+              "price": 124.66
+            },
+            {
+              "name": "Monza:5|Cagliari:0",
+              "price": 137.07
+            },
+            {
+              "name": "Monza:5|Cagliari:1",
+              "price": 114.64
+            },
+            {
+              "name": "Monza:5|Cagliari:2",
+              "price": 157.12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "codere_it",
+      "title": "Codere (IT)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:32Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.1
+            },
+            {
+              "name": "Monza",
+              "price": 2.38
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:15:32Z",
+          "outcomes": [
+            {
+              "name": "Cagliari or Draw",
+              "price": 1.57
+            },
+            {
+              "name": "Monza or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Cagliari or Monza",
+              "price": 1.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:14:46Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3
+            },
+            {
+              "name": "Monza",
+              "price": 2.15
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:14:03Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.46
+            },
+            {
+              "name": "Monza",
+              "price": 2.38
+            },
+            {
+              "name": "Draw",
+              "price": 3.27
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:14:03Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.78
+            },
+            {
+              "name": "No",
+              "price": 1.95
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:14:03Z",
+          "outcomes": [
+            {
+              "name": "Cagliari or Draw",
+              "price": 1.65
+            },
+            {
+              "name": "Monza or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Cagliari or Monza",
+              "price": 1.39
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:13:30Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.02
+            },
+            {
+              "name": "Monza",
+              "price": 2.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:04Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.1
+            },
+            {
+              "name": "Monza",
+              "price": 2.35
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:14:51Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3
+            },
+            {
+              "name": "Monza",
+              "price": 2.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:14:47Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 2.95
+            },
+            {
+              "name": "Monza",
+              "price": 2.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:14:36Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.38
+            },
+            {
+              "name": "Monza",
+              "price": 2.32
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:14:36Z",
+          "outcomes": [
+            {
+              "name": "Cagliari or Draw",
+              "price": 1.63
+            },
+            {
+              "name": "Monza or Draw",
+              "price": 1.34
+            },
+            {
+              "name": "Cagliari or Monza",
+              "price": 1.37
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:33Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 2.9
+            },
+            {
+              "name": "Monza",
+              "price": 2.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:14:33Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 2.9
+            },
+            {
+              "name": "Monza",
+              "price": 2.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:14:33Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.8
+            },
+            {
+              "name": "No",
+              "price": 2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:14:33Z",
+          "outcomes": [
+            {
+              "name": "Cagliari or Draw",
+              "price": 1.57
+            },
+            {
+              "name": "Monza or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Cagliari or Monza",
+              "price": 1.33
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:15:28Z",
+          "outcomes": [
+            {
+              "name": "Monza:1|Cagliari:0",
+              "price": 7.5
+            },
+            {
+              "name": "Monza:2|Cagliari:0",
+              "price": 10
+            },
+            {
+              "name": "Monza:2|Cagliari:1",
+              "price": 9
+            },
+            {
+              "name": "Monza:3|Cagliari:0",
+              "price": 19
+            },
+            {
+              "name": "Monza:3|Cagliari:1",
+              "price": 17
+            },
+            {
+              "name": "Monza:3|Cagliari:2",
+              "price": 29
+            },
+            {
+              "name": "Monza:4|Cagliari:0",
+              "price": 46
+            },
+            {
+              "name": "Monza:4|Cagliari:1",
+              "price": 41
+            },
+            {
+              "name": "Monza:4|Cagliari:2",
+              "price": 66
+            },
+            {
+              "name": "Monza:4|Cagliari:3",
+              "price": 101
+            },
+            {
+              "name": "Monza:5|Cagliari:0",
+              "price": 101
+            },
+            {
+              "name": "Monza:5|Cagliari:1",
+              "price": 91
+            },
+            {
+              "name": "Monza:5|Cagliari:2",
+              "price": 126
+            },
+            {
+              "name": "Monza:6|Cagliari:0",
+              "price": 151
+            },
+            {
+              "name": "Monza:6|Cagliari:1",
+              "price": 151
+            },
+            {
+              "name": "Monza:6|Cagliari:2",
+              "price": 151
+            },
+            {
+              "name": "Monza:7|Cagliari:0",
+              "price": 151
+            },
+            {
+              "name": "Monza:7|Cagliari:1",
+              "price": 151
+            },
+            {
+              "name": "Monza:8|Cagliari:0",
+              "price": 151
+            },
+            {
+              "name": "Monza:9|Cagliari:0",
+              "price": 151
+            },
+            {
+              "name": "Monza:10|Cagliari:0",
+              "price": 151
+            },
+            {
+              "name": "Monza:0|Cagliari:0",
+              "price": 9
+            },
+            {
+              "name": "Monza:1|Cagliari:1",
+              "price": 6
+            },
+            {
+              "name": "Monza:2|Cagliari:2",
+              "price": 13
+            },
+            {
+              "name": "Monza:3|Cagliari:3",
+              "price": 56
+            },
+            {
+              "name": "Monza:4|Cagliari:4",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:1|Monza:0",
+              "price": 9
+            },
+            {
+              "name": "Cagliari:2|Monza:0",
+              "price": 15
+            },
+            {
+              "name": "Cagliari:2|Monza:1",
+              "price": 11
+            },
+            {
+              "name": "Cagliari:3|Monza:0",
+              "price": 34
+            },
+            {
+              "name": "Cagliari:3|Monza:1",
+              "price": 26
+            },
+            {
+              "name": "Cagliari:3|Monza:2",
+              "price": 34
+            },
+            {
+              "name": "Cagliari:4|Monza:0",
+              "price": 81
+            },
+            {
+              "name": "Cagliari:4|Monza:1",
+              "price": 67
+            },
+            {
+              "name": "Cagliari:4|Monza:2",
+              "price": 81
+            },
+            {
+              "name": "Cagliari:4|Monza:3",
+              "price": 101
+            },
+            {
+              "name": "Cagliari:5|Monza:0",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:5|Monza:1",
+              "price": 126
+            },
+            {
+              "name": "Cagliari:5|Monza:2",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:6|Monza:0",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:6|Monza:1",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:6|Monza:2",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:7|Monza:0",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:7|Monza:1",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:8|Monza:0",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:9|Monza:0",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:10|Monza:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:01Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.3
+            },
+            {
+              "name": "Monza",
+              "price": 2.5
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T12:15:01Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.4
+            },
+            {
+              "name": "Monza",
+              "price": 2.54
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:04Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.1
+            },
+            {
+              "name": "Monza",
+              "price": 2.38
+            },
+            {
+              "name": "Draw",
+              "price": 3.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:01Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.1
+            },
+            {
+              "name": "Monza",
+              "price": 2.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:14:46Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 2.95
+            },
+            {
+              "name": "Monza",
+              "price": 2.28
+            },
+            {
+              "name": "Draw",
+              "price": 2.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:03Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.25
+            },
+            {
+              "name": "Monza",
+              "price": 2.48
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:02Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.05
+            },
+            {
+              "name": "Monza",
+              "price": 2.35
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:19Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.25
+            },
+            {
+              "name": "Monza",
+              "price": 2.48
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "everygame",
+      "title": "Everygame",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:08:15Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.05
+            },
+            {
+              "name": "Monza",
+              "price": 2.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matchbook",
+      "title": "Matchbook",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:17Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.2
+            },
+            {
+              "name": "Monza",
+              "price": 2.42
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T12:15:17Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.5
+            },
+            {
+              "name": "Monza",
+              "price": 2.56
+            },
+            {
+              "name": "Draw",
+              "price": 3.5
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:15:17Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.84
+            },
+            {
+              "name": "No",
+              "price": 2.08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gtbets",
+      "title": "GTbets",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:15:18Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.25
+            },
+            {
+              "name": "Monza",
+              "price": 2.33
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coolbet",
+      "title": "Coolbet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:14:33Z",
+          "outcomes": [
+            {
+              "name": "Cagliari",
+              "price": 3.25
+            },
+            {
+              "name": "Monza",
+              "price": 2.44
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

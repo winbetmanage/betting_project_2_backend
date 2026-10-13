@@ -15,6 +15,10 @@ const ODDS_API_MARKETS = "h2h,totals,btts";
 // Featured markets only — the only keys the bulk /sports/{sportKey}/odds endpoint supports
 const ODDS_API_FEATURED_MARKETS = "h2h,spreads,totals";
 
+// "Minimalistic" fetch: EU bookmakers only, and only these full-time markets.
+export const ODDS_API_MINIMAL_REGIONS = "eu";
+export const ODDS_API_MINIMAL_MARKETS = "h2h,btts,double_chance,correct_score";
+
 // Every market type the odds api supports for soccer
 // NOTE: correct_score, correct_score_h1, halftime_fulltime, corners_1x2, and the
 // *_corners and *_cards keys are unverified for soccer. If the real API returns 422,
@@ -23,9 +27,16 @@ export const ODDS_API_ALL_MARKETS =
   "h2h,spreads,totals,btts,draw_no_bet,h2h_3_way,double_chance," +
   "alternate_spreads,alternate_totals,team_totals,alternate_team_totals," +
   "btts_h1,double_chance_h1,h2h_h1,h2h_h2,totals_h1,totals_h2," +
-  "correct_score,correct_score_h1,halftime_fulltime,corners_1x2," +
-  "alternate_totals_corners,alternate_spreads_corners," +
-  "alternate_totals_cards,alternate_spreads_cards";
+  "correct_score,correct_score_h1,halftime_fulltime";
+
+
+// export const ODDS_API_ALL_MARKETS =
+//   "h2h,spreads,totals,btts,draw_no_bet,h2h_3_way,double_chance," +
+//   "alternate_spreads,alternate_totals,team_totals,alternate_team_totals," +
+//   "btts_h1,double_chance_h1,h2h_h1,h2h_h2,totals_h1,totals_h2," +
+//   "correct_score,correct_score_h1,halftime_fulltime,corners_1x2," +
+//   "alternate_totals_corners,alternate_spreads_corners," +
+//   "alternate_totals_cards,alternate_spreads_cards";
 
 // Free call - list of all sports supported by the plan
 export const getAllSportsUrl = () =>
@@ -72,8 +83,8 @@ export const getChampionsLeagueEventsUrl = () =>
 // NOTE: this per-event endpoint is the one to use for additional markets — pass
 // ODDS_API_ALL_MARKETS here, e.g. getOddsApiEventDetailUrl(sportKey, eventId, ODDS_API_ALL_MARKETS).
 // ------------------------------------------------
-export const getOddsApiEventDetailUrl = (sportKey: string, eventId: string, markets: string = ODDS_API_MARKETS) =>
-  `${ODDS_API_BASE_URL}/sports/${sportKey}/events/${eventId}/odds/?apiKey=${ODDS_API_KEY}&regions=${ODDS_API_REGIONS}&markets=${markets}&oddsFormat=decimal&dateFormat=iso`;
+export const getOddsApiEventDetailUrl = (sportKey: string, eventId: string, markets: string = ODDS_API_MARKETS, regions: string = ODDS_API_REGIONS) =>
+  `${ODDS_API_BASE_URL}/sports/${sportKey}/events/${eventId}/odds/?apiKey=${ODDS_API_KEY}&regions=${regions}&markets=${markets}&oddsFormat=decimal&dateFormat=iso`;
 
 // Costs credits (roughly number of markets x number of regions per event) -
 // single game detail with EVERY market in ODDS_API_ALL_MARKETS. If the API
@@ -166,3 +177,25 @@ export const getSerieATeamsUrl = () => getCompetitionTeamsUrl("SA");
 
 // All Ligue 1 (France) teams
 export const getLigue1TeamsUrl = () => getCompetitionTeamsUrl("FL1");
+
+
+// All FA Cup fixtures
+export const getFaCupEventsUrl = () =>
+  `${ODDS_API_BASE_URL}/sports/soccer_fa_cup/events/?apiKey=${ODDS_API_KEY}`;
+
+// All EFL Cup (League Cup) fixtures
+export const getEflCupEventsUrl = () =>
+  `${ODDS_API_BASE_URL}/sports/soccer_england_efl_cup/events/?apiKey=${ODDS_API_KEY}`;
+
+// ------------------------------------------------
+// Scores/results (used by odds-api-only competitions such as the FA Cup /
+// EFL Cup, which are NOT tracked by football-data.org). Returns completed
+// games with `completed: true` and a `scores` array of { name, score }.
+// daysFrom: 1-3 typically (how many days back to include).
+// ------------------------------------------------
+export const getScoresUrl = (sportKey: string, daysFrom = 3) =>
+  `${ODDS_API_BASE_URL}/sports/${sportKey}/scores/?apiKey=${ODDS_API_KEY}&daysFrom=${daysFrom}`;
+
+export const getFaCupScoresUrl = (daysFrom = 3) => getScoresUrl('soccer_fa_cup', daysFrom);
+
+export const getEflCupScoresUrl = (daysFrom = 3) => getScoresUrl('soccer_england_efl_cup', daysFrom);

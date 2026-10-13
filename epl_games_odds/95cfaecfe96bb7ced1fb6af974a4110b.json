@@ -1,0 +1,666 @@
+{
+  "id": "95cfaecfe96bb7ced1fb6af974a4110b",
+  "sport_key": "soccer_italy_serie_a",
+  "sport_title": "Serie A - Italy",
+  "commence_time": "2026-10-25T14:00:00Z",
+  "home_team": "Genoa",
+  "away_team": "Venezia",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:39Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.14
+            },
+            {
+              "name": "Venezia",
+              "price": 3.71
+            },
+            {
+              "name": "Draw",
+              "price": 3.19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:40Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.05
+            },
+            {
+              "name": "Venezia",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:39Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 1.94
+            },
+            {
+              "name": "Venezia",
+              "price": 3
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:07Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 1.92
+            },
+            {
+              "name": "Venezia",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:59:12Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 1.97
+            },
+            {
+              "name": "Venezia",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:55Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.18
+            },
+            {
+              "name": "Venezia",
+              "price": 3.83
+            },
+            {
+              "name": "Draw",
+              "price": 3.38
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:04:55Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.69
+            },
+            {
+              "name": "No",
+              "price": 2.07
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:04:55Z",
+          "outcomes": [
+            {
+              "name": "Genoa or Draw",
+              "price": 1.31
+            },
+            {
+              "name": "Venezia or Draw",
+              "price": 1.76
+            },
+            {
+              "name": "Genoa or Venezia",
+              "price": 1.37
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:45Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.1
+            },
+            {
+              "name": "Venezia",
+              "price": 3.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:12Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.12
+            },
+            {
+              "name": "Venezia",
+              "price": 3.72
+            },
+            {
+              "name": "Draw",
+              "price": 3.28
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:04:12Z",
+          "outcomes": [
+            {
+              "name": "Genoa or Draw",
+              "price": 1.29
+            },
+            {
+              "name": "Venezia or Draw",
+              "price": 1.75
+            },
+            {
+              "name": "Genoa or Venezia",
+              "price": 1.36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:21Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.05
+            },
+            {
+              "name": "Venezia",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:23Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.05
+            },
+            {
+              "name": "Venezia",
+              "price": 3.4
+            },
+            {
+              "name": "Draw",
+              "price": 3.2
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:04:23Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.75
+            },
+            {
+              "name": "No",
+              "price": 2
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:04:23Z",
+          "outcomes": [
+            {
+              "name": "Genoa or Draw",
+              "price": 1.29
+            },
+            {
+              "name": "Venezia or Draw",
+              "price": 1.7
+            },
+            {
+              "name": "Genoa or Venezia",
+              "price": 1.33
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T13:05:02Z",
+          "outcomes": [
+            {
+              "name": "Genoa:1|Venezia:0",
+              "price": 7.5
+            },
+            {
+              "name": "Genoa:2|Venezia:0",
+              "price": 9.5
+            },
+            {
+              "name": "Genoa:2|Venezia:1",
+              "price": 8.5
+            },
+            {
+              "name": "Genoa:3|Venezia:0",
+              "price": 17
+            },
+            {
+              "name": "Genoa:3|Venezia:1",
+              "price": 15
+            },
+            {
+              "name": "Genoa:3|Venezia:2",
+              "price": 26
+            },
+            {
+              "name": "Genoa:4|Venezia:0",
+              "price": 36
+            },
+            {
+              "name": "Genoa:4|Venezia:1",
+              "price": 36
+            },
+            {
+              "name": "Genoa:4|Venezia:2",
+              "price": 51
+            },
+            {
+              "name": "Genoa:4|Venezia:3",
+              "price": 91
+            },
+            {
+              "name": "Genoa:5|Venezia:0",
+              "price": 81
+            },
+            {
+              "name": "Genoa:5|Venezia:1",
+              "price": 81
+            },
+            {
+              "name": "Genoa:5|Venezia:2",
+              "price": 101
+            },
+            {
+              "name": "Genoa:6|Venezia:0",
+              "price": 151
+            },
+            {
+              "name": "Genoa:6|Venezia:1",
+              "price": 126
+            },
+            {
+              "name": "Genoa:6|Venezia:2",
+              "price": 151
+            },
+            {
+              "name": "Genoa:7|Venezia:0",
+              "price": 151
+            },
+            {
+              "name": "Genoa:7|Venezia:1",
+              "price": 151
+            },
+            {
+              "name": "Genoa:8|Venezia:0",
+              "price": 151
+            },
+            {
+              "name": "Genoa:9|Venezia:0",
+              "price": 151
+            },
+            {
+              "name": "Genoa:10|Venezia:0",
+              "price": 151
+            },
+            {
+              "name": "Genoa:0|Venezia:0",
+              "price": 10
+            },
+            {
+              "name": "Genoa:1|Venezia:1",
+              "price": 6
+            },
+            {
+              "name": "Genoa:2|Venezia:2",
+              "price": 13
+            },
+            {
+              "name": "Genoa:3|Venezia:3",
+              "price": 51
+            },
+            {
+              "name": "Genoa:4|Venezia:4",
+              "price": 151
+            },
+            {
+              "name": "Venezia:1|Genoa:0",
+              "price": 10
+            },
+            {
+              "name": "Venezia:2|Genoa:0",
+              "price": 17
+            },
+            {
+              "name": "Venezia:2|Genoa:1",
+              "price": 11
+            },
+            {
+              "name": "Venezia:3|Genoa:0",
+              "price": 36
+            },
+            {
+              "name": "Venezia:3|Genoa:1",
+              "price": 26
+            },
+            {
+              "name": "Venezia:3|Genoa:2",
+              "price": 29
+            },
+            {
+              "name": "Venezia:4|Genoa:0",
+              "price": 81
+            },
+            {
+              "name": "Venezia:4|Genoa:1",
+              "price": 67
+            },
+            {
+              "name": "Venezia:4|Genoa:2",
+              "price": 81
+            },
+            {
+              "name": "Venezia:4|Genoa:3",
+              "price": 101
+            },
+            {
+              "name": "Venezia:5|Genoa:0",
+              "price": 151
+            },
+            {
+              "name": "Venezia:5|Genoa:1",
+              "price": 126
+            },
+            {
+              "name": "Venezia:5|Genoa:2",
+              "price": 126
+            },
+            {
+              "name": "Venezia:6|Genoa:0",
+              "price": 151
+            },
+            {
+              "name": "Venezia:6|Genoa:1",
+              "price": 151
+            },
+            {
+              "name": "Venezia:6|Genoa:2",
+              "price": 151
+            },
+            {
+              "name": "Venezia:7|Genoa:0",
+              "price": 151
+            },
+            {
+              "name": "Venezia:7|Genoa:1",
+              "price": 151
+            },
+            {
+              "name": "Venezia:8|Genoa:0",
+              "price": 151
+            },
+            {
+              "name": "Venezia:9|Genoa:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:40Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.1
+            },
+            {
+              "name": "Venezia",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:38Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.05
+            },
+            {
+              "name": "Venezia",
+              "price": 3.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:54Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.18
+            },
+            {
+              "name": "Venezia",
+              "price": 3.35
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:07Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.18
+            },
+            {
+              "name": "Venezia",
+              "price": 3.35
+            },
+            {
+              "name": "Draw",
+              "price": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:38Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.15
+            },
+            {
+              "name": "Venezia",
+              "price": 3.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:04:23Z",
+          "outcomes": [
+            {
+              "name": "Genoa",
+              "price": 2.15
+            },
+            {
+              "name": "Venezia",
+              "price": 3.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

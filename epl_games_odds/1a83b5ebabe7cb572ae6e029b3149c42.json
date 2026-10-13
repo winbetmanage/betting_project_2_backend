@@ -1,0 +1,664 @@
+{
+  "id": "1a83b5ebabe7cb572ae6e029b3149c42",
+  "sport_key": "soccer_france_ligue_one",
+  "sport_title": "Ligue 1 - France",
+  "commence_time": "2026-10-25T16:15:00Z",
+  "home_team": "Angers",
+  "away_team": "Lorient",
+  "bookmakers": [
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:10:43Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.69
+            },
+            {
+              "name": "Lorient",
+              "price": 2.85
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:10:43Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.81
+            },
+            {
+              "name": "No",
+              "price": 1.91
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:10:43Z",
+          "outcomes": [
+            {
+              "name": "Angers or Draw",
+              "price": 1.48
+            },
+            {
+              "name": "Lorient or Draw",
+              "price": 1.53
+            },
+            {
+              "name": "Angers or Lorient",
+              "price": 1.36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:10:44Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.35
+            },
+            {
+              "name": "Lorient",
+              "price": 2.55
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:10:15Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.45
+            },
+            {
+              "name": "Lorient",
+              "price": 2.6
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:09:47Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.35
+            },
+            {
+              "name": "Lorient",
+              "price": 2.45
+            },
+            {
+              "name": "Draw",
+              "price": 3.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:10:29Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.55
+            },
+            {
+              "name": "Lorient",
+              "price": 2.8
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:01:15Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.38
+            },
+            {
+              "name": "Lorient",
+              "price": 2.62
+            },
+            {
+              "name": "Draw",
+              "price": 3.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:09:59Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.5
+            },
+            {
+              "name": "Lorient",
+              "price": 2.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:10:45Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.5
+            },
+            {
+              "name": "Lorient",
+              "price": 2.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T13:10:45Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.85
+            },
+            {
+              "name": "No",
+              "price": 1.95
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:10:45Z",
+          "outcomes": [
+            {
+              "name": "Angers or Draw",
+              "price": 1.4
+            },
+            {
+              "name": "Lorient or Draw",
+              "price": 1.5
+            },
+            {
+              "name": "Angers or Lorient",
+              "price": 1.35
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T13:10:41Z",
+          "outcomes": [
+            {
+              "name": "Angers:1|Lorient:0",
+              "price": 7.5
+            },
+            {
+              "name": "Angers:2|Lorient:0",
+              "price": 12
+            },
+            {
+              "name": "Angers:2|Lorient:1",
+              "price": 9
+            },
+            {
+              "name": "Angers:3|Lorient:0",
+              "price": 23
+            },
+            {
+              "name": "Angers:3|Lorient:1",
+              "price": 21
+            },
+            {
+              "name": "Angers:3|Lorient:2",
+              "price": 29
+            },
+            {
+              "name": "Angers:4|Lorient:0",
+              "price": 61
+            },
+            {
+              "name": "Angers:4|Lorient:1",
+              "price": 51
+            },
+            {
+              "name": "Angers:4|Lorient:2",
+              "price": 71
+            },
+            {
+              "name": "Angers:4|Lorient:3",
+              "price": 101
+            },
+            {
+              "name": "Angers:5|Lorient:0",
+              "price": 126
+            },
+            {
+              "name": "Angers:5|Lorient:1",
+              "price": 101
+            },
+            {
+              "name": "Angers:5|Lorient:2",
+              "price": 126
+            },
+            {
+              "name": "Angers:6|Lorient:0",
+              "price": 151
+            },
+            {
+              "name": "Angers:6|Lorient:1",
+              "price": 151
+            },
+            {
+              "name": "Angers:6|Lorient:2",
+              "price": 151
+            },
+            {
+              "name": "Angers:7|Lorient:0",
+              "price": 151
+            },
+            {
+              "name": "Angers:7|Lorient:1",
+              "price": 151
+            },
+            {
+              "name": "Angers:8|Lorient:0",
+              "price": 151
+            },
+            {
+              "name": "Angers:9|Lorient:0",
+              "price": 151
+            },
+            {
+              "name": "Angers:10|Lorient:0",
+              "price": 151
+            },
+            {
+              "name": "Angers:0|Lorient:0",
+              "price": 8.5
+            },
+            {
+              "name": "Angers:1|Lorient:1",
+              "price": 6
+            },
+            {
+              "name": "Angers:2|Lorient:2",
+              "price": 13
+            },
+            {
+              "name": "Angers:3|Lorient:3",
+              "price": 61
+            },
+            {
+              "name": "Angers:4|Lorient:4",
+              "price": 151
+            },
+            {
+              "name": "Lorient:1|Angers:0",
+              "price": 8
+            },
+            {
+              "name": "Lorient:2|Angers:0",
+              "price": 13
+            },
+            {
+              "name": "Lorient:2|Angers:1",
+              "price": 9.5
+            },
+            {
+              "name": "Lorient:3|Angers:0",
+              "price": 29
+            },
+            {
+              "name": "Lorient:3|Angers:1",
+              "price": 23
+            },
+            {
+              "name": "Lorient:3|Angers:2",
+              "price": 29
+            },
+            {
+              "name": "Lorient:4|Angers:0",
+              "price": 71
+            },
+            {
+              "name": "Lorient:4|Angers:1",
+              "price": 61
+            },
+            {
+              "name": "Lorient:4|Angers:2",
+              "price": 81
+            },
+            {
+              "name": "Lorient:4|Angers:3",
+              "price": 101
+            },
+            {
+              "name": "Lorient:5|Angers:0",
+              "price": 126
+            },
+            {
+              "name": "Lorient:5|Angers:1",
+              "price": 126
+            },
+            {
+              "name": "Lorient:5|Angers:2",
+              "price": 151
+            },
+            {
+              "name": "Lorient:6|Angers:0",
+              "price": 151
+            },
+            {
+              "name": "Lorient:6|Angers:1",
+              "price": 151
+            },
+            {
+              "name": "Lorient:6|Angers:2",
+              "price": 151
+            },
+            {
+              "name": "Lorient:7|Angers:0",
+              "price": 151
+            },
+            {
+              "name": "Lorient:7|Angers:1",
+              "price": 151
+            },
+            {
+              "name": "Lorient:8|Angers:0",
+              "price": 151
+            },
+            {
+              "name": "Lorient:9|Angers:0",
+              "price": 151
+            },
+            {
+              "name": "Lorient:10|Angers:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:09:49Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.62
+            },
+            {
+              "name": "Lorient",
+              "price": 2.78
+            },
+            {
+              "name": "Draw",
+              "price": 3.32
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T13:09:49Z",
+          "outcomes": [
+            {
+              "name": "Angers or Draw",
+              "price": 1.47
+            },
+            {
+              "name": "Lorient or Draw",
+              "price": 1.52
+            },
+            {
+              "name": "Angers or Lorient",
+              "price": 1.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betfair_ex_eu",
+      "title": "Betfair",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:10:28Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.58
+            },
+            {
+              "name": "Lorient",
+              "price": 2.78
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        },
+        {
+          "key": "h2h_lay",
+          "last_update": "2026-10-13T13:10:28Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 3.05
+            },
+            {
+              "name": "Lorient",
+              "price": 3.3
+            },
+            {
+              "name": "Draw",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:10:48Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.61
+            },
+            {
+              "name": "Lorient",
+              "price": 2.81
+            },
+            {
+              "name": "Draw",
+              "price": 3.23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:09:58Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.65
+            },
+            {
+              "name": "Lorient",
+              "price": 2.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:09:58Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.48
+            },
+            {
+              "name": "Lorient",
+              "price": 2.55
+            },
+            {
+              "name": "Draw",
+              "price": 3.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:10:29Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.6
+            },
+            {
+              "name": "Lorient",
+              "price": 2.7
+            },
+            {
+              "name": "Draw",
+              "price": 3.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T13:09:59Z",
+          "outcomes": [
+            {
+              "name": "Angers",
+              "price": 2.65
+            },
+            {
+              "name": "Lorient",
+              "price": 2.75
+            },
+            {
+              "name": "Draw",
+              "price": 3.4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

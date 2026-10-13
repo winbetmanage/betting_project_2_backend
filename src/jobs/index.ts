@@ -20,6 +20,7 @@ export function startJobs() {
   cron.schedule('*/5 * * * *', async () => {
     try {
       const r = await runRefreshGameOddsJob();
+      if (r.paused) return; // auto odds refresh turned off in settings
       if (r.due || r.errored) {
         console.log(`[jobs] refresh-game-odds: candidates=${r.candidates} due=${r.due} refreshed=${r.refreshed} fresh=${r.fresh} errored=${r.errored}`);
         for (const d of r.details) console.log(`  ${d.fixture}: ${d.oddsChanged} odds changed across ${d.marketsUpdated} markets${d.notes.length ? ` — notes: ${d.notes.join(' | ')}` : ''}`);

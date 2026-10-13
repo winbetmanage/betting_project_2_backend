@@ -1,0 +1,666 @@
+{
+  "id": "b7f0880e3da978f9481f7cb5697e2aa5",
+  "sport_key": "soccer_italy_serie_a",
+  "sport_title": "Serie A - Italy",
+  "commence_time": "2026-10-24T13:00:00Z",
+  "home_team": "Cagliari",
+  "away_team": "Bologna",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:01Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.48
+            },
+            {
+              "name": "Cagliari",
+              "price": 3.27
+            },
+            {
+              "name": "Draw",
+              "price": 2.94
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:18Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.35
+            },
+            {
+              "name": "Cagliari",
+              "price": 2.9
+            },
+            {
+              "name": "Draw",
+              "price": 3.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:17Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.2
+            },
+            {
+              "name": "Cagliari",
+              "price": 2.75
+            },
+            {
+              "name": "Draw",
+              "price": 2.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:01Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.15
+            },
+            {
+              "name": "Cagliari",
+              "price": 2.95
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:22:43Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.23
+            },
+            {
+              "name": "Cagliari",
+              "price": 2.93
+            },
+            {
+              "name": "Draw",
+              "price": 3.02
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:21:23Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.52
+            },
+            {
+              "name": "Cagliari",
+              "price": 3.35
+            },
+            {
+              "name": "Draw",
+              "price": 3.13
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:21:23Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.83
+            },
+            {
+              "name": "No",
+              "price": 1.89
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:21:23Z",
+          "outcomes": [
+            {
+              "name": "Bologna or Draw",
+              "price": 1.38
+            },
+            {
+              "name": "Cagliari or Draw",
+              "price": 1.59
+            },
+            {
+              "name": "Bologna or Cagliari",
+              "price": 1.42
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:16Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.45
+            },
+            {
+              "name": "Cagliari",
+              "price": 3.2
+            },
+            {
+              "name": "Draw",
+              "price": 2.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:22:16Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.44
+            },
+            {
+              "name": "Cagliari",
+              "price": 3.25
+            },
+            {
+              "name": "Draw",
+              "price": 3.04
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:22:16Z",
+          "outcomes": [
+            {
+              "name": "Bologna or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Cagliari or Draw",
+              "price": 1.58
+            },
+            {
+              "name": "Bologna or Cagliari",
+              "price": 1.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:15Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.45
+            },
+            {
+              "name": "Cagliari",
+              "price": 2.9
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:22:34Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.45
+            },
+            {
+              "name": "Cagliari",
+              "price": 2.9
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:22:34Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.85
+            },
+            {
+              "name": "No",
+              "price": 1.85
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:22:34Z",
+          "outcomes": [
+            {
+              "name": "Bologna or Draw",
+              "price": 1.36
+            },
+            {
+              "name": "Cagliari or Draw",
+              "price": 1.53
+            },
+            {
+              "name": "Bologna or Cagliari",
+              "price": 1.36
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:22:54Z",
+          "outcomes": [
+            {
+              "name": "Cagliari:1|Bologna:0",
+              "price": 8
+            },
+            {
+              "name": "Cagliari:2|Bologna:0",
+              "price": 13
+            },
+            {
+              "name": "Cagliari:2|Bologna:1",
+              "price": 10
+            },
+            {
+              "name": "Cagliari:3|Bologna:0",
+              "price": 29
+            },
+            {
+              "name": "Cagliari:3|Bologna:1",
+              "price": 23
+            },
+            {
+              "name": "Cagliari:3|Bologna:2",
+              "price": 36
+            },
+            {
+              "name": "Cagliari:4|Bologna:0",
+              "price": 71
+            },
+            {
+              "name": "Cagliari:4|Bologna:1",
+              "price": 67
+            },
+            {
+              "name": "Cagliari:4|Bologna:2",
+              "price": 81
+            },
+            {
+              "name": "Cagliari:4|Bologna:3",
+              "price": 126
+            },
+            {
+              "name": "Cagliari:5|Bologna:0",
+              "price": 126
+            },
+            {
+              "name": "Cagliari:5|Bologna:1",
+              "price": 126
+            },
+            {
+              "name": "Cagliari:5|Bologna:2",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:6|Bologna:0",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:6|Bologna:1",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:6|Bologna:2",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:7|Bologna:0",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:7|Bologna:1",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:8|Bologna:0",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:9|Bologna:0",
+              "price": 151
+            },
+            {
+              "name": "Cagliari:0|Bologna:0",
+              "price": 8
+            },
+            {
+              "name": "Cagliari:1|Bologna:1",
+              "price": 5.8
+            },
+            {
+              "name": "Cagliari:2|Bologna:2",
+              "price": 13
+            },
+            {
+              "name": "Cagliari:3|Bologna:3",
+              "price": 61
+            },
+            {
+              "name": "Cagliari:4|Bologna:4",
+              "price": 151
+            },
+            {
+              "name": "Bologna:1|Cagliari:0",
+              "price": 7
+            },
+            {
+              "name": "Bologna:2|Cagliari:0",
+              "price": 11
+            },
+            {
+              "name": "Bologna:2|Cagliari:1",
+              "price": 9.5
+            },
+            {
+              "name": "Bologna:3|Cagliari:0",
+              "price": 23
+            },
+            {
+              "name": "Bologna:3|Cagliari:1",
+              "price": 19
+            },
+            {
+              "name": "Bologna:3|Cagliari:2",
+              "price": 29
+            },
+            {
+              "name": "Bologna:4|Cagliari:0",
+              "price": 56
+            },
+            {
+              "name": "Bologna:4|Cagliari:1",
+              "price": 51
+            },
+            {
+              "name": "Bologna:4|Cagliari:2",
+              "price": 71
+            },
+            {
+              "name": "Bologna:4|Cagliari:3",
+              "price": 101
+            },
+            {
+              "name": "Bologna:5|Cagliari:0",
+              "price": 101
+            },
+            {
+              "name": "Bologna:5|Cagliari:1",
+              "price": 101
+            },
+            {
+              "name": "Bologna:5|Cagliari:2",
+              "price": 126
+            },
+            {
+              "name": "Bologna:6|Cagliari:0",
+              "price": 151
+            },
+            {
+              "name": "Bologna:6|Cagliari:1",
+              "price": 151
+            },
+            {
+              "name": "Bologna:6|Cagliari:2",
+              "price": 151
+            },
+            {
+              "name": "Bologna:7|Cagliari:0",
+              "price": 151
+            },
+            {
+              "name": "Bologna:7|Cagliari:1",
+              "price": 151
+            },
+            {
+              "name": "Bologna:8|Cagliari:0",
+              "price": 151
+            },
+            {
+              "name": "Bologna:9|Cagliari:0",
+              "price": 151
+            },
+            {
+              "name": "Bologna:10|Cagliari:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:22:30Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.33
+            },
+            {
+              "name": "Cagliari",
+              "price": 2.95
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:22:31Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.43
+            },
+            {
+              "name": "Cagliari",
+              "price": 3.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:01Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.43
+            },
+            {
+              "name": "Cagliari",
+              "price": 3.1
+            },
+            {
+              "name": "Draw",
+              "price": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:22:46Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.28
+            },
+            {
+              "name": "Cagliari",
+              "price": 2.88
+            },
+            {
+              "name": "Draw",
+              "price": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:22:31Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.45
+            },
+            {
+              "name": "Cagliari",
+              "price": 3
+            },
+            {
+              "name": "Draw",
+              "price": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:23:01Z",
+          "outcomes": [
+            {
+              "name": "Bologna",
+              "price": 2.48
+            },
+            {
+              "name": "Cagliari",
+              "price": 3.05
+            },
+            {
+              "name": "Draw",
+              "price": 3.15
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,662 @@
+{
+  "id": "08ffd99b2249c81d8a7410598f32b9b0",
+  "sport_key": "soccer_italy_serie_a",
+  "sport_title": "Serie A - Italy",
+  "commence_time": "2026-10-24T13:00:00Z",
+  "home_team": "Como",
+  "away_team": "Sassuolo",
+  "bookmakers": [
+    {
+      "key": "pinnacle",
+      "title": "Pinnacle",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:18Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.43
+            },
+            {
+              "name": "Sassuolo",
+              "price": 7.26
+            },
+            {
+              "name": "Draw",
+              "price": 4.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_de",
+      "title": "Winamax (DE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:36Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.42
+            },
+            {
+              "name": "Sassuolo",
+              "price": 5.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "winamax_fr",
+      "title": "Winamax (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:36Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.37
+            },
+            {
+              "name": "Sassuolo",
+              "price": 5.1
+            },
+            {
+              "name": "Draw",
+              "price": 4.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_fr",
+      "title": "Unibet (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:35Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.35
+            },
+            {
+              "name": "Sassuolo",
+              "price": 5.8
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betclic_fr",
+      "title": "Betclic (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:01Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.38
+            },
+            {
+              "name": "Sassuolo",
+              "price": 5.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "onexbet",
+      "title": "1xBet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:17:35Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.45
+            },
+            {
+              "name": "Sassuolo",
+              "price": 7.6
+            },
+            {
+              "name": "Draw",
+              "price": 5.1
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:17:35Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.7
+            },
+            {
+              "name": "No",
+              "price": 2.05
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:17:35Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.1
+            },
+            {
+              "name": "Sassuolo or Draw",
+              "price": 2.96
+            },
+            {
+              "name": "Como or Sassuolo",
+              "price": 1.21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tipico_de",
+      "title": "Tipico",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:17:36Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.4
+            },
+            {
+              "name": "Sassuolo",
+              "price": 7
+            },
+            {
+              "name": "Draw",
+              "price": 4.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "marathonbet",
+      "title": "Marathon Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:24Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.41
+            },
+            {
+              "name": "Sassuolo",
+              "price": 7.4
+            },
+            {
+              "name": "Draw",
+              "price": 4.95
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:18:24Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.1
+            },
+            {
+              "name": "Sassuolo or Draw",
+              "price": 2.98
+            },
+            {
+              "name": "Como or Sassuolo",
+              "price": 1.19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sport888",
+      "title": "888sport",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:17:49Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.4
+            },
+            {
+              "name": "Sassuolo",
+              "price": 6.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "williamhill",
+      "title": "William Hill",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:19Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.4
+            },
+            {
+              "name": "Sassuolo",
+              "price": 6.5
+            },
+            {
+              "name": "Draw",
+              "price": 4.6
+            }
+          ]
+        },
+        {
+          "key": "btts",
+          "last_update": "2026-10-13T12:18:19Z",
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 1.67
+            },
+            {
+              "name": "No",
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "key": "double_chance",
+          "last_update": "2026-10-13T12:18:19Z",
+          "outcomes": [
+            {
+              "name": "Como or Draw",
+              "price": 1.1
+            },
+            {
+              "name": "Sassuolo or Draw",
+              "price": 2.88
+            },
+            {
+              "name": "Como or Sassuolo",
+              "price": 1.18
+            }
+          ]
+        },
+        {
+          "key": "correct_score",
+          "last_update": "2026-10-13T12:17:41Z",
+          "outcomes": [
+            {
+              "name": "Como:1|Sassuolo:0",
+              "price": 8.5
+            },
+            {
+              "name": "Como:2|Sassuolo:0",
+              "price": 7.5
+            },
+            {
+              "name": "Como:2|Sassuolo:1",
+              "price": 7.5
+            },
+            {
+              "name": "Como:3|Sassuolo:0",
+              "price": 10
+            },
+            {
+              "name": "Como:3|Sassuolo:1",
+              "price": 10
+            },
+            {
+              "name": "Como:3|Sassuolo:2",
+              "price": 17
+            },
+            {
+              "name": "Como:4|Sassuolo:0",
+              "price": 15
+            },
+            {
+              "name": "Como:4|Sassuolo:1",
+              "price": 17
+            },
+            {
+              "name": "Como:4|Sassuolo:2",
+              "price": 29
+            },
+            {
+              "name": "Como:4|Sassuolo:3",
+              "price": 67
+            },
+            {
+              "name": "Como:5|Sassuolo:0",
+              "price": 29
+            },
+            {
+              "name": "Como:5|Sassuolo:1",
+              "price": 34
+            },
+            {
+              "name": "Como:5|Sassuolo:2",
+              "price": 56
+            },
+            {
+              "name": "Como:6|Sassuolo:0",
+              "price": 67
+            },
+            {
+              "name": "Como:6|Sassuolo:1",
+              "price": 67
+            },
+            {
+              "name": "Como:6|Sassuolo:2",
+              "price": 101
+            },
+            {
+              "name": "Como:7|Sassuolo:0",
+              "price": 101
+            },
+            {
+              "name": "Como:7|Sassuolo:1",
+              "price": 101
+            },
+            {
+              "name": "Como:8|Sassuolo:0",
+              "price": 151
+            },
+            {
+              "name": "Como:9|Sassuolo:0",
+              "price": 151
+            },
+            {
+              "name": "Como:10|Sassuolo:0",
+              "price": 151
+            },
+            {
+              "name": "Como:0|Sassuolo:0",
+              "price": 17
+            },
+            {
+              "name": "Como:1|Sassuolo:1",
+              "price": 8.5
+            },
+            {
+              "name": "Como:2|Sassuolo:2",
+              "price": 15
+            },
+            {
+              "name": "Como:3|Sassuolo:3",
+              "price": 46
+            },
+            {
+              "name": "Como:4|Sassuolo:4",
+              "price": 126
+            },
+            {
+              "name": "Sassuolo:1|Como:0",
+              "price": 21
+            },
+            {
+              "name": "Sassuolo:2|Como:0",
+              "price": 41
+            },
+            {
+              "name": "Sassuolo:2|Como:1",
+              "price": 19
+            },
+            {
+              "name": "Sassuolo:3|Como:0",
+              "price": 91
+            },
+            {
+              "name": "Sassuolo:3|Como:1",
+              "price": 51
+            },
+            {
+              "name": "Sassuolo:3|Como:2",
+              "price": 41
+            },
+            {
+              "name": "Sassuolo:4|Como:0",
+              "price": 151
+            },
+            {
+              "name": "Sassuolo:4|Como:1",
+              "price": 101
+            },
+            {
+              "name": "Sassuolo:4|Como:2",
+              "price": 101
+            },
+            {
+              "name": "Sassuolo:4|Como:3",
+              "price": 101
+            },
+            {
+              "name": "Sassuolo:5|Como:0",
+              "price": 151
+            },
+            {
+              "name": "Sassuolo:5|Como:1",
+              "price": 151
+            },
+            {
+              "name": "Sassuolo:5|Como:2",
+              "price": 151
+            },
+            {
+              "name": "Sassuolo:6|Como:0",
+              "price": 151
+            },
+            {
+              "name": "Sassuolo:6|Como:1",
+              "price": 151
+            },
+            {
+              "name": "Sassuolo:6|Como:2",
+              "price": 151
+            },
+            {
+              "name": "Sassuolo:7|Como:0",
+              "price": 151
+            },
+            {
+              "name": "Sassuolo:7|Como:1",
+              "price": 151
+            },
+            {
+              "name": "Sassuolo:8|Como:0",
+              "price": 151
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "leovegas_se",
+      "title": "LeoVegas (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:37Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.42
+            },
+            {
+              "name": "Sassuolo",
+              "price": 6.25
+            },
+            {
+              "name": "Draw",
+              "price": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_se",
+      "title": "Unibet (SE)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:17:49Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.47
+            },
+            {
+              "name": "Sassuolo",
+              "price": 6.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "unibet_nl",
+      "title": "Unibet (NL)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:35Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.47
+            },
+            {
+              "name": "Sassuolo",
+              "price": 6.75
+            },
+            {
+              "name": "Draw",
+              "price": 4.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pmu_fr",
+      "title": "PMU (FR)",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:35Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.4
+            },
+            {
+              "name": "Sassuolo",
+              "price": 6
+            },
+            {
+              "name": "Draw",
+              "price": 4.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "nordicbet",
+      "title": "Nordic Bet",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:16:19Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.46
+            },
+            {
+              "name": "Sassuolo",
+              "price": 6.7
+            },
+            {
+              "name": "Draw",
+              "price": 4.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betsson",
+      "title": "Betsson",
+      "markets": [
+        {
+          "key": "h2h",
+          "last_update": "2026-10-13T12:18:36Z",
+          "outcomes": [
+            {
+              "name": "Como",
+              "price": 1.47
+            },
+            {
+              "name": "Sassuolo",
+              "price": 6.8
+            },
+            {
+              "name": "Draw",
+              "price": 4.45
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
