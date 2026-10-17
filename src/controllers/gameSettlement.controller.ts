@@ -2,8 +2,9 @@ import * as settlementService from '../services/gameSettlement.service';
 import asyncHandler from '../utils/asyncHandler';
 import ApiError from '../utils/ApiError';
 
-export const listBetGames = asyncHandler(async (_req, res) => {
-  const data = await settlementService.listBetGames();
+export const listBetGames = asyncHandler(async (req, res) => {
+  const finishedOnly = (req.query as { finished?: unknown }).finished === 'true';
+  const data = await settlementService.listBetGames(finishedOnly);
   res.json({ data });
 });
 

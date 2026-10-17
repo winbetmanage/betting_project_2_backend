@@ -1263,12 +1263,20 @@ export async function markPayout(gameId: string, payoutStatus: 'SUBMITTED' | 'PA
   return buildSettlement(gameId);
 }
 
-/** List published games with settlement-relevant aggregates for the "Bet Games" screen. */
-export async function listBetGames() {
+/**
+ * List published games with settlement-relevant aggregates for the "Bet Games" screen.
+ *
+ * `finishedOnly` powers the sibling "Finished Bet Games" screen: the same rows,
+ * the same aggregates, restricted to games the result sync has marked FINISHED
+ * and ordered with the most recently finished at the top.
+ */
+export async function listBetGames(finishedOnly = false) {
   const games = await prisma.game.findMany({
-    where: { isPublished: true },
+    where: { isPublished: true, ...(finishedOnly ? { status: 'FINISHED' as const } : {}) },
     include: { competition: { include: { sport: true } }, score: { select: { footballDataMatchId: true, homeScoreFT: true, awayScoreFT: true, status: true } } },
-    orderBy: { startTime: 'asc' },
+    // Finished view leads with the newest result; the live view leads with the
+    // soonest kickoff.
+    orderBy: { startTime: finishedOnly ? 'desc' : 'asc' },
   });
   const gameIds = games.map((g) => g.id);
 
