@@ -56,11 +56,18 @@ export const updateOdds = async (id: string, odds: number) => {
 export const removeMarket = async (id: string) => {
   const market = await prisma.market.findUnique({
     where: { id },
-    include: { selections: { include: { betSelections: true } } },
+    include: { selections: { include: { betSelections: { include: { bet: { select: { id: true, status: true } } } } } } },
   });
   if (!market) throw new ApiError(404, 'Market not found');
-  const hasBets = market.selections.some((s) => s.betSelections.length > 0);
-  if (hasBets) throw new ApiError(400, 'Cannot remove market with active bets');
+  const legs = market.selections.flatMap((s) => s.betSelections);
+  if (legs.length > 0) {
+    const betIds = [...new Set(legs.map((l) => l.betId))];
+    const settled = [...new Set(legs.filter((l) => l.bet.status !== 'PENDING').map((l) => l.bet.status))];
+    throw new ApiError(
+      400,
+      `Cannot remove this market: ${betIds.length} ticket(s) already hold a leg on it${settled.length ? ` (${settled.join(', ')})` : ''}. Use the Replace action instead — it moves those bets onto a correct market.`
+    );
+  }
 
   return prisma.$transaction(async (tx) => {
     const selectionIds = market.selections.map((s) => s.id);
@@ -69,6 +76,68 @@ export const removeMarket = async (id: string) => {
     await tx.market.delete({ where: { id } });
     return { message: 'Market removed' };
   });
+};
+
+/**
+ * Hide a market from the players' betting list without touching anybody's bet.
+ *
+ * SUSPENDED is the status that does exactly this, and both ends of the flow
+ * already honour it: the players' game page renders only OPEN markets
+ * (games/[id]/page.tsx filters m.status === 'OPEN'), and placeBet requires
+ * `market: { status: 'OPEN' }`. So a suspended market stops accepting new bets
+ * and disappears from the list, while every existing BetSelection still points
+ * at it — settlement only skips SETTLED markets, so those bets grade normally.
+ *
+ * The market is never deleted or voided, so this is fully reversible.
+ */
+export const setMarketHidden = async (id: string, hidden: boolean, actorId: string) => {
+  const market = await prisma.market.findUnique({ where: { id } });
+  if (!market) throw new ApiError(404, 'Market not found');
+  if (market.status === 'SETTLED') throw new ApiError(400, 'Settled markets cannot be hidden — their results are already graded');
+  if (market.status === 'CANCELLED') {
+    throw new ApiError(400, 'This market was retired by a replacement — it is already out of the betting list and cannot be reopened');
+  }
+
+  const nextStatus = hidden ? 'SUSPENDED' : 'OPEN';
+  if (market.status === nextStatus) {
+    return { id, status: nextStatus, changed: false, betCount: 0, bettorCount: 0 };
+  }
+
+  // Existing bets must survive untouched, so count them for the log + the toast.
+  const legs = await prisma.betSelection.findMany({
+    where: { selection: { marketId: id } },
+    select: { betId: true, bet: { select: { userId: true } } },
+  });
+  const betIds = new Set(legs.map((l) => l.betId));
+  const bettors = new Set(legs.map((l) => l.bet.userId));
+
+  const updated = await prisma.market.update({
+    where: { id },
+    data: { status: nextStatus, lastActionById: actorId, lastActionAt: new Date() },
+    include: { selections: true },
+  });
+
+  await prisma.adminActionLog.create({
+    data: {
+      userId: actorId,
+      action: hidden ? 'MARKET_HIDDEN' : 'MARKET_SHOWN',
+      targetType: 'Market',
+      targetId: id,
+      metadata: {
+        marketName: market.name,
+        marketKey: (market.parameters as { marketKey?: string } | null)?.marketKey ?? null,
+        line: (market.parameters as { line?: number | null } | null)?.line ?? null,
+        fromStatus: market.status,
+        toStatus: nextStatus,
+        selectionCount: updated.selections.length,
+        // Proof that nothing already placed was disturbed.
+        betsKept: betIds.size,
+        bettorsKept: bettors.size,
+      },
+    },
+  });
+
+  return { id, status: nextStatus, changed: true, betCount: betIds.size, bettorCount: bettors.size };
 };
 
 export const settleSelection = async (id: string, isWinning: boolean | null) => {

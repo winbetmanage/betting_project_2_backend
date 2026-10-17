@@ -383,6 +383,16 @@ export function manualReason(market: { type: string; parameters: unknown }): str
   return null;
 }
 
+/**
+ * A market retired by marketReplace. Its bets now point at the replacement
+ * market, so it must stay out of settlement — only legs the admin voided still
+ * reference it, and those are graded VOID already.
+ */
+function isReplacedMarket(market: { parameters: unknown }): boolean {
+  const params = (market.parameters ?? {}) as { replacedByMarketId?: unknown };
+  return typeof params.replacedByMarketId === 'string' && params.replacedByMarketId.length > 0;
+}
+
 /** True when every token of the team name appears in the outcome name. */
 function outcomeMentionsTeam(outcome: string, team: string): boolean {
   const t = [...teamTokens(team)];
@@ -686,7 +696,7 @@ async function buildSettlement(gameId: string) {
   const autoSettleable: string[] = [];
   const needsManual: string[] = [];
   for (const m of game.markets) {
-    if (m.status === 'SETTLED') continue;
+    if (m.status === 'SETTLED' || isReplacedMarket(m)) continue;
     const w = resolveMarketWinners(m, game, result);
     winnerMap.set(m.id, w);
     if (w) autoSettleable.push(m.name);
@@ -848,6 +858,7 @@ export async function calculateGameSettlement(gameId: string, adminId?: string) 
       if (leg.result !== 'PENDING') continue; // manual grades + other games' legs stay as they are
       const market = game.markets.find((m) => m.id === leg.selection.marketId);
       if (!market || market.gameId !== gameId || market.status === 'SETTLED') continue;
+      if (isReplacedMarket(market)) continue; // legs already moved to the replacement market
       const winners = resolveMarketWinners(market, game, result);
       if (!winners) continue; // needs manual settlement
       const v = winners.get(leg.selectionId);
@@ -1049,7 +1060,7 @@ export async function settleGame(gameId: string, adminId?: string) {
   let settledMarkets = 0;
   let skippedMarkets = 0;
   for (const m of game.markets) {
-    if (m.status === 'SETTLED') continue;
+    if (m.status === 'SETTLED' || isReplacedMarket(m)) continue;
     const winners = resolveMarketWinners(m, game, result);
     if (!winners) { skippedMarkets++; continue; }
     for (const s of m.selections) {

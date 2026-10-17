@@ -1,4 +1,5 @@
 import * as marketService from '../services/market.service';
+import * as marketReplaceService from '../services/marketReplace.service';
 import asyncHandler from '../utils/asyncHandler';
 import ApiError from '../utils/ApiError';
 
@@ -49,4 +50,43 @@ export const settle = asyncHandler(async (req, res) => {
 export const remove = asyncHandler(async (req, res) => {
   const result = await marketService.removeMarket(req.params.id as string);
   res.json({ message: 'Market removed', data: result });
+});
+
+export const setVisibility = asyncHandler(async (req, res) => {
+  const { hidden } = req.body as { hidden?: unknown };
+  if (typeof hidden !== 'boolean') throw new ApiError(400, 'hidden must be true or false');
+  const result = await marketService.setMarketHidden(req.params.id as string, hidden, req.user!.id);
+  res.json({
+    message: result.changed
+      ? hidden
+        ? `Hidden from the betting list — ${result.betCount} existing ticket(s) left as they are`
+        : 'Back on the betting list'
+      : `Already ${hidden ? 'hidden' : 'open'} — nothing changed`,
+    data: result,
+  });
+});
+
+export const replaceOptions = asyncHandler(async (req, res) => {
+  const data = await marketReplaceService.getReplaceOptions(req.params.id as string);
+  res.json({ data });
+});
+
+export const replacePreview = asyncHandler(async (req, res) => {
+  const { candidateKey } = req.body as { candidateKey?: string };
+  if (!candidateKey) throw new ApiError(400, 'candidateKey is required');
+  const data = await marketReplaceService.previewReplace(req.params.id as string, candidateKey);
+  res.json({ data });
+});
+
+export const replace = asyncHandler(async (req, res) => {
+  const { candidateKey, plans } = req.body as marketReplaceService.ReplaceInput;
+  const data = await marketReplaceService.replaceMarket(
+    req.params.id as string,
+    { candidateKey, plans },
+    req.user!.id
+  );
+  res.json({
+    message: `Market replaced — ${data.betsUpdated} ticket(s) updated, ${data.legsRewritten} leg(s) rewritten, ${data.legsVoided} voided`,
+    data,
+  });
 });

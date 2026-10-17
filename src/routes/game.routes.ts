@@ -39,5 +39,9 @@ router.post('/:id/payout', authenticate, authorize('ADMIN'), gameSettlementContr
 router.post('/:id/bets/:betId/settle', authenticate, authorize('ADMIN'), gameSettlementController.settleSingleBet);
 router.post('/:id/markets/approve', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), bookmakerOddsController.approveMarket);
 router.post('/:id/markets/approve-bulk', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), bookmakerOddsController.approveMarketsBulk);
+router.get('/:id/markets/auto-replace', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), bookmakerOddsController.autoReplacePreview);
+router.post('/:id/markets/auto-replace', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), bookmakerOddsController.autoReplace);
+router.get('/:id/markets/ticket-sync', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), bookmakerOddsController.ticketSyncPreview);
+router.post('/:id/markets/ticket-sync', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), bookmakerOddsController.ticketSync);
 
 export default router;

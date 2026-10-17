@@ -1,6 +1,8 @@
 import * as bookmakerOddsService from '../services/bookmakerOdds.service';
 import * as marketApprovalService from '../services/marketApproval.service';
+import * as marketReplaceService from '../services/marketReplace.service';
 import asyncHandler from '../utils/asyncHandler';
+import ApiError from '../utils/ApiError';
 import prisma from '../utils/prisma';
 
 export const fetchForGame = asyncHandler(async (req, res) => {
@@ -20,9 +22,12 @@ export const getGroupedForGame = asyncHandler(async (req, res) => {
   const game = await prisma.game.findUnique({ where: { id: gameId }, include: { markets: true } });
   const hasJson = result.game.externalEventId ? bookmakerOddsService.hasJsonFor(result.game.externalEventId) : false;
   const hasSelection = (game?.markets?.length ?? 0) > 0;
-  // Which group keys already have a saved Market (to highlight in UI)
+  // Which group keys already have a saved Market (to highlight in UI).
+  // Cancelled markets are skipped — a market retired by Replace must not make
+  // its successor look already-recorded.
   const TYPE_TO_KEY: Record<string, string> = { MATCH_WINNER: 'h2h', OVER_UNDER: 'totals', HANDICAP: 'spreads', BOTH_TEAMS_TO_SCORE: 'btts', CORRECT_SCORE: 'correct_score' };
   const savedKeys = (game?.markets ?? [])
+    .filter((m) => m.status !== 'CANCELLED')
     .map((m) => {
       const p = m.parameters as { marketKey?: string; line?: number | null } | null;
       const mk = p?.marketKey ?? TYPE_TO_KEY[m.type] ?? m.type.toLowerCase();
@@ -43,6 +48,40 @@ export const approveMarket = asyncHandler(async (req, res) => {
   };
   const market = await marketApprovalService.approveMarket(gameId, { marketKey, point: point ?? null, bookmakerKey, selections }, adminUserId);
   res.json({ message: 'Market approved', data: market });
+});
+
+export const autoReplacePreview = asyncHandler(async (req, res) => {
+  const data = await marketReplaceService.previewAutoReplace(req.params.id as string);
+  res.json({ data });
+});
+
+export const autoReplace = asyncHandler(async (req, res) => {
+  const { noReplacement } = req.body as marketReplaceService.AutoReplaceInput;
+  const result = await marketReplaceService.autoReplace(req.params.id as string, { noReplacement }, req.user!.id);
+  const bits: string[] = [];
+  if (result.marketsCorrected) bits.push(`${result.marketsCorrected} market(s) corrected`);
+  if (result.marketsRemoved) bits.push(`${result.marketsRemoved} removed`);
+  if (result.marketsKept) bits.push(`${result.marketsKept} kept`);
+  if (result.leftAloneWithBets) bits.push(`${result.leftAloneWithBets} left alone (players have bets)`);
+  res.json({ message: `Auto replace done — ${bits.join(', ') || 'nothing to change'}`, data: result });
+});
+
+export const ticketSyncPreview = asyncHandler(async (req, res) => {
+  const data = await marketReplaceService.previewTicketSync(req.params.id as string);
+  res.json({ data });
+});
+
+export const ticketSync = asyncHandler(async (req, res) => {
+  const { updateOdds } = req.body as marketReplaceService.TicketSyncInput;
+  const result = await marketReplaceService.syncTickets(req.params.id as string, { updateOdds }, req.user!.id);
+  const parts: string[] = [];
+  if (result.renamed) parts.push(`${result.renamed} club name(s) corrected`);
+  if (result.updateOdds && result.repriced) parts.push(`${result.repriced} price(s) updated`);
+  if (result.leftAloneNoSource) parts.push(`${result.leftAloneNoSource} left alone (no odds source)`);
+  res.json({
+    message: `Tickets synced — ${result.betsUpdated} ticket(s) from ${result.bettorsAffected} player(s) updated${parts.length ? `: ${parts.join(', ')}` : ''}`,
+    data: result,
+  });
 });
 
 const TRANSIENT_DB = ["Server has closed", "max_statement_time", "Can't reach", "Timed out", "ETIMEDOUT", "ECONNRESET", "connection", "P1001", "P1017"];

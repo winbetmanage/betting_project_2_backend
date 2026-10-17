@@ -45,7 +45,7 @@ function loadMarketTypes(): Record<string, MarketTypeEntry> {
 const MARKET_TYPES = loadMarketTypes();
 
 // Fallback resolver so new/unknown variants don't all collapse to CUSTOM
-function resolveMarketType(marketKey: string): string {
+export function resolveMarketType(marketKey: string): string {
   if (MARKET_TYPES[marketKey]) return MARKET_TYPES[marketKey].type;
   if (marketKey.startsWith('h2h') || marketKey.startsWith('draw_no_bet') || marketKey.startsWith('double_chance')) return 'MATCH_WINNER';
   if (marketKey.startsWith('totals') || marketKey.startsWith('team_totals') || marketKey.startsWith('alternate_totals')) return 'OVER_UNDER';
@@ -55,7 +55,7 @@ function resolveMarketType(marketKey: string): string {
   return 'CUSTOM';
 }
 
-function humanLabel(marketKey: string, point: number | null): string {
+export function humanLabel(marketKey: string, point: number | null): string {
   const base = MARKET_TYPES[marketKey]?.label
     ?? marketKey.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
   if (point != null) return `${base} — line ${point}`;
@@ -88,20 +88,23 @@ export async function approveMarket(gameId: string, input: ApproveInput, adminUs
 
   // Find existing market for this game+type+marketKey+line (manual check due to Json filtering)
   const candidates = await prisma.market.findMany({ where: { gameId, type: type as never }, include: { selections: true } });
-  let market = candidates.find((m) => {
+  const matches = candidates.filter((m) => {
     const p = m.parameters as { line?: number | null; marketKey?: string } | null;
     // Match the exact source market key too, so h2h vs h2h_3_way (both MATCH_WINNER) stay separate
     if (p?.marketKey && p.marketKey !== marketKey) return false;
     if (point == null && (p == null || p.line == null)) return true;
     if (point != null && p && p.line === point) return true;
     return false;
-  }) ?? null;
+  });
+  // A market retired by Replace keeps the same key+line as its successor, so
+  // prefer whichever one is still taking bets.
+  const existing = matches.find((m) => m.status === 'OPEN') ?? matches[0] ?? null;
 
   const now = new Date();
   const sourceKeys = [bookmakerKey];
 
-  if (!market) {
-    market = await prisma.market.create({
+  if (!existing) {
+    const market = await prisma.market.create({
       data: {
         gameId,
         type: type as never,
@@ -134,6 +137,7 @@ export async function approveMarket(gameId: string, input: ApproveInput, adminUs
   }
 
   // Update existing
+  const market = existing;
   const oldKeys = (market.sourceBookmakerKeys as string[] | null) ?? [];
   const oldSelections = market.selections;
 

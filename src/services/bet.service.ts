@@ -6,6 +6,8 @@ import { getNumberSetting } from './settings.service';
 const roundMoney = (value: number | Prisma.Decimal): number => Math.round(Number(value) * 100) / 100;
 const roundOdds = (value: number): number => Math.round(value * 1000) / 1000;
 
+export { roundMoney, roundOdds };
+
 export interface PlaceBetInput {
   type?: string;
   stake: number | string;

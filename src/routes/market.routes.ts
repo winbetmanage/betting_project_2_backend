@@ -15,6 +15,13 @@ router.patch('/selections/:id', authenticate, authorize('ADMIN', 'ODDS_MANAGER')
 
 router.get('/:id', marketController.getById);
 router.patch('/:id', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), marketController.update);
+router.patch('/:id/visibility', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), marketController.setVisibility);
 router.delete('/:id', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), marketController.remove);
+
+// Replace a wrong market with the same market from another bookmaker / line and
+// migrate every bet leg onto the new selections.
+router.get('/:id/replace-options', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), marketController.replaceOptions);
+router.post('/:id/replace-preview', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), marketController.replacePreview);
+router.post('/:id/replace', authenticate, authorize('ADMIN', 'ODDS_MANAGER'), marketController.replace);
 
 export default router;
