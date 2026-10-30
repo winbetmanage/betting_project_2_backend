@@ -27,10 +27,15 @@ export const placeBet = async (userId: string, { type, stake, selections }: Plac
   if (!Array.isArray(selections) || selections.length === 0) {
     throw new ApiError(400, 'At least one selection is required');
   }
-  const maxLegs = await getNumberSetting('betting.max_legs', MAX_PARLAY_LEGS);
+  const [maxLegs, maxMarketsPerGame] = await Promise.all([
+    getNumberSetting('betting.max_legs', MAX_PARLAY_LEGS),
+    getNumberSetting('betting.max_markets_per_game', MAX_MARKETS_PER_GAME),
+  ]);
   if (selections.length > maxLegs) {
     throw new ApiError(400, `A bet slip can contain at most ${maxLegs} selections`);
   }
+  // Guard against a bad stored value; the limit is always at least one market.
+  const perGameLimit = Math.max(1, Math.floor(maxMarketsPerGame));
   if (type === 'SYSTEM') throw new ApiError(400, 'System bets are not supported');
   // Type is derived server-side: 1 leg = SINGLE, more = MULTIPLE
   const betType = selections.length === 1 ? 'SINGLE' : 'MULTIPLE';
@@ -57,15 +62,16 @@ export const placeBet = async (userId: string, { type, stake, selections }: Plac
     throw new ApiError(400, `Only one selection per market is allowed — "${dup?.market.name ?? 'a market'}" appears twice on this slip`);
   }
 
-  // Max 2 markets per game on one ticket (multiple games allowed, 2 each)
+  // Cap how many markets from the same game may sit on one ticket.
+  // Multiple games are allowed, each up to the configured per-game limit.
   const legsPerGame = new Map<string, number>();
   for (const sel of available) {
     const gid: string = sel.market.gameId ?? `market:${sel.market.id}`;
     legsPerGame.set(gid, (legsPerGame.get(gid) ?? 0) + 1);
   }
-  const overLimit = [...legsPerGame.entries()].find(([, count]) => count > MAX_MARKETS_PER_GAME);
+  const overLimit = [...legsPerGame.entries()].find(([, count]) => count > perGameLimit);
   if (overLimit) {
-    throw new ApiError(400, `Maximum ${MAX_MARKETS_PER_GAME} markets per game on one ticket — one game has ${overLimit[1]} picks. Remove one to add another.`);
+    throw new ApiError(400, `Maximum ${perGameLimit} markets per game on one ticket — one game has ${overLimit[1]} picks. Remove one to add another.`);
   }
 
   // Game not started / betting window / odds stale validation

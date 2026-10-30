@@ -3,8 +3,10 @@ import asyncHandler from '../utils/asyncHandler';
 import ApiError from '../utils/ApiError';
 
 export const listBetGames = asyncHandler(async (req, res) => {
-  const finishedOnly = (req.query as { finished?: unknown }).finished === 'true';
-  const data = await settlementService.listBetGames(finishedOnly);
+  const query = req.query as { finished?: unknown; active?: unknown };
+  const finishedOnly = query.finished === 'true';
+  const activeOnly = query.active === 'true';
+  const data = await settlementService.listBetGames(finishedOnly, activeOnly);
   res.json({ data });
 });
 

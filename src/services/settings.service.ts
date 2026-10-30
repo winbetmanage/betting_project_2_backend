@@ -70,10 +70,18 @@ export const KNOWN_SETTINGS: Record<string, SettingDef> = {
   'betting.max_legs': {
     kind: 'number',
     label: 'Maximum markets per ticket',
-    description: 'Most selections a single bet slip may contain. Empty/unset falls back to 30.',
+    description: 'Most selections a single bet slip may contain across all games. Empty/unset falls back to 30.',
     min: 1,
     group: 'Betting',
     defaultValue: 30,
+  },
+  'betting.max_markets_per_game': {
+    kind: 'number',
+    label: 'Maximum markets per game on one ticket',
+    description: 'Most selections a single ticket may include from the same game. Applies on top of the overall per-ticket limit above. Empty/unset falls back to 2.',
+    min: 1,
+    group: 'Betting',
+    defaultValue: 2,
   },
   'betting.max_payout': {
     kind: 'number',

@@ -35,10 +35,11 @@ export const maxStake = asyncHandler(async (_req, res) => {
 
 /** All user-facing limits in one call (any authenticated user). */
 export const publicLimits = asyncHandler(async (_req, res) => {
-  const [maxStake, minDeposit, maxLegs, maxPayout, minStake, bonusEnabled, bonusMinDeposit, bonusFlat, bonusPercent, bonusExpiryDays] = await Promise.all([
+  const [maxStake, minDeposit, maxLegs, maxMarketsPerGame, maxPayout, minStake, bonusEnabled, bonusMinDeposit, bonusFlat, bonusPercent, bonusExpiryDays] = await Promise.all([
     settingsService.getNumberSetting('betting.max_stake', Number.POSITIVE_INFINITY),
     settingsService.getNumberSetting('deposit.min_amount', 100),
     settingsService.getNumberSetting('betting.max_legs', 30),
+    settingsService.getNumberSetting('betting.max_markets_per_game', 2),
     settingsService.getNumberSetting('betting.max_payout', Number.POSITIVE_INFINITY),
     settingsService.getNumberSetting('betting.min_stake', 10),
     settingsService.getBoolSetting('bonus.enabled', false),
@@ -52,6 +53,7 @@ export const publicLimits = asyncHandler(async (_req, res) => {
       maxStake: maxStake > 0 && Number.isFinite(maxStake) ? maxStake : null,
       minDeposit,
       maxLegs,
+      maxMarketsPerGame,
       maxPayout: Number.isFinite(maxPayout) ? maxPayout : null,
       minStake,
       bonus: { enabled: bonusEnabled, minDeposit: bonusMinDeposit, flatAmount: bonusFlat, percent: bonusPercent, expiryDays: bonusExpiryDays },

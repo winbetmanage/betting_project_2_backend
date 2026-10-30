@@ -1269,13 +1269,23 @@ export async function markPayout(gameId: string, payoutStatus: 'SUBMITTED' | 'PA
  * `finishedOnly` powers the sibling "Finished Bet Games" screen: the same rows,
  * the same aggregates, restricted to games the result sync has marked FINISHED
  * and ordered with the most recently finished at the top.
+ *
+ * `activeOnly` powers the main "Bet Games" screen: only upcoming and live games
+ * (SCHEDULED / LIVE / SUSPENDED). Finished, cancelled and postponed games are
+ * excluded so the working list stays focused on games that can still be bet on.
  */
-export async function listBetGames(finishedOnly = false) {
+export async function listBetGames(finishedOnly = false, activeOnly = false) {
+  const statusWhere = finishedOnly
+    ? { status: 'FINISHED' as const }
+    : activeOnly
+      ? { status: { in: ['SCHEDULED', 'LIVE', 'SUSPENDED'] as ('SCHEDULED' | 'LIVE' | 'SUSPENDED')[] } }
+      : {};
+
   const games = await prisma.game.findMany({
-    where: { isPublished: true, ...(finishedOnly ? { status: 'FINISHED' as const } : {}) },
+    where: { isPublished: true, ...statusWhere },
     include: { competition: { include: { sport: true } }, score: { select: { footballDataMatchId: true, homeScoreFT: true, awayScoreFT: true, status: true } } },
-    // Finished view leads with the newest result; the live view leads with the
-    // soonest kickoff.
+    // Finished view leads with the newest result; the active view leads with the
+    // soonest kickoff (the front-end then moves live games above upcoming ones).
     orderBy: { startTime: finishedOnly ? 'desc' : 'asc' },
   });
   const gameIds = games.map((g) => g.id);

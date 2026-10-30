@@ -10,3 +10,5 @@ prisma/migrations/
 !prisma/migrations/.gitkeep
 uploads/
 json_store/
+epl_games_odds/
+epl_games_Scores/
